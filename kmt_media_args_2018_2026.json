@@ -1,0 +1,1133 @@
+[
+  {
+    "id": "kmt-nuclear-extend",
+    "pros": [
+      "全球核能回潮，核電為低碳基載，有助供電穩定與產業用電",
+      "核一二三在安全無虞下延役可避免缺電與大停電風險",
+      "核電成本相對燃氣進口便宜，可舒緩電價上漲壓力",
+      "核管法放寬延役年限符合國際老舊機組延役實務",
+      "恆春等地居民長期與核三共處，地方支持延役聲音存在"
+    ],
+    "cons": [
+      "老舊機組延役增加核安風險，福島後社會對核電高度敏感",
+      "核廢料仍無最終處置場，延役等於繼續累積核廢",
+      "修法過程被批黑箱、限縮環團與核安討論空間",
+      "地方首長（含藍營縣市）反對核廢落腳本縣，立場矛盾",
+      "2025核三延役公投未達門檻，顯示社會共識不足"
+    ],
+    "sources": [
+      "https://www.twreporter.org/a/ahead-referendum-to-restart-maanshan-nuclear-power-plant",
+      "https://www.bbc.com/zhongwen/articles/clyjgwxk3dxo/trad",
+      "https://www.twreporter.org/a/2024-election-presidential-candidates-interview-hou-yu-yi",
+      "https://www.cna.com.tw/news/ahel/202508055002.aspx",
+      "https://zh.wikipedia.org/zh-hant/%E6%A0%B8%E4%B8%89%E5%BB%B6%E5%BD%B9%E5%85%AC%E6%8A%95"
+    ]
+  },
+  {
+    "id": "kmt-non-carbon",
+    "pros": [
+      "侯友宜主張改變2025非核家園，以多元能源避免缺電",
+      "以核搭配綠能可同時追求低碳與供電穩定",
+      "批評非核家園導致燃氣／燃煤依賴上升，不利減碳",
+      "國際趨勢是淨零而非一律廢核，應務實調整路徑",
+      "過去數次大停電凸顯能源結構需重新檢討"
+    ],
+    "cons": [
+      "非核家園是民進黨黨綱與多年能源轉型承諾，突然轉向破壞政策延續",
+      "核能並非唯一解，強化再生能源與電網同樣可減碳",
+      "重啟／延役核電時程長，短期難解供電，卻拖延綠能投資",
+      "「非碳」口號若綁核電，恐掩蓋核廢與核安外部成本",
+      "能源配比應依科學與法規，不宜純政治口號翻轉"
+    ],
+    "sources": [
+      "https://www.twreporter.org/a/2024-election-presidential-candidates-interview-hou-yu-yi",
+      "https://e-info.org.tw/node/238221",
+      "https://www.energy-omni.com/news/article/44eZyF4xY4yM1wh2",
+      "https://www.businessweekly.com.tw/focus/blog/3012446"
+    ]
+  },
+  {
+    "id": "kmt-coal-phase",
+    "pros": [
+      "侯陣營提出2040無煤台灣，有明確除煤時程表",
+      "以核減煤可降低空污與PM2.5，改善公共健康",
+      "燃煤為高碳排，加速退場有助2030／2050減碳目標",
+      "無煤路徑讓產業與地方有轉型預期，優於模糊口號",
+      "國際主要經濟體亦加速淘汰燃煤發電"
+    ],
+    "cons": [
+      "若核電延役受阻，無煤時程可能落空而回頭燒煤",
+      "過快退煤若無充足替代，恐推高電價與供電風險",
+      "以核減煤爭議大，社會未必接受用核換煤的交換",
+      "燃煤退場牽涉台電財務、機組除役與地方就業，配套不足",
+      "批評者指藍營能源論述仍偏核、對再生能源細節較薄"
+    ],
+    "sources": [
+      "https://tcan2050.org.tw/%E6%AA%A2%E8%A6%96%E4%BE%AF%E5%8F%8B%E5%AE%9C%E8%83%BD%E6%BA%90%E6%94%BF%E7%AD%96%EF%BC%9A%E6%8B%8B%E6%A3%84%E3%80%8C%E7%B6%A0%E8%83%BD%E4%B8%91%E8%A7%92%E8%AB%96%E3%80%8D%E5%80%BC%E5%BE%97%E9%BC%93/",
+      "https://www.rti.org.tw/news?uid=3&pid=48553",
+      "https://www.businessweekly.com.tw/focus/blog/3013001",
+      "https://tw.news.yahoo.com/%E4%BE%AF%E5%8F%8B%E5%AE%9C%E6%8F%90%E6%A0%B8%E5%9B%9B%E5%AE%89%E5%85%A8%E9%87%8D%E5%95%9F-%E5%AE%A3%E7%A4%BA2040%E5%B9%B4%E9%82%81%E5%90%91%E7%84%A1%E7%85%A4%E5%8F%B0%E7%81%A3-031846059.html"
+    ]
+  },
+  {
+    "id": "kmt-92-consensus",
+    "pros": [
+      "九二共識是兩岸對話與制度化協商的政治基礎",
+      "一中各表可堅持中華民國、拒絕一國兩制",
+      "馬政府時期在九二共識下兩岸交流熱絡、經貿紅利明顯",
+      "憲法九二論述強調依中華民國憲法處理兩岸關係",
+      "沒有共同政治基礎則兩會協商難重啟、官方接觸中斷"
+    ],
+    "cons": [
+      "北京版本強調一中原則，與台灣「各表」認知落差大",
+      "年輕世代與多數民意對九二共識接受度下降",
+      "被批評為國共私下共識，不代表台灣整體民意",
+      "民進黨指其綁架兩岸、限縮台灣國際空間",
+      "與一國兩制連結的疑慮使口號成為選舉毒藥"
+    ],
+    "sources": [
+      "https://zh.wikipedia.org/zh-hant/%E4%B9%9D%E4%BA%8C%E5%85%B1%E8%AD%98",
+      "https://www.bbc.com/zhongwen/trad/chinese-news-54069670",
+      "https://whogovernstw.org/2018/11/27/cwwy1/",
+      "https://www.dw.com/zh-hant/%E5%B0%88%E8%A8%AA-%E7%BF%92%E8%BF%91%E5%B9%B3%E8%88%87%E6%B0%91%E9%80%B2%E9%BB%A8%E6%B1%A1%E8%A1%8A%E4%B9%9D%E4%BA%8C%E5%85%B1%E8%AD%98/a-51830712"
+    ]
+  },
+  {
+    "id": "kmt-cross-trade",
+    "pros": [
+      "兩岸經貿規模大，穩定關係有利出口與就業",
+      "制度化協商可降低突發性禁運、關稅衝擊",
+      "中小企業與傳產高度依賴對陸供應鏈與訂單",
+      "恢復交流可帶動觀光、物流、服務業復甦",
+      "避免過度政治化經貿，讓市場機制運作"
+    ],
+    "cons": [
+      "過度依賴中國市場構成經濟安全與政治風險",
+      "北京以商逼政、片面禁運已成常態工具",
+      "深化經貿整合可能讓北京槓桿台灣產業與政治自主",
+      "新南向與多元市場被指才是降低風險正途",
+      "經貿紅利分配不均，部分產業受害而少數受益"
+    ],
+    "sources": [
+      "https://www.bbc.com/zhongwen/trad/chinese-news-61922391",
+      "https://www.dw.com/zh-hant/%E8%A7%A3%E8%AE%80%E4%B8%AD%E5%9C%8B%E7%A6%81%E5%8F%B0%E7%9F%B3%E6%96%91%E9%AD%9A%E5%85%A9%E5%B2%B8%E9%97%9C%E4%BF%82%E5%A6%82%E4%BD%95%E5%BD%B1%E9%9F%BF%E8%BE%B2%E6%B0%B4%E7%94%A2/a-62120210",
+      "https://www.dpp.org.tw/media/contents/10595",
+      "https://www.seftb.org/cp-4-2219-242ef-1.html"
+    ]
+  },
+  {
+    "id": "kmt-peace-defense",
+    "pros": [
+      "主張對話降低誤判，避免兩岸走向衝突",
+      "和平與防衛並重：有實力才能談和平",
+      "批評抗中保台口號升高緊張、不利民生經濟",
+      "穩定兩岸關係有助外資信心與區域安全",
+      "反對台獨、反對一國兩制，走中華民國路線"
+    ],
+    "cons": [
+      "被批和平保台可能弱化防衛意志、向北京示弱",
+      "對話若預設九二共識，條件不對等",
+      "中共軍演與文攻武嚇下，單靠善意難以換和平",
+      "國防預算刪凍與軍購杯葛被指言行不一",
+      "國際盟友可能質疑台灣自我防衛決心"
+    ],
+    "sources": [
+      "https://www.chinatimes.com/newspapers/20230613000376-263101",
+      "https://news.ltn.com.tw/news/politics/breakingnews/4164963",
+      "https://udn.com/news/story/6656/9428359",
+      "https://theinitium.com/20250123-whatsnew-taiwan-2025-budget/"
+    ]
+  },
+  {
+    "id": "kmt-youth-mortgage",
+    "pros": [
+      "青年購屋貸款額度提高到1200萬，降低成家門檻",
+      "超低利政策性貸款減輕首購族利息負擔",
+      "第三胎家庭購屋／換屋補貼鼓勵生育與成家",
+      "地上權住宅以市價七折協助結婚青年取得居所",
+      "回應年輕人買不起房的焦慮，政策可操作空間大"
+    ],
+    "cons": [
+      "低利貸款可能推升需求與房價，反助炒作",
+      "負債壓力加大，青年財務風險上升",
+      "未同步大幅增加供給，難以根本解決居住問題",
+      "財政成本與排富執行細節常被質疑",
+      "受益者多為已能進房市者，租屋族感受有限"
+    ],
+    "sources": [
+      "https://www.businessweekly.com.tw/focus/blog/3013520",
+      "https://event.gvm.com.tw/2024presidential_election/candidate_kmt.html",
+      "https://tw.news.yahoo.com/2024%E9%81%B8%E8%88%89-%E7%B8%BD%E7%B5%B1%E5%A4%A7%E9%81%B8-%E7%B8%BD%E7%B5%B1%E9%81%B8%E8%88%89-%E4%BE%AF%E5%8F%8B%E5%AE%9C%E6%94%BF%E8%A6%8B%E7%B8%BD%E6%95%B4%E7%90%86-%E4%B8%80%E6%AC%A1%E7%9C%8B-010055925.html"
+    ]
+  },
+  {
+    "id": "kmt-social-rent-kmt",
+    "pros": [
+      "提出公宅多元取得、目標大幅增加可負擔住宅",
+      "包租代管與租金補貼並進，照顧租屋族",
+      "企業勞工宅、銀髮宅擴大供給類型",
+      "租金實價登錄與租賃所得改革提升市場透明",
+      "二胎家庭優先抽社宅，結合人口政策"
+    ],
+    "cons": [
+      "8年120萬戶目標被質疑過於樂觀、難以達標",
+      "地方土地、財政與都更阻力大，執行落差常見",
+      "民間興辦誘因不足時易淪口號",
+      "與現有社宅政策重疊，差異與可行性需檢驗",
+      "租屋改革涉及房東稅負，推動阻力高"
+    ],
+    "sources": [
+      "https://www.businessweekly.com.tw/focus/blog/3013520",
+      "https://www.twreporter.org/a/2024-election-presidential-candidates-policies-education-social-welfare",
+      "https://event.gvm.com.tw/2024presidential_election/candidate_kmt.html"
+    ]
+  },
+  {
+    "id": "kmt-congress-reform",
+    "pros": [
+      "強化立法院調查權、聽證權，提升國會監督效能",
+      "藐視國會罪遏止官員說謊、隱匿資訊",
+      "總統國情報告常態化，對行政權課責",
+      "朝小野大下制衡行政權符合權力分立精神",
+      "參考歐美國會調查與聽證制度"
+    ],
+    "cons": [
+      "被批擴權、立法院一權獨大，侵害行政與司法",
+      "程序爭議大：倉促表決、肢體衝突、缺乏實質討論",
+      "藐視國會罪定義寬鬆，恐寒蟬效應與違憲",
+      "憲法法庭多數條文宣告違憲，凸顯合憲性問題",
+      "青鳥行動等公民抗議質疑民主倒退與中國因素"
+    ],
+    "sources": [
+      "https://zh.wikipedia.org/zh-hant/2024%E5%B9%B4%E7%AB%8B%E6%B3%95%E9%99%A2%E8%81%B7%E6%AC%8A%E4%BF%AE%E6%B3%95%E7%88%AD%E8%AD%B0",
+      "https://www.twreporter.org/a/legislature-voting-on-controversial-political-reforms-3",
+      "https://www.bbc.com/zhongwen/simp/chinese-news-69044613",
+      "https://www.voachinese.com/a/taiwan-government-seeks-constitution-interpretation-on-the-legislature-s-controversial-reform-bills-20240621/7665294.html"
+    ]
+  },
+  {
+    "id": "kmt-fiscal-div",
+    "pros": [
+      "財劃法25年未修，中央集權集錢、地方長期喊窮",
+      "擴大統籌分配稅款讓地方有財源辦建設與社福",
+      "垂直分配調整符合學者對地方財政自主的呼籲",
+      "公式入法提高可預測性，減少恣意式補助",
+      "回應地方首長跨黨派要求還財於地方"
+    ],
+    "cons": [
+      "中央少數千億恐衝擊國防、社福、撥補與公共建設",
+      "修法公式瑕疵（離島分配）引發執行混亂",
+      "程序被批零討論強行表決，內容錯誤連連",
+      "水平分配可能拉大城鄉差距或鼓勵炒地皮指標",
+      "行政院覆議與舉債壓力警告：財政永續受威脅"
+    ],
+    "sources": [
+      "https://www.twreporter.org/a/allocation-amendments-controversy",
+      "https://news.pts.org.tw/article/781964",
+      "https://tfc-taiwan.org.tw/fact-check-reports/migration-11217/",
+      "https://www.dpp.org.tw/anti_rumor/contents/285",
+      "http://www.taiwansig.tw/index.php/%E6%94%BF%E7%AD%96%E5%A0%B1%E5%91%8A/%E6%86%B2%E6%94%BF%E6%B3%95%E5%88%B6/9045-%E6%99%82%E9%9A%94%E5%9B%9B%E5%88%86%E4%B9%8B%E4%B8%80%E4%B8%96%E7%B4%80%EF%BC%8C%E3%80%8A%E8%B2%A1%E5%8A%83%E6%B3%95%E3%80%8B%E4%BF%AE%E6%83%A1%E4%BA%86%EF%BC%8C%E9%82%84%E6%98%AF%E4%BF%AE%E5%A5%BD%E4%BA%86%EF%BC%9F"
+    ]
+  },
+  {
+    "id": "kmt-recall-law",
+    "pros": [
+      "要求連署附身分證影本，防堵假連署、死亡連署",
+      "提高罷免門檻避免罷免權被濫用、政治清算",
+      "偽造連署加重刑責，維護選舉公正",
+      "比照總統連署標準，制度一致性",
+      "減少職業連署與個資濫用亂象"
+    ],
+    "cons": [
+      "實質提高罷免難度，削弱憲法賦予的罷免權",
+      "身分證影本增加個資外洩與蒐集成本",
+      "被批為大罷免潮下自保修法、削弱民主制衡",
+      "弱勢與偏鄉連署更困難，參與不平等",
+      "程序倉促、朝野衝突，正當性受質疑"
+    ],
+    "sources": [
+      "https://www.twreporter.org/a/kmt-tpp-lawmakers-pass-three-amendments-include-constitutional-court-procedure-act",
+      "https://news.pts.org.tw/article/729820",
+      "https://theinitium.com/20241220-whatsnew-taiwan-legislative-yuan/",
+      "https://follaw.tw/topic/display/2868"
+    ]
+  },
+  {
+    "id": "kmt-const-court",
+    "pros": [
+      "提高大法官評議與違憲宣告門檻，避免少數決",
+      "重大憲政爭議應有更高共識再作成判決",
+      "回應社會對特定判決（如死刑相關）的不滿",
+      "強化憲法法庭決定的民主正當性",
+      "防止憲法法庭過度介入政治性案件"
+    ],
+    "cons": [
+      "在大法官缺額下提高門檻，實質癱瘓憲法法庭",
+      "立法院否決提名＋修法被指破壞權力分立",
+      "人民聲請案件大量積壓，權利救濟受阻",
+      "憲法法庭後判決修法違憲，程序與實體皆受否定",
+      "法界與公民團體指為憲政危機、波蘭式操作"
+    ],
+    "sources": [
+      "https://www.bbc.com/zhongwen/articles/c0lz4x943r4o/trad",
+      "https://www.twreporter.org/a/amendment-to-constitutional-court-procedure-act-unconstitutional",
+      "https://zh.wikipedia.org/zh-hant/2024%E5%B9%B4%E6%86%B2%E6%B3%95%E8%A8%B4%E8%A8%9F%E6%B3%95%E4%BF%AE%E6%AD%A3%E6%A1%88",
+      "https://news.pts.org.tw/article/786706"
+    ]
+  },
+  {
+    "id": "kmt-huadong",
+    "pros": [
+      "花東長期交通落後西部數十年，需特別條例加速建設",
+      "花東快、國道延伸改善就醫、就業與觀光可及性",
+      "平衡區域發展、留住青年人口",
+      "縮短東西岸時間距離，提升花東投資意願",
+      "地方民意對改善交通有高度期待"
+    ],
+    "cons": [
+      "經費上看天文數字，被批錢坑與財政不可持續",
+      "穿越中央山脈生態衝擊大，環評與原民權益疑慮",
+      "審查程序倉促、未充分討論被批違反程序正義",
+      "地方與環團質疑需求被誇大、替代方案未評估",
+      "重大建設應先可行性研究，不宜特別條例跳過把關"
+    ],
+    "sources": [
+      "https://e-info.org.tw/node/239130",
+      "https://news.pts.org.tw/article/696739",
+      "https://www.cet-taiwan.org/node/4503",
+      "https://wuo-wuo.com/infographics/lazypack/2152-202412"
+    ]
+  },
+  {
+    "id": "kmt-elder-nhi",
+    "pros": [
+      "65歲以上長者排富後全額補助健保，減輕銀髮負擔",
+      "55–64歲原住民長者同步照顧，兼顧族群公平",
+      "約400萬長者受惠，回應超高齡社會需求",
+      "消弭縣市補助不一造成的差別待遇",
+      "提升長者就醫可近性與健康老化"
+    ],
+    "cons": [
+      "健保財務已緊繃，擴大免費恐加速破產風險",
+      "排富門檻與財政來源細節常被質疑跳票",
+      "資源應精準用於弱勢與重症，而非一刀切年齡",
+      "世代正義：青壯年保費負擔可能加重",
+      "與既有長照、醫療預算排擠效應"
+    ],
+    "sources": [
+      "https://www.businessweekly.com.tw/focus/blog/3013520",
+      "https://news.pts.org.tw/article/655014",
+      "https://www.twreporter.org/a/2024-election-presidential-candidates-policies-education-social-welfare"
+    ]
+  },
+  {
+    "id": "kmt-budget-cut",
+    "pros": [
+      "嚴格監督總預算，刪減浮編與大內宣經費",
+      "媒體宣傳費統刪，避免公帑政治操作",
+      "刪凍金額創高是朝小野大下應有的國會把關",
+      "要求報告後解凍，強化對軍購與工程的課責",
+      "歲出仍高，並非癱瘓政府而是合理瘦身"
+    ],
+    "cons": [
+      "國防、外交、社福、文化遭大刪凍，影響施政與國安",
+      "潛艦國造等戰力項目受挫，國際質疑防衛決心",
+      "公視、NCC、數發部等被政治性砍預算",
+      "程序馬拉松表決、通案統刪被批非理性",
+      "行政院與總統府指實質癱瘓政府運作"
+    ],
+    "sources": [
+      "https://theinitium.com/20250123-whatsnew-taiwan-2025-budget/",
+      "https://www.twreporter.org/a/legislature-passes-2025-government-budget",
+      "https://zh.wikipedia.org/zh-hant/2025%E5%B9%B4%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E6%94%BF%E5%BA%9C%E7%B8%BD%E9%A0%90%E7%AE%97%E6%A1%88%E5%88%AA%E6%B8%9B",
+      "https://www.rfi.fr/tw/%E6%B8%AF%E6%BE%B3%E5%8F%B0/20250121-%E5%8F%B0%E7%81%A32025%E7%B8%BD%E9%A0%90%E7%AE%97%E6%A1%88%E7%B5%82%E9%81%8E%E4%BA%86-%E4%BD%86%E5%88%AA%E5%87%8D%E9%87%91%E9%A1%8D%E5%8F%B2%E4%B8%8A%E6%9C%80%E9%AB%98"
+    ]
+  },
+  {
+    "id": "kmt-public-safety",
+    "pros": [
+      "強調治安與公共安全是地方政府執政核心能力",
+      "警察／消防第一線資源應優先保障",
+      "打詐、反毒、婦幼安全是跨黨共識可操作議題",
+      "重大事故究責與補強法規可提升人民安全感",
+      "藍營執政縣市常以治安政績為訴求"
+    ],
+    "cons": [
+      "中央預算刪凍若波及內政與警政，被批自打嘴巴",
+      "公共安全常淪選舉口號，結構性改革不足",
+      "詐欺跨境與數位犯罪需中央跨部會，地方難獨力",
+      "部分治安數據解讀具選擇性、政治操作疑慮",
+      "與司法、社福配套不足時難治本"
+    ],
+    "sources": [
+      "https://www.businessweekly.com.tw/focus/blog/3013520",
+      "https://tw.news.yahoo.com/%E5%88%AA%E9%A0%90%E7%AE%97%E6%87%B6%E4%BA%BA%E5%8C%85%EF%BC%9A%E7%AB%8B%E6%B3%95%E9%99%A2%E7%B8%BD%E9%A0%90%E7%AE%97%E5%8D%94%E5%95%86%E7%A0%B4%E5%B1%80-%E6%95%B8%E7%99%BC%E9%83%A8%E3%80%81%E5%85%AC%E8%A6%96%E3%80%81%E8%BE%B2%E6%A5%AD%E9%83%A8%E3%80%81%E9%AB%94%E8%82%B2%E7%BD%B2%E3%80%81ncc%E9%A0%90%E7%AE%97%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A2%AB%E5%88%AA%EF%BC%9F%E8%A2%AB%E5%88%AA%E5%A4%9A%E5%B0%91%E5%8E%9F%E5%9B%A0%E4%B8%80%E6%AC%A1%E7%9C%8B-072834516.html",
+      "（較廣義治安／預算監督辯論；地方治安政績論述常見於縣市選舉）"
+    ]
+  },
+  {
+    "id": "kmt-nuclear-waste",
+    "pros": [
+      "主張核廢妥善處理是使用核電的前提與責任",
+      "乾貯設施進度應依法審查，不宜無限期卡關",
+      "國際有成熟中期貯存技術可借鏡",
+      "核廢問題不解決，任何能源選項都難務實",
+      "科學選址與回饋機制可降低地方阻力"
+    ],
+    "cons": [
+      "最終處置場遙遙無期，藍營地方亦常反對落腳",
+      "支持延役卻擋乾貯，被批邏輯矛盾",
+      "核廢跨世代不正義，不應再累積",
+      "選址民主同意困難，技術方案難解社會信任",
+      "環團指延役修法迴避核廢討論"
+    ],
+    "sources": [
+      "https://www.twreporter.org/a/ahead-referendum-to-restart-maanshan-nuclear-power-plant",
+      "https://www.twreporter.org/a/2024-election-presidential-candidates-interview-hou-yu-yi",
+      "https://www.cet-taiwan.org/node/4630",
+      "https://www.bbc.com/zhongwen/articles/clyjgwxk3dxo/trad"
+    ]
+  },
+  {
+    "id": "kmt-ecfa",
+    "pros": [
+      "ECFA早收清單降低關稅，有利石化、機械、紡織等傳產",
+      "制度化兩岸經貿，減少不確定性",
+      "馬政府簽署後出口與就業曾受惠",
+      "延續ECFA可避免訂單外移與關廠潮",
+      "兩岸都是WTO成員，協議本身有互利空間"
+    ],
+    "cons": [
+      "被批糖衣毒藥，加深對中依賴與以商逼政風險",
+      "中國可片面中止關稅減讓，顯示協議政治化",
+      "服貿等後續協議引發太陽花與民主防衛疑慮",
+      "紅利集中特定產業，整體結構轉型不足",
+      "執政後未廢但批評者指其戰略風險仍在"
+    ],
+    "sources": [
+      "https://www.dpp.org.tw/media/contents/10595",
+      "https://www.cier.edu.tw/issues-ch/10412/",
+      "https://www.seftb.org/cp-4-2219-242ef-1.html",
+      "https://today.line.me/tw/v3/article/2DmVERX"
+    ]
+  },
+  {
+    "id": "kmt-tourism-cn",
+    "pros": [
+      "陸客高峰期帶動飯店、夜市、遊覽車與地方經濟",
+      "恢復團客／自由行可緩解觀光逆差與業者困境",
+      "兩岸直航正常化降低交通成本、方便探親",
+      "藍營主張透過交流降溫政治對立",
+      "基層觀光業者高度期待市場回流"
+    ],
+    "cons": [
+      "陸客被用作統戰與政治籌碼，開放不對等",
+      "過度依賴陸客使產業脆弱，疫情後已證明風險",
+      "品質與秩序問題（低價團）曾傷害觀光形象",
+      "國安與社會管理成本（非法滯留等）需納入",
+      "多元國際客源才是永續，不應押寶單一市場"
+    ],
+    "sources": [
+      "https://www.voacantonese.com/a/tw-elections-tourism-between-taiwan-and-china-remain-in-choppy-waters-20231211/7393091.html",
+      "https://www.bbc.com/zhongwen/articles/cdejxrxn904o/trad",
+      "https://news.pts.org.tw/article/691992",
+      "https://www.waou.com.mo/2025/03/08/%E8%A7%80%E5%85%89%E9%80%86%E5%B7%AE%E8%BF%91900%E8%90%AC%E4%BA%BA%E6%AC%A1%EF%BC%8C-%E5%B3%B6%E5%85%A7%E5%91%BC%E7%B1%B2%E6%81%A2%E5%BE%A9%E5%85%A9%E5%B2%B8%E6%97%85%E9%81%8A/"
+    ]
+  },
+  {
+    "id": "kmt-farm-export",
+    "pros": [
+      "恢復對陸農漁出口可立即紓困蕉農、果農、養殖戶",
+      "中國曾是鳳梨、石斑等主力市場，價格支撐明顯",
+      "兩岸關係緩和有助解除政治性禁運",
+      "外銷暢通減少產銷失衡與毀棄浪費",
+      "地方農業縣經濟高度相關，政策有感"
+    ],
+    "cons": [
+      "禁運多由中方發動，責任不在單方面「不賣」",
+      "以農逼政證明市場集中的戰略風險",
+      "應加速外銷市場多元化與加工升級",
+      "檢疫政治化下，再開放仍可能隨時被切斷",
+      "技術外流與對岸競爭已削弱部分品項優勢"
+    ],
+    "sources": [
+      "https://www.bbc.com/zhongwen/trad/chinese-news-61922391",
+      "https://www.dw.com/zh-hant/%E8%A7%A3%E8%AE%80%E4%B8%AD%E5%9C%8B%E7%A6%81%E5%8F%B0%E7%9F%B3%E6%96%91%E9%AD%9A%E5%85%A9%E5%B2%B8%E9%97%9C%E4%BF%82%E5%A6%82%E4%BD%95%E5%BD%B1%E9%9F%BF%E8%BE%B2%E6%B0%B4%E7%94%A2/a-62120210",
+      "https://www.kmt.org.tw/2021/03/blog-post_4.html?m=1",
+      "https://www.rfi.fr/cn/%E4%B8%93%E6%A0%8F%E6%A3%80%E7%B4%A2/%E8%81%9A%E7%84%A6%E5%8F%B0%E6%B5%B7/20260624-%E6%B5%B7%E5%B3%A1%E8%AE%BA%E5%9D%9B%E4%B8%AD%E5%85%B1%E9%87%8D%E6%8F%90%E9%87%87%E8%B4%AD%E5%8F%B0%E6%B9%BE%E5%86%9C%E4%BA%A7%E5%93%81-%E4%BD%86%E5%86%9C%E4%B8%9A%E9%83%A8%E8%AE%A4%E4%B8%BA%E4%B8%AD%E5%9B%BD%E5%B8%82%E5%9C%BA%E6%98%93%E5%AF%B9%E5%86%9C%E6%B0%91%E5%BD%A2%E6%88%90-%E5%85%BB%E5%A5%97%E6%9D%80-%E4%B8%80%E9%A2%97%E5%87%A4%E6%A2%A8%E9%87%8A%E8%BF%A6%E5%A6%82%E4%BD%95%E5%BC%95%E7%88%86%E6%8A%97%E4%B8%AD%E4%BF%9D%E5%8F%B0%E4%BA%89%E8%AE%AE"
+    ]
+  },
+  {
+    "id": "kmt-tax-cut",
+    "pros": [
+      "低薪受薪族所得稅減半，直接增加可支配所得",
+      "中小企業加薪扣抵提高，鼓勵幫年輕人加薪",
+      "扶養幼童扣除額提高，減輕育兒家庭負擔",
+      "減稅刺激消費與投資，有助經濟動能",
+      "回應通膨下薪資實質購買力下降"
+    ],
+    "cons": [
+      "減稅侵蝕稅基，社福與建設財源受壓",
+      "若搭配富人稅等，執行與政治可行性存疑",
+      "受益分配未必精準落在最弱勢",
+      "財政紀律與債務上限限制大開減稅空間",
+      "選舉牛肉色彩濃，永續性被質疑"
+    ],
+    "sources": [
+      "https://www.businessweekly.com.tw/focus/blog/3013520",
+      "https://event.gvm.com.tw/2024presidential_election/candidate_kmt.html",
+      "https://vocus.cc/article/659e4fb9fd8978000199dda0"
+    ]
+  },
+  {
+    "id": "kmt-sme-power",
+    "pros": [
+      "中小企業占就業大宗，電價穩定攸關生存",
+      "批評能源政策錯誤導致電價與停電雙重打擊",
+      "主張穩定基載（含核電）壓低長期發電成本",
+      "電價補貼或緩漲可避免關廠、外移",
+      "用電大戶與小商家分級措施應更細緻"
+    ],
+    "cons": [
+      "電價長期凍漲造成台電虧損，終需全民埋單",
+      "國際燃料成本非純政策失誤可解釋",
+      "補貼扭曲價格訊號，不利節電與轉型",
+      "若拒付綠能與電網投資，長期供電更不穩",
+      "產業用電優惠可能轉嫁民生用戶"
+    ],
+    "sources": [
+      "https://www.twreporter.org/a/2024-election-presidential-candidates-interview-hou-yu-yi",
+      "https://www.facebook.com/TPPfanpage/posts/766669838148864",
+      "https://www.energy-omni.com/news/article/44eZyF4xY4yM1wh2"
+    ]
+  },
+  {
+    "id": "kmt-edu-tech",
+    "pros": [
+      "教育與科技人才是國力基礎，應跨黨優先投資",
+      "數位學習、技職與產學合作提升青年競爭力",
+      "半導體與AI時代需強化STEM與應用教育",
+      "地方創生結合教育可減緩城鄉教育落差",
+      "減少意識形態爭議，回歸教學現場資源"
+    ],
+    "cons": [
+      "預算刪減若波及科研、文化與數位部會，政策矛盾",
+      "教改口號多、現場教師負荷與薪資改善不足",
+      "科技人才政策需移民、兵役、薪資全套，單點無效",
+      "政治干預課綱與文化預算引發對立",
+      "與長照、社福搶資源時優先序不明"
+    ],
+    "sources": [
+      "https://www.twreporter.org/a/2024-election-presidential-candidates-policies-education-social-welfare",
+      "https://www.businessweekly.com.tw/focus/blog/3013520",
+      "https://theinitium.com/20250123-whatsnew-taiwan-2025-budget/"
+    ]
+  },
+  {
+    "id": "kmt-military-pay",
+    "pros": [
+      "提高志願役加給吸引留營、緩解人力缺口",
+      "通膨下軍薪實質倒退，應制度化調升",
+      "改善待遇是提升戰力與士氣的直接手段",
+      "義務役薪資過低不符社會基本工資趨勢",
+      "國會立法展現支持國軍的具體行動"
+    ],
+    "cons": [
+      "齊頭式加薪被批違憲、排擠裝備與訓練預算",
+      "新增數百億從何而來未有完整財源",
+      "民進黨指近年已多次加薪與專項加給",
+      "待遇應依危險性與專業差異設計，非齊頭",
+      "一邊砍國防預算一邊加薪，被批政治操作"
+    ],
+    "sources": [
+      "https://www.bbc.com/zhongwen/articles/clylgynpv76o/trad",
+      "https://www.cna.com.tw/news/aipl/202506100130.aspx",
+      "https://www.dpp.org.tw/anti_rumor/contents/388",
+      "https://www.facebook.com/mykmt/posts/1283375013151353"
+    ]
+  },
+  {
+    "id": "kmt-reserve",
+    "pros": [
+      "後備戰力是全民防衛關鍵，應強化訓練與裝備",
+      "義務役延長後更需後備動員制度現代化",
+      "改善教召品質與補償，提高參與意願",
+      "烏俄戰爭顯示後備與民防不可忽視",
+      "結合地方與企業的後備動員更務實"
+    ],
+    "cons": [
+      "訓練天數與裝備若無預算，改革流於形式",
+      "社會對役期與教召仍有反彈，政治成本高",
+      "藍營部分刪凍國防預算被指削弱後備整備",
+      "後備制度改革細節專業，不宜口號化",
+      "與志願役人力、後勤體系整合不足"
+    ],
+    "sources": [
+      "https://theinitium.com/20250123-whatsnew-taiwan-2025-budget/",
+      "https://www.bbc.com/zhongwen/articles/clylgynpv76o/trad",
+      "https://www.twreporter.org/a/legislature-passes-2025-government-budget",
+      "（義務役延長與後備改革為2022後跨黨辯論主軸）"
+    ]
+  },
+  {
+    "id": "kmt-local-first",
+    "pros": [
+      "地方最了解需求，財源與事權應對等下放",
+      "財劃法修法體現地方優先、中央不應集錢",
+      "縣市首長跨黨派長期爭取統籌分配改革",
+      "因地制宜建設效率可能高於中央一刀切",
+      "地方包圍中央的民主正當性在選民授權"
+    ],
+    "cons": [
+      "地方財政能力與治理落差大，恐擴大不均",
+      "中央減少統籌後國安、防疫、重大建設受損",
+      "地方優先若成黨派分贓，缺乏全國視野",
+      "監督機制弱的縣市可能出現浪費與貪腐風險",
+      "水平分配公式爭議顯示「地方」內部也衝突"
+    ],
+    "sources": [
+      "https://www.twreporter.org/a/allocation-amendments-controversy",
+      "https://news.pts.org.tw/article/781964",
+      "https://tfc-taiwan.org.tw/fact-check-reports/migration-11217/"
+    ]
+  },
+  {
+    "id": "kmt-anti-green-energy-abuse",
+    "pros": [
+      "光電濫設占農地、破壞景觀與生態，需嚴格把關",
+      "假種作真種電傷害糧食安全與農民權益",
+      "地方抗爭反映程序不正義與回饋不足",
+      "綠能發展不應犧牲環境與農業永續",
+      "強化環評、地目與專區管制可導正亂象"
+    ],
+    "cons": [
+      "反濫設若成反綠能，恐拖累再生能源與減碳",
+      "屋頂型與專區光電仍是能源轉型必要路徑",
+      "部分反對夾雜地方政治與既得利益",
+      "全國廢核同時限縮綠能，能源缺口誰填？",
+      "需要精準執法而非全面污名化再生能源"
+    ],
+    "sources": [
+      "https://ourisland.pts.org.tw/content/11049",
+      "https://www.moea.gov.tw/mns/populace/news/News.aspx?kind=1&menu_id=40&news_id=110233",
+      "https://www.cet-taiwan.org/node/3756",
+      "https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=6590&pid=225116"
+    ]
+  },
+  {
+    "id": "kmt-fish-solar",
+    "pros": [
+      "漁電共生可增加養殖戶租金與綠能收益",
+      "在地層下陷、不利耕作區有條件發展光電",
+      "政策若落實產量門檻，理論可農電雙贏",
+      "沿海土地複合利用提高土地利用效率",
+      "有助再生能源目標與漁村轉型"
+    ],
+    "cons": [
+      "實務常變「假養殖真種電」，漁業產量下滑",
+      "室內型蔓延農地、逃脫環社檢核",
+      "生態、排水與景觀衝擊引發地方強烈反彈",
+      "業者與地主得利、實際養殖漁民邊緣化",
+      "政策反覆讓投資與漁民無所適從"
+    ],
+    "sources": [
+      "https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=6590&pid=225116",
+      "https://www.newsmarket.com.tw/blog/235961/",
+      "https://ourisland.pts.org.tw/content/11049",
+      "https://www.youtube.com/watch?v=o5SMsjHpVPQ"
+    ]
+  },
+  {
+    "id": "kmt-judicial-indep",
+    "pros": [
+      "主張司法不應成為執政黨工具，應獨立公正",
+      "監督檢調個案與政治辦案疑雲是在野職責",
+      "人事同意權是國會制衡司法高層的憲法機制",
+      "人民對司法信任不足，改革有社會基礎",
+      "程序正義與人權保障需持續檢討"
+    ],
+    "cons": [
+      "否決大法官與修憲訴法被批反而是政治干涉司法",
+      "國會改革調查權過廣恐侵害審判獨立",
+      "司法改革口號常隨政黨輪替雙標",
+      "癱瘓憲法法庭傷害權利救濟與憲政秩序",
+      "個案關說與立委施壓同樣危害獨立"
+    ],
+    "sources": [
+      "https://www.twreporter.org/a/amendment-to-constitutional-court-procedure-act-unconstitutional",
+      "https://zh.wikipedia.org/zh-hant/2024%E5%B9%B4%E7%AB%8B%E6%B3%95%E9%99%A2%E8%81%B7%E6%AC%8A%E4%BF%AE%E6%B3%95%E7%88%AD%E8%AD%B0",
+      "https://www.bbc.com/zhongwen/articles/c0lz4x943r4o/trad"
+    ]
+  },
+  {
+    "id": "kmt-media-freedom",
+    "pros": [
+      "中天不予換照被批政治打壓異己媒體",
+      "多元言論是民主核心，關台寒蟬效應嚴重",
+      "NCC組成與裁罰被質疑選擇性執法",
+      "監督政府的媒體不應因立場被下架",
+      "國際新聞自由評比與國內爭議應被重視"
+    ],
+    "cons": [
+      "NCC指出中天違規累累、內控失靈、股東干預新聞",
+      "新聞自由非傳播假訊息與違反事實查證的護身符",
+      "頻道執照本屬特許，依法換照非白色恐怖",
+      "親中資本與國安疑慮是民主防衛合理考量",
+      "其他台亦受裁罰，非單一政治追殺"
+    ],
+    "sources": [
+      "https://zh.wikipedia.org/zh-hant/%E4%B8%AD%E5%A4%A9%E6%96%B0%E8%81%9E%E5%8F%B0%E5%81%9C%E6%92%AD%E4%BA%8B%E4%BB%B6",
+      "https://www.bbc.com/zhongwen/trad/chinese-news-55000536",
+      "https://watchout.tw/reports/B5toguiEubI4ErbZOWXn",
+      "https://www.kmt.org.tw/2023/06/ncc.html?m=1"
+    ]
+  },
+  {
+    "id": "kmt-pension-fix",
+    "pros": [
+      "年改傷害軍公教尊嚴與退休生活，應停砍或調整",
+      "物價上漲下所得替代率續降不合理",
+      "信賴保護與契約精神應被尊重",
+      "八百壯士等基層反彈顯示政策社會成本高",
+      "2025停砍修法回應退休者生活壓力"
+    ],
+    "cons": [
+      "不改革退撫基金恐提前破產、債留子孫",
+      "軍公教退休待遇長期優於勞工，世代不正義",
+      "停砍被批走回頭路、破壞改革成果",
+      "財政與保險精算警示風險",
+      "國民黨執政時未竟全功、在野反改革被批雙標"
+    ],
+    "sources": [
+      "https://zh.wikipedia.org/zh-hant/%E8%87%BA%E7%81%A3%E5%8F%8D%E5%B9%B4%E9%87%91%E6%94%B9%E9%9D%A9%E8%A1%8C%E5%8B%95",
+      "https://news.pts.org.tw/article/779860",
+      "https://money.udn.com/money/story/124512/9211535",
+      "https://watchout.tw/reports/VCxQEBDoD2iJnQlI86R1"
+    ]
+  },
+  {
+    "id": "kmt-vaccine-choice",
+    "pros": [
+      "主張多元疫苗選項，不應獨厚特定國產疫苗",
+      "民間購BNT受阻引發程序不透明批評",
+      "人民應有知情選擇國際認證疫苗的權利",
+      "採購價格與時程應接受國會嚴格監督",
+      "疫情高峰缺苗打擊政府公信力"
+    ],
+    "cons": [
+      "疫苗採購受國際供應與授權限制，非純政治",
+      "國產疫苗政策有產業與備援戰略考量",
+      "假訊息與疫苗猶豫同樣危害公共衛生",
+      "後來多品牌開放接種，爭議部分被時間緩解",
+      "將防疫完全政黨化不利科學決策"
+    ],
+    "sources": [
+      "https://www.bbc.com/zhongwen/trad/chinese-news-57847076",
+      "https://www.kmt.org.tw/2023/05/bnt.html",
+      "https://www.rfi.fr/tw/%E4%B8%AD%E5%9C%8B/20230510-%E9%83%AD%E5%8F%B0%E9%8A%98%E7%88%86%E6%96%99%E5%8F%B0%E7%81%A3%E5%AE%98%E6%96%B9%E8%B3%BC%E8%B2%B7bnt%E7%96%AB%E8%8B%97%E7%A0%B4%E5%B1%80%E5%8E%9F%E5%9B%A0%E5%9C%A8%E6%96%BC%E5%90%8D%E7%A8%B1",
+      "https://covid19.mohw.gov.tw/ch/cp-4822-65825-205.html"
+    ]
+  },
+  {
+    "id": "kmt-border-open",
+    "pros": [
+      "過度封控傷害觀光、航空、餐飲與留學就業",
+      "與國際同步開放才能恢復經貿與交流",
+      "邊境管理應科學分級而非長期零確診思維",
+      "國人返鄉與外商進出便利影響投資",
+      "疫情後期開放是多數民主國家共識"
+    ],
+    "cons": [
+      "過早開放可能造成醫療量能崩潰",
+      "長者與慢性病患風險需精密評估",
+      "邊境政策專業應由指揮中心科學判斷",
+      "政治壓力加速開放的究責問題",
+      "開放後仍需防疫與社會支持配套"
+    ],
+    "sources": [
+      "https://www.voacantonese.com/a/tw-elections-tourism-between-taiwan-and-china-remain-in-choppy-waters-20231211/7393091.html",
+      "https://news.pts.org.tw/article/691992",
+      "（2022邊境解封時程為跨黨攻防；與觀光／經貿開放論述相連）"
+    ]
+  },
+  {
+    "id": "kmt-rail-east",
+    "pros": [
+      "東部鐵路改善與花東快可大幅縮短旅運時間",
+      "鐵路電氣化與雙軌化提升準點與運能",
+      "觀光與在地產業仰賴可靠軌道運輸",
+      "減少公路依賴、兼顧運輸與減碳",
+      "花東居民長期承受一票難求與誤點"
+    ],
+    "cons": [
+      "高山隧道工程風險高、預算易暴增",
+      "生態與原住民土地權爭議大",
+      "環島高鐵等方案被批幻想型錢坑",
+      "應優先強化現有台鐵東線而非新開山路",
+      "特別條例跳過評估程序引發違憲疑慮"
+    ],
+    "sources": [
+      "https://e-info.org.tw/node/239130",
+      "https://news.pts.org.tw/article/696739",
+      "https://www.cet-taiwan.org/node/4503",
+      "https://wuo-wuo.com/infographics/lazypack/2152-202412"
+    ]
+  },
+  {
+    "id": "kmt-freeway",
+    "pros": [
+      "國道六號東延等可改善中橫以東聯外",
+      "公路網完善有助防災疏散與物流",
+      "西部經驗顯示國道帶動區域發展",
+      "花東用路人需要更安全快捷選項",
+      "與鐵路形成多元運輸備援"
+    ],
+    "cons": [
+      "山區國道生態成本極高、碳排增加",
+      "誘發車流與開發壓力，未必永續",
+      "財政負擔與維護成本長期沉重",
+      "替代方案（軌道、既有道路改善）可能更佳",
+      "環評與地質風險不可政治硬推"
+    ],
+    "sources": [
+      "https://news.pts.org.tw/article/696739",
+      "https://e-info.org.tw/node/239130",
+      "https://www.cet-taiwan.org/node/4503"
+    ]
+  },
+  {
+    "id": "kmt-housing-supply",
+    "pros": [
+      "囤房稅、實價課稅與打炒房可抑制投資需求",
+      "都更容積與TOD增加都會區供給",
+      "公宅＋地上權＋包租代管多管齊下",
+      "住宅基金專款專用可長期興辦社宅",
+      "行政院層級住宅政策統籌較具執行力"
+    ],
+    "cons": [
+      "供給面改革緩不濟急，短期房價難降",
+      "容積獎勵可能圖利建商、改變城市風貌",
+      "打炒房若力度不穩，市場預期反覆",
+      "地方財政與地主反對阻礙都更",
+      "青年仍感政策遠水救不了近火"
+    ],
+    "sources": [
+      "https://www.businessweekly.com.tw/focus/blog/3013520",
+      "https://event.gvm.com.tw/2024presidential_election/candidate_kmt.html",
+      "https://www.twreporter.org/a/2024-election-presidential-candidates-policies-education-social-welfare"
+    ]
+  },
+  {
+    "id": "kmt-labor-flex",
+    "pros": [
+      "基本工資逐步調升至合理水準保障勞工",
+      "鼓勵企業加薪的稅負誘因提升實質薪資",
+      "部分工時與彈性需兼顧產業競爭力",
+      "中小企業加薪扣抵有助非都會就業",
+      "勞資協商優於一刀切僵化規定"
+    ],
+    "cons": [
+      "彈性若成過勞與假承攬，傷害勞權",
+      "基本工資爭議中資方遊說色彩需警惕",
+      "一例一休等攻防顯示藍營勞權立場受質疑",
+      "青年低薪結構問題不僅是工時彈性",
+      "缺乏強執法時彈性等於資方單方決定"
+    ],
+    "sources": [
+      "https://www.businessweekly.com.tw/focus/blog/3013520",
+      "https://tw.news.yahoo.com/2024%E9%81%B8%E8%88%89-%E7%B8%BD%E7%B5%B1%E5%A4%A7%E9%81%B8-%E7%B8%BD%E7%B5%B1%E9%81%B8%E8%88%89-%E4%BE%AF%E5%8F%8B%E5%AE%9C%E6%94%BF%E8%A6%8B%E7%B8%BD%E6%95%B4%E7%90%86-%E4%B8%80%E6%AC%A1%E7%9C%8B-010055925.html",
+      "（勞基法／基本工資為長期朝野辯論；侯政見含加薪扣抵）"
+    ]
+  },
+  {
+    "id": "kmt-foreign-talent",
+    "pros": [
+      "半導體與數位經濟需要國際人才補缺口",
+      "放寬簽證與依親可提升台灣吸引力",
+      "與育才、留才並列的三才政策是跨黨共識方向",
+      "學術與研發國際化有助創新",
+      "競逐全球人才不能自我封閉"
+    ],
+    "cons": [
+      "社會福利、兵役與國家認同配套需先釐清",
+      "薪資與生活成本不改善難留住人才",
+      "排擠本國青年就業的疑慮需評估",
+      "國安審查對特定國家人才必要",
+      "政策口號多於實際行政效率改善"
+    ],
+    "sources": [
+      "https://www.businessweekly.com.tw/focus/blog/3013520",
+      "https://event.gvm.com.tw/2024presidential_election/candidate_kmt.html",
+      "（人才政策為2024各陣營共同議題，細節差異在移民門檻與產業別）"
+    ]
+  },
+  {
+    "id": "kmt-china-trade-risk",
+    "pros": [
+      "主張管理風險而非全面脫鉤，務實面對市場規模",
+      "過度抗中脫鉤傷害傳產與就業",
+      "風險分散應漸進，搭配談判降低禁運衝擊",
+      "供應鏈不完全等於政治投降",
+      "出口市場多元化與維持對陸經貿可並行"
+    ],
+    "cons": [
+      "中國市場政治風險已現實化（禁運、ECFA中止）",
+      "國安與關鍵技術外流風險被低估",
+      "依賴度高時談判籌碼其實在對岸",
+      "國際友盟推動de-risking，台灣不能逆勢",
+      "經貿和平論無法阻止軍事威脅"
+    ],
+    "sources": [
+      "https://www.bbc.com/zhongwen/trad/chinese-news-61922391",
+      "https://www.dpp.org.tw/media/contents/10595",
+      "https://www.seftb.org/cp-4-2219-242ef-1.html",
+      "https://today.line.me/tw/v3/article/2DmVERX"
+    ]
+  },
+  {
+    "id": "kmt-defense-budget-kmt",
+    "pros": [
+      "主張有效監督軍購，避免黑洞與廉政問題",
+      "潛艦等進度落後應凍結待驗證再撥款",
+      "國防預算不是空白支票，需績效導向",
+      "部分立委支持GDP一定比例國防支出",
+      "把關不等於反國防，而是反浪費"
+    ],
+    "cons": [
+      "2025總預算大刪凍國防被指傷害戰備",
+      "國際解讀為防衛意志動搖",
+      "裝備維護、彈藥、油料受業務費凍結衝擊",
+      "與軍人加薪並陳時優先序混亂",
+      "烏俄與共軍威脅下不宜拿國防開刀"
+    ],
+    "sources": [
+      "https://theinitium.com/20250123-whatsnew-taiwan-2025-budget/",
+      "https://www.twreporter.org/a/legislature-passes-2025-government-budget",
+      "https://zh.wikipedia.org/zh-hant/2025%E5%B9%B4%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E6%94%BF%E5%BA%9C%E7%B8%BD%E9%A0%90%E7%AE%97%E6%A1%88%E5%88%AA%E6%B8%9B",
+      "https://udn.com/news/story/6656/9428359"
+    ]
+  },
+  {
+    "id": "kmt-anti-corruption",
+    "pros": [
+      "在野監督是防腐敗的重要機制",
+      "綠能、疫苗、高端採購等案應查清楚",
+      "國會調查權有助揭露弊案",
+      "地方執政經驗強調清廉效率形象",
+      "阳光法案與財產申報應更嚴格"
+    ],
+    "cons": [
+      "自身歷來亦有貪腐個案，道德制高點受挑戰",
+      "調查權若成政治整肅工具則雙標",
+      "反貪應靠司法檢調專業，非立委作秀",
+      "刪減監察與相關預算削弱監督體系",
+      "選戰抹黑與真正反腐界線模糊"
+    ],
+    "sources": [
+      "https://zh.wikipedia.org/zh-hant/2024%E5%B9%B4%E7%AB%8B%E6%B3%95%E9%99%A2%E8%81%B7%E6%AC%8A%E4%BF%AE%E6%B3%95%E7%88%AD%E8%AD%B0",
+      "https://www.bbc.com/zhongwen/simp/chinese-news-69044613",
+      "https://theinitium.com/20250123-whatsnew-taiwan-2025-budget/"
+    ]
+  },
+  {
+    "id": "kmt-culture-roc",
+    "pros": [
+      "中華民國憲政與歷史文化應被尊重傳承",
+      "去中國化課綱被批切斷歷史脈絡",
+      "多元文化包含中華文化與本土文化並存",
+      "國慶、國旗、國軍榮譽是共同體象徵",
+      "文化不應成意識形態鬥爭工具"
+    ],
+    "cons": [
+      "被批大中國史觀忽視台灣主體經驗",
+      "轉型正義與威權歷史須面對，非復辟",
+      "文化預算刪減與中華文化口號自相矛盾",
+      "年輕世代認同變遷，強推易反效果",
+      "文化政策應專業距離政治動員"
+    ],
+    "sources": [
+      "https://zh.wikipedia.org/zh-hant/%E4%B9%9D%E4%BA%8C%E5%85%B1%E8%AD%98",
+      "https://theinitium.com/20250123-whatsnew-taiwan-2025-budget/",
+      "https://www.businessweekly.com.tw/focus/blog/3013520",
+      "（課綱／中華文化 vs 台灣主體為長期文化政治辯論）"
+    ]
+  },
+  {
+    "id": "kmt-sports",
+    "pros": [
+      "競技與全民運動提升國力與公共健康",
+      "選手待遇、訓練資源應去政治化支持",
+      "爭取國際賽會與城市行銷帶動觀光",
+      "校園體育與反毒反詐可結合",
+      "地方運動中心建設有感"
+    ],
+    "cons": [
+      "體育署預算若遭刪凍衝擊培訓與賽事",
+      "長遠結構（教練、科學、就業）改革不足",
+      "政治卡位主導體育團體人事",
+      "成績導向忽略基層參與率",
+      "經費分配明星項目 vs 冷門項目不均"
+    ],
+    "sources": [
+      "https://tw.news.yahoo.com/%E5%88%AA%E9%A0%90%E7%AE%97%E6%87%B6%E4%BA%BA%E5%8C%85%EF%BC%9A%E7%AB%8B%E6%B3%95%E9%99%A2%E7%B8%BD%E9%A0%90%E7%AE%97%E5%8D%94%E5%95%86%E7%A0%B4%E5%B1%80-%E6%95%B8%E7%99%BC%E9%83%A8%E3%80%81%E5%85%AC%E8%A6%96%E3%80%81%E8%BE%B2%E6%A5%AD%E9%83%A8%E3%80%81%E9%AB%94%E8%82%B2%E7%BD%B2%E3%80%81ncc%E9%A0%90%E7%AE%97%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A2%AB%E5%88%AA%EF%BC%9F%E8%A2%AB%E5%88%AA%E5%A4%9A%E5%B0%91%E5%8E%9F%E5%9B%A0%E4%B8%80%E6%AC%A1%E7%9C%8B-072834516.html",
+      "https://theinitium.com/20250123-whatsnew-taiwan-2025-budget/",
+      "（體育署預算爭議為2025總預算辯論一環；專屬體育政見覆蓋較薄）"
+    ]
+  },
+  {
+    "id": "kmt-longcare-kmt",
+    "pros": [
+      "主張長照保險化，穩定財源與給付",
+      "提高重度失能給付與住宿型補助",
+      "住院全責照護減輕家屬尋找看護負擔",
+      "照顧者津貼與扣除額支持家庭照顧者",
+      "銀髮宅與長照服務整合因應超高齡"
+    ],
+    "cons": [
+      "長照保險費率與世代負擔爭議大",
+      "與既有長照2.0銜接與轉型成本高",
+      "人力荒（外籍看護、本國照顧員）未解",
+      "財政部與衛福部資源排擠",
+      "政見細節需精算否則易跳票"
+    ],
+    "sources": [
+      "https://www.businessweekly.com.tw/focus/blog/3013520",
+      "https://www.twreporter.org/a/2024-election-presidential-candidates-policies-education-social-welfare",
+      "https://event.gvm.com.tw/2024presidential_election/candidate_kmt.html"
+    ]
+  },
+  {
+    "id": "kmt-sme-loan",
+    "pros": [
+      "中小企業融資是保就業關鍵，政策性貸款必要",
+      "疫情與升息後週轉困難，需政府信用保證",
+      "地方銀行與信保基金可精準服務在地企業",
+      "青年創業與二代接班需要資本協助",
+      "減稅＋融資雙管齊下優於單一補貼"
+    ],
+    "cons": [
+      "壞帳風險最終可能由納稅人承擔",
+      "資源易流向有關係企業而非真正弱勢",
+      "重複補助效率不彰",
+      "結構轉型（數位、綠能）貸款設計不足",
+      "貨幣與通膨環境下大規模放貸有副作用"
+    ],
+    "sources": [
+      "https://www.businessweekly.com.tw/focus/blog/3013520",
+      "https://event.gvm.com.tw/2024presidential_election/candidate_kmt.html",
+      "（中小企業融資為常態經濟政見；與減稅／電價論述相連）"
+    ]
+  },
+  {
+    "id": "kmt-energy-storage-kmt",
+    "pros": [
+      "儲能是再生能源與電網穩定的關鍵配套",
+      "大停電後強化電網韌性成社會共識",
+      "儲能可削峰填谷、支援瞬間調度",
+      "分散式儲能提升戰時與災時能源韌性",
+      "產業鏈（電池、系統整合）具經濟潛力"
+    ],
+    "cons": [
+      "成本高、電價結構下商業模式仍挑戰",
+      "消防與社區接受度（氣爆疑慮）待解",
+      "若能源政策反覆，投資信心受損",
+      "過度依賴特定廠商有寡占與廉政風險",
+      "不能以儲能迴避基載與電源規劃問題"
+    ],
+    "sources": [
+      "https://www.nextdrive.io/2022/09/22/columnist/%E5%84%B2%E8%83%BD%E3%80%8C%E7%98%8B%E3%80%8D%E4%BB%80%E9%BA%BC%EF%BC%9F%E5%85%A9%E9%97%9C%E9%8D%B5%E5%9B%A0%E7%B4%A0%E9%80%8F%E9%9C%B2%E5%A0%B4%E5%A5%BD%E6%99%82%E6%A9%9F/",
+      "https://www.taipower.com.tw/",
+      "https://www.twreporter.org/a/2024-election-presidential-candidates-interview-hou-yu-yi",
+      "（儲能多出現在缺電／電網辯論；藍營論述常併基載核電）"
+    ]
+  },
+  {
+    "id": "kmt-local-police",
+    "pros": [
+      "基層警察勤务繁重，待遇與設備應強化",
+      "地方治安第一線最了解社區需求",
+      "優先強化派出所能量優於口號式政策",
+      "警消退休與勤務加給改革有其基層訴求",
+      "打詐需地方警察與社區協力"
+    ],
+    "cons": [
+      "警政人事與預算高度中央化，地方能動有限",
+      "加給齊頭式改革引發職系不平與財政爭議",
+      "濫權與執法品質問題同樣需監督",
+      "治安不能只靠警察，社福司法要配套",
+      "政治動員警察團體有專業中立疑慮"
+    ],
+    "sources": [
+      "https://watchout.tw/reports/VCxQEBDoD2iJnQlI86R1",
+      "https://www.businessweekly.com.tw/focus/blog/3013520",
+      "（警消待遇／地方治安為縣市與立院長期議題；覆蓋較分散）"
+    ]
+  },
+  {
+    "id": "kmt-disaster",
+    "pros": [
+      "防災型都更與老屋耐震是救命工程",
+      "極端氣候下治水、坡地與震災整備優先",
+      "地方應有充裕財源做防救災能量",
+      "花東交通亦常被框架為災時生命線",
+      "跨縣市支援機制需預先制度化"
+    ],
+    "cons": [
+      "重大工程若跳過環評，本身可能製造災害風險",
+      "預算刪減若影響中央災防能量屬矛盾",
+      "口號多於落實老舊建物加速重建",
+      "國土計畫與開發壓力常勝於防災",
+      "科學風險圖與政治開發承諾衝突"
+    ],
+    "sources": [
+      "https://www.businessweekly.com.tw/focus/blog/3013520",
+      "https://e-info.org.tw/node/239130",
+      "https://www.twreporter.org/a/allocation-amendments-controversy"
+    ]
+  },
+  {
+    "id": "kmt-indigenous-kmt",
+    "pros": [
+      "原民長者健保優惠體現族群照顧",
+      "花東建設論述常連結原鄉交通與就業",
+      "傳統領域與共管需務實協商非對立",
+      "原民立委在國會為族語文化發聲",
+      "觀光與農業可結合部落經濟"
+    ],
+    "cons": [
+      "大型開發常未落實原民諮商同意權",
+      "花東三法被原民與環團批評犧牲土地",
+      "文化預算與轉型正義資源受政治波動",
+      "黨內開發派與原權派張力",
+      "象徵性優惠多於結構性自治與土地正義"
+    ],
+    "sources": [
+      "https://www.businessweekly.com.tw/focus/blog/3013520",
+      "https://www.cet-taiwan.org/node/4503",
+      "https://e-info.org.tw/node/239130",
+      "（原民政策覆蓋分散；與花東開發／長者健保政見交疊）"
+    ]
+  },
+  {
+    "id": "kmt-youth-job-kmt",
+    "pros": [
+      "企業為年輕人加薪稅賦誘因直接促進就業品質",
+      "基本工資目標與產業加薪並進",
+      "青年購屋、成家政策降低流動不安",
+      "中小企業與地方創生創造非都會職缺",
+      "技職與產學對接減少學用落差"
+    ],
+    "cons": [
+      "低薪主因是產業結構與工會力量，非單一減稅",
+      "房貸政策可能讓青年更早背負高槓桿",
+      "若經濟過度依賴對中供應鏈，青年職涯風險高",
+      "兵役、工時、育兒成本未解仍難留才",
+      "青年投票行為顯示對藍營青年政策信任有限"
+    ],
+    "sources": [
+      "https://www.businessweekly.com.tw/focus/blog/3013520",
+      "https://event.gvm.com.tw/2024presidential_election/candidate_kmt.html",
+      "https://www.twreporter.org/a/2024-election-presidential-candidates-policies-education-social-welfare"
+    ]
+  }
+]

@@ -1,44 +1,6 @@
-/** 城市市政題庫（六都＋新竹）；每題 5 則依政策內容撰寫的正／反論點 */
-const CITY_META = {
-  "taipei": {
-    "name": "臺北市",
-    "short": "北市"
-  },
-  "newtaipei": {
-    "name": "新北市",
-    "short": "新北"
-  },
-  "taoyuan": {
-    "name": "桃園市",
-    "short": "桃園"
-  },
-  "taichung": {
-    "name": "臺中市",
-    "short": "中市"
-  },
-  "tainan": {
-    "name": "臺南市",
-    "short": "南市"
-  },
-  "kaohsiung": {
-    "name": "高雄市",
-    "short": "高市"
-  },
-  "hsinchu": {
-    "name": "新竹市",
-    "short": "竹市"
-  }
-};
-const CITIES = Object.keys(CITY_META);
-const CITY_POLICIES = [
+[
   {
     "id": "tpe-kmt-infra1",
-    "city": "taipei",
-    "party": "kmt",
-    "category": "交通",
-    "status": "已推動",
-    "text": "臺北市持續推動軌道或幹道瓶頸改善工程。",
-    "simple": "改善塞車瓶頸與軌道／幹道建設。",
     "pros": [
       "信義計畫區、內湖科技園區與環狀線周邊仍常見尖峰壅塞，幹道與軌道瓶頸改善可縮短跨區通勤時間",
       "捷運容量與站體動線優化能提高轉乘效率，減輕公車站牌排隊與人潮推擠",
@@ -46,24 +8,24 @@ const CITY_POLICIES = [
       "軌道建設長期有助降低私人運具依賴與路邊停車壓力",
       "工程分期與交通維持計畫若落實，可邊施工邊維持基本運能"
     ],
-    "oppose": [
+    "cons": [
       "捷運與幹道工程預算高、工期長，易排擠社福與校舍經費",
       "施工期間車道縮減常使鄰里更塞、店家營業受影響",
       "用地取得、管線遷移與中央核定時程難掌握，進度常落後承諾",
       "運量預估樂觀時，通車後可能面臨虧損與維運補貼爭議",
       "聯開宅與開發基金收益爭議顯示軌道建設財務壓力仍大"
     ],
-    "note": "交通建設。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://news.ltn.com.tw/news/politics/breakingnews/5399220",
+      "https://www.house91.tw/news/1763097305",
+      "https://www.gov.taipei/News_Content.aspx?n=2044902FC839D045&s=F246A40683F6559C",
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-kmt-infra2",
-    "city": "taipei",
-    "party": "kmt",
-    "category": "交通",
-    "status": "規劃中",
-    "text": "規劃轉乘樞紐與公車路網重整。",
-    "simple": "轉乘更好，公車路線重整。",
     "pros": [
       "公車路網重整可減少重複路線、補足捷運未覆蓋的最後一哩",
       "轉乘樞紐整合捷運、公車、YouBike 有助縮短總出行時間",
@@ -71,24 +33,21 @@ const CITY_POLICIES = [
       "夜間與偏區班次若納入重整，可回應移動正義訴求",
       "資訊整合與準點率公開可讓市民比較路線、監督服務品質"
     ],
-    "oppose": [
+    "cons": [
       "路線裁併常引發沿線居民與議員反彈，政治壓力下難徹底整頓",
       "轉乘樞紐用地與周邊接駁若不足，乘客仍覺得「多轉一次更累」",
       "公車業者人力與成本上漲，重整後班次密度未必提升",
       "月票補貼增加市庫負擔，效益需長期追蹤搭乘數據",
       "若只重畫路線不改善準點與塞車，市民感受有限"
     ],
-    "note": "運具整合。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-kmt-house1",
-    "city": "taipei",
-    "party": "kmt",
-    "category": "住宅",
-    "status": "已推動",
-    "text": "推動社宅或青年宅供給並檢討申請機制。",
-    "simple": "社宅青年宅供給與申請機制。",
     "pros": [
       "北市房價租金全國最高，社宅與青年宅可直接減輕年輕與弱勢現金壓力",
       "申請資格與抽籤機制公開檢討，有助減少「排不到、條件不清」的抱怨",
@@ -96,24 +55,21 @@ const CITY_POLICIES = [
       "包租代管與租金補貼並行，比單一路徑更快增加可負擔供給",
       "社宅附托育、長照或青創空間可一次回應多世代需求"
     ],
-    "oppose": [
+    "cons": [
       "興辦速度仍遠落後需求，排隊與中籤率低是長期批評焦點",
       "聯開宅出售或財務操作引發「出租社宅變賣」疑慮",
       "鄰避效應使部分里民反對社宅進駐，進度受阻",
       "申請門檻與弱勢保留比例若調整不當，恐排擠真正需求戶",
       "土地與營建成本高，戶數目標容易跳票或品質縮水"
     ],
-    "note": "居住政策。",
-    "yearHint": "2019–2026"
+    "sources": [
+      "https://news.ltn.com.tw/news/politics/breakingnews/5399220",
+      "https://www.house91.tw/news/1763097305",
+      "https://www.gov.taipei/News_Content.aspx?n=2044902FC839D045&s=F246A40683F6559C"
+    ]
   },
   {
     "id": "tpe-kmt-econ1",
-    "city": "taipei",
-    "party": "kmt",
-    "category": "產業",
-    "status": "已推動",
-    "text": "招商與產業園區升級，創造就業。",
-    "simple": "招商設廠創造工作機會。",
     "pros": [
       "內湖、南港與北士科等園區升級可留住總部與研發職缺",
       "招商可帶動周邊餐飲、商務服務與住宅需求，擴大稅基",
@@ -121,24 +77,21 @@ const CITY_POLICIES = [
       "國際會展與新創聚落有助提升城市競爭力與青年就業",
       "公共建設與產業園區聯動可縮短「住一區、工一區」的通勤痛點"
     ],
-    "oppose": [
+    "cons": [
       "大型園區開發易推高周邊房價租金，排擠原有居民",
       "土地變更與環評爭議可能延宕，招商承諾難以兌現",
       "就業機會若偏高技能，基層勞工未必受惠",
       "財政誘因過高時被批評圖利大企業、排擠中小企業輔導",
       "交通與電力負荷若未同步升級，招商後塞車與缺電風險上升"
     ],
-    "note": "產業招商。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-kmt-env1",
-    "city": "taipei",
-    "party": "kmt",
-    "category": "環境",
-    "status": "已推動",
-    "text": "空品或河川水質改善與稽查。",
-    "simple": "空氣或河水品質改善。",
     "pros": [
       "河川水質與空品稽查可改善民生健康，降低呼吸道疾病風險",
       "感測器與公開數據讓污染源可追蹤、可課責",
@@ -146,24 +99,21 @@ const CITY_POLICIES = [
       "水岸與綠美化可提升生活品質與觀光吸引力",
       "源頭管制與稽查比事後救災更具成本效益"
     ],
-    "oppose": [
+    "cons": [
       "空品受區域傳輸與氣象影響大，單靠本市稽查效果有限",
       "嚴格裁罰可能引發業者反彈與就業顧慮",
       "感測數據若未即時或校正不足，容易引發公信力質疑",
       "綠美化與景觀工程被批「好看但治標」",
       "預算分散在多局處，績效難量化、市民無感"
     ],
-    "note": "環境治理。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-kmt-social1",
-    "city": "taipei",
-    "party": "kmt",
-    "category": "社福",
-    "status": "已推動",
-    "text": "托育或長照據點布建擴大。",
-    "simple": "托育長照據點更多。",
     "pros": [
       "公共托育與長照據點可降低家庭照顧負擔，回應少子高齡雙重壓力",
       "準公共化擴大可壓低費用、提高可近性",
@@ -171,24 +121,21 @@ const CITY_POLICIES = [
       "結合社宅與學校用地可加速開設、節省土地成本",
       "服務量能提升有助家長就業與長輩在地老化"
     ],
-    "oppose": [
+    "cons": [
       "人力與專業師資不足，據點多不等於服務品質好",
       "排隊與額滿仍常見，偏區與夜間需求難滿足",
       "財政持續補貼壓力大，收費與補助公式常爭議",
       "老舊校舍或里民中心改建據點有耐震與動線限制",
       "跨局處協調慢，家長仍需跑多窗口"
     ],
-    "note": "社福布建。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-kmt-safe1",
-    "city": "taipei",
-    "party": "kmt",
-    "category": "治安",
-    "status": "已推動",
-    "text": "防詐宣導與科技執法強化。",
-    "simple": "防詐與科技執法。",
     "pros": [
       "防詐宣導與警示機制可降低高齡與青年受騙率",
       "科技執法、監視器與大數據協作可提高破案效率",
@@ -196,24 +143,21 @@ const CITY_POLICIES = [
       "熱點分析有助警力配置，提升夜間安全感",
       "公開被害數據可督促市府持續改善，而非只做活動"
     ],
-    "oppose": [
+    "cons": [
       "詐騙手法快速翻新，宣導往往追不上新型態",
       "監視器密度引發個資與監控社會疑慮",
       "跨縣市與跨境詐騙需中央與國際合作，市府權限有限",
       "科技設備採購與維運成本高，成效難完全歸因",
       "若只重宣導不重阻斷金流，被害金額仍可能攀升"
     ],
-    "note": "治安防詐。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-kmt-flood1",
-    "city": "taipei",
-    "party": "kmt",
-    "category": "治水",
-    "status": "已推動",
-    "text": "排水清疏與抽水站效能提升。",
-    "simple": "排水抽水更強降淹水。",
     "pros": [
       "抽水站與排水清疏可降低低窪里在短延時強降雨下的淹水機率",
       "雨水下水道更新與出流管制有助都市防洪韌性",
@@ -221,24 +165,21 @@ const CITY_POLICIES = [
       "滯洪與透水鋪面兼顧治水與都市景觀",
       "工程進度公開可讓受災熱點里民監督"
     ],
-    "oppose": [
+    "cons": [
       "極端降雨加劇，舊有設計標準可能仍不足",
       "工程擾民與工期長，施工期反而積水抱怨多",
       "上下游跨行政區排水協調困難",
       "預算龐大卻難保證「永不淹水」，期待管理不易",
       "私人土地與管線阻礙清疏，執行常卡關"
     ],
-    "note": "治水。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-dpp-d1",
-    "city": "taipei",
-    "party": "dpp",
-    "category": "社福",
-    "status": "立院提案",
-    "text": "議會要求社福預算占比與據點服務公開。",
-    "simple": "社福預算與服務要公開可查。",
     "pros": [
       "要求社福預算占比與據點服務公開，可檢驗資源是否真到弱勢",
       "公開數據有助比較各行政區落差，推動資源重分配",
@@ -246,24 +187,21 @@ const CITY_POLICIES = [
       "市民與公民團體較易追蹤申辦數、使用率與滿意度",
       "避免大拜拜式活動排擠托育長照實質服務"
     ],
-    "oppose": [
+    "cons": [
       "過度強調占比數字可能忽視服務品質與成果",
       "公開報表若格式難懂，一般市民仍無法監督",
       "行政成本上升，第一線忙於填表而非服務",
       "政治攻防下數據解讀易被選擇性引用",
       "預算公開不等於立刻解決排隊與人力荒"
     ],
-    "note": "議會社福監督。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-dpp-d2",
-    "city": "taipei",
-    "party": "dpp",
-    "category": "環境",
-    "status": "立院提案",
-    "text": "要求污染源稽查期限與數據公開。",
-    "simple": "污染稽查有期限資料公開。",
     "pros": [
       "污染稽查設期限可避免案件久拖、業者觀望",
       "數據公開提高信任，公民可參與監督空品與水質",
@@ -271,24 +209,21 @@ const CITY_POLICIES = [
       "可與中央測站數據比對，辨識本市污染熱點",
       "對違法排放形成嚇阻，改善周邊居民健康權"
     ],
-    "oppose": [
+    "cons": [
       "期限過短可能導致檢查流於形式",
       "部分污染源屬跨域或移動源，單靠市府期限難解",
       "業者主張程序過嚴影響營運與就業",
       "即時公開若誤差，易引發恐慌或誤導",
       "人力不足時「有期限無能量」變成空轉"
     ],
-    "note": "環境監督。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-dpp-d3",
-    "city": "taipei",
-    "party": "dpp",
-    "category": "住宅",
-    "status": "立院提案",
-    "text": "要求租金補貼與社宅進度透明。",
-    "simple": "租金補助社宅進度透明。",
     "pros": [
       "租金補貼與社宅進度透明可檢驗居住政策是否達標",
       "公開排隊戶數、中籤率與完工時程，減少黑箱傳聞",
@@ -296,24 +231,21 @@ const CITY_POLICIES = [
       "申請人可依公開資訊規劃居住選項",
       "避免「只宣布目標、不公布進度」的政治操作"
     ],
-    "oppose": [
+    "cons": [
       "進度公開也可能暴露延宕，被政治化攻擊而影響士氣",
       "敏感財務與個資需去識別，公開範圍有爭議",
       "透明本身不增加戶數，根本問題仍是土地與預算",
       "頻繁要求報告占用行政能量",
       "不同口徑的統計易造成「各說各話」"
     ],
-    "note": "居住監督。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://news.ltn.com.tw/news/politics/breakingnews/5399220",
+      "https://www.house91.tw/news/1763097305",
+      "https://www.gov.taipei/News_Content.aspx?n=2044902FC839D045&s=F246A40683F6559C"
+    ]
   },
   {
     "id": "tpe-dpp-d4",
-    "city": "taipei",
-    "party": "dpp",
-    "category": "交通",
-    "status": "立院提案",
-    "text": "要求偏區或夜間運能改善。",
-    "simple": "偏區夜間公車運能改善。",
     "pros": [
       "偏區與夜間運能改善回應移動正義，服務非尖峰與邊緣社區",
       "夜班與醫療、服務業通勤者依賴夜間公車",
@@ -321,24 +253,21 @@ const CITY_POLICIES = [
       "公開班次與載客率可精準調整路線",
       "對高齡與行動不便者，夜間與偏區服務尤其關鍵"
     ],
-    "oppose": [
+    "cons": [
       "離峰載客率低，擴大運能恐增加虧損",
       "司機工時與安全需配套，否則加班風險上升",
       "路線調整牽動既有乘客習慣，反彈難免",
       "治安與站候環境若未同步改善，夜間搭乘意願仍低",
       "預算排擠其他熱門路線的班次密度"
     ],
-    "note": "移動正義。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-dpp-d5",
-    "city": "taipei",
-    "party": "dpp",
-    "category": "勞動",
-    "status": "立院提案",
-    "text": "要求移工與基層勞工權益諮詢布建。",
-    "simple": "移工勞工諮詢服務要加强。",
     "pros": [
       "移工與基層勞工諮詢據點可降低言語與資訊障礙",
       "一站式服務有助申訴職災、薪資與仲介糾紛",
@@ -346,24 +275,21 @@ const CITY_POLICIES = [
       "多元語言服務體現城市包容與人權",
       "減少因求助無門而衍生的社會事件"
     ],
-    "oppose": [
+    "cons": [
       "據點若人力不足，排隊與轉介仍慢",
       "權限多在中央勞動法令，市府能做的有限",
       "部分雇主與社區對移工設施抱持鄰避態度",
       "服務重複設置可能與既有NGO重疊、效率低",
       "宣導不足時目標群體不知道據點存在"
     ],
-    "note": "勞動監督。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-dpp-d6",
-    "city": "taipei",
-    "party": "dpp",
-    "category": "教育",
-    "status": "立院提案",
-    "text": "要求通學安全與老舊校舍改善。",
-    "simple": "通學安全與校舍改善。",
     "pros": [
       "通學步道與行人環境改善可降低學童事故",
       "老舊校舍耐震補強直接關係孩子安全",
@@ -371,24 +297,20 @@ const CITY_POLICIES = [
       "可結合人本交通與校園周邊人車分道",
       "公開危樓清冊與工期有助監督進度"
     ],
-    "oppose": [
+    "cons": [
       "校舍工程擾學、工期常跨學年",
       "預算龐大，優先順序易起爭議",
       "通學安全牽涉私人汽機車與違停，執法難持續",
       "部分學校用地狹小，工程選項有限",
       "中央補助與市配合款時程不一，進度不均"
     ],
-    "note": "教育設施。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.gov.taipei/News_Content.aspx?n=2044902FC839D045&s=F246A40683F6559C",
+      "https://www.taiwannews.com.tw/ch/news/4789012"
+    ]
   },
   {
     "id": "tpe-dpp-d7",
-    "city": "taipei",
-    "party": "dpp",
-    "category": "青年",
-    "status": "立院提案",
-    "text": "要求青年就業媒合成果公布。",
-    "simple": "青年就業媒合成績公開。",
     "pros": [
       "青年就業媒合成果公開可檢驗活動是否有實質就業",
       "數據可引導補助與產學合作方向",
@@ -396,24 +318,21 @@ const CITY_POLICIES = [
       "青年可比較各方案成效再參與",
       "提高市政問責，減少空轉資源"
     ],
-    "oppose": [
+    "cons": [
       "就業受景氣與產業結構影響，難全歸功市府",
       "公開指標若設計不佳，易鼓勵「湊數字」",
       "個資與企業意願限制細緻揭露",
       "媒合成功定義不一，統計口徑爭議",
       "資源可能偏向都會核心，偏區青年受惠少"
     ],
-    "note": "青年就業。",
-    "yearHint": "2021–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-dpp-d8",
-    "city": "taipei",
-    "party": "dpp",
-    "category": "廉政",
-    "status": "立院提案",
-    "text": "要求標案與都更程序資訊公開。",
-    "simple": "標案都更程序公開。",
     "pros": [
       "標案與都更程序公開可降低圖利與資訊不對稱",
       "住戶與市民較能參與都更條件討論",
@@ -421,24 +340,21 @@ const CITY_POLICIES = [
       "提高投資人與實施者信任，長期利於都更量能",
       "對齊開放政府趨勢，減少黑箱傳聞"
     ],
-    "oppose": [
+    "cons": [
       "商業機密與談判策略公開範圍難拿捏",
       "程序公開不保證實質公平，弱勢住戶仍可能被邊緣",
       "文件量大，一般人難以消化",
       "可能拉長時程，反而延宕危老重建",
       "政治化解讀標案細節，影響行政效率"
     ],
-    "note": "程序透明。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-tpp-t1",
-    "city": "taipei",
-    "party": "tpp",
-    "category": "廉政",
-    "status": "競選政見",
-    "text": "主張市政透明與重大工程說明會前置。",
-    "simple": "大工程先說明會，過程透明。",
     "pros": [
       "重大工程前置說明會可降低資訊落差與事後抗爭",
       "透明決策提升市政信任，尤其在都更與軌道案",
@@ -446,24 +362,21 @@ const CITY_POLICIES = [
       "減少「宣布後才知道」的突襲感",
       "會議紀錄公開有助後續究責"
     ],
-    "oppose": [
+    "cons": [
       "說明會若流於形式，反成橡皮圖章",
       "多次會議拉長工期與成本",
       "參與者可能以鄰近利害關係人為主，代表性不足",
       "技術複雜案一般市民難有效監督",
       "過度程序化可能讓急需工程無法即時上路"
     ],
-    "note": "透明治理。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-tpp-t2",
-    "city": "taipei",
-    "party": "tpp",
-    "category": "財政",
-    "status": "立院提案",
-    "text": "主張刪減效益不足活動與建設預算。",
-    "simple": "沒效益的活動建設預算要刪。",
     "pros": [
       "刪減效益不足活動與建設，可把錢留給社宅、托育與路平",
       "強制成本效益評估可抑制大拜拜式預算",
@@ -471,24 +384,21 @@ const CITY_POLICIES = [
       "公開刪減理由可提升預算辯論品質",
       "對長期虧損或低使用率設施形成壓力"
     ],
-    "oppose": [
+    "cons": [
       "「效益」定義常政治化，文化、體育活動難量化",
       "刪減過頭可能傷害基層活動與社區連結",
       "評估本身耗時耗錢，小額計畫不划算",
       "短期刪減或犧牲長期必要維護",
       "府會對立下刪減易淪為政治籌碼"
     ],
-    "note": "預算監督。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-tpp-t3",
-    "city": "taipei",
-    "party": "tpp",
-    "category": "住宅",
-    "status": "競選政見",
-    "text": "主張精準租金補貼與社宅公平性檢討。",
-    "simple": "租金補助精準、社宅抽籤公平。",
     "pros": [
       "精準租金補貼可把資源給真正租屋壓力大的家戶",
       "社宅抽籤與資格公平性檢討可減少特權與資訊黑箱疑慮",
@@ -496,24 +406,21 @@ const CITY_POLICIES = [
       "青年與弱勢分軌設計可兼顧不同需求",
       "公開中籤與候補資訊提高程序正義感"
     ],
-    "oppose": [
+    "cons": [
       "精準化提高行政門檻，弱勢可能因證明文件被排除",
       "資產調查侵犯隱私的批評",
       "抽籤再公平也無法解決供給不足",
       "補貼可能部分轉嫁為房東漲租",
       "頻繁改規則讓申請人無所適從"
     ],
-    "note": "居住正義。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://news.ltn.com.tw/news/politics/breakingnews/5399220",
+      "https://www.house91.tw/news/1763097305",
+      "https://www.gov.taipei/News_Content.aspx?n=2044902FC839D045&s=F246A40683F6559C"
+    ]
   },
   {
     "id": "tpe-tpp-t4",
-    "city": "taipei",
-    "party": "tpp",
-    "category": "交通",
-    "status": "競選政見",
-    "text": "主張準點率與運具資訊公開整合。",
-    "simple": "公車捷運準點與資訊整合公開。",
     "pros": [
       "準點率與運具資訊公開整合，方便規劃轉乘",
       "數據透明可迫使業者改善班次與調度",
@@ -521,24 +428,21 @@ const CITY_POLICIES = [
       "TPASS 使用者可比較各路線實際表現",
       "事故與延誤即時通報降低乘客焦慮"
     ],
-    "oppose": [
+    "cons": [
       "塞車與事故導致準點率波動大，數字易被誤解",
       "系統整合成本高，舊系統介接困難",
       "過度公開可能引發對單一業者的獵巫",
       "偏區路線先天準點差，公開後更難維持班次",
       "資訊正確性需持續維運，否則信任反降"
     ],
-    "note": "交通資訊。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-tpp-t5",
-    "city": "taipei",
-    "party": "tpp",
-    "category": "青年",
-    "status": "競選政見",
-    "text": "主張青年創業與租屋支持套案。",
-    "simple": "青年創業加租屋支持。",
     "pros": [
       "青年創業與租屋支持套案同時處理「低薪＋高房租」痛點",
       "一站式輔導降低申請成本",
@@ -546,24 +450,21 @@ const CITY_POLICIES = [
       "公開成果有助複製成功模式",
       "回應世代居住與就業焦慮"
     ],
-    "oppose": [
+    "cons": [
       "創業成功率本來就低，政府補助易被批風險外部化",
       "租屋補貼治標不治本，供給不足仍在",
       "資格門檻可能排除最需要的青年",
       "預算有限下覆蓋率不高、感受不均",
       "與中央方案重疊，協調不佳則窗口混亂"
     ],
-    "note": "青年政策。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-tpp-t6",
-    "city": "taipei",
-    "party": "tpp",
-    "category": "產業",
-    "status": "競選政見",
-    "text": "主張中小企業輔導優先於只服務大投資。",
-    "simple": "中小企業輔導不要只顧大廠。",
     "pros": [
       "中小企業占就業大宗，輔導優先可擴大受惠面",
       "避免資源過度集中在少數大型投資案",
@@ -571,24 +472,21 @@ const CITY_POLICIES = [
       "地方特色產業需要客製化而非只給大廠優惠",
       "就業穩定度往往優於大型招商的浮動承諾"
     ],
-    "oppose": [
+    "cons": [
       "中小企業數量龐大，輔導能量易被稀釋",
       "大投資案仍可能帶來較高稅收與指標性產業鏈",
       "申請書審若繁複，真正小店難申請",
       "效果難量化，容易變成撒胡椒粉",
       "產業結構問題非市府單點輔導可解"
     ],
-    "note": "中小企業。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-tpp-t7",
-    "city": "taipei",
-    "party": "tpp",
-    "category": "環境",
-    "status": "立院提案",
-    "text": "主張感測數據即時公開與申訴時限。",
-    "simple": "環境感測即時公開、申訴有時限。",
     "pros": [
       "環境感測即時公開讓市民自行避險與監督",
       "申訴時限可避免公文空轉",
@@ -596,24 +494,21 @@ const CITY_POLICIES = [
       "提高對空品、噪音與水質的日常感知",
       "接軌開放政府與智慧城市治理"
     ],
-    "oppose": [
+    "cons": [
       "感測誤差與維護成本常被低估",
       "即時公開可能引發不必要恐慌",
       "申訴時限過短導致調查不完整",
       "跨局處責任不清時時限成互相推諉",
       "硬體建置若無人力分析，數據堆積無行動"
     ],
-    "note": "環境數據。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tpe-tpp-t8",
-    "city": "taipei",
-    "party": "tpp",
-    "category": "其他",
-    "status": "競選政見",
-    "text": "主張參與式預算與里層級需求調查。",
-    "simple": "小額預算讓市民參與決定。",
     "pros": [
       "參與式預算讓市民決定小額公共投資，提升地方歸屬",
       "里層級需求調查可補足由上而下規劃盲點",
@@ -621,24 +516,21 @@ const CITY_POLICIES = [
       "小額但可見的改善提高政策信任",
       "過程公開有助抑制里長與特定團體壟斷"
     ],
-    "oppose": [
+    "cons": [
       "參與率往往偏低，代表性受質疑",
       "小額預算難解結構性問題如房價與軌道",
       "提案競爭可能加劇社區對立",
       "行政作業成本相對金額偏高",
       "若審查不透明，仍被批政治酬庸"
     ],
-    "note": "參與式治理。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-kmt-mrt",
-    "city": "newtaipei",
-    "party": "kmt",
-    "category": "交通",
-    "status": "已推動",
-    "text": "多條捷運通車與淡江大橋等跨河工程推進。",
-    "simple": "捷運通車與跨河大橋建設。",
     "pros": [
       "環狀線、淡海輕軌等通車改善跨區通勤，減輕橋樑與平面道路壓力",
       "淡江大橋等跨河工程可分流關渡、重陽橋車潮",
@@ -646,24 +538,20 @@ const CITY_POLICIES = [
       "公共運具提升可降低機車依賴與事故",
       "與北北基桃票證整合後轉乘成本下降"
     ],
-    "oppose": [
+    "cons": [
       "三鶯線等工程進度、經費與安全爭議常成質詢焦點",
       "輕軌運量與成本效益受質疑，長期虧損需補貼",
       "施工期間交通打結、地方反彈",
       "中央核定與用地取得拖延，承諾時程常跳票",
       "沿線房價上漲可能排擠原居民"
     ],
-    "note": "侯市府軌道路橋。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.ntpc.gov.tw/ch/home.jsp?id=e8ca970cde5c00e1&dataserno=7cdd15f3363802e012f7e6d60b137769",
+      "https://udn.com/news/story/7323/9005829"
+    ]
   },
   {
     "id": "ntp-kmt-care",
-    "city": "newtaipei",
-    "party": "kmt",
-    "category": "社福",
-    "status": "已推動",
-    "text": "公共托育與準公共化擴大。",
-    "simple": "托育更普及便宜。",
     "pros": [
       "公共托育與準公共化擴大，直接降低育兒現金與時間成本",
       "據點數增加縮短接送距離，利於雙薪家庭",
@@ -671,24 +559,20 @@ const CITY_POLICIES = [
       "費用透明與補助分層有助弱勢家庭",
       "被視為回應少子化的可檢驗政策工具"
     ],
-    "oppose": [
+    "cons": [
       "熱門行政區仍一位難求，偏區又使用率不均",
       "教保人力荒影響擴班速度與品質",
       "財政持續補貼壓力大",
       "準公共機構品質落差需加強稽核",
       "托育 alone 難扭轉整體生育率結構因素"
     ],
-    "note": "托育政策。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://udn.com/news/story/7323/9005829",
+      "https://www.ntpc.gov.tw/"
+    ]
   },
   {
     "id": "ntp-kmt-sh",
-    "city": "newtaipei",
-    "party": "kmt",
-    "category": "住宅",
-    "status": "已推動",
-    "text": "安居社宅與青年宅擴大供給。",
-    "simple": "社宅青年宅增加。",
     "pros": [
       "安居社宅與青年宅擴大供給，回應人口最多縣市的居住壓力",
       "提高婚育戶保留比例，連結少子化對策",
@@ -696,24 +580,20 @@ const CITY_POLICIES = [
       "多元取得（興建、容獎回饋、包租）可加快戶數",
       "租金相對市價低，現金壓力立即減輕"
     ],
-    "oppose": [
+    "cons": [
       "需求仍遠大於供給，排隊與抽籤競爭激烈",
       "部分基地鄰避與交通配套不足",
       "興建成本上漲影響戶數與完工時程",
       "申請資格與弱勢比例調整易引發公平爭議",
       "沿線房價可能被建設題材推升"
     ],
-    "note": "安居政策。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/202604070150.aspx",
+      "https://www.ntpc.gov.tw/"
+    ]
   },
   {
     "id": "ntp-kmt-fraud",
-    "city": "newtaipei",
-    "party": "kmt",
-    "category": "治安",
-    "status": "已推動",
-    "text": "防詐與科技辦案強化。",
-    "simple": "打詐騙科技辦案。",
     "pros": [
       "防詐與科技辦案可降低高齡被害與網購詐騙",
       "熱點預警與阻詐機制減少匯款當下受害",
@@ -721,24 +601,21 @@ const CITY_POLICIES = [
       "公開破案與宣導數據可檢視成效",
       "提升城市安全感，尤其夜間與網路交易"
     ],
-    "oppose": [
+    "cons": [
       "詐欺集團跨境作案，市府權限有限",
       "科技設備與專案人力成本高",
       "宣導成效難量化，被害金額仍可能波動",
       "個資與監控尺度需平衡",
       "若司法與電信端未同步，前端防詐易破功"
     ],
-    "note": "防詐。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-kmt-env1",
-    "city": "newtaipei",
-    "party": "kmt",
-    "category": "環境",
-    "status": "已推動",
-    "text": "空品或河川水質改善與稽查。",
-    "simple": "空氣或河水品質改善。",
     "pros": [
       "河川整治與空品稽查改善沿岸與工業周邊生活品質",
       "感測與公開可定位污染熱點",
@@ -746,24 +623,21 @@ const CITY_POLICIES = [
       "水岸遊憩與生態復育兼顧",
       "跨區流域治理若強化，可降低下游風險"
     ],
-    "oppose": [
+    "cons": [
       "工業與營建揚塵、移動源占比高，單點稽查不夠",
       "跨縣市污染傳輸使數據解讀爭議",
       "嚴格執法與地方就業的兩難",
       "工程整治預算大、工期長",
       "市民感受受季節與風向影響，政策無感"
     ],
-    "note": "環境治理。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-kmt-social1",
-    "city": "newtaipei",
-    "party": "kmt",
-    "category": "社福",
-    "status": "已推動",
-    "text": "托育或長照據點布建擴大。",
-    "simple": "托育長照據點更多。",
     "pros": [
       "托育與長照據點同步擴大，因應人口結構壓力",
       "社區式服務支持在地老化",
@@ -771,24 +645,20 @@ const CITY_POLICIES = [
       "與社宅、活動中心共構提高使用率",
       "公開據點地圖有助可近性"
     ],
-    "oppose": [
+    "cons": [
       "人力薪資與班表壓力使服務不穩",
       "行政區分配不均",
       "長照需求成長快於據點開設",
       "品質稽核不足時易出事故風險",
       "財政永續性受質疑"
     ],
-    "note": "社福布建。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://udn.com/news/story/7323/9005829",
+      "https://www.ntpc.gov.tw/"
+    ]
   },
   {
     "id": "ntp-kmt-safe1",
-    "city": "newtaipei",
-    "party": "kmt",
-    "category": "治安",
-    "status": "已推動",
-    "text": "防詐宣導與科技執法強化。",
-    "simple": "防詐與科技執法。",
     "pros": [
       "防詐宣導與科技執法雙軌，兼顧預防與查緝",
       "提高見警率與科技監視可抑止街頭犯罪",
@@ -796,24 +666,21 @@ const CITY_POLICIES = [
       "跨局合作處理毒品與詐欺",
       "公開治安指標強化問責"
     ],
-    "oppose": [
+    "cons": [
       "科技執法不代表整體治安結構改善",
       "監視器引發隱私爭議",
       "基層警力負荷與過勞問題仍在",
       "跨域案件需中央協力",
       "數字美化疑慮影響公信"
     ],
-    "note": "治安防詐。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-kmt-flood1",
-    "city": "newtaipei",
-    "party": "kmt",
-    "category": "治水",
-    "status": "已推動",
-    "text": "排水清疏與抽水站效能提升。",
-    "simple": "排水抽水更強降淹水。",
     "pros": [
       "抽水站與排水清疏針對易淹行政區可快速見效",
       "流域整治降低暴雨積水",
@@ -821,24 +688,21 @@ const CITY_POLICIES = [
       "與都市計畫出流管制連動較具系統性",
       "災後復原成本可長期下降"
     ],
-    "oppose": [
+    "cons": [
       "極端雨量挑戰既有保護標準",
       "施工擾民與工期爭議",
       "上下游權責切分困難",
       "私人排水與違建影響整體成效",
       "預算排擠其他民生建設"
     ],
-    "note": "治水。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-dpp-d1",
-    "city": "newtaipei",
-    "party": "dpp",
-    "category": "社福",
-    "status": "立院提案",
-    "text": "議會要求社福預算占比與據點服務公開。",
-    "simple": "社福預算與服務要公開可查。",
     "pros": [
       "新北市社福預算與據點服務公開，可檢驗資源是否真正到托育、長照與弱勢家戶",
       "各行政區數據並陳有助發現服務落差、推動重分配",
@@ -846,24 +710,21 @@ const CITY_POLICIES = [
       "減少大拜拜活動排擠實質照顧服務的空間",
       "提高申辦流程透明度，降低「不知道如何申請」的門檻"
     ],
-    "oppose": [
+    "cons": [
       "過度聚焦預算占比數字，可能忽略服務品質與成果",
       "報表格式若艱澀，一般市民仍難監督",
       "第一線可能忙於填表，排擠直接服務時間",
       "數據易被選擇性解讀，淪為政治攻防素材",
       "公開本身不自動解決人力荒與排隊問題"
     ],
-    "note": "議會社福監督。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-dpp-d2",
-    "city": "newtaipei",
-    "party": "dpp",
-    "category": "環境",
-    "status": "立院提案",
-    "text": "要求污染源稽查期限與數據公開。",
-    "simple": "污染稽查有期限資料公開。",
     "pros": [
       "新北市污染源稽查設期限，可避免案件久拖與執法空轉",
       "數據公開提高空品、水質與噪音治理的社會信任",
@@ -871,24 +732,21 @@ const CITY_POLICIES = [
       "公民可依公開資料參與監督熱點",
       "對違法排放形成嚇阻，守護周邊居民健康"
     ],
-    "oppose": [
+    "cons": [
       "期限過短可能使檢查流於形式、深度不足",
       "跨域與移動污染源非單一市府期限能完全處理",
       "業者主張程序過嚴影響營運與就業",
       "數據誤差或延遲公開反而傷害公信",
       "稽查人力不足時「有期限無能量」"
     ],
-    "note": "環境監督。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-dpp-d3",
-    "city": "newtaipei",
-    "party": "dpp",
-    "category": "住宅",
-    "status": "立院提案",
-    "text": "要求租金補貼與社宅進度透明。",
-    "simple": "租金補助社宅進度透明。",
     "pros": [
       "新北市租金補貼與社宅進度透明，可檢驗居住政策是否達標",
       "公開排隊、中籤與完工時程，減少黑箱傳聞",
@@ -896,24 +754,21 @@ const CITY_POLICIES = [
       "申請人可依資訊規劃居住選項",
       "避免只喊戶數目標、不公布進度的空轉"
     ],
-    "oppose": [
+    "cons": [
       "進度延宕公開後易被政治化，影響行政士氣",
       "個資與財務細節公開範圍難拿捏",
       "透明不直接增加供給戶數",
       "頻繁報告占用行政能量",
       "統計口徑不一造成各說各話"
     ],
-    "note": "居住監督。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-dpp-d4",
-    "city": "newtaipei",
-    "party": "dpp",
-    "category": "交通",
-    "status": "立院提案",
-    "text": "要求偏區或夜間運能改善。",
-    "simple": "偏區夜間公車運能改善。",
     "pros": [
       "新北市偏區與夜間運能改善，落實移動正義",
       "夜班、醫療與服務業通勤者高度依賴離峰運具",
@@ -921,24 +776,21 @@ const CITY_POLICIES = [
       "公開載客率有助精準調班",
       "高齡與行動不便者夜間出行更有保障"
     ],
-    "oppose": [
+    "cons": [
       "離峰載客率低，擴大運能增加虧損與補貼",
       "司機工時與行車安全需嚴格配套",
       "路線調整牽動既有乘客習慣",
       "候車環境與治安若未改善，夜間搭乘意願仍低",
       "預算可能排擠尖峰熱門路線班次"
     ],
-    "note": "移動正義。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-dpp-d5",
-    "city": "newtaipei",
-    "party": "dpp",
-    "category": "勞動",
-    "status": "立院提案",
-    "text": "要求移工與基層勞工權益諮詢布建。",
-    "simple": "移工勞工諮詢服務要加强。",
     "pros": [
       "新北市移工與基層勞工諮詢據點可降低語言與資訊障礙",
       "一站式處理薪資、職災與仲介糾紛更有效率",
@@ -946,24 +798,21 @@ const CITY_POLICIES = [
       "多元語言服務體現城市包容",
       "減少求助無門衍生的衝突與社會成本"
     ],
-    "oppose": [
+    "cons": [
       "據點人力不足時排隊與轉介仍慢",
       "勞動法令主軸在中央，市府權限有限",
       "部分社區對移工服務設施抱持鄰避",
       "與既有民間單位重疊可能造成資源分散",
       "宣導不足時目標群體不知道據點"
     ],
-    "note": "勞動監督。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-dpp-d6",
-    "city": "newtaipei",
-    "party": "dpp",
-    "category": "教育",
-    "status": "立院提案",
-    "text": "要求通學安全與老舊校舍改善。",
-    "simple": "通學安全與校舍改善。",
     "pros": [
       "新北市通學安全與老舊校舍改善直接關係孩子安全",
       "行人環境與人車分道可降低學童事故",
@@ -971,24 +820,21 @@ const CITY_POLICIES = [
       "家長與社區支持度高，政策正當性強",
       "公開危樓清冊與工期便於監督"
     ],
-    "oppose": [
+    "cons": [
       "工程擾學、工期常跨學年影響教學",
       "預算龐大，優先順序易起爭議",
       "通學違停與汽機車文化需持續執法",
       "校地狹小限制工程方案",
       "中央補助與地方配合款時程不一"
     ],
-    "note": "教育設施。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-dpp-d7",
-    "city": "newtaipei",
-    "party": "dpp",
-    "category": "青年",
-    "status": "立院提案",
-    "text": "要求青年就業媒合成果公布。",
-    "simple": "青年就業媒合成績公開。",
     "pros": [
       "新北市青年就業媒合成果公開，可檢驗是否有實質就業而非只辦活動",
       "數據可導引產學合作與補助方向",
@@ -996,24 +842,21 @@ const CITY_POLICIES = [
       "青年可比較方案成效再參與",
       "提高市政問責與世代政策可信度"
     ],
-    "oppose": [
+    "cons": [
       "就業受景氣與產業結構影響，難全歸市政",
       "指標設計不佳易鼓勵湊數字",
       "個資與企業意願限制細緻揭露",
       "「媒合成功」口徑易爭議",
       "資源可能偏向核心都會，邊緣青年受惠少"
     ],
-    "note": "青年就業。",
-    "yearHint": "2021–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-dpp-d8",
-    "city": "newtaipei",
-    "party": "dpp",
-    "category": "廉政",
-    "status": "立院提案",
-    "text": "要求標案與都更程序資訊公開。",
-    "simple": "標案都更程序公開。",
     "pros": [
       "新北市標案與都更程序資訊公開，可降低圖利與資訊不對稱",
       "住戶較能參與都更條件討論",
@@ -1021,24 +864,21 @@ const CITY_POLICIES = [
       "提高實施者與投資人長期信任",
       "對齊開放政府，減少黑箱傳聞"
     ],
-    "oppose": [
+    "cons": [
       "商業機密與談判策略公開範圍難界定",
       "程序公開不保證弱勢住戶實質對等",
       "文件量大一般人難消化",
       "可能拉長時程，延宕危老重建",
       "細節易被政治化解讀影響效率"
     ],
-    "note": "程序透明。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-tpp-t1",
-    "city": "newtaipei",
-    "party": "tpp",
-    "category": "廉政",
-    "status": "競選政見",
-    "text": "主張市政透明與重大工程說明會前置。",
-    "simple": "大工程先說明會，過程透明。",
     "pros": [
       "新北市重大工程前置說明會，可降低資訊落差與事後抗爭",
       "透明決策提升市政信任",
@@ -1046,24 +886,21 @@ const CITY_POLICIES = [
       "減少宣布後才知情的突襲感",
       "會議紀錄公開有助後續究責"
     ],
-    "oppose": [
+    "cons": [
       "說明會若流於形式，反成程序招牌",
       "多次會議拉長工期與成本",
       "參與者以利害關係人為主，代表性不足",
       "技術複雜案一般市民難有效監督",
       "過度程序化可能耽误急需工程"
     ],
-    "note": "透明治理。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-tpp-t2",
-    "city": "newtaipei",
-    "party": "tpp",
-    "category": "財政",
-    "status": "立院提案",
-    "text": "主張刪減效益不足活動與建設預算。",
-    "simple": "沒效益的活動建設預算要刪。",
     "pros": [
       "新北市刪減效益不足活動與建設，可把資源留給托育、居住與交通",
       "成本效益評估抑制大拜拜式預算",
@@ -1071,24 +908,21 @@ const CITY_POLICIES = [
       "公開刪減理由提升預算辯論品質",
       "對低使用率設施形成改革壓力"
     ],
-    "oppose": [
+    "cons": [
       "效益定義常政治化，文化體育難量化",
       "刪減過頭傷害社區活動與基層連結",
       "評估成本對小額計畫可能不划算",
       "短期刪減或犧牲長期維護",
       "府會對立下易淪政治籌碼"
     ],
-    "note": "預算監督。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-tpp-t3",
-    "city": "newtaipei",
-    "party": "tpp",
-    "category": "住宅",
-    "status": "競選政見",
-    "text": "主張精準租金補貼與社宅公平性檢討。",
-    "simple": "租金補助精準、社宅抽籤公平。",
     "pros": [
       "新北市精準租金補貼可把資源給壓力最大的租屋家戶",
       "社宅抽籤與資格公平性檢討減少特權疑慮",
@@ -1096,24 +930,21 @@ const CITY_POLICIES = [
       "青年與弱勢分軌可兼顧不同需求",
       "公開中籤與候補資訊強化程序正義"
     ],
-    "oppose": [
+    "cons": [
       "精準化提高文件門檻，弱勢可能被排除",
       "資產調查引發隱私疑慮",
       "抽籤再公平也難解供給不足",
       "補貼可能部分轉嫁成漲租",
       "規則常改讓申請人無所適從"
     ],
-    "note": "居住正義。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-tpp-t4",
-    "city": "newtaipei",
-    "party": "tpp",
-    "category": "交通",
-    "status": "競選政見",
-    "text": "主張準點率與運具資訊公開整合。",
-    "simple": "公車捷運準點與資訊整合公開。",
     "pros": [
       "新北市公車捷運準點與運具資訊整合公開，方便轉乘規劃",
       "數據透明迫使業者改善調度",
@@ -1121,24 +952,21 @@ const CITY_POLICIES = [
       "月票使用者可比較路線表現",
       "延誤即時通報降低焦慮"
     ],
-    "oppose": [
+    "cons": [
       "塞車與事故使準點波動，數字易被誤解",
       "舊系統介接與整合成本高",
       "過度公開可能獵巫單一業者",
       "偏區路線先天準點差，公開後更難維持",
       "資訊錯誤會反噬信任"
     ],
-    "note": "交通資訊。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-tpp-t5",
-    "city": "newtaipei",
-    "party": "tpp",
-    "category": "青年",
-    "status": "競選政見",
-    "text": "主張青年創業與租屋支持套案。",
-    "simple": "青年創業加租屋支持。",
     "pros": [
       "新北市青年創業與租屋支持套案，同時處理低薪與高房租",
       "一站式降低申請成本",
@@ -1146,24 +974,21 @@ const CITY_POLICIES = [
       "公開成果便於複製",
       "直接回應世代焦慮"
     ],
-    "oppose": [
+    "cons": [
       "創業失敗率高，補助風險受質疑",
       "租屋補貼治標不治本",
       "資格門檻可能排除最需要者",
       "覆蓋率有限、感受不均",
       "與中央方案重疊造成窗口混亂"
     ],
-    "note": "青年政策。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-tpp-t6",
-    "city": "newtaipei",
-    "party": "tpp",
-    "category": "產業",
-    "status": "競選政見",
-    "text": "主張中小企業輔導優先於只服務大投資。",
-    "simple": "中小企業輔導不要只顧大廠。",
     "pros": [
       "新北市中小企業輔導優先，擴大就業受惠面",
       "避免資源只集中少數大型投資",
@@ -1171,24 +996,21 @@ const CITY_POLICIES = [
       "在地特色產業需要客製化支持",
       "穩定就業往往優於大型案的浮動承諾"
     ],
-    "oppose": [
+    "cons": [
       "中小企業數量多，輔導能量易稀釋",
       "大投資仍可能帶來較高稅收與指標鏈",
       "書審繁複時小店難申請",
       "效果難量化，易成胡椒粉式補助",
       "結構問題非單點輔導能解"
     ],
-    "note": "中小企業。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-tpp-t7",
-    "city": "newtaipei",
-    "party": "tpp",
-    "category": "環境",
-    "status": "立院提案",
-    "text": "主張感測數據即時公開與申訴時限。",
-    "simple": "環境感測即時公開、申訴有時限。",
     "pros": [
       "新北市環境感測即時公開，讓市民避險並監督",
       "申訴時限避免公文空轉",
@@ -1196,24 +1018,21 @@ const CITY_POLICIES = [
       "提高空品噪音水質的日常感知",
       "接軌開放政府與智慧治理"
     ],
-    "oppose": [
+    "cons": [
       "感測誤差與維護成本常被低估",
       "即時公開可能引發過度恐慌",
       "時限過短使調查不完整",
       "跨局責任不清時互相推諉",
       "有數據無人力分析則空轉"
     ],
-    "note": "環境數據。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "ntp-tpp-t8",
-    "city": "newtaipei",
-    "party": "tpp",
-    "category": "其他",
-    "status": "競選政見",
-    "text": "主張參與式預算與里層級需求調查。",
-    "simple": "小額預算讓市民參與決定。",
     "pros": [
       "新北市參與式預算讓市民決定小額公共投資，提升歸屬感",
       "里層級需求調查補足由上而下盲點",
@@ -1221,24 +1040,21 @@ const CITY_POLICIES = [
       "小而可見的改善提高信任",
       "過程公開抑制特定團體壟斷"
     ],
-    "oppose": [
+    "cons": [
       "參與率偏低時代表性受質疑",
       "小額難解房價軌道等結構問題",
       "提案競爭可能加劇社區對立",
       "行政成本相對金額偏高",
       "審查不透明仍被批酬庸"
     ],
-    "note": "參與式治理。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-kmt-aero",
-    "city": "taoyuan",
-    "party": "kmt",
-    "category": "產業",
-    "status": "已推動",
-    "text": "航空城特定區開發與配套交通。",
-    "simple": "機場旁產業與交通開發。",
     "pros": [
       "航空城特定區可帶動機場周邊產業、物流與就業",
       "聯外道路與捷運配套可改善國門門戶意象",
@@ -1246,24 +1062,21 @@ const CITY_POLICIES = [
       "長期稅收與人口紅利可支撐市政財源",
       "國際機場優勢是其他縣市難複製的競爭力"
     ],
-    "oppose": [
+    "cons": [
       "區段徵收與拆遷爭議長期未解，人權與補償受質疑",
       "開發時程反覆，居民生活在不確定中",
       "航噪與空污外部成本由沿線居民承擔",
       "若招商不如預期，恐成土地炒作與閒置",
       "交通配套若落後，開發後塞車更嚴重"
     ],
-    "note": "航空城。",
-    "yearHint": "2010s–2026"
+    "sources": [
+      "https://zh.wikipedia.org/zh-hant/%E6%A1%83%E5%9C%92%E8%88%AA%E7%A9%BA%E5%9F%8E",
+      "https://www.tycg.gov.tw/",
+      "https://www.cna.com.tw/news/aloc/"
+    ]
   },
   {
     "id": "tyn-kmt-ai",
-    "city": "taoyuan",
-    "party": "kmt",
-    "category": "產業",
-    "status": "已推動",
-    "text": "AI 半導體供應鏈招商。",
-    "simple": "AI 半導體招商。",
     "pros": [
       "AI 與半導體供應鏈招商可創造高薪職缺",
       "產業聚落帶動周邊中小企業訂單",
@@ -1271,24 +1084,21 @@ const CITY_POLICIES = [
       "稅收與就業有助青年留鄉",
       "與國際供應鏈連結提升城市能見度"
     ],
-    "oppose": [
+    "cons": [
       "用水用電與土地負荷大，排擠民生與農業",
       "房價租金上漲加速，居住正義壓力升高",
       "職缺技能門檻高，在地勞工未必直接受惠",
       "環境與空污疑慮引發社區反彈",
       "過度依賴單一產業鏈風險高"
     ],
-    "note": "科技招商。",
-    "yearHint": "2023–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-kmt-green",
-    "city": "taoyuan",
-    "party": "kmt",
-    "category": "交通",
-    "status": "已推動",
-    "text": "捷運綠線等軌道推進。",
-    "simple": "捷運綠線建設。",
     "pros": [
       "捷運綠線可串聯航空城、都會區與重大開發，降低公路依賴",
       "通車後預期縮短跨區通勤時間",
@@ -1296,24 +1106,20 @@ const CITY_POLICIES = [
       "轉乘機場捷運可強化國門聯外",
       "長期減碳與空品效益可期"
     ],
-    "oppose": [
+    "cons": [
       "工期與經費常超支，進度受用地與工程技術影響",
       "施工期嚴重衝擊沿線交通與商家",
       "運量與財務計畫若樂觀，通車後虧損風險",
       "站區都更與房價上漲爭議",
       "與公車路網整合不足時轉乘仍不便"
     ],
-    "note": "桃園捷運。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.tymetro.com.tw/",
+      "https://www.tycg.gov.tw/"
+    ]
   },
   {
     "id": "tyn-kmt-yh",
-    "city": "taoyuan",
-    "party": "kmt",
-    "category": "住宅",
-    "status": "已推動",
-    "text": "青年宅結合產業安居。",
-    "simple": "青年宅搭配就業。",
     "pros": [
       "青年宅結合產業安居，可同時回應高房價與就業",
       "靠近園區或捷運站可縮短通勤",
@@ -1321,24 +1127,21 @@ const CITY_POLICIES = [
       "有助留住半導體與航太人才",
       "申請機制公開可減少特權質疑"
     ],
-    "oppose": [
+    "cons": [
       "戶數有限，中籤率低",
       "產業綁約或資格限制被批彈性不足",
       "周邊機能與學區若不足，入住意願受影響",
       "可能推升基地周邊行情",
       "與社宅、租金補貼政策需整合以免疊床架屋"
     ],
-    "note": "安居。",
-    "yearHint": "2023–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-kmt-env1",
-    "city": "taoyuan",
-    "party": "kmt",
-    "category": "環境",
-    "status": "已推動",
-    "text": "空品或河川水質改善與稽查。",
-    "simple": "空氣或河水品質改善。",
     "pros": [
       "工業與航噪周邊的空品、水質改善直接關係居民健康",
       "稽查公開可降低黑工廠與違法排放",
@@ -1346,24 +1149,21 @@ const CITY_POLICIES = [
       "接軌淨零有助綠供應鏈招商",
       "感測布建提高預警能力"
     ],
-    "oppose": [
+    "cons": [
       "航空與工業活動本質排放難完全消除",
       "執法與地方就業的拉扯",
       "跨局處與中央權責交錯",
       "數據解讀爭議影響信任",
       "工程與稽查預算排擠其他建設"
     ],
-    "note": "環境治理。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-kmt-social1",
-    "city": "taoyuan",
-    "party": "kmt",
-    "category": "社福",
-    "status": "已推動",
-    "text": "托育或長照據點布建擴大。",
-    "simple": "托育長照據點更多。",
     "pros": [
       "人口快速成長城市更需托育長照據點",
       "據點普及降低雙薪與移工家庭負擔",
@@ -1371,24 +1171,21 @@ const CITY_POLICIES = [
       "社區長照支持在地老化",
       "公開服務量能便於監督"
     ],
-    "oppose": [
+    "cons": [
       "人口成長快於布建速度",
       "人力不足影響服務時間",
       "新舊行政區資源落差",
       "財政壓力隨服務擴大而上升",
       "品質監管若跟不上擴張易出包"
     ],
-    "note": "社福布建。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-kmt-safe1",
-    "city": "taoyuan",
-    "party": "kmt",
-    "category": "治安",
-    "status": "已推動",
-    "text": "防詐宣導與科技執法強化。",
-    "simple": "防詐與科技執法。",
     "pros": [
       "移工與產業人口多，防詐與科技執法可維穩社會秩序",
       "科技設備提升辦案效率",
@@ -1396,24 +1193,21 @@ const CITY_POLICIES = [
       "工業區與商圈熱點執法",
       "公開數據強化問責"
     ],
-    "oppose": [
+    "cons": [
       "跨境詐欺與人口販運非市府能獨力處理",
       "監控與人權平衡爭議",
       "基層警力配置是否跟上人口成長存疑",
       "宣導疲勞效應",
       "成本與成效歸因困難"
     ],
-    "note": "治安防詐。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-kmt-flood1",
-    "city": "taoyuan",
-    "party": "kmt",
-    "category": "治水",
-    "status": "已推動",
-    "text": "排水清疏與抽水站效能提升。",
-    "simple": "排水抽水更強降淹水。",
     "pros": [
       "桃園部分行政區地勢與排水老舊，抽水清疏可降災",
       "工業區與新開發區出流管制必要",
@@ -1421,24 +1215,21 @@ const CITY_POLICIES = [
       "與航空城開發同步治水可避免邊開發邊淹",
       "長期減少農損與產線中斷"
     ],
-    "oppose": [
+    "cons": [
       "開發速度若快於排水建設，淹水風險上升",
       "工程用地與居民協調難",
       "極端降雨挑戰標準",
       "跨流域協調不足",
       "預算龐大且成效期待管理難"
     ],
-    "note": "治水。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-dpp-d1",
-    "city": "taoyuan",
-    "party": "dpp",
-    "category": "社福",
-    "status": "立院提案",
-    "text": "議會要求社福預算占比與據點服務公開。",
-    "simple": "社福預算與服務要公開可查。",
     "pros": [
       "桃園市社福預算與據點服務公開，可檢驗資源是否真正到托育、長照與弱勢家戶",
       "各行政區數據並陳有助發現服務落差、推動重分配",
@@ -1446,24 +1237,21 @@ const CITY_POLICIES = [
       "減少大拜拜活動排擠實質照顧服務的空間",
       "提高申辦流程透明度，降低「不知道如何申請」的門檻"
     ],
-    "oppose": [
+    "cons": [
       "過度聚焦預算占比數字，可能忽略服務品質與成果",
       "報表格式若艱澀，一般市民仍難監督",
       "第一線可能忙於填表，排擠直接服務時間",
       "數據易被選擇性解讀，淪為政治攻防素材",
       "公開本身不自動解決人力荒與排隊問題"
     ],
-    "note": "議會社福監督。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-dpp-d2",
-    "city": "taoyuan",
-    "party": "dpp",
-    "category": "環境",
-    "status": "立院提案",
-    "text": "要求污染源稽查期限與數據公開。",
-    "simple": "污染稽查有期限資料公開。",
     "pros": [
       "桃園市污染源稽查設期限，可避免案件久拖與執法空轉",
       "數據公開提高空品、水質與噪音治理的社會信任",
@@ -1471,24 +1259,21 @@ const CITY_POLICIES = [
       "公民可依公開資料參與監督熱點",
       "對違法排放形成嚇阻，守護周邊居民健康"
     ],
-    "oppose": [
+    "cons": [
       "期限過短可能使檢查流於形式、深度不足",
       "跨域與移動污染源非單一市府期限能完全處理",
       "業者主張程序過嚴影響營運與就業",
       "數據誤差或延遲公開反而傷害公信",
       "稽查人力不足時「有期限無能量」"
     ],
-    "note": "環境監督。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-dpp-d3",
-    "city": "taoyuan",
-    "party": "dpp",
-    "category": "住宅",
-    "status": "立院提案",
-    "text": "要求租金補貼與社宅進度透明。",
-    "simple": "租金補助社宅進度透明。",
     "pros": [
       "桃園市租金補貼與社宅進度透明，可檢驗居住政策是否達標",
       "公開排隊、中籤與完工時程，減少黑箱傳聞",
@@ -1496,24 +1281,21 @@ const CITY_POLICIES = [
       "申請人可依資訊規劃居住選項",
       "避免只喊戶數目標、不公布進度的空轉"
     ],
-    "oppose": [
+    "cons": [
       "進度延宕公開後易被政治化，影響行政士氣",
       "個資與財務細節公開範圍難拿捏",
       "透明不直接增加供給戶數",
       "頻繁報告占用行政能量",
       "統計口徑不一造成各說各話"
     ],
-    "note": "居住監督。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-dpp-d4",
-    "city": "taoyuan",
-    "party": "dpp",
-    "category": "交通",
-    "status": "立院提案",
-    "text": "要求偏區或夜間運能改善。",
-    "simple": "偏區夜間公車運能改善。",
     "pros": [
       "桃園市偏區與夜間運能改善，落實移動正義",
       "夜班、醫療與服務業通勤者高度依賴離峰運具",
@@ -1521,24 +1303,21 @@ const CITY_POLICIES = [
       "公開載客率有助精準調班",
       "高齡與行動不便者夜間出行更有保障"
     ],
-    "oppose": [
+    "cons": [
       "離峰載客率低，擴大運能增加虧損與補貼",
       "司機工時與行車安全需嚴格配套",
       "路線調整牽動既有乘客習慣",
       "候車環境與治安若未改善，夜間搭乘意願仍低",
       "預算可能排擠尖峰熱門路線班次"
     ],
-    "note": "移動正義。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-dpp-d5",
-    "city": "taoyuan",
-    "party": "dpp",
-    "category": "勞動",
-    "status": "立院提案",
-    "text": "要求移工與基層勞工權益諮詢布建。",
-    "simple": "移工勞工諮詢服務要加强。",
     "pros": [
       "桃園市移工與基層勞工諮詢據點可降低語言與資訊障礙",
       "一站式處理薪資、職災與仲介糾紛更有效率",
@@ -1546,24 +1325,21 @@ const CITY_POLICIES = [
       "多元語言服務體現城市包容",
       "減少求助無門衍生的衝突與社會成本"
     ],
-    "oppose": [
+    "cons": [
       "據點人力不足時排隊與轉介仍慢",
       "勞動法令主軸在中央，市府權限有限",
       "部分社區對移工服務設施抱持鄰避",
       "與既有民間單位重疊可能造成資源分散",
       "宣導不足時目標群體不知道據點"
     ],
-    "note": "勞動監督。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-dpp-d6",
-    "city": "taoyuan",
-    "party": "dpp",
-    "category": "教育",
-    "status": "立院提案",
-    "text": "要求通學安全與老舊校舍改善。",
-    "simple": "通學安全與校舍改善。",
     "pros": [
       "桃園市通學安全與老舊校舍改善直接關係孩子安全",
       "行人環境與人車分道可降低學童事故",
@@ -1571,24 +1347,21 @@ const CITY_POLICIES = [
       "家長與社區支持度高，政策正當性強",
       "公開危樓清冊與工期便於監督"
     ],
-    "oppose": [
+    "cons": [
       "工程擾學、工期常跨學年影響教學",
       "預算龐大，優先順序易起爭議",
       "通學違停與汽機車文化需持續執法",
       "校地狹小限制工程方案",
       "中央補助與地方配合款時程不一"
     ],
-    "note": "教育設施。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-dpp-d7",
-    "city": "taoyuan",
-    "party": "dpp",
-    "category": "青年",
-    "status": "立院提案",
-    "text": "要求青年就業媒合成果公布。",
-    "simple": "青年就業媒合成績公開。",
     "pros": [
       "桃園市青年就業媒合成果公開，可檢驗是否有實質就業而非只辦活動",
       "數據可導引產學合作與補助方向",
@@ -1596,24 +1369,21 @@ const CITY_POLICIES = [
       "青年可比較方案成效再參與",
       "提高市政問責與世代政策可信度"
     ],
-    "oppose": [
+    "cons": [
       "就業受景氣與產業結構影響，難全歸市政",
       "指標設計不佳易鼓勵湊數字",
       "個資與企業意願限制細緻揭露",
       "「媒合成功」口徑易爭議",
       "資源可能偏向核心都會，邊緣青年受惠少"
     ],
-    "note": "青年就業。",
-    "yearHint": "2021–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-dpp-d8",
-    "city": "taoyuan",
-    "party": "dpp",
-    "category": "廉政",
-    "status": "立院提案",
-    "text": "要求標案與都更程序資訊公開。",
-    "simple": "標案都更程序公開。",
     "pros": [
       "桃園市標案與都更程序資訊公開，可降低圖利與資訊不對稱",
       "住戶較能參與都更條件討論",
@@ -1621,24 +1391,21 @@ const CITY_POLICIES = [
       "提高實施者與投資人長期信任",
       "對齊開放政府，減少黑箱傳聞"
     ],
-    "oppose": [
+    "cons": [
       "商業機密與談判策略公開範圍難界定",
       "程序公開不保證弱勢住戶實質對等",
       "文件量大一般人難消化",
       "可能拉長時程，延宕危老重建",
       "細節易被政治化解讀影響效率"
     ],
-    "note": "程序透明。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-tpp-t1",
-    "city": "taoyuan",
-    "party": "tpp",
-    "category": "廉政",
-    "status": "競選政見",
-    "text": "主張市政透明與重大工程說明會前置。",
-    "simple": "大工程先說明會，過程透明。",
     "pros": [
       "桃園市重大工程前置說明會，可降低資訊落差與事後抗爭",
       "透明決策提升市政信任",
@@ -1646,24 +1413,21 @@ const CITY_POLICIES = [
       "減少宣布後才知情的突襲感",
       "會議紀錄公開有助後續究責"
     ],
-    "oppose": [
+    "cons": [
       "說明會若流於形式，反成程序招牌",
       "多次會議拉長工期與成本",
       "參與者以利害關係人為主，代表性不足",
       "技術複雜案一般市民難有效監督",
       "過度程序化可能耽误急需工程"
     ],
-    "note": "透明治理。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-tpp-t2",
-    "city": "taoyuan",
-    "party": "tpp",
-    "category": "財政",
-    "status": "立院提案",
-    "text": "主張刪減效益不足活動與建設預算。",
-    "simple": "沒效益的活動建設預算要刪。",
     "pros": [
       "桃園市刪減效益不足活動與建設，可把資源留給托育、居住與交通",
       "成本效益評估抑制大拜拜式預算",
@@ -1671,24 +1435,21 @@ const CITY_POLICIES = [
       "公開刪減理由提升預算辯論品質",
       "對低使用率設施形成改革壓力"
     ],
-    "oppose": [
+    "cons": [
       "效益定義常政治化，文化體育難量化",
       "刪減過頭傷害社區活動與基層連結",
       "評估成本對小額計畫可能不划算",
       "短期刪減或犧牲長期維護",
       "府會對立下易淪政治籌碼"
     ],
-    "note": "預算監督。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-tpp-t3",
-    "city": "taoyuan",
-    "party": "tpp",
-    "category": "住宅",
-    "status": "競選政見",
-    "text": "主張精準租金補貼與社宅公平性檢討。",
-    "simple": "租金補助精準、社宅抽籤公平。",
     "pros": [
       "桃園市精準租金補貼可把資源給壓力最大的租屋家戶",
       "社宅抽籤與資格公平性檢討減少特權疑慮",
@@ -1696,24 +1457,21 @@ const CITY_POLICIES = [
       "青年與弱勢分軌可兼顧不同需求",
       "公開中籤與候補資訊強化程序正義"
     ],
-    "oppose": [
+    "cons": [
       "精準化提高文件門檻，弱勢可能被排除",
       "資產調查引發隱私疑慮",
       "抽籤再公平也難解供給不足",
       "補貼可能部分轉嫁成漲租",
       "規則常改讓申請人無所適從"
     ],
-    "note": "居住正義。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-tpp-t4",
-    "city": "taoyuan",
-    "party": "tpp",
-    "category": "交通",
-    "status": "競選政見",
-    "text": "主張準點率與運具資訊公開整合。",
-    "simple": "公車捷運準點與資訊整合公開。",
     "pros": [
       "桃園市公車捷運準點與運具資訊整合公開，方便轉乘規劃",
       "數據透明迫使業者改善調度",
@@ -1721,24 +1479,21 @@ const CITY_POLICIES = [
       "月票使用者可比較路線表現",
       "延誤即時通報降低焦慮"
     ],
-    "oppose": [
+    "cons": [
       "塞車與事故使準點波動，數字易被誤解",
       "舊系統介接與整合成本高",
       "過度公開可能獵巫單一業者",
       "偏區路線先天準點差，公開後更難維持",
       "資訊錯誤會反噬信任"
     ],
-    "note": "交通資訊。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-tpp-t5",
-    "city": "taoyuan",
-    "party": "tpp",
-    "category": "青年",
-    "status": "競選政見",
-    "text": "主張青年創業與租屋支持套案。",
-    "simple": "青年創業加租屋支持。",
     "pros": [
       "桃園市青年創業與租屋支持套案，同時處理低薪與高房租",
       "一站式降低申請成本",
@@ -1746,24 +1501,21 @@ const CITY_POLICIES = [
       "公開成果便於複製",
       "直接回應世代焦慮"
     ],
-    "oppose": [
+    "cons": [
       "創業失敗率高，補助風險受質疑",
       "租屋補貼治標不治本",
       "資格門檻可能排除最需要者",
       "覆蓋率有限、感受不均",
       "與中央方案重疊造成窗口混亂"
     ],
-    "note": "青年政策。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-tpp-t6",
-    "city": "taoyuan",
-    "party": "tpp",
-    "category": "產業",
-    "status": "競選政見",
-    "text": "主張中小企業輔導優先於只服務大投資。",
-    "simple": "中小企業輔導不要只顧大廠。",
     "pros": [
       "桃園市中小企業輔導優先，擴大就業受惠面",
       "避免資源只集中少數大型投資",
@@ -1771,24 +1523,21 @@ const CITY_POLICIES = [
       "在地特色產業需要客製化支持",
       "穩定就業往往優於大型案的浮動承諾"
     ],
-    "oppose": [
+    "cons": [
       "中小企業數量多，輔導能量易稀釋",
       "大投資仍可能帶來較高稅收與指標鏈",
       "書審繁複時小店難申請",
       "效果難量化，易成胡椒粉式補助",
       "結構問題非單點輔導能解"
     ],
-    "note": "中小企業。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-tpp-t7",
-    "city": "taoyuan",
-    "party": "tpp",
-    "category": "環境",
-    "status": "立院提案",
-    "text": "主張感測數據即時公開與申訴時限。",
-    "simple": "環境感測即時公開、申訴有時限。",
     "pros": [
       "桃園市環境感測即時公開，讓市民避險並監督",
       "申訴時限避免公文空轉",
@@ -1796,24 +1545,21 @@ const CITY_POLICIES = [
       "提高空品噪音水質的日常感知",
       "接軌開放政府與智慧治理"
     ],
-    "oppose": [
+    "cons": [
       "感測誤差與維護成本常被低估",
       "即時公開可能引發過度恐慌",
       "時限過短使調查不完整",
       "跨局責任不清時互相推諉",
       "有數據無人力分析則空轉"
     ],
-    "note": "環境數據。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tyn-tpp-t8",
-    "city": "taoyuan",
-    "party": "tpp",
-    "category": "其他",
-    "status": "競選政見",
-    "text": "主張參與式預算與里層級需求調查。",
-    "simple": "小額預算讓市民參與決定。",
     "pros": [
       "桃園市參與式預算讓市民決定小額公共投資，提升歸屬感",
       "里層級需求調查補足由上而下盲點",
@@ -1821,24 +1567,21 @@ const CITY_POLICIES = [
       "小而可見的改善提高信任",
       "過程公開抑制特定團體壟斷"
     ],
-    "oppose": [
+    "cons": [
       "參與率偏低時代表性受質疑",
       "小額難解房價軌道等結構問題",
       "提案競爭可能加劇社區對立",
       "行政成本相對金額偏高",
       "審查不透明仍被批酬庸"
     ],
-    "note": "參與式治理。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-kmt-coal",
-    "city": "taichung",
-    "party": "kmt",
-    "category": "環境",
-    "status": "已推動",
-    "text": "中火減煤降載與空品措施。",
-    "simple": "火力減煤改善空品。",
     "pros": [
       "中火減煤降載直接關係中部空品與公共健康",
       "明確減煤路徑回應長期反空污運動訴求",
@@ -1846,24 +1589,21 @@ const CITY_POLICIES = [
       "空品改善有助城市宜居與招商形象",
       "監測公開可讓市民檢驗承諾"
     ],
-    "oppose": [
+    "cons": [
       "減煤與供電穩定、電價之間存在結構張力",
       "空品受天氣與跨區污染影響，單一電廠減煤未必立刻有感",
       "地方與中央權責、台電調度常成政治攻防",
       "工業與交通移動源同樣重要，只盯中火被批不全面",
       "轉型過程中就業與地方經濟疑慮"
     ],
-    "note": "盧市府空污。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://e-info.org.tw/",
+      "https://www.taichung.gov.tw/",
+      "https://www.cna.com.tw/news/ahel/"
+    ]
   },
   {
     "id": "txg-kmt-mrt",
-    "city": "taichung",
-    "party": "kmt",
-    "category": "交通",
-    "status": "已推動",
-    "text": "捷運營運優化與山手線規劃。",
-    "simple": "捷運優化與延伸規劃。",
     "pros": [
       "綠線營運優化與延伸規劃可提高公共運具占比",
       "山手線／山海環線構想串聯海線與山線，回應均衡發展",
@@ -1871,24 +1611,20 @@ const CITY_POLICIES = [
       "站區開發帶動再投資",
       "長期減碳與交通事故下降潛力"
     ],
-    "oppose": [
+    "cons": [
       "延伸與環線經費龐大，財務計畫與中央補助不確定",
       "運量是否支撐建設標準受質疑",
       "工期長、施工擾民",
       "與公車、BRT 整合若不足，轉乘體驗差",
       "沿線房價上漲與拆遷爭議"
     ],
-    "note": "臺中捷運。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.tmrt.com.tw/",
+      "https://www.taichung.gov.tw/"
+    ]
   },
   {
     "id": "txg-kmt-inv",
-    "city": "taichung",
-    "party": "kmt",
-    "category": "產業",
-    "status": "已推動",
-    "text": "招商與產業園區升級。",
-    "simple": "招商創造就業。",
     "pros": [
       "招商與產業園區升級創造就業，緩解青年外流",
       "中部精密機械與半導體供應鏈可再擴張",
@@ -1896,24 +1632,21 @@ const CITY_POLICIES = [
       "國際品牌進駐提升城市能見度",
       "園區基礎建設升級有助既有廠商留在臺中"
     ],
-    "oppose": [
+    "cons": [
       "大型園區可能加劇空污、用水與交通負荷",
       "土地徵收與農地變更爭議",
       "房價上漲排擠在地居民",
       "就業技能落差使受惠不均",
       "社福與建設預算排擠的批評（重建設輕照顧）"
     ],
-    "note": "經濟發展。",
-    "yearHint": "2019–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-kmt-flood",
-    "city": "taichung",
-    "party": "kmt",
-    "category": "治水",
-    "status": "已推動",
-    "text": "排水抽水與流域整治。",
-    "simple": "治水降淹水。",
     "pros": [
       "流域整治與抽水可降低暴雨積水與農損",
       "中部短延時強降雨頻繁，治水有感度高",
@@ -1921,24 +1654,21 @@ const CITY_POLICIES = [
       "即時監測提升應變",
       "減少企業與住家財損"
     ],
-    "oppose": [
+    "cons": [
       "工程預算與工期常受質疑",
       "上下游與中央管河川權責複雜",
       "開發與透水面積減少抵銷治水效益",
       "極端氣候下標準落後",
       "施工期積水抱怨"
     ],
-    "note": "治水。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-kmt-env1",
-    "city": "taichung",
-    "party": "kmt",
-    "category": "環境",
-    "status": "已推動",
-    "text": "空品或河川水質改善與稽查。",
-    "simple": "空氣或河水品質改善。",
     "pros": [
       "空品與河川稽查回應中部長期空污痛點",
       "工業廢氣與揚塵管制可補中火以外的污染源",
@@ -1946,24 +1676,21 @@ const CITY_POLICIES = [
       "健康成本可長期下降",
       "綠色供應鏈要求下企業也需配合"
     ],
-    "oppose": [
+    "cons": [
       "跨縣市污染與氣象因素使「本市努力」難完全反映在指標",
       "嚴格標準與產業成本衝突",
       "稽查人力與設備不足",
       "數據爭議引發政治口水",
       "短期難讓敏感族群明顯有感"
     ],
-    "note": "環境治理。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://e-info.org.tw/",
+      "https://www.taichung.gov.tw/",
+      "https://www.cna.com.tw/news/ahel/"
+    ]
   },
   {
     "id": "txg-kmt-social1",
-    "city": "taichung",
-    "party": "kmt",
-    "category": "社福",
-    "status": "已推動",
-    "text": "托育或長照據點布建擴大。",
-    "simple": "托育長照據點更多。",
     "pros": [
       "托育長照據點擴大回應高齡與育兒雙重需求",
       "據點近便減少照顧者通勤",
@@ -1971,24 +1698,21 @@ const CITY_POLICIES = [
       "準公共化壓低費用",
       "公開布建地圖便於監督"
     ],
-    "oppose": [
+    "cons": [
       "建設導向城市常被批社福占比不足",
       "人力荒影響服務",
       "行政區落差大",
       "品質稽核能量不足",
       "財政永續疑慮"
     ],
-    "note": "社福布建。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-kmt-safe1",
-    "city": "taichung",
-    "party": "kmt",
-    "category": "治安",
-    "status": "已推動",
-    "text": "防詐宣導與科技執法強化。",
-    "simple": "防詐與科技執法。",
     "pros": [
       "防詐與科技執法提升都會安全感",
       "大數據協作提高破案率",
@@ -1996,24 +1720,21 @@ const CITY_POLICIES = [
       "夜間熱點見警與監視",
       "公開指標可檢驗"
     ],
-    "oppose": [
+    "cons": [
       "詐欺手法翻新速度快",
       "隱私與監控爭議",
       "跨域案件限制",
       "基層負荷",
       "成效歸因困難"
     ],
-    "note": "治安防詐。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-kmt-flood1",
-    "city": "taichung",
-    "party": "kmt",
-    "category": "治水",
-    "status": "已推動",
-    "text": "排水清疏與抽水站效能提升。",
-    "simple": "排水抽水更強降淹水。",
     "pros": [
       "排水清疏與抽水站強化可快速改善易淹點",
       "與流域整治形成多層防護",
@@ -2021,24 +1742,21 @@ const CITY_POLICIES = [
       "監測預警減少人命風險",
       "工程進度可量化監督"
     ],
-    "oppose": [
+    "cons": [
       "清疏若未制度化，雨季仍反覆積水",
       "設備維運經費常被低估",
       "私人排水與違建難處理",
       "極端雨量超標",
       "預算排擠社福的批評"
     ],
-    "note": "治水。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-dpp-d1",
-    "city": "taichung",
-    "party": "dpp",
-    "category": "社福",
-    "status": "立院提案",
-    "text": "議會要求社福預算占比與據點服務公開。",
-    "simple": "社福預算與服務要公開可查。",
     "pros": [
       "臺中市社福預算與據點服務公開，可檢驗資源是否真正到托育、長照與弱勢家戶",
       "各行政區數據並陳有助發現服務落差、推動重分配",
@@ -2046,24 +1764,21 @@ const CITY_POLICIES = [
       "減少大拜拜活動排擠實質照顧服務的空間",
       "提高申辦流程透明度，降低「不知道如何申請」的門檻"
     ],
-    "oppose": [
+    "cons": [
       "過度聚焦預算占比數字，可能忽略服務品質與成果",
       "報表格式若艱澀，一般市民仍難監督",
       "第一線可能忙於填表，排擠直接服務時間",
       "數據易被選擇性解讀，淪為政治攻防素材",
       "公開本身不自動解決人力荒與排隊問題"
     ],
-    "note": "議會社福監督。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-dpp-d2",
-    "city": "taichung",
-    "party": "dpp",
-    "category": "環境",
-    "status": "立院提案",
-    "text": "要求污染源稽查期限與數據公開。",
-    "simple": "污染稽查有期限資料公開。",
     "pros": [
       "臺中市污染源稽查設期限，可避免案件久拖與執法空轉",
       "數據公開提高空品、水質與噪音治理的社會信任",
@@ -2071,24 +1786,21 @@ const CITY_POLICIES = [
       "公民可依公開資料參與監督熱點",
       "對違法排放形成嚇阻，守護周邊居民健康"
     ],
-    "oppose": [
+    "cons": [
       "期限過短可能使檢查流於形式、深度不足",
       "跨域與移動污染源非單一市府期限能完全處理",
       "業者主張程序過嚴影響營運與就業",
       "數據誤差或延遲公開反而傷害公信",
       "稽查人力不足時「有期限無能量」"
     ],
-    "note": "環境監督。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-dpp-d3",
-    "city": "taichung",
-    "party": "dpp",
-    "category": "住宅",
-    "status": "立院提案",
-    "text": "要求租金補貼與社宅進度透明。",
-    "simple": "租金補助社宅進度透明。",
     "pros": [
       "臺中市租金補貼與社宅進度透明，可檢驗居住政策是否達標",
       "公開排隊、中籤與完工時程，減少黑箱傳聞",
@@ -2096,24 +1808,21 @@ const CITY_POLICIES = [
       "申請人可依資訊規劃居住選項",
       "避免只喊戶數目標、不公布進度的空轉"
     ],
-    "oppose": [
+    "cons": [
       "進度延宕公開後易被政治化，影響行政士氣",
       "個資與財務細節公開範圍難拿捏",
       "透明不直接增加供給戶數",
       "頻繁報告占用行政能量",
       "統計口徑不一造成各說各話"
     ],
-    "note": "居住監督。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-dpp-d4",
-    "city": "taichung",
-    "party": "dpp",
-    "category": "交通",
-    "status": "立院提案",
-    "text": "要求偏區或夜間運能改善。",
-    "simple": "偏區夜間公車運能改善。",
     "pros": [
       "臺中市偏區與夜間運能改善，落實移動正義",
       "夜班、醫療與服務業通勤者高度依賴離峰運具",
@@ -2121,24 +1830,21 @@ const CITY_POLICIES = [
       "公開載客率有助精準調班",
       "高齡與行動不便者夜間出行更有保障"
     ],
-    "oppose": [
+    "cons": [
       "離峰載客率低，擴大運能增加虧損與補貼",
       "司機工時與行車安全需嚴格配套",
       "路線調整牽動既有乘客習慣",
       "候車環境與治安若未改善，夜間搭乘意願仍低",
       "預算可能排擠尖峰熱門路線班次"
     ],
-    "note": "移動正義。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-dpp-d5",
-    "city": "taichung",
-    "party": "dpp",
-    "category": "勞動",
-    "status": "立院提案",
-    "text": "要求移工與基層勞工權益諮詢布建。",
-    "simple": "移工勞工諮詢服務要加强。",
     "pros": [
       "臺中市移工與基層勞工諮詢據點可降低語言與資訊障礙",
       "一站式處理薪資、職災與仲介糾紛更有效率",
@@ -2146,24 +1852,21 @@ const CITY_POLICIES = [
       "多元語言服務體現城市包容",
       "減少求助無門衍生的衝突與社會成本"
     ],
-    "oppose": [
+    "cons": [
       "據點人力不足時排隊與轉介仍慢",
       "勞動法令主軸在中央，市府權限有限",
       "部分社區對移工服務設施抱持鄰避",
       "與既有民間單位重疊可能造成資源分散",
       "宣導不足時目標群體不知道據點"
     ],
-    "note": "勞動監督。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-dpp-d6",
-    "city": "taichung",
-    "party": "dpp",
-    "category": "教育",
-    "status": "立院提案",
-    "text": "要求通學安全與老舊校舍改善。",
-    "simple": "通學安全與校舍改善。",
     "pros": [
       "臺中市通學安全與老舊校舍改善直接關係孩子安全",
       "行人環境與人車分道可降低學童事故",
@@ -2171,24 +1874,21 @@ const CITY_POLICIES = [
       "家長與社區支持度高，政策正當性強",
       "公開危樓清冊與工期便於監督"
     ],
-    "oppose": [
+    "cons": [
       "工程擾學、工期常跨學年影響教學",
       "預算龐大，優先順序易起爭議",
       "通學違停與汽機車文化需持續執法",
       "校地狹小限制工程方案",
       "中央補助與地方配合款時程不一"
     ],
-    "note": "教育設施。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-dpp-d7",
-    "city": "taichung",
-    "party": "dpp",
-    "category": "青年",
-    "status": "立院提案",
-    "text": "要求青年就業媒合成果公布。",
-    "simple": "青年就業媒合成績公開。",
     "pros": [
       "臺中市青年就業媒合成果公開，可檢驗是否有實質就業而非只辦活動",
       "數據可導引產學合作與補助方向",
@@ -2196,24 +1896,21 @@ const CITY_POLICIES = [
       "青年可比較方案成效再參與",
       "提高市政問責與世代政策可信度"
     ],
-    "oppose": [
+    "cons": [
       "就業受景氣與產業結構影響，難全歸市政",
       "指標設計不佳易鼓勵湊數字",
       "個資與企業意願限制細緻揭露",
       "「媒合成功」口徑易爭議",
       "資源可能偏向核心都會，邊緣青年受惠少"
     ],
-    "note": "青年就業。",
-    "yearHint": "2021–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-dpp-d8",
-    "city": "taichung",
-    "party": "dpp",
-    "category": "廉政",
-    "status": "立院提案",
-    "text": "要求標案與都更程序資訊公開。",
-    "simple": "標案都更程序公開。",
     "pros": [
       "臺中市標案與都更程序資訊公開，可降低圖利與資訊不對稱",
       "住戶較能參與都更條件討論",
@@ -2221,24 +1918,21 @@ const CITY_POLICIES = [
       "提高實施者與投資人長期信任",
       "對齊開放政府，減少黑箱傳聞"
     ],
-    "oppose": [
+    "cons": [
       "商業機密與談判策略公開範圍難界定",
       "程序公開不保證弱勢住戶實質對等",
       "文件量大一般人難消化",
       "可能拉長時程，延宕危老重建",
       "細節易被政治化解讀影響效率"
     ],
-    "note": "程序透明。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-tpp-t1",
-    "city": "taichung",
-    "party": "tpp",
-    "category": "廉政",
-    "status": "競選政見",
-    "text": "主張市政透明與重大工程說明會前置。",
-    "simple": "大工程先說明會，過程透明。",
     "pros": [
       "臺中市重大工程前置說明會，可降低資訊落差與事後抗爭",
       "透明決策提升市政信任",
@@ -2246,24 +1940,21 @@ const CITY_POLICIES = [
       "減少宣布後才知情的突襲感",
       "會議紀錄公開有助後續究責"
     ],
-    "oppose": [
+    "cons": [
       "說明會若流於形式，反成程序招牌",
       "多次會議拉長工期與成本",
       "參與者以利害關係人為主，代表性不足",
       "技術複雜案一般市民難有效監督",
       "過度程序化可能耽误急需工程"
     ],
-    "note": "透明治理。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-tpp-t2",
-    "city": "taichung",
-    "party": "tpp",
-    "category": "財政",
-    "status": "立院提案",
-    "text": "主張刪減效益不足活動與建設預算。",
-    "simple": "沒效益的活動建設預算要刪。",
     "pros": [
       "臺中市刪減效益不足活動與建設，可把資源留給托育、居住與交通",
       "成本效益評估抑制大拜拜式預算",
@@ -2271,24 +1962,21 @@ const CITY_POLICIES = [
       "公開刪減理由提升預算辯論品質",
       "對低使用率設施形成改革壓力"
     ],
-    "oppose": [
+    "cons": [
       "效益定義常政治化，文化體育難量化",
       "刪減過頭傷害社區活動與基層連結",
       "評估成本對小額計畫可能不划算",
       "短期刪減或犧牲長期維護",
       "府會對立下易淪政治籌碼"
     ],
-    "note": "預算監督。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-tpp-t3",
-    "city": "taichung",
-    "party": "tpp",
-    "category": "住宅",
-    "status": "競選政見",
-    "text": "主張精準租金補貼與社宅公平性檢討。",
-    "simple": "租金補助精準、社宅抽籤公平。",
     "pros": [
       "臺中市精準租金補貼可把資源給壓力最大的租屋家戶",
       "社宅抽籤與資格公平性檢討減少特權疑慮",
@@ -2296,24 +1984,21 @@ const CITY_POLICIES = [
       "青年與弱勢分軌可兼顧不同需求",
       "公開中籤與候補資訊強化程序正義"
     ],
-    "oppose": [
+    "cons": [
       "精準化提高文件門檻，弱勢可能被排除",
       "資產調查引發隱私疑慮",
       "抽籤再公平也難解供給不足",
       "補貼可能部分轉嫁成漲租",
       "規則常改讓申請人無所適從"
     ],
-    "note": "居住正義。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-tpp-t4",
-    "city": "taichung",
-    "party": "tpp",
-    "category": "交通",
-    "status": "競選政見",
-    "text": "主張準點率與運具資訊公開整合。",
-    "simple": "公車捷運準點與資訊整合公開。",
     "pros": [
       "臺中市公車捷運準點與運具資訊整合公開，方便轉乘規劃",
       "數據透明迫使業者改善調度",
@@ -2321,24 +2006,21 @@ const CITY_POLICIES = [
       "月票使用者可比較路線表現",
       "延誤即時通報降低焦慮"
     ],
-    "oppose": [
+    "cons": [
       "塞車與事故使準點波動，數字易被誤解",
       "舊系統介接與整合成本高",
       "過度公開可能獵巫單一業者",
       "偏區路線先天準點差，公開後更難維持",
       "資訊錯誤會反噬信任"
     ],
-    "note": "交通資訊。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-tpp-t5",
-    "city": "taichung",
-    "party": "tpp",
-    "category": "青年",
-    "status": "競選政見",
-    "text": "主張青年創業與租屋支持套案。",
-    "simple": "青年創業加租屋支持。",
     "pros": [
       "臺中市青年創業與租屋支持套案，同時處理低薪與高房租",
       "一站式降低申請成本",
@@ -2346,24 +2028,21 @@ const CITY_POLICIES = [
       "公開成果便於複製",
       "直接回應世代焦慮"
     ],
-    "oppose": [
+    "cons": [
       "創業失敗率高，補助風險受質疑",
       "租屋補貼治標不治本",
       "資格門檻可能排除最需要者",
       "覆蓋率有限、感受不均",
       "與中央方案重疊造成窗口混亂"
     ],
-    "note": "青年政策。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-tpp-t6",
-    "city": "taichung",
-    "party": "tpp",
-    "category": "產業",
-    "status": "競選政見",
-    "text": "主張中小企業輔導優先於只服務大投資。",
-    "simple": "中小企業輔導不要只顧大廠。",
     "pros": [
       "臺中市中小企業輔導優先，擴大就業受惠面",
       "避免資源只集中少數大型投資",
@@ -2371,24 +2050,21 @@ const CITY_POLICIES = [
       "在地特色產業需要客製化支持",
       "穩定就業往往優於大型案的浮動承諾"
     ],
-    "oppose": [
+    "cons": [
       "中小企業數量多，輔導能量易稀釋",
       "大投資仍可能帶來較高稅收與指標鏈",
       "書審繁複時小店難申請",
       "效果難量化，易成胡椒粉式補助",
       "結構問題非單點輔導能解"
     ],
-    "note": "中小企業。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-tpp-t7",
-    "city": "taichung",
-    "party": "tpp",
-    "category": "環境",
-    "status": "立院提案",
-    "text": "主張感測數據即時公開與申訴時限。",
-    "simple": "環境感測即時公開、申訴有時限。",
     "pros": [
       "臺中市環境感測即時公開，讓市民避險並監督",
       "申訴時限避免公文空轉",
@@ -2396,24 +2072,21 @@ const CITY_POLICIES = [
       "提高空品噪音水質的日常感知",
       "接軌開放政府與智慧治理"
     ],
-    "oppose": [
+    "cons": [
       "感測誤差與維護成本常被低估",
       "即時公開可能引發過度恐慌",
       "時限過短使調查不完整",
       "跨局責任不清時互相推諉",
       "有數據無人力分析則空轉"
     ],
-    "note": "環境數據。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "txg-tpp-t8",
-    "city": "taichung",
-    "party": "tpp",
-    "category": "其他",
-    "status": "競選政見",
-    "text": "主張參與式預算與里層級需求調查。",
-    "simple": "小額預算讓市民參與決定。",
     "pros": [
       "臺中市參與式預算讓市民決定小額公共投資，提升歸屬感",
       "里層級需求調查補足由上而下盲點",
@@ -2421,24 +2094,21 @@ const CITY_POLICIES = [
       "小而可見的改善提高信任",
       "過程公開抑制特定團體壟斷"
     ],
-    "oppose": [
+    "cons": [
       "參與率偏低時代表性受質疑",
       "小額難解房價軌道等結構問題",
       "提案競爭可能加劇社區對立",
       "行政成本相對金額偏高",
       "審查不透明仍被批酬庸"
     ],
-    "note": "參與式治理。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-kmt-infra1",
-    "city": "tainan",
-    "party": "kmt",
-    "category": "交通",
-    "status": "已推動",
-    "text": "臺南市持續推動軌道或幹道瓶頸改善工程。",
-    "simple": "改善塞車瓶頸與軌道／幹道建設。",
     "pros": [
       "幹道與瓶頸改善可紓解南科通勤與市區塞車",
       "軌道與快速道路銜接提升物流效率",
@@ -2446,24 +2116,21 @@ const CITY_POLICIES = [
       "長期有助觀光與產業動線",
       "事故熱點改善提升安全"
     ],
-    "oppose": [
+    "cons": [
       "工程預算與農地、文化遺址衝突",
       "施工期更塞",
       "運量與效益評估常樂觀",
       "排擠治水與社福預算的批評",
       "地方拆遷反彈"
     ],
-    "note": "交通建設。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-kmt-infra2",
-    "city": "tainan",
-    "party": "kmt",
-    "category": "交通",
-    "status": "規劃中",
-    "text": "規劃轉乘樞紐與公車路網重整。",
-    "simple": "轉乘更好，公車路線重整。",
     "pros": [
       "公車路網重整可補鐵路與未來捷運的接駁",
       "轉乘樞紐減少重複路線",
@@ -2471,24 +2138,21 @@ const CITY_POLICIES = [
       "資訊整合提高搭乘意願",
       "偏鄉與市區連通改善移動正義"
     ],
-    "oppose": [
+    "cons": [
       "裁線引發里民反彈",
       "偏鄉載客率低、虧損壓力",
       "司機人力不足",
       "重整若無準點改善則無感",
       "樞紐用地取得難"
     ],
-    "note": "運具整合。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-kmt-house1",
-    "city": "tainan",
-    "party": "kmt",
-    "category": "住宅",
-    "status": "已推動",
-    "text": "推動社宅或青年宅供給並檢討申請機制。",
-    "simple": "社宅青年宅供給與申請機制。",
     "pros": [
       "社宅青年宅可緩解南科與市區租金上漲壓力",
       "申請機制檢討提高公平感",
@@ -2496,24 +2160,21 @@ const CITY_POLICIES = [
       "結合產業園區安居留才",
       "弱勢與青年分軌設計"
     ],
-    "oppose": [
+    "cons": [
       "供給仍不足，排隊長",
       "區位若偏遠生活機能差",
       "鄰避與財政壓力",
       "與都更進度不同步",
       "中籤率低打擊信任"
     ],
-    "note": "居住政策。",
-    "yearHint": "2019–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-kmt-econ1",
-    "city": "tainan",
-    "party": "kmt",
-    "category": "產業",
-    "status": "已推動",
-    "text": "招商與產業園區升級，創造就業。",
-    "simple": "招商設廠創造工作機會。",
     "pros": [
       "招商與園區升級可分散北部產業過度集中",
       "綠能、半導體與傳產升級帶動就業",
@@ -2521,24 +2182,21 @@ const CITY_POLICIES = [
       "青年返鄉機會增加",
       "供應鏈在地化"
     ],
-    "oppose": [
+    "cons": [
       "用水用電與農地衝突",
       "空污與交通負荷",
       "房價上漲",
       "徵收爭議",
       "中小企業受惠不如大廠"
     ],
-    "note": "產業招商。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-kmt-env1",
-    "city": "tainan",
-    "party": "kmt",
-    "category": "環境",
-    "status": "已推動",
-    "text": "空品或河川水質改善與稽查。",
-    "simple": "空氣或河水品質改善。",
     "pros": [
       "河川與空品改善關係農業、養殖與居民健康",
       "稽查遏止違法排放",
@@ -2546,24 +2204,20 @@ const CITY_POLICIES = [
       "濕地與海岸保育",
       "觀光形象提升"
     ],
-    "oppose": [
+    "cons": [
       "漁電與工業開發壓力大",
       "跨域污染難管",
       "執法與生計衝突",
       "感測覆蓋不足",
       "短期指標波動大"
     ],
-    "note": "環境治理。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://e-info.org.tw/",
+      "https://www.tainan.gov.tw/"
+    ]
   },
   {
     "id": "tnn-kmt-social1",
-    "city": "tainan",
-    "party": "kmt",
-    "category": "社福",
-    "status": "已推動",
-    "text": "托育或長照據點布建擴大。",
-    "simple": "托育長照據點更多。",
     "pros": [
       "托育長照據點回應高齡化縣市需求",
       "降低家庭照顧負擔",
@@ -2571,24 +2225,21 @@ const CITY_POLICIES = [
       "與醫療體系轉介",
       "公開服務量能"
     ],
-    "oppose": [
+    "cons": [
       "偏鄉據點經營困難",
       "人力不足",
       "預算與建設優先順序爭議",
       "品質落差",
       "交通可近性不足"
     ],
-    "note": "社福布建。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-kmt-safe1",
-    "city": "tainan",
-    "party": "kmt",
-    "category": "治安",
-    "status": "已推動",
-    "text": "防詐宣導與科技執法強化。",
-    "simple": "防詐與科技執法。",
     "pros": [
       "防詐宣導涵蓋高齡與觀光客",
       "科技執法提升破案",
@@ -2596,24 +2247,21 @@ const CITY_POLICIES = [
       "多語服務",
       "公開治安指標"
     ],
-    "oppose": [
+    "cons": [
       "跨境詐欺限制",
       "隱私疑慮",
       "警力配置城鄉差",
       "宣導疲勞",
       "成本效益難證"
     ],
-    "note": "治安防詐。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-kmt-flood1",
-    "city": "tainan",
-    "party": "kmt",
-    "category": "治水",
-    "status": "已推動",
-    "text": "排水清疏與抽水站效能提升。",
-    "simple": "排水抽水更強降淹水。",
     "pros": [
       "排水抽水強化可降低低窪區反覆淹水",
       "清疏制度化減少雨季抱怨",
@@ -2621,24 +2269,20 @@ const CITY_POLICIES = [
       "保護農漁業與住家",
       "與滯洪設施互補"
     ],
-    "oppose": [
+    "cons": [
       "極端降雨與地層下陷挑戰",
       "光電案場排水爭議可能抵銷成效",
       "工程擾民",
       "預算龐大",
       "跨區域協調"
     ],
-    "note": "治水。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.tainan.gov.tw/",
+      "https://www.cna.com.tw/news/aloc/"
+    ]
   },
   {
     "id": "tnn-dpp-flood",
-    "city": "tainan",
-    "party": "dpp",
-    "category": "治水",
-    "status": "已推動",
-    "text": "滯洪池與區域排水改善。",
-    "simple": "滯洪排水降淹水。",
     "pros": [
       "滯洪池與區域排水是回應歷年水患的核心工程",
       "系統性治水比單點抽水更持久",
@@ -2646,24 +2290,20 @@ const CITY_POLICIES = [
       "保護科技園區與農業產值",
       "公開工程進度可問責"
     ],
-    "oppose": [
+    "cons": [
       "滯洪池用地取得與地方反彈",
       "完工後若遇超標雨量仍可能淹，期待管理難",
       "預算與工期常受監督質疑",
       "與上游開發、光電排水需整體協調",
       "維運經費若不足，設施效能衰退"
     ],
-    "note": "黃市府治水。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.tainan.gov.tw/",
+      "https://www.cna.com.tw/news/aloc/"
+    ]
   },
   {
     "id": "tnn-dpp-shalun",
-    "city": "tainan",
-    "party": "dpp",
-    "category": "能源",
-    "status": "已推動",
-    "text": "沙崙智慧綠能科學城。",
-    "simple": "沙崙綠能科技園區。",
     "pros": [
       "沙崙智慧綠能科學城可發展綠能研發與示範場域",
       "吸引科研與新創人才南下",
@@ -2671,24 +2311,20 @@ const CITY_POLICIES = [
       "能源轉型地方化實驗場",
       "長期帶動週邊產業與就業"
     ],
-    "oppose": [
+    "cons": [
       "進駐率與實質產業化進度曾被批偏慢",
       "公共建設投資大，短期稅收回饋有限",
       "與在地生活圈連結不足時成孤島",
       "綠能示範若無法商品化，形象大於實效",
       "交通與住宅配套需同步否則塞車與房價壓力"
     ],
-    "note": "沙崙。",
-    "yearHint": "2017–2026"
+    "sources": [
+      "https://www.tainan.gov.tw/",
+      "https://zh.wikipedia.org/zh-hant/%E6%B2%99%E5%B4%99%E7%B6%A0%E8%83%BD%E7%A7%91%E5%AD%B8%E5%9F%8E"
+    ]
   },
   {
     "id": "tnn-dpp-rail",
-    "city": "tainan",
-    "party": "dpp",
-    "category": "交通",
-    "status": "已推動",
-    "text": "鐵路地下化後站區再發展。",
-    "simple": "鐵道下地後都市縫合。",
     "pros": [
       "鐵路地下化後可縫合都市、消除平交道事故",
       "釋出廊帶土地做綠地與道路，改善東西向連通",
@@ -2696,24 +2332,20 @@ const CITY_POLICIES = [
       "長期改善交通安全與通勤可靠度",
       "站區再發展可帶動商圈"
     ],
-    "oppose": [
+    "cons": [
       "東移與徵收引發長期迫遷與人權爭議",
       "工期長、補償與安置爭議不斷",
       "工程經費龐大排擠其他市政",
       "施工期严重影响沿線生活與商業",
       "完工後若再發展規劃不佳，效益打折"
     ],
-    "note": "鐵路地下化。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://ourisland.pts.org.tw/content/2721",
+      "https://www.tainan.gov.tw/"
+    ]
   },
   {
     "id": "tnn-dpp-tour",
-    "city": "tainan",
-    "party": "dpp",
-    "category": "觀光",
-    "status": "已推動",
-    "text": "古都文化觀光與節慶。",
-    "simple": "文化觀光活動。",
     "pros": [
       "古都文化觀光與節慶帶動餐旅就業與地方品牌",
       "國際能見度提升有助多元產業",
@@ -2721,24 +2353,21 @@ const CITY_POLICIES = [
       "淡旺季活動可平衡人流",
       "青年文創與設計產業受惠"
     ],
-    "oppose": [
+    "cons": [
       "過度觀光化推高租金、排擠在地生活",
       "節慶垃圾、噪音與交通壅塞",
       "活動預算效益難量化，被批大拜拜",
       "文化遺產商業化爭議",
       "疫情或外部衝擊下觀光業脆弱"
     ],
-    "note": "觀光。",
-    "yearHint": "2019–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-dpp-d5",
-    "city": "tainan",
-    "party": "dpp",
-    "category": "勞動",
-    "status": "立院提案",
-    "text": "要求移工與基層勞工權益諮詢布建。",
-    "simple": "移工勞工諮詢服務要加强。",
     "pros": [
       "臺南市移工與基層勞工諮詢據點可降低語言與資訊障礙",
       "一站式處理薪資、職災與仲介糾紛更有效率",
@@ -2746,24 +2375,21 @@ const CITY_POLICIES = [
       "多元語言服務體現城市包容",
       "減少求助無門衍生的衝突與社會成本"
     ],
-    "oppose": [
+    "cons": [
       "據點人力不足時排隊與轉介仍慢",
       "勞動法令主軸在中央，市府權限有限",
       "部分社區對移工服務設施抱持鄰避",
       "與既有民間單位重疊可能造成資源分散",
       "宣導不足時目標群體不知道據點"
     ],
-    "note": "勞動監督。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-dpp-d6",
-    "city": "tainan",
-    "party": "dpp",
-    "category": "教育",
-    "status": "立院提案",
-    "text": "要求通學安全與老舊校舍改善。",
-    "simple": "通學安全與校舍改善。",
     "pros": [
       "臺南市通學安全與老舊校舍改善直接關係孩子安全",
       "行人環境與人車分道可降低學童事故",
@@ -2771,24 +2397,21 @@ const CITY_POLICIES = [
       "家長與社區支持度高，政策正當性強",
       "公開危樓清冊與工期便於監督"
     ],
-    "oppose": [
+    "cons": [
       "工程擾學、工期常跨學年影響教學",
       "預算龐大，優先順序易起爭議",
       "通學違停與汽機車文化需持續執法",
       "校地狹小限制工程方案",
       "中央補助與地方配合款時程不一"
     ],
-    "note": "教育設施。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-dpp-d7",
-    "city": "tainan",
-    "party": "dpp",
-    "category": "青年",
-    "status": "立院提案",
-    "text": "要求青年就業媒合成果公布。",
-    "simple": "青年就業媒合成績公開。",
     "pros": [
       "臺南市青年就業媒合成果公開，可檢驗是否有實質就業而非只辦活動",
       "數據可導引產學合作與補助方向",
@@ -2796,24 +2419,21 @@ const CITY_POLICIES = [
       "青年可比較方案成效再參與",
       "提高市政問責與世代政策可信度"
     ],
-    "oppose": [
+    "cons": [
       "就業受景氣與產業結構影響，難全歸市政",
       "指標設計不佳易鼓勵湊數字",
       "個資與企業意願限制細緻揭露",
       "「媒合成功」口徑易爭議",
       "資源可能偏向核心都會，邊緣青年受惠少"
     ],
-    "note": "青年就業。",
-    "yearHint": "2021–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-dpp-d8",
-    "city": "tainan",
-    "party": "dpp",
-    "category": "廉政",
-    "status": "立院提案",
-    "text": "要求標案與都更程序資訊公開。",
-    "simple": "標案都更程序公開。",
     "pros": [
       "臺南市標案與都更程序資訊公開，可降低圖利與資訊不對稱",
       "住戶較能參與都更條件討論",
@@ -2821,24 +2441,21 @@ const CITY_POLICIES = [
       "提高實施者與投資人長期信任",
       "對齊開放政府，減少黑箱傳聞"
     ],
-    "oppose": [
+    "cons": [
       "商業機密與談判策略公開範圍難界定",
       "程序公開不保證弱勢住戶實質對等",
       "文件量大一般人難消化",
       "可能拉長時程，延宕危老重建",
       "細節易被政治化解讀影響效率"
     ],
-    "note": "程序透明。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-tpp-t1",
-    "city": "tainan",
-    "party": "tpp",
-    "category": "廉政",
-    "status": "競選政見",
-    "text": "主張市政透明與重大工程說明會前置。",
-    "simple": "大工程先說明會，過程透明。",
     "pros": [
       "臺南市重大工程前置說明會，可降低資訊落差與事後抗爭",
       "透明決策提升市政信任",
@@ -2846,24 +2463,21 @@ const CITY_POLICIES = [
       "減少宣布後才知情的突襲感",
       "會議紀錄公開有助後續究責"
     ],
-    "oppose": [
+    "cons": [
       "說明會若流於形式，反成程序招牌",
       "多次會議拉長工期與成本",
       "參與者以利害關係人為主，代表性不足",
       "技術複雜案一般市民難有效監督",
       "過度程序化可能耽误急需工程"
     ],
-    "note": "透明治理。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-tpp-t2",
-    "city": "tainan",
-    "party": "tpp",
-    "category": "財政",
-    "status": "立院提案",
-    "text": "主張刪減效益不足活動與建設預算。",
-    "simple": "沒效益的活動建設預算要刪。",
     "pros": [
       "臺南市刪減效益不足活動與建設，可把資源留給托育、居住與交通",
       "成本效益評估抑制大拜拜式預算",
@@ -2871,24 +2485,21 @@ const CITY_POLICIES = [
       "公開刪減理由提升預算辯論品質",
       "對低使用率設施形成改革壓力"
     ],
-    "oppose": [
+    "cons": [
       "效益定義常政治化，文化體育難量化",
       "刪減過頭傷害社區活動與基層連結",
       "評估成本對小額計畫可能不划算",
       "短期刪減或犧牲長期維護",
       "府會對立下易淪政治籌碼"
     ],
-    "note": "預算監督。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-tpp-t3",
-    "city": "tainan",
-    "party": "tpp",
-    "category": "住宅",
-    "status": "競選政見",
-    "text": "主張精準租金補貼與社宅公平性檢討。",
-    "simple": "租金補助精準、社宅抽籤公平。",
     "pros": [
       "臺南市精準租金補貼可把資源給壓力最大的租屋家戶",
       "社宅抽籤與資格公平性檢討減少特權疑慮",
@@ -2896,24 +2507,21 @@ const CITY_POLICIES = [
       "青年與弱勢分軌可兼顧不同需求",
       "公開中籤與候補資訊強化程序正義"
     ],
-    "oppose": [
+    "cons": [
       "精準化提高文件門檻，弱勢可能被排除",
       "資產調查引發隱私疑慮",
       "抽籤再公平也難解供給不足",
       "補貼可能部分轉嫁成漲租",
       "規則常改讓申請人無所適從"
     ],
-    "note": "居住正義。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-tpp-t4",
-    "city": "tainan",
-    "party": "tpp",
-    "category": "交通",
-    "status": "競選政見",
-    "text": "主張準點率與運具資訊公開整合。",
-    "simple": "公車捷運準點與資訊整合公開。",
     "pros": [
       "臺南市公車捷運準點與運具資訊整合公開，方便轉乘規劃",
       "數據透明迫使業者改善調度",
@@ -2921,24 +2529,21 @@ const CITY_POLICIES = [
       "月票使用者可比較路線表現",
       "延誤即時通報降低焦慮"
     ],
-    "oppose": [
+    "cons": [
       "塞車與事故使準點波動，數字易被誤解",
       "舊系統介接與整合成本高",
       "過度公開可能獵巫單一業者",
       "偏區路線先天準點差，公開後更難維持",
       "資訊錯誤會反噬信任"
     ],
-    "note": "交通資訊。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-tpp-t5",
-    "city": "tainan",
-    "party": "tpp",
-    "category": "青年",
-    "status": "競選政見",
-    "text": "主張青年創業與租屋支持套案。",
-    "simple": "青年創業加租屋支持。",
     "pros": [
       "臺南市青年創業與租屋支持套案，同時處理低薪與高房租",
       "一站式降低申請成本",
@@ -2946,24 +2551,21 @@ const CITY_POLICIES = [
       "公開成果便於複製",
       "直接回應世代焦慮"
     ],
-    "oppose": [
+    "cons": [
       "創業失敗率高，補助風險受質疑",
       "租屋補貼治標不治本",
       "資格門檻可能排除最需要者",
       "覆蓋率有限、感受不均",
       "與中央方案重疊造成窗口混亂"
     ],
-    "note": "青年政策。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-tpp-t6",
-    "city": "tainan",
-    "party": "tpp",
-    "category": "產業",
-    "status": "競選政見",
-    "text": "主張中小企業輔導優先於只服務大投資。",
-    "simple": "中小企業輔導不要只顧大廠。",
     "pros": [
       "臺南市中小企業輔導優先，擴大就業受惠面",
       "避免資源只集中少數大型投資",
@@ -2971,24 +2573,21 @@ const CITY_POLICIES = [
       "在地特色產業需要客製化支持",
       "穩定就業往往優於大型案的浮動承諾"
     ],
-    "oppose": [
+    "cons": [
       "中小企業數量多，輔導能量易稀釋",
       "大投資仍可能帶來較高稅收與指標鏈",
       "書審繁複時小店難申請",
       "效果難量化，易成胡椒粉式補助",
       "結構問題非單點輔導能解"
     ],
-    "note": "中小企業。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-tpp-t7",
-    "city": "tainan",
-    "party": "tpp",
-    "category": "環境",
-    "status": "立院提案",
-    "text": "主張感測數據即時公開與申訴時限。",
-    "simple": "環境感測即時公開、申訴有時限。",
     "pros": [
       "臺南市環境感測即時公開，讓市民避險並監督",
       "申訴時限避免公文空轉",
@@ -2996,24 +2595,21 @@ const CITY_POLICIES = [
       "提高空品噪音水質的日常感知",
       "接軌開放政府與智慧治理"
     ],
-    "oppose": [
+    "cons": [
       "感測誤差與維護成本常被低估",
       "即時公開可能引發過度恐慌",
       "時限過短使調查不完整",
       "跨局責任不清時互相推諉",
       "有數據無人力分析則空轉"
     ],
-    "note": "環境數據。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "tnn-tpp-t8",
-    "city": "tainan",
-    "party": "tpp",
-    "category": "其他",
-    "status": "競選政見",
-    "text": "主張參與式預算與里層級需求調查。",
-    "simple": "小額預算讓市民參與決定。",
     "pros": [
       "臺南市參與式預算讓市民決定小額公共投資，提升歸屬感",
       "里層級需求調查補足由上而下盲點",
@@ -3021,24 +2617,21 @@ const CITY_POLICIES = [
       "小而可見的改善提高信任",
       "過程公開抑制特定團體壟斷"
     ],
-    "oppose": [
+    "cons": [
       "參與率偏低時代表性受質疑",
       "小額難解房價軌道等結構問題",
       "提案競爭可能加劇社區對立",
       "行政成本相對金額偏高",
       "審查不透明仍被批酬庸"
     ],
-    "note": "參與式治理。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-kmt-infra1",
-    "city": "kaohsiung",
-    "party": "kmt",
-    "category": "交通",
-    "status": "已推動",
-    "text": "高雄市持續推動軌道或幹道瓶頸改善工程。",
-    "simple": "改善塞車瓶頸與軌道／幹道建設。",
     "pros": [
       "幹道與瓶頸改善紓解港區、園區與市區車流",
       "軌道銜接提升通勤效率",
@@ -3046,24 +2639,21 @@ const CITY_POLICIES = [
       "事故熱點改善",
       "長期減碳潛力"
     ],
-    "oppose": [
+    "cons": [
       "工程預算與工期",
       "施工塞車",
       "拆遷反彈",
       "運量預估爭議",
       "排擠社福預算批評"
     ],
-    "note": "交通建設。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-kmt-infra2",
-    "city": "kaohsiung",
-    "party": "kmt",
-    "category": "交通",
-    "status": "規劃中",
-    "text": "規劃轉乘樞紐與公車路網重整。",
-    "simple": "轉乘更好，公車路線重整。",
     "pros": [
       "公車與輕軌捷運轉乘整合可提高公共運具使用",
       "路網重整減少重複",
@@ -3071,24 +2661,21 @@ const CITY_POLICIES = [
       "資訊整合便民",
       "夜間與偏區服務可納入"
     ],
-    "oppose": [
+    "cons": [
       "裁線反彈",
       "虧損與補貼",
       "準點受塞車影響",
       "業者人力",
       "樞紐用地"
     ],
-    "note": "運具整合。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-kmt-house1",
-    "city": "kaohsiung",
-    "party": "kmt",
-    "category": "住宅",
-    "status": "已推動",
-    "text": "推動社宅或青年宅供給並檢討申請機制。",
-    "simple": "社宅青年宅供給與申請機制。",
     "pros": [
       "社宅青年宅增加可負擔供給",
       "港區轉型區可結合居住",
@@ -3096,24 +2683,21 @@ const CITY_POLICIES = [
       "弱勢與青年支持",
       "帶動周邊機能"
     ],
-    "oppose": [
+    "cons": [
       "供給速度與需求落差",
       "區位與就業是否匹配",
       "鄰避",
       "財政",
       "中籤率"
     ],
-    "note": "居住政策。",
-    "yearHint": "2019–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-kmt-econ1",
-    "city": "kaohsiung",
-    "party": "kmt",
-    "category": "產業",
-    "status": "已推動",
-    "text": "招商與產業園區升級，創造就業。",
-    "simple": "招商設廠創造工作機會。",
     "pros": [
       "產業園區升級與招商創造就業",
       "傳產轉型與高科技並進",
@@ -3121,24 +2705,20 @@ const CITY_POLICIES = [
       "稅收與人口回流",
       "供應鏈在地"
     ],
-    "oppose": [
+    "cons": [
       "空污與工業風險疑慮",
       "土地與環評爭議",
       "房價上漲",
       "技能落差",
       "大型案排擠中小企業"
     ],
-    "note": "產業招商。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.tcscre.org/post/%E9%AB%98%E9%9B%84%E4%BA%9E%E7%81%A31-%E4%BA%9E%E6%B4%B2%E6%96%B0%E7%81%A3%E5%8D%80%E7%9A%84%E6%BC%94%E8%AE%8A%E9%80%B2%E7%A8%8B",
+      "https://urban-web.kcg.gov.tw/"
+    ]
   },
   {
     "id": "khh-kmt-env1",
-    "city": "kaohsiung",
-    "party": "kmt",
-    "category": "環境",
-    "status": "已推動",
-    "text": "空品或河川水質改善與稽查。",
-    "simple": "空氣或河水品質改善。",
     "pros": [
       "空品與水質改善是高雄長期核心民生議題",
       "稽查工業排放可降健康風險",
@@ -3146,24 +2726,20 @@ const CITY_POLICIES = [
       "轉型形象有助招商",
       "水岸整治提升宜居"
     ],
-    "oppose": [
+    "cons": [
       "工業結構使減污難一蹴可幾",
       "就業與環保兩難",
       "跨域污染",
       "數據爭議",
       "短期無感"
     ],
-    "note": "環境治理。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://e-info.org.tw/",
+      "https://www.kcg.gov.tw/"
+    ]
   },
   {
     "id": "khh-kmt-social1",
-    "city": "kaohsiung",
-    "party": "kmt",
-    "category": "社福",
-    "status": "已推動",
-    "text": "托育或長照據點布建擴大。",
-    "simple": "托育長照據點更多。",
     "pros": [
       "托育長照據點擴大減輕家庭負擔",
       "高齡城市需求迫切",
@@ -3171,24 +2747,21 @@ const CITY_POLICIES = [
       "與社宅共構",
       "公開布建"
     ],
-    "oppose": [
+    "cons": [
       "人力荒",
       "行政區落差",
       "財政",
       "品質",
       "建設優先排擠疑慮"
     ],
-    "note": "社福布建。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-kmt-safe1",
-    "city": "kaohsiung",
-    "party": "kmt",
-    "category": "治安",
-    "status": "已推動",
-    "text": "防詐宣導與科技執法強化。",
-    "simple": "防詐與科技執法。",
     "pros": [
       "防詐與科技執法",
       "港都流動人口多更需治安作為",
@@ -3196,24 +2769,21 @@ const CITY_POLICIES = [
       "公開指標",
       "跨局合作"
     ],
-    "oppose": [
+    "cons": [
       "跨境案件",
       "隱私",
       "警力",
       "宣導疲勞",
       "成本"
     ],
-    "note": "治安防詐。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-kmt-flood1",
-    "city": "kaohsiung",
-    "party": "kmt",
-    "category": "治水",
-    "status": "已推動",
-    "text": "排水清疏與抽水站效能提升。",
-    "simple": "排水抽水更強降淹水。",
     "pros": [
       "排水抽水對低窪與沿海行政區關鍵",
       "清疏降低暴雨積水",
@@ -3221,24 +2791,21 @@ const CITY_POLICIES = [
       "保護產業與住家",
       "可量化工程"
     ],
-    "oppose": [
+    "cons": [
       "極端降雨與地層因素",
       "工期擾民",
       "維運經費",
       "上下游",
       "預算排擠"
     ],
-    "note": "治水。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-dpp-lrt",
-    "city": "kaohsiung",
-    "party": "dpp",
-    "category": "交通",
-    "status": "已推動",
-    "text": "捷運輕軌路網延伸。",
-    "simple": "捷運輕軌更長。",
     "pros": [
       "輕軌與捷運路網延伸提高公共運具覆蓋",
       "串聯亞灣、商圈與住宅區，減少轉乘斷點",
@@ -3246,24 +2813,20 @@ const CITY_POLICIES = [
       "帶動沿線再開發與觀光動線",
       "票證整合後市民出行成本可降"
     ],
-    "oppose": [
+    "cons": [
       "輕軌與汽機車爭道，肇事與用路文化衝突不斷",
       "運量與建設成本效益長期被質疑",
       "工期、預算與工程弊案疑雲影響信任",
       "施工期商家營收下滑",
       "部分路段被批速度慢、準點與轉乘體驗不足"
     ],
-    "note": "陳市府軌道。",
-    "yearHint": "2019–2026"
+    "sources": [
+      "https://www.krtc.com.tw/",
+      "https://www.kcg.gov.tw/"
+    ]
   },
   {
     "id": "khh-dpp-bay",
-    "city": "kaohsiung",
-    "party": "dpp",
-    "category": "產業",
-    "status": "已推動",
-    "text": "亞洲新灣區創新聚落。",
-    "simple": "港灣科技會展特區。",
     "pros": [
       "亞洲新灣區定位港灣科技、會展與創新聚落，推動產業轉型",
       "公共建設（展館、流行音樂中心等）已形成門戶意象",
@@ -3271,24 +2834,20 @@ const CITY_POLICIES = [
       "社宅與商辦並進可平衡居住與產業",
       "港市合作釋放土地價值"
     ],
-    "oppose": [
+    "cons": [
       "部分區塊長期空地、開發速度不均，被批只見藍圖",
       "公共投資回報與民間進駐是否成正比受檢視",
       "房價與租金上漲排擠在地",
       "交通與停車若未同步，活動尖峰壅塞",
       "南半部開發與環評、重劃時程仍不確定"
     ],
-    "note": "亞灣。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.tcscre.org/post/%E9%AB%98%E9%9B%84%E4%BA%9E%E7%81%A31-%E4%BA%9E%E6%B4%B2%E6%96%B0%E7%81%A3%E5%8D%80%E7%9A%84%E6%BC%94%E8%AE%8A%E9%80%B2%E7%A8%8B",
+      "https://urban-web.kcg.gov.tw/"
+    ]
   },
   {
     "id": "khh-dpp-air",
-    "city": "kaohsiung",
-    "party": "dpp",
-    "category": "環境",
-    "status": "已推動",
-    "text": "工業減排與空品改善。",
-    "simple": "減排改善空氣。",
     "pros": [
       "工業減排與空品改善直接回應高雄健康權訴求",
       "固定污染源管制可量化追蹤",
@@ -3296,24 +2855,20 @@ const CITY_POLICIES = [
       "公開監測強化課責",
       "綠供應鏈要求下企業減排也是競爭力"
     ],
-    "oppose": [
+    "cons": [
       "結構性工業排放難短期歸零",
       "減排成本可能影響就業與投資",
       "移動源與境外傳輸仍影響指標",
       "重大工安與空污事件一出即摧毀信任",
       "中央與地方權責、罰則力道爭議"
     ],
-    "note": "空污治理。",
-    "yearHint": "2019–2026"
+    "sources": [
+      "https://e-info.org.tw/",
+      "https://www.kcg.gov.tw/"
+    ]
   },
   {
     "id": "khh-dpp-sh",
-    "city": "kaohsiung",
-    "party": "dpp",
-    "category": "住宅",
-    "status": "已推動",
-    "text": "社宅與租屋協助沿線布點。",
-    "simple": "社宅租屋協助。",
     "pros": [
       "社宅與租屋協助沿線布點，結合軌道可近性",
       "亞灣等智慧公宅強調節能與機能",
@@ -3321,24 +2876,20 @@ const CITY_POLICIES = [
       "弱勢與青年申請管道",
       "戶數成長可檢驗政策誠意"
     ],
-    "oppose": [
+    "cons": [
       "完工時程長，短期排隊壓力仍在",
       "區位與工作地是否匹配",
       "鄰避與基地爭議",
       "營運管理與社區融合挑戰",
       "財政與維運成本"
     ],
-    "note": "居住。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.tcscre.org/post/%E9%AB%98%E9%9B%84%E4%BA%9E%E7%81%A31-%E4%BA%9E%E6%B4%B2%E6%96%B0%E7%81%A3%E5%8D%80%E7%9A%84%E6%BC%94%E8%AE%8A%E9%80%B2%E7%A8%8B",
+      "https://urban-web.kcg.gov.tw/"
+    ]
   },
   {
     "id": "khh-dpp-d5",
-    "city": "kaohsiung",
-    "party": "dpp",
-    "category": "勞動",
-    "status": "立院提案",
-    "text": "要求移工與基層勞工權益諮詢布建。",
-    "simple": "移工勞工諮詢服務要加强。",
     "pros": [
       "高雄市移工與基層勞工諮詢據點可降低語言與資訊障礙",
       "一站式處理薪資、職災與仲介糾紛更有效率",
@@ -3346,24 +2897,21 @@ const CITY_POLICIES = [
       "多元語言服務體現城市包容",
       "減少求助無門衍生的衝突與社會成本"
     ],
-    "oppose": [
+    "cons": [
       "據點人力不足時排隊與轉介仍慢",
       "勞動法令主軸在中央，市府權限有限",
       "部分社區對移工服務設施抱持鄰避",
       "與既有民間單位重疊可能造成資源分散",
       "宣導不足時目標群體不知道據點"
     ],
-    "note": "勞動監督。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-dpp-d6",
-    "city": "kaohsiung",
-    "party": "dpp",
-    "category": "教育",
-    "status": "立院提案",
-    "text": "要求通學安全與老舊校舍改善。",
-    "simple": "通學安全與校舍改善。",
     "pros": [
       "高雄市通學安全與老舊校舍改善直接關係孩子安全",
       "行人環境與人車分道可降低學童事故",
@@ -3371,24 +2919,21 @@ const CITY_POLICIES = [
       "家長與社區支持度高，政策正當性強",
       "公開危樓清冊與工期便於監督"
     ],
-    "oppose": [
+    "cons": [
       "工程擾學、工期常跨學年影響教學",
       "預算龐大，優先順序易起爭議",
       "通學違停與汽機車文化需持續執法",
       "校地狹小限制工程方案",
       "中央補助與地方配合款時程不一"
     ],
-    "note": "教育設施。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-dpp-d7",
-    "city": "kaohsiung",
-    "party": "dpp",
-    "category": "青年",
-    "status": "立院提案",
-    "text": "要求青年就業媒合成果公布。",
-    "simple": "青年就業媒合成績公開。",
     "pros": [
       "高雄市青年就業媒合成果公開，可檢驗是否有實質就業而非只辦活動",
       "數據可導引產學合作與補助方向",
@@ -3396,24 +2941,21 @@ const CITY_POLICIES = [
       "青年可比較方案成效再參與",
       "提高市政問責與世代政策可信度"
     ],
-    "oppose": [
+    "cons": [
       "就業受景氣與產業結構影響，難全歸市政",
       "指標設計不佳易鼓勵湊數字",
       "個資與企業意願限制細緻揭露",
       "「媒合成功」口徑易爭議",
       "資源可能偏向核心都會，邊緣青年受惠少"
     ],
-    "note": "青年就業。",
-    "yearHint": "2021–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-dpp-d8",
-    "city": "kaohsiung",
-    "party": "dpp",
-    "category": "廉政",
-    "status": "立院提案",
-    "text": "要求標案與都更程序資訊公開。",
-    "simple": "標案都更程序公開。",
     "pros": [
       "高雄市標案與都更程序資訊公開，可降低圖利與資訊不對稱",
       "住戶較能參與都更條件討論",
@@ -3421,24 +2963,21 @@ const CITY_POLICIES = [
       "提高實施者與投資人長期信任",
       "對齊開放政府，減少黑箱傳聞"
     ],
-    "oppose": [
+    "cons": [
       "商業機密與談判策略公開範圍難界定",
       "程序公開不保證弱勢住戶實質對等",
       "文件量大一般人難消化",
       "可能拉長時程，延宕危老重建",
       "細節易被政治化解讀影響效率"
     ],
-    "note": "程序透明。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-tpp-t1",
-    "city": "kaohsiung",
-    "party": "tpp",
-    "category": "廉政",
-    "status": "競選政見",
-    "text": "主張市政透明與重大工程說明會前置。",
-    "simple": "大工程先說明會，過程透明。",
     "pros": [
       "高雄市重大工程前置說明會，可降低資訊落差與事後抗爭",
       "透明決策提升市政信任",
@@ -3446,24 +2985,21 @@ const CITY_POLICIES = [
       "減少宣布後才知情的突襲感",
       "會議紀錄公開有助後續究責"
     ],
-    "oppose": [
+    "cons": [
       "說明會若流於形式，反成程序招牌",
       "多次會議拉長工期與成本",
       "參與者以利害關係人為主，代表性不足",
       "技術複雜案一般市民難有效監督",
       "過度程序化可能耽误急需工程"
     ],
-    "note": "透明治理。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-tpp-t2",
-    "city": "kaohsiung",
-    "party": "tpp",
-    "category": "財政",
-    "status": "立院提案",
-    "text": "主張刪減效益不足活動與建設預算。",
-    "simple": "沒效益的活動建設預算要刪。",
     "pros": [
       "高雄市刪減效益不足活動與建設，可把資源留給托育、居住與交通",
       "成本效益評估抑制大拜拜式預算",
@@ -3471,24 +3007,21 @@ const CITY_POLICIES = [
       "公開刪減理由提升預算辯論品質",
       "對低使用率設施形成改革壓力"
     ],
-    "oppose": [
+    "cons": [
       "效益定義常政治化，文化體育難量化",
       "刪減過頭傷害社區活動與基層連結",
       "評估成本對小額計畫可能不划算",
       "短期刪減或犧牲長期維護",
       "府會對立下易淪政治籌碼"
     ],
-    "note": "預算監督。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-tpp-t3",
-    "city": "kaohsiung",
-    "party": "tpp",
-    "category": "住宅",
-    "status": "競選政見",
-    "text": "主張精準租金補貼與社宅公平性檢討。",
-    "simple": "租金補助精準、社宅抽籤公平。",
     "pros": [
       "高雄市精準租金補貼可把資源給壓力最大的租屋家戶",
       "社宅抽籤與資格公平性檢討減少特權疑慮",
@@ -3496,24 +3029,21 @@ const CITY_POLICIES = [
       "青年與弱勢分軌可兼顧不同需求",
       "公開中籤與候補資訊強化程序正義"
     ],
-    "oppose": [
+    "cons": [
       "精準化提高文件門檻，弱勢可能被排除",
       "資產調查引發隱私疑慮",
       "抽籤再公平也難解供給不足",
       "補貼可能部分轉嫁成漲租",
       "規則常改讓申請人無所適從"
     ],
-    "note": "居住正義。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-tpp-t4",
-    "city": "kaohsiung",
-    "party": "tpp",
-    "category": "交通",
-    "status": "競選政見",
-    "text": "主張準點率與運具資訊公開整合。",
-    "simple": "公車捷運準點與資訊整合公開。",
     "pros": [
       "高雄市公車捷運準點與運具資訊整合公開，方便轉乘規劃",
       "數據透明迫使業者改善調度",
@@ -3521,24 +3051,21 @@ const CITY_POLICIES = [
       "月票使用者可比較路線表現",
       "延誤即時通報降低焦慮"
     ],
-    "oppose": [
+    "cons": [
       "塞車與事故使準點波動，數字易被誤解",
       "舊系統介接與整合成本高",
       "過度公開可能獵巫單一業者",
       "偏區路線先天準點差，公開後更難維持",
       "資訊錯誤會反噬信任"
     ],
-    "note": "交通資訊。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-tpp-t5",
-    "city": "kaohsiung",
-    "party": "tpp",
-    "category": "青年",
-    "status": "競選政見",
-    "text": "主張青年創業與租屋支持套案。",
-    "simple": "青年創業加租屋支持。",
     "pros": [
       "高雄市青年創業與租屋支持套案，同時處理低薪與高房租",
       "一站式降低申請成本",
@@ -3546,24 +3073,21 @@ const CITY_POLICIES = [
       "公開成果便於複製",
       "直接回應世代焦慮"
     ],
-    "oppose": [
+    "cons": [
       "創業失敗率高，補助風險受質疑",
       "租屋補貼治標不治本",
       "資格門檻可能排除最需要者",
       "覆蓋率有限、感受不均",
       "與中央方案重疊造成窗口混亂"
     ],
-    "note": "青年政策。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-tpp-t6",
-    "city": "kaohsiung",
-    "party": "tpp",
-    "category": "產業",
-    "status": "競選政見",
-    "text": "主張中小企業輔導優先於只服務大投資。",
-    "simple": "中小企業輔導不要只顧大廠。",
     "pros": [
       "高雄市中小企業輔導優先，擴大就業受惠面",
       "避免資源只集中少數大型投資",
@@ -3571,24 +3095,21 @@ const CITY_POLICIES = [
       "在地特色產業需要客製化支持",
       "穩定就業往往優於大型案的浮動承諾"
     ],
-    "oppose": [
+    "cons": [
       "中小企業數量多，輔導能量易稀釋",
       "大投資仍可能帶來較高稅收與指標鏈",
       "書審繁複時小店難申請",
       "效果難量化，易成胡椒粉式補助",
       "結構問題非單點輔導能解"
     ],
-    "note": "中小企業。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-tpp-t7",
-    "city": "kaohsiung",
-    "party": "tpp",
-    "category": "環境",
-    "status": "立院提案",
-    "text": "主張感測數據即時公開與申訴時限。",
-    "simple": "環境感測即時公開、申訴有時限。",
     "pros": [
       "高雄市環境感測即時公開，讓市民避險並監督",
       "申訴時限避免公文空轉",
@@ -3596,24 +3117,21 @@ const CITY_POLICIES = [
       "提高空品噪音水質的日常感知",
       "接軌開放政府與智慧治理"
     ],
-    "oppose": [
+    "cons": [
       "感測誤差與維護成本常被低估",
       "即時公開可能引發過度恐慌",
       "時限過短使調查不完整",
       "跨局責任不清時互相推諉",
       "有數據無人力分析則空轉"
     ],
-    "note": "環境數據。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "khh-tpp-t8",
-    "city": "kaohsiung",
-    "party": "tpp",
-    "category": "其他",
-    "status": "競選政見",
-    "text": "主張參與式預算與里層級需求調查。",
-    "simple": "小額預算讓市民參與決定。",
     "pros": [
       "高雄市參與式預算讓市民決定小額公共投資，提升歸屬感",
       "里層級需求調查補足由上而下盲點",
@@ -3621,24 +3139,21 @@ const CITY_POLICIES = [
       "小而可見的改善提高信任",
       "過程公開抑制特定團體壟斷"
     ],
-    "oppose": [
+    "cons": [
       "參與率偏低時代表性受質疑",
       "小額難解房價軌道等結構問題",
       "提案競爭可能加劇社區對立",
       "行政成本相對金額偏高",
       "審查不透明仍被批酬庸"
     ],
-    "note": "參與式治理。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-kmt-infra1",
-    "city": "hsinchu",
-    "party": "kmt",
-    "category": "交通",
-    "status": "已推動",
-    "text": "新竹市持續推動軌道或幹道瓶頸改善工程。",
-    "simple": "改善塞車瓶頸與軌道／幹道建設。",
     "pros": [
       "科學園區通勤塞車是竹市核心痛點，幹道瓶頸改善可縮短通關時間",
       "軌道與快速道路銜接分散車流",
@@ -3646,24 +3161,20 @@ const CITY_POLICIES = [
       "物流與上下班可靠度提高",
       "長期有助留才與宜居"
     ],
-    "oppose": [
+    "cons": [
       "工程期間往往更塞，民怨反升",
       "土地狹小拓寬困難",
       "預算與中央計畫時程不確定",
       "誘發更多車流的批評（誘發需求）",
       "排擠停車與人本空間的疑慮"
     ],
-    "note": "交通建設。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.hccg.gov.tw/",
+      "https://www.cna.com.tw/news/aloc/"
+    ]
   },
   {
     "id": "hc-kmt-infra2",
-    "city": "hsinchu",
-    "party": "kmt",
-    "category": "交通",
-    "status": "規劃中",
-    "text": "規劃轉乘樞紐與公車路網重整。",
-    "simple": "轉乘更好，公車路線重整。",
     "pros": [
       "公車路網重整可服務園區與市區轉乘",
       "減少私人運具進園區",
@@ -3671,24 +3182,20 @@ const CITY_POLICIES = [
       "資訊準點公開提高搭乘",
       "偏區與校園路線可補強"
     ],
-    "oppose": [
+    "cons": [
       "園區班次尖峰仍擠、離峰空車",
       "路線調整反彈",
       "塞車使公車準點難提升",
       "虧損補貼壓力",
       "最後一哩不足"
     ],
-    "note": "運具整合。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.hccg.gov.tw/",
+      "https://www.cna.com.tw/news/aloc/"
+    ]
   },
   {
     "id": "hc-kmt-house1",
-    "city": "hsinchu",
-    "party": "kmt",
-    "category": "住宅",
-    "status": "已推動",
-    "text": "推動社宅或青年宅供給並檢討申請機制。",
-    "simple": "社宅青年宅供給與申請機制。",
     "pros": [
       "高房價縣市更需社宅青年宅",
       "減輕工程師與服務業租屋壓力",
@@ -3696,24 +3203,21 @@ const CITY_POLICIES = [
       "結合學區與通勤廊帶",
       "弱勢保障"
     ],
-    "oppose": [
+    "cons": [
       "土地難取得，戶數遠低於需求",
       "中籤率極低",
       "可能推升周邊行情",
       "與新竹縣跨域居住問題難單靠市解",
       "財政與鄰避"
     ],
-    "note": "居住政策。",
-    "yearHint": "2019–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-kmt-econ1",
-    "city": "hsinchu",
-    "party": "kmt",
-    "category": "產業",
-    "status": "已推動",
-    "text": "招商與產業園區升級，創造就業。",
-    "simple": "招商設廠創造工作機會。",
     "pros": [
       "產業園區升級鞏固半導體聚落",
       "就業與稅收支撐城市",
@@ -3721,24 +3225,21 @@ const CITY_POLICIES = [
       "國際能見度",
       "研發能量外溢"
     ],
-    "oppose": [
+    "cons": [
       "交通與居住外部成本由全市承擔",
       "產業單一風險",
       "房價推升",
       "用水用電與環境負荷",
       "在地傳統商家受租金排擠"
     ],
-    "note": "產業招商。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-kmt-env1",
-    "city": "hsinchu",
-    "party": "kmt",
-    "category": "環境",
-    "status": "已推動",
-    "text": "空品或河川水質改善與稽查。",
-    "simple": "空氣或河水品質改善。",
     "pros": [
       "空品水質稽查保護密集居住與校園",
       "感測公開",
@@ -3746,24 +3247,21 @@ const CITY_POLICIES = [
       "水資源保護",
       "宜居品牌"
     ],
-    "oppose": [
+    "cons": [
       "交通移動源占比高",
       "跨縣污染",
       "執法與產業張力",
       "數據爭議",
       "短期無感"
     ],
-    "note": "環境治理。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-kmt-social1",
-    "city": "hsinchu",
-    "party": "kmt",
-    "category": "社福",
-    "status": "已推動",
-    "text": "托育或長照據點布建擴大。",
-    "simple": "托育長照據點更多。",
     "pros": [
       "雙薪科技家庭托育需求高，據點擴大有感",
       "長照因應高齡與夾心族",
@@ -3771,24 +3269,21 @@ const CITY_POLICIES = [
       "準公共壓低費用",
       "公開量能"
     ],
-    "oppose": [
+    "cons": [
       "排隊與師資不足",
       "園區與市區資源不均",
       "財政",
       "品質落差",
       "夜間與臨時托育仍缺"
     ],
-    "note": "社福布建。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-kmt-safe1",
-    "city": "hsinchu",
-    "party": "kmt",
-    "category": "治安",
-    "status": "已推動",
-    "text": "防詐宣導與科技執法強化。",
-    "simple": "防詐與科技執法。",
     "pros": [
       "防詐守護高資產與高齡族群",
       "科技執法",
@@ -3796,24 +3291,21 @@ const CITY_POLICIES = [
       "公開指標",
       "跨局合作"
     ],
-    "oppose": [
+    "cons": [
       "跨境詐欺",
       "隱私",
       "警力相對人口",
       "宣導疲勞",
       "成本"
     ],
-    "note": "治安防詐。",
-    "yearHint": "2020–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-kmt-flood1",
-    "city": "hsinchu",
-    "party": "kmt",
-    "category": "治水",
-    "status": "已推動",
-    "text": "排水清疏與抽水站效能提升。",
-    "simple": "排水抽水更強降淹水。",
     "pros": [
       "排水抽水降低暴雨積水影響通勤",
       "保護低窪里",
@@ -3821,24 +3313,21 @@ const CITY_POLICIES = [
       "減少產線與住家損失",
       "工程可檢驗"
     ],
-    "oppose": [
+    "cons": [
       "都市化提高逕流",
       "工期擾民",
       "維運",
       "極端雨量",
       "預算"
     ],
-    "note": "治水。",
-    "yearHint": "2018–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-dpp-d1",
-    "city": "hsinchu",
-    "party": "dpp",
-    "category": "社福",
-    "status": "立院提案",
-    "text": "議會要求社福預算占比與據點服務公開。",
-    "simple": "社福預算與服務要公開可查。",
     "pros": [
       "新竹市社福預算與據點服務公開，可檢驗資源是否真正到托育、長照與弱勢家戶",
       "各行政區數據並陳有助發現服務落差、推動重分配",
@@ -3846,24 +3335,21 @@ const CITY_POLICIES = [
       "減少大拜拜活動排擠實質照顧服務的空間",
       "提高申辦流程透明度，降低「不知道如何申請」的門檻"
     ],
-    "oppose": [
+    "cons": [
       "過度聚焦預算占比數字，可能忽略服務品質與成果",
       "報表格式若艱澀，一般市民仍難監督",
       "第一線可能忙於填表，排擠直接服務時間",
       "數據易被選擇性解讀，淪為政治攻防素材",
       "公開本身不自動解決人力荒與排隊問題"
     ],
-    "note": "議會社福監督。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-dpp-d2",
-    "city": "hsinchu",
-    "party": "dpp",
-    "category": "環境",
-    "status": "立院提案",
-    "text": "要求污染源稽查期限與數據公開。",
-    "simple": "污染稽查有期限資料公開。",
     "pros": [
       "新竹市污染源稽查設期限，可避免案件久拖與執法空轉",
       "數據公開提高空品、水質與噪音治理的社會信任",
@@ -3871,24 +3357,21 @@ const CITY_POLICIES = [
       "公民可依公開資料參與監督熱點",
       "對違法排放形成嚇阻，守護周邊居民健康"
     ],
-    "oppose": [
+    "cons": [
       "期限過短可能使檢查流於形式、深度不足",
       "跨域與移動污染源非單一市府期限能完全處理",
       "業者主張程序過嚴影響營運與就業",
       "數據誤差或延遲公開反而傷害公信",
       "稽查人力不足時「有期限無能量」"
     ],
-    "note": "環境監督。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-dpp-d3",
-    "city": "hsinchu",
-    "party": "dpp",
-    "category": "住宅",
-    "status": "立院提案",
-    "text": "要求租金補貼與社宅進度透明。",
-    "simple": "租金補助社宅進度透明。",
     "pros": [
       "新竹市租金補貼與社宅進度透明，可檢驗居住政策是否達標",
       "公開排隊、中籤與完工時程，減少黑箱傳聞",
@@ -3896,24 +3379,21 @@ const CITY_POLICIES = [
       "申請人可依資訊規劃居住選項",
       "避免只喊戶數目標、不公布進度的空轉"
     ],
-    "oppose": [
+    "cons": [
       "進度延宕公開後易被政治化，影響行政士氣",
       "個資與財務細節公開範圍難拿捏",
       "透明不直接增加供給戶數",
       "頻繁報告占用行政能量",
       "統計口徑不一造成各說各話"
     ],
-    "note": "居住監督。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-dpp-d4",
-    "city": "hsinchu",
-    "party": "dpp",
-    "category": "交通",
-    "status": "立院提案",
-    "text": "要求偏區或夜間運能改善。",
-    "simple": "偏區夜間公車運能改善。",
     "pros": [
       "新竹市偏區與夜間運能改善，落實移動正義",
       "夜班、醫療與服務業通勤者高度依賴離峰運具",
@@ -3921,24 +3401,21 @@ const CITY_POLICIES = [
       "公開載客率有助精準調班",
       "高齡與行動不便者夜間出行更有保障"
     ],
-    "oppose": [
+    "cons": [
       "離峰載客率低，擴大運能增加虧損與補貼",
       "司機工時與行車安全需嚴格配套",
       "路線調整牽動既有乘客習慣",
       "候車環境與治安若未改善，夜間搭乘意願仍低",
       "預算可能排擠尖峰熱門路線班次"
     ],
-    "note": "移動正義。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-dpp-d5",
-    "city": "hsinchu",
-    "party": "dpp",
-    "category": "勞動",
-    "status": "立院提案",
-    "text": "要求移工與基層勞工權益諮詢布建。",
-    "simple": "移工勞工諮詢服務要加强。",
     "pros": [
       "新竹市移工與基層勞工諮詢據點可降低語言與資訊障礙",
       "一站式處理薪資、職災與仲介糾紛更有效率",
@@ -3946,24 +3423,21 @@ const CITY_POLICIES = [
       "多元語言服務體現城市包容",
       "減少求助無門衍生的衝突與社會成本"
     ],
-    "oppose": [
+    "cons": [
       "據點人力不足時排隊與轉介仍慢",
       "勞動法令主軸在中央，市府權限有限",
       "部分社區對移工服務設施抱持鄰避",
       "與既有民間單位重疊可能造成資源分散",
       "宣導不足時目標群體不知道據點"
     ],
-    "note": "勞動監督。",
-    "yearHint": "2020–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-dpp-d6",
-    "city": "hsinchu",
-    "party": "dpp",
-    "category": "教育",
-    "status": "立院提案",
-    "text": "要求通學安全與老舊校舍改善。",
-    "simple": "通學安全與校舍改善。",
     "pros": [
       "新竹市通學安全與老舊校舍改善直接關係孩子安全",
       "行人環境與人車分道可降低學童事故",
@@ -3971,24 +3445,21 @@ const CITY_POLICIES = [
       "家長與社區支持度高，政策正當性強",
       "公開危樓清冊與工期便於監督"
     ],
-    "oppose": [
+    "cons": [
       "工程擾學、工期常跨學年影響教學",
       "預算龐大，優先順序易起爭議",
       "通學違停與汽機車文化需持續執法",
       "校地狹小限制工程方案",
       "中央補助與地方配合款時程不一"
     ],
-    "note": "教育設施。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-dpp-d7",
-    "city": "hsinchu",
-    "party": "dpp",
-    "category": "青年",
-    "status": "立院提案",
-    "text": "要求青年就業媒合成果公布。",
-    "simple": "青年就業媒合成績公開。",
     "pros": [
       "新竹市青年就業媒合成果公開，可檢驗是否有實質就業而非只辦活動",
       "數據可導引產學合作與補助方向",
@@ -3996,24 +3467,21 @@ const CITY_POLICIES = [
       "青年可比較方案成效再參與",
       "提高市政問責與世代政策可信度"
     ],
-    "oppose": [
+    "cons": [
       "就業受景氣與產業結構影響，難全歸市政",
       "指標設計不佳易鼓勵湊數字",
       "個資與企業意願限制細緻揭露",
       "「媒合成功」口徑易爭議",
       "資源可能偏向核心都會，邊緣青年受惠少"
     ],
-    "note": "青年就業。",
-    "yearHint": "2021–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-dpp-d8",
-    "city": "hsinchu",
-    "party": "dpp",
-    "category": "廉政",
-    "status": "立院提案",
-    "text": "要求標案與都更程序資訊公開。",
-    "simple": "標案都更程序公開。",
     "pros": [
       "新竹市標案與都更程序資訊公開，可降低圖利與資訊不對稱",
       "住戶較能參與都更條件討論",
@@ -4021,24 +3489,21 @@ const CITY_POLICIES = [
       "提高實施者與投資人長期信任",
       "對齊開放政府，減少黑箱傳聞"
     ],
-    "oppose": [
+    "cons": [
       "商業機密與談判策略公開範圍難界定",
       "程序公開不保證弱勢住戶實質對等",
       "文件量大一般人難消化",
       "可能拉長時程，延宕危老重建",
       "細節易被政治化解讀影響效率"
     ],
-    "note": "程序透明。",
-    "yearHint": "2019–2025"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-tpp-jam",
-    "city": "hsinchu",
-    "party": "tpp",
-    "category": "交通",
-    "status": "已推動",
-    "text": "塞車熱點與號誌優化紓緩園區車潮。",
-    "simple": "改善塞車號誌。",
     "pros": [
       "塞車熱點與號誌優化可相對低成本、短工期改善園區車潮",
       "智慧交控比大興土木更快有感",
@@ -4046,24 +3511,20 @@ const CITY_POLICIES = [
       "減少怠速排放與通勤時間",
       "公開熱點改善前後數據可監督"
     ],
-    "oppose": [
+    "cons": [
       "號誌優化無法解決結構性車多路少",
       "一個路口綠了、下一個紅了，網路效應有限",
       "尖峰車流來自跨縣通勤，單市難解",
       "科技標案維運與資安成本",
       "若不同步公共交通，私車量可能再成長"
     ],
-    "note": "高市府交通。",
-    "yearHint": "2023–2026"
+    "sources": [
+      "https://www.hccg.gov.tw/",
+      "https://www.cna.com.tw/news/aloc/"
+    ]
   },
   {
     "id": "hc-tpp-care",
-    "city": "hsinchu",
-    "party": "tpp",
-    "category": "社福",
-    "status": "已推動",
-    "text": "托育婦幼服務量能擴大。",
-    "simple": "托育婦幼服務增加。",
     "pros": [
       "托育婦幼量能擴大直接回應科技城雙薪家庭",
       "降低育兒成本與排隊焦慮",
@@ -4071,24 +3532,21 @@ const CITY_POLICIES = [
       "公開收托率與品質稽核",
       "有助留才與生育意願"
     ],
-    "oppose": [
+    "cons": [
       "師資與場地仍是瓶頸",
       "熱門區一位難求",
       "財政補貼壓力",
       "臨時與夜間托育缺口",
       "品質若不穩，擴量反增風險"
     ],
-    "note": "托育。",
-    "yearHint": "2023–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-tpp-ltc",
-    "city": "hsinchu",
-    "party": "tpp",
-    "category": "社福",
-    "status": "已推動",
-    "text": "長照據點與高齡服務。",
-    "simple": "長照據點增加。",
     "pros": [
       "長照據點與高齡服務回應夾心族與在地老化",
       "日照與居家服務減輕住院壓力",
@@ -4096,24 +3554,21 @@ const CITY_POLICIES = [
       "結合醫療轉介",
       "公開據點與人力"
     ],
-    "oppose": [
+    "cons": [
       "長照人力薪資與流動率問題",
       "失智與重度需求能量不足",
       "城鄉與里際落差",
       "財政永續",
       "家屬對服務品質信任需時間累積"
     ],
-    "note": "長照。",
-    "yearHint": "2023–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-tpp-smart",
-    "city": "hsinchu",
-    "party": "tpp",
-    "category": "產業",
-    "status": "規劃中",
-    "text": "智慧城市與數位便民。",
-    "simple": "數位申請更方便。",
     "pros": [
       "數位申請與智慧城市可減少臨櫃與公文往返",
       "對忙碌科技族與新住民較友善",
@@ -4121,24 +3576,21 @@ const CITY_POLICIES = [
       "交通、停車與市政整合潛力",
       "提升行政效率與透明度"
     ],
-    "oppose": [
+    "cons": [
       "高齡與數位弱勢可能被排除",
       "系統標案與資安風險",
       "「智慧」口號多、體感少時反噬信任",
       "維運與改版成本高",
       "跨局資料孤島難真正整合"
     ],
-    "note": "智慧城市。",
-    "yearHint": "2023–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-tpp-t5",
-    "city": "hsinchu",
-    "party": "tpp",
-    "category": "青年",
-    "status": "競選政見",
-    "text": "主張青年創業與租屋支持套案。",
-    "simple": "青年創業加租屋支持。",
     "pros": [
       "新竹市青年創業與租屋支持套案，同時處理低薪與高房租",
       "一站式降低申請成本",
@@ -4146,24 +3598,21 @@ const CITY_POLICIES = [
       "公開成果便於複製",
       "直接回應世代焦慮"
     ],
-    "oppose": [
+    "cons": [
       "創業失敗率高，補助風險受質疑",
       "租屋補貼治標不治本",
       "資格門檻可能排除最需要者",
       "覆蓋率有限、感受不均",
       "與中央方案重疊造成窗口混亂"
     ],
-    "note": "青年政策。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-tpp-t6",
-    "city": "hsinchu",
-    "party": "tpp",
-    "category": "產業",
-    "status": "競選政見",
-    "text": "主張中小企業輔導優先於只服務大投資。",
-    "simple": "中小企業輔導不要只顧大廠。",
     "pros": [
       "新竹市中小企業輔導優先，擴大就業受惠面",
       "避免資源只集中少數大型投資",
@@ -4171,24 +3620,21 @@ const CITY_POLICIES = [
       "在地特色產業需要客製化支持",
       "穩定就業往往優於大型案的浮動承諾"
     ],
-    "oppose": [
+    "cons": [
       "中小企業數量多，輔導能量易稀釋",
       "大投資仍可能帶來較高稅收與指標鏈",
       "書審繁複時小店難申請",
       "效果難量化，易成胡椒粉式補助",
       "結構問題非單點輔導能解"
     ],
-    "note": "中小企業。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-tpp-t7",
-    "city": "hsinchu",
-    "party": "tpp",
-    "category": "環境",
-    "status": "立院提案",
-    "text": "主張感測數據即時公開與申訴時限。",
-    "simple": "環境感測即時公開、申訴有時限。",
     "pros": [
       "新竹市環境感測即時公開，讓市民避險並監督",
       "申訴時限避免公文空轉",
@@ -4196,24 +3642,21 @@ const CITY_POLICIES = [
       "提高空品噪音水質的日常感知",
       "接軌開放政府與智慧治理"
     ],
-    "oppose": [
+    "cons": [
       "感測誤差與維護成本常被低估",
       "即時公開可能引發過度恐慌",
       "時限過短使調查不完整",
       "跨局責任不清時互相推諉",
       "有數據無人力分析則空轉"
     ],
-    "note": "環境數據。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   },
   {
     "id": "hc-tpp-t8",
-    "city": "hsinchu",
-    "party": "tpp",
-    "category": "其他",
-    "status": "競選政見",
-    "text": "主張參與式預算與里層級需求調查。",
-    "simple": "小額預算讓市民參與決定。",
     "pros": [
       "新竹市參與式預算讓市民決定小額公共投資，提升歸屬感",
       "里層級需求調查補足由上而下盲點",
@@ -4221,14 +3664,17 @@ const CITY_POLICIES = [
       "小而可見的改善提高信任",
       "過程公開抑制特定團體壟斷"
     ],
-    "oppose": [
+    "cons": [
       "參與率偏低時代表性受質疑",
       "小額難解房價軌道等結構問題",
       "提案競爭可能加劇社區對立",
       "行政成本相對金額偏高",
       "審查不透明仍被批酬庸"
     ],
-    "note": "參與式治理。",
-    "yearHint": "2022–2026"
+    "sources": [
+      "https://www.cna.com.tw/news/aloc/",
+      "https://udn.com/news/cate/2/6638",
+      "https://news.ltn.com.tw/list/politics"
+    ]
   }
-];
+]
