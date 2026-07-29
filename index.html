@@ -1,0 +1,2852 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f3f0ea" id="meta-theme-color" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>政策光譜測驗｜你同意的政策屬於誰？</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #12151c;
+      --ink-soft: #4a5160;
+      --muted: #7a8294;
+      --paper: #f3f0ea;
+      --paper-deep: #e5e0d6;
+      --card: #fffcf8;
+      --card-edge: rgba(18, 21, 28, 0.08);
+      --line: #d8d2c6;
+      --accent: #1a1f2e;
+      --accent-gold: #c9a227;
+      --accent-soft: #e8d9a8;
+      /* Party colors — vivid & distinct */
+      --dpp: #00a651;
+      --dpp-deep: #007a3d;
+      --dpp-soft: rgba(0, 166, 81, 0.12);
+      --kmt: #0057d9;
+      --kmt-deep: #003fa3;
+      --kmt-soft: rgba(0, 87, 217, 0.12);
+      --tpp: #f0c000;
+      --tpp-deep: #c99700;
+      --tpp-ink: #6b5200;
+      --tpp-soft: rgba(240, 192, 0, 0.18);
+      --agree: #0d8f4e;
+      --disagree: #c62828;
+      --shadow: 0 4px 6px rgba(18, 21, 28, 0.03), 0 16px 40px rgba(18, 21, 28, 0.08);
+      --shadow-lg: 0 24px 64px rgba(18, 21, 28, 0.14);
+      --radius: 18px;
+      --radius-sm: 12px;
+      --font-serif: "Noto Serif TC", "PMingLiU", serif;
+      --font-sans: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      --bg-grad-1: rgba(0, 166, 81, 0.09);
+      --bg-grad-2: rgba(0, 87, 217, 0.08);
+      --bg-grad-3: rgba(240, 192, 0, 0.12);
+      --bg-base-top: #f7f4ef;
+      --bg-base-bottom: #ebe6dc;
+      --sticky-top-bg: rgba(247, 244, 239, 0.97);
+      --sticky-bot-bg: rgba(247, 244, 239, 0.98);
+      --sticky-bot-mid: rgba(243, 240, 234, 0.92);
+    }
+
+    html[data-theme="dark"] {
+      --ink: #f4f7fc;
+      --ink-soft: #c5cddc;
+      --muted: #9aa6bb;
+      --paper: #0a0d14;
+      --paper-deep: #151b28;
+      --card: #141b2a;
+      --card-edge: rgba(148, 163, 184, 0.22);
+      --line: #2a3548;
+      --accent: #f4f7fc;
+      --accent-gold: #f5c842;
+      --accent-soft: #5c4a16;
+      --dpp: #34d399;
+      --dpp-deep: #6ee7b7;
+      --dpp-soft: rgba(52, 211, 153, 0.18);
+      --kmt: #60a5fa;
+      --kmt-deep: #93c5fd;
+      --kmt-soft: rgba(96, 165, 250, 0.18);
+      --tpp: #fbbf24;
+      --tpp-deep: #fcd34d;
+      --tpp-ink: #fef3c7;
+      --tpp-soft: rgba(251, 191, 36, 0.16);
+      --agree: #34d399;
+      --disagree: #f87171;
+      --shadow: 0 4px 24px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255,255,255,0.04);
+      --shadow-lg: 0 28px 70px rgba(0, 0, 0, 0.55);
+      --bg-grad-1: rgba(52, 211, 153, 0.12);
+      --bg-grad-2: rgba(96, 165, 250, 0.12);
+      --bg-grad-3: rgba(251, 191, 36, 0.1);
+      --bg-base-top: #070a10;
+      --bg-base-bottom: #0f1520;
+      --sticky-top-bg: rgba(10, 13, 20, 0.92);
+      --sticky-bot-bg: rgba(10, 13, 20, 0.96);
+      --sticky-bot-mid: rgba(10, 13, 20, 0.9);
+      color-scheme: dark;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--ink);
+      background-color: var(--paper);
+      background-image:
+        radial-gradient(ellipse 80% 50% at 10% -10%, var(--bg-grad-1), transparent 55%),
+        radial-gradient(ellipse 70% 45% at 95% 10%, var(--bg-grad-2), transparent 50%),
+        radial-gradient(ellipse 60% 40% at 70% 100%, var(--bg-grad-3), transparent 50%),
+        linear-gradient(180deg, var(--bg-base-top) 0%, var(--paper) 40%, var(--bg-base-bottom) 100%);
+      min-height: 100dvh;
+      min-height: 100svh;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: rgba(0, 87, 217, 0.12);
+    }
+
+    /* Fine paper grain */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.035;
+      z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* Top tri-color ribbon */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      z-index: 100;
+      background: linear-gradient(90deg, var(--dpp) 0%, var(--dpp) 33.33%, var(--kmt) 33.33%, var(--kmt) 66.66%, var(--tpp) 66.66%, var(--tpp) 100%);
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .app {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto;
+      padding:
+        max(1.25rem, calc(env(safe-area-inset-top, 0px) + 0.75rem))
+        max(0.9rem, env(safe-area-inset-right, 0px))
+        max(2rem, calc(env(safe-area-inset-bottom, 0px) + 1.25rem))
+        max(0.9rem, env(safe-area-inset-left, 0px));
+      min-height: 100dvh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .screen { display: none; animation: riseIn 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+    .screen.active { display: flex; flex-direction: column; flex: 1; }
+
+    @keyframes riseIn {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 0 transparent; }
+      50% { box-shadow: 0 0 0 4px var(--tpp-soft); }
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      padding: 0.32rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 252, 248, 0.9);
+      color: var(--ink-soft);
+      backdrop-filter: blur(6px);
+    }
+
+    .pill.dpp {
+      background: var(--dpp-soft);
+      border-color: color-mix(in srgb, var(--dpp) 45%, var(--line));
+      color: var(--dpp-deep);
+    }
+    .pill.kmt {
+      background: var(--kmt-soft);
+      border-color: color-mix(in srgb, var(--kmt) 45%, var(--line));
+      color: var(--kmt-deep);
+    }
+    .pill.tpp {
+      background: var(--tpp-soft);
+      border-color: color-mix(in srgb, var(--tpp) 55%, var(--line));
+      color: var(--tpp-ink);
+    }
+
+    /* —— Start —— */
+    #screen-start {
+      justify-content: center;
+      gap: 1.35rem;
+      text-align: center;
+      padding-top: 2.25rem;
+    }
+
+    .logo-mark {
+      width: 84px;
+      height: 84px;
+      margin: 0 auto 0.35rem;
+      border-radius: 24px;
+      background:
+        linear-gradient(145deg, #ffffff 0%, var(--card) 50%, var(--paper-deep) 100%);
+      border: 1px solid var(--card-edge);
+      box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,0.9);
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-mark::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 40%, rgba(240, 192, 0, 0.08));
+      pointer-events: none;
+    }
+
+    .logo-mark span {
+      display: flex;
+      gap: 5px;
+      align-items: flex-end;
+      height: 40px;
+      position: relative;
+      z-index: 1;
+    }
+    .logo-mark i {
+      width: 11px;
+      border-radius: 4px 4px 2px 2px;
+      display: block;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    }
+    .logo-mark i:nth-child(1) {
+      background: linear-gradient(180deg, #22c55e, var(--dpp));
+      height: 26px;
+    }
+    .logo-mark i:nth-child(2) {
+      background: linear-gradient(180deg, #3b82f6, var(--kmt));
+      height: 40px;
+    }
+    .logo-mark i:nth-child(3) {
+      background: linear-gradient(180deg, #fde047, var(--tpp));
+      height: 32px;
+    }
+
+    #screen-start h1 {
+      font-size: clamp(1.85rem, 5.5vw, 2.45rem);
+      line-height: 1.22;
+      margin-bottom: 0.4rem;
+      background: linear-gradient(135deg, var(--ink) 30%, #2a3348 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      /* fallback solid if clip fails on some browsers still shows ink via color */
+      color: var(--ink);
+    }
+
+    .subtitle {
+      color: var(--ink-soft);
+      font-size: 1.08rem;
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--card-edge);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.35rem 1.45rem;
+      text-align: left;
+      position: relative;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 1.25rem;
+      right: 1.25rem;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.95), transparent);
+      border-radius: 1px;
+    }
+
+    .rules {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+    }
+
+    .rules > p:first-child {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      color: var(--ink);
+      margin-bottom: 0.15rem;
+    }
+
+    .rules ol {
+      margin: 0.85rem 0 0 0;
+      padding-left: 0;
+      list-style: none;
+      counter-reset: rule;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .rules li {
+      counter-increment: rule;
+      position: relative;
+      padding: 0.65rem 0.75rem 0.65rem 2.6rem;
+      background: linear-gradient(90deg, rgba(18,21,28,0.03), transparent);
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+    }
+
+    .rules li::before {
+      content: counter(rule, decimal-leading-zero);
+      position: absolute;
+      left: 0.55rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--font-serif);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      letter-spacing: 0.02em;
+    }
+
+    .rules li strong { color: var(--ink); font-weight: 700; }
+
+    .disclaimer {
+      font-size: 0.76rem;
+      color: var(--muted);
+      margin-top: 1rem;
+      padding-top: 0.9rem;
+      border-top: 1px dashed var(--line);
+      line-height: 1.55;
+    }
+
+    .btn {
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 999px;
+      padding: 0.95rem 1.75rem;
+      min-height: 48px;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, filter 0.18s ease;
+      letter-spacing: 0.04em;
+      touch-action: manipulation;
+    }
+
+    .btn:active { transform: scale(0.98); }
+    .btn:focus-visible { outline: 3px solid color-mix(in srgb, var(--kmt) 50%, white); outline-offset: 3px; }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #1a2030 0%, #0d111a 100%);
+      color: #f7f4ef;
+      box-shadow: 0 10px 28px rgba(13, 17, 26, 0.35), inset 0 1px 0 rgba(255,255,255,0.12);
+      width: 100%;
+      max-width: 320px;
+      margin: 0.35rem auto 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, transparent 40%, rgba(240, 192, 0, 0.15) 50%, transparent 60%);
+      transform: translateX(-100%);
+      transition: transform 0.5s ease;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.08);
+      box-shadow: 0 14px 32px rgba(13, 17, 26, 0.4);
+    }
+    .btn-primary:hover::after { transform: translateX(100%); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink-soft);
+      border: 1.5px solid var(--line);
+      padding: 0.6rem 1.15rem;
+      font-size: 0.9rem;
+      box-shadow: none;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.6);
+      border-color: var(--ink-soft);
+      color: var(--ink);
+    }
+
+    /* —— Quiz —— */
+    #screen-quiz {
+      gap: 1.05rem;
+      /* room for sticky action bar on phones */
+      padding-bottom: 0;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.15rem 0.15rem 0.35rem;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: linear-gradient(180deg, var(--sticky-top-bg) 60%, transparent);
+      backdrop-filter: blur(8px);
+      margin: 0 -0.15rem;
+      padding-top: 0.35rem;
+      padding-bottom: 0.65rem;
+    }
+
+    .progress-wrap { flex: 1; }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--ink-soft);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.02em;
+    }
+
+    .progress-track {
+      height: 10px;
+      background: rgba(18, 21, 28, 0.06);
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.04);
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 8.33%;
+      background: linear-gradient(90deg, var(--dpp), var(--kmt) 50%, var(--tpp));
+      border-radius: 999px;
+      transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: 0 0 12px rgba(0, 87, 217, 0.25);
+    }
+
+    .policy-card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.95rem;
+      min-height: 280px;
+    }
+
+    .policy-card .card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: relative;
+      border-top: 3px solid transparent;
+      border-image: linear-gradient(90deg, var(--dpp), var(--kmt), var(--tpp)) 1;
+      border-image-slice: 1;
+      /* border-image breaks radius; use pseudo instead */
+      border-top: none;
+    }
+
+    .policy-card .card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      border-radius: var(--radius) var(--radius) 0 0;
+      background: linear-gradient(90deg, var(--dpp), var(--kmt), var(--tpp));
+    }
+
+    .category-tag {
+      align-self: flex-start;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      padding: 0.35rem 0.8rem;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #1a2030, #2a3348);
+      color: #f0ebe3;
+      border: none;
+      box-shadow: 0 2px 8px rgba(18, 21, 28, 0.15);
+    }
+
+    .policy-text {
+      font-family: var(--font-serif);
+      font-size: clamp(1.05rem, 3.8vw, 1.4rem);
+      font-weight: 600;
+      line-height: 1.58;
+      color: var(--ink);
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .help-btn {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: linear-gradient(135deg, #fff9e8, #fff3d0);
+      border: 1px solid color-mix(in srgb, var(--tpp) 40%, var(--line));
+      color: var(--tpp-ink);
+      border-radius: 999px;
+      padding: 0.5rem 1rem;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 2px 8px rgba(201, 162, 39, 0.15);
+    }
+
+    .help-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(201, 162, 39, 0.25);
+    }
+    .help-btn:focus-visible { outline: 3px solid var(--tpp); outline-offset: 2px; }
+
+    .help-btn .q {
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--tpp), var(--tpp-deep));
+      color: var(--ink);
+      display: grid;
+      place-items: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .stance-hint {
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      text-align: center;
+      margin: 0.1rem 0 0.2rem;
+      font-weight: 500;
+    }
+
+    .stance-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+    }
+
+    .stance-box {
+      text-align: left;
+      font-family: inherit;
+      padding: 1rem 1rem 1.05rem;
+      border-radius: 16px;
+      border: 2px solid var(--line);
+      background: var(--card);
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      color: inherit;
+      width: 100%;
+      box-shadow: 0 2px 10px rgba(18, 21, 28, 0.04);
+      touch-action: manipulation;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .stance-box:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(18, 21, 28, 0.1);
+      }
+    }
+    .stance-box:focus-visible { outline: 3px solid var(--kmt); outline-offset: 2px; }
+
+    .stance-box.for {
+      border-color: color-mix(in srgb, var(--agree) 40%, var(--line));
+      background: linear-gradient(165deg, #f4fbf7 0%, #ffffff 55%);
+    }
+
+    .stance-box.against {
+      border-color: color-mix(in srgb, var(--disagree) 35%, var(--line));
+      background: linear-gradient(165deg, #fdf6f6 0%, #ffffff 55%);
+    }
+
+    .stance-box.for.selected {
+      border-color: var(--agree);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--agree) 25%, transparent), 0 12px 28px rgba(13, 143, 78, 0.15);
+      background: linear-gradient(165deg, #e6f7ee 0%, #f8fffb 100%);
+    }
+
+    .stance-box.against.selected {
+      border-color: var(--disagree);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--disagree) 22%, transparent), 0 12px 28px rgba(198, 40, 40, 0.12);
+      background: linear-gradient(165deg, #fdeaea 0%, #fff8f8 100%);
+    }
+
+    .stance-box h4 {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      letter-spacing: 0.02em;
+    }
+
+    .stance-box.for h4 { color: var(--agree); }
+    .stance-box.against h4 { color: var(--disagree); }
+
+    .stance-box ol {
+      margin: 0;
+      padding-left: 1.15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.38rem;
+    }
+
+    .stance-box li {
+      font-size: 0.82rem;
+      line-height: 1.48;
+      color: var(--ink-soft);
+      overflow-wrap: anywhere;
+    }
+
+    .stance-box.selected li { color: var(--ink); }
+
+    .pick-label {
+      display: block;
+      margin-top: 0.8rem;
+      padding-top: 0.55rem;
+      border-top: 1px dashed var(--line);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      opacity: 0.7;
+    }
+
+    .stance-box.for .pick-label { color: var(--agree); }
+    .stance-box.against .pick-label { color: var(--disagree); }
+
+    .neutral-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 0.1rem;
+    }
+
+    .btn-neutral {
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 0.8rem 1.5rem;
+      border-radius: 999px;
+      border: 2px solid var(--line);
+      background: rgba(255, 252, 248, 0.9);
+      color: var(--ink-soft);
+      cursor: pointer;
+      transition: all 0.18s ease;
+      min-width: 168px;
+      min-height: 48px;
+      letter-spacing: 0.04em;
+      touch-action: manipulation;
+    }
+
+    .btn-neutral:hover {
+      border-color: var(--ink-soft);
+      color: var(--ink);
+      background: #fff;
+    }
+    .btn-neutral.selected {
+      border-color: #5a6170;
+      background: linear-gradient(135deg, #eef0f4, #e4e7ed);
+      color: var(--ink);
+      box-shadow: 0 0 0 3px rgba(90, 97, 112, 0.15);
+    }
+    .btn-neutral:focus-visible { outline: 3px solid var(--kmt); outline-offset: 2px; }
+
+    .quiz-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin-top: 0.15rem;
+    }
+
+    .nav-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .nav-row-split {
+      justify-content: space-between;
+    }
+
+    .nav-row-split .btn-ghost,
+    .nav-row-split .btn-next {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .nav-row-extra {
+      justify-content: center;
+    }
+
+    .nav-row-extra .btn-ghost {
+      width: 100%;
+      opacity: 0.9;
+      font-size: 0.9rem;
+    }
+
+    #btn-prev:disabled {
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    .party-bars-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .party-bar-card {
+      border: 1px solid var(--card-edge);
+      border-radius: 14px;
+      padding: 0.9rem 1rem 1rem;
+      background: linear-gradient(180deg, color-mix(in srgb, var(--card) 92%, white), var(--card));
+    }
+
+    .party-bar-card h3 {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 0.65rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .party-bar-card h3 .net {
+      font-size: 0.85rem;
+      font-weight: 700;
+      opacity: 0.9;
+    }
+
+    .party-metric {
+      display: grid;
+      grid-template-columns: 4.2rem 1fr 2rem;
+      gap: 0.45rem;
+      align-items: center;
+      margin-bottom: 0.4rem;
+      font-size: 0.86rem;
+    }
+
+    .party-metric .m-label { font-weight: 700; color: var(--ink-soft); }
+    .party-metric .m-track {
+      height: 16px;
+      border-radius: 999px;
+      background: var(--paper-deep);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .party-metric .m-fill {
+      height: 100%;
+      border-radius: 999px;
+      width: 0;
+      transition: width 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .party-metric .m-fill.agree { background: var(--agree); }
+    .party-metric .m-fill.disagree { background: var(--disagree); }
+    .party-metric .m-fill.neutral { background: #8b93a7; }
+    .party-metric .m-count { font-weight: 800; text-align: right; }
+
+    .modal-actions-split {
+      display: flex;
+      gap: 0.6rem;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+    .modal-actions-split .btn-ghost {
+      min-height: 48px;
+      padding: 0.65rem 1.2rem;
+    }
+
+    .u-stat {
+      border: 1px solid var(--card-edge);
+      border-radius: 14px;
+      padding: 0.85rem 0.75rem;
+      text-align: center;
+      background: linear-gradient(180deg, #ffffff, #faf8f4);
+      box-shadow: 0 2px 10px rgba(18, 21, 28, 0.04);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .u-stat::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+    }
+    .u-stat:nth-child(1)::before { background: var(--dpp); }
+    .u-stat:nth-child(2)::before { background: var(--kmt); }
+    .u-stat:nth-child(3)::before { background: var(--tpp); }
+
+    .u-stat .party { font-weight: 800; font-size: 0.92rem; margin-bottom: 0.3rem; }
+    .u-stat .party.dpp { color: var(--dpp-deep); }
+    .u-stat .party.kmt { color: var(--kmt-deep); }
+    .u-stat .party.tpp { color: var(--tpp-ink); }
+    .u-stat .score {
+      font-family: var(--font-serif);
+      font-size: 1.65rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    .u-stat .detail {
+      font-size: 0.74rem;
+      color: var(--muted);
+      margin-top: 0.3rem;
+      line-height: 1.4;
+    }
+
+    .stat-big .num.neutral { color: #5a6170; }
+
+    .btn-next {
+      background: linear-gradient(135deg, #1a2030, #0d111a);
+      color: #f7f4ef;
+      width: auto;
+      min-width: 148px;
+      min-height: 48px;
+      opacity: 0.35;
+      pointer-events: none;
+      box-shadow: none;
+    }
+
+    .btn-next.ready {
+      opacity: 1;
+      pointer-events: auto;
+      box-shadow: 0 8px 22px rgba(13, 17, 26, 0.28);
+    }
+
+    /* —— Modal —— */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(12, 14, 20, 0.52);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      z-index: 50;
+      padding: 0;
+      animation: riseIn 0.25s ease;
+    }
+
+    .modal-backdrop.open { display: flex; }
+
+    .modal {
+      background: var(--card);
+      border: 1px solid var(--card-edge);
+      border-radius: 20px 20px 0 0;
+      max-width: 100%;
+      width: 100%;
+      padding: 1.35rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom, 0px));
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      max-height: min(85dvh, 640px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .modal::before {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--line);
+      margin: 0 auto 1rem;
+    }
+
+    @media (min-width: 560px) {
+      .modal-backdrop {
+        align-items: center;
+        padding: 1rem;
+      }
+      .modal {
+        border-radius: 20px;
+        max-width: 440px;
+        padding: 1.5rem 1.5rem 1.3rem;
+        max-height: none;
+      }
+      .modal::before { display: none; }
+    }
+
+    .modal-bubble { display: none; }
+
+    .modal h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.7rem;
+      color: var(--tpp-ink);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .modal h3::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--tpp);
+      box-shadow: 0 0 0 3px var(--tpp-soft);
+    }
+
+    .modal p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--ink);
+    }
+
+    .modal-actions {
+      margin-top: 1.2rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    /* —— Results —— */
+    #screen-results { gap: 1.15rem; padding-bottom: 2rem; }
+
+    .results-hero {
+      text-align: center;
+      padding: 1rem 0.5rem 0.5rem;
+      position: relative;
+    }
+
+    .results-hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(200px, 50%);
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--dpp), var(--kmt), var(--tpp));
+    }
+
+    .results-hero h1 {
+      font-size: clamp(1.6rem, 4.5vw, 2rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-big {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin: 1rem 0 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-big .item {
+      min-width: 100px;
+      padding: 0.75rem 1rem;
+      background: var(--card);
+      border-radius: 14px;
+      border: 1px solid var(--card-edge);
+      box-shadow: var(--shadow);
+    }
+
+    .stat-big .num {
+      font-family: var(--font-serif);
+      font-size: 2.35rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-big .num.agree { color: var(--agree); }
+    .stat-big .num.disagree { color: var(--disagree); }
+
+    .stat-big .lbl {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-top: 0.35rem;
+      letter-spacing: 0.04em;
+    }
+
+    .headline-insight {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      max-width: 34em;
+      margin: 0 auto;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    .section-title {
+      font-size: 1.08rem;
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 5px;
+      height: 1.15em;
+      border-radius: 3px;
+      background: linear-gradient(180deg, var(--dpp), var(--kmt) 50%, var(--tpp));
+      flex-shrink: 0;
+    }
+
+    .bar-list { display: flex; flex-direction: column; gap: 0.7rem; }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 5.5rem 1fr 2rem;
+      gap: 0.5rem;
+      align-items: center;
+      font-size: 0.88rem;
+    }
+
+    .bar-row .name { font-weight: 600; }
+    .bar-track {
+      height: 22px;
+      background: var(--paper-deep);
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+
+    .bar-fill {
+      height: 100%;
+      width: 0;
+      border-radius: 5px;
+      transition: width 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      min-width: 0;
+    }
+
+    .bar-fill.dpp { background: linear-gradient(90deg, var(--dpp-deep), var(--dpp)); }
+    .bar-fill.kmt { background: linear-gradient(90deg, var(--kmt-deep), var(--kmt)); }
+    .bar-fill.tpp { background: linear-gradient(90deg, var(--tpp-deep), var(--tpp)); }
+
+    .bar-row .count { font-weight: 700; text-align: right; }
+
+    .lean-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+    }
+
+    .lean-badge.dpp {
+      background: var(--dpp-soft);
+      color: var(--dpp-deep);
+      border-color: color-mix(in srgb, var(--dpp) 40%, var(--line));
+    }
+    .lean-badge.kmt {
+      background: var(--kmt-soft);
+      color: var(--kmt-deep);
+      border-color: color-mix(in srgb, var(--kmt) 40%, var(--line));
+    }
+    .lean-badge.tpp {
+      background: var(--tpp-soft);
+      color: var(--tpp-ink);
+      border-color: color-mix(in srgb, var(--tpp) 50%, var(--line));
+    }
+    .lean-badge.tie { background: var(--paper-deep); color: var(--ink-soft); }
+    .lean-badge.none { background: #f0f0f0; color: #888; }
+
+    .insights {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .insights li {
+      padding: 0.8rem 1rem;
+      background: linear-gradient(90deg, rgba(0, 87, 217, 0.05), rgba(240, 192, 0, 0.06));
+      border-radius: 12px;
+      border-left: 3px solid var(--kmt);
+      font-size: 0.93rem;
+      color: var(--ink-soft);
+      line-height: 1.55;
+    }
+
+    .insights li strong { color: var(--ink); }
+
+    .review-list { display: flex; flex-direction: column; gap: 0.7rem; }
+
+    .review-item {
+      border: 1px solid var(--card-edge);
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--card);
+      box-shadow: 0 2px 10px rgba(18, 21, 28, 0.04);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .review-item:hover { box-shadow: 0 6px 20px rgba(18, 21, 28, 0.08); }
+
+    .review-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.95rem 1.05rem;
+      font-weight: 600;
+      font-size: 0.92rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .review-item summary::-webkit-details-marker { display: none; }
+
+    .review-item summary::after {
+      content: "展開 ▾";
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .review-item[open] summary::after { content: "收合 ▴"; }
+
+    .review-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      align-items: center;
+    }
+
+    .review-body {
+      padding: 0 1.05rem 1.1rem;
+      border-top: 1px dashed var(--line);
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+    }
+
+    .review-body p { margin-top: 0.55rem; }
+    .review-body .note {
+      margin-top: 0.7rem;
+      padding: 0.65rem 0.8rem;
+      background: linear-gradient(135deg, #f7f5f0, #efebe3);
+      border-radius: 10px;
+      font-size: 0.85rem;
+      border: 1px solid var(--line);
+    }
+
+    .op-chip {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.18rem 0.5rem;
+      border-radius: 6px;
+    }
+
+    .op-chip.agree { background: var(--dpp-soft); color: var(--dpp-deep); }
+    .op-chip.disagree { background: color-mix(in srgb, var(--disagree) 12%, white); color: var(--disagree); }
+    .op-chip.neutral { background: #eef0f4; color: #5a6170; }
+
+    .footer-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      align-items: center;
+      margin-top: 0.65rem;
+    }
+
+    .footer-actions .btn-primary { max-width: 280px; }
+
+    .site-footer {
+      margin-top: auto;
+      padding-top: 1.75rem;
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    /* —— Mobile-first refinements —— */
+    @media (max-width: 720px) {
+      .stance-grid { grid-template-columns: 1fr; }
+
+      .quiz-actions {
+        position: sticky;
+        bottom: 0;
+        z-index: 25;
+        margin-left: -0.15rem;
+        margin-right: -0.15rem;
+        margin-bottom: calc(-0.5rem - env(safe-area-inset-bottom, 0px));
+        padding:
+          0.75rem 0.85rem
+          calc(0.75rem + env(safe-area-inset-bottom, 0px));
+        background: linear-gradient(180deg, transparent 0%, var(--sticky-bot-mid) 18%, var(--sticky-bot-bg) 40%);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid var(--line);
+        box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.12);
+      }
+
+      .neutral-row { margin: 0; }
+
+      .btn-neutral {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .nav-row {
+        justify-content: stretch;
+      }
+
+      .nav-row-split {
+        flex-direction: row;
+        gap: 0.5rem;
+      }
+
+      .btn-next,
+      #btn-prev {
+        width: 100%;
+        min-width: 0;
+        flex: 1;
+      }
+
+      .radar-wrap svg {
+        width: min(100%, 340px);
+      }
+
+      .unified-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-big {
+        gap: 0.5rem;
+        width: 100%;
+      }
+
+      .stat-big .item {
+        flex: 1 1 calc(33.33% - 0.5rem);
+        min-width: 0;
+        padding: 0.65rem 0.4rem;
+      }
+
+      .stat-big .num { font-size: clamp(1.55rem, 7vw, 2rem); }
+      .stat-big .lbl { font-size: 0.72rem; }
+
+      .footer-actions {
+        width: 100%;
+        position: sticky;
+        bottom: 0;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+
+      .footer-actions .btn-primary,
+      .footer-actions .btn-ghost {
+        width: 100%;
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .app {
+        padding-left: max(0.75rem, env(safe-area-inset-left, 0px));
+        padding-right: max(0.75rem, env(safe-area-inset-right, 0px));
+      }
+
+      #screen-start {
+        padding-top: 1.25rem;
+        gap: 1rem;
+      }
+
+      #screen-start h1 {
+        font-size: clamp(1.55rem, 7.5vw, 1.9rem);
+      }
+
+      .subtitle { font-size: 0.98rem; }
+
+      .logo-mark {
+        width: 72px;
+        height: 72px;
+        border-radius: 20px;
+      }
+
+      .card {
+        padding: 1.05rem 1rem;
+        border-radius: 16px;
+      }
+
+      .rules li {
+        padding: 0.55rem 0.55rem 0.55rem 2.35rem;
+        font-size: 0.9rem;
+      }
+
+      .badge-row {
+        justify-content: center;
+        gap: 0.35rem;
+      }
+
+      .pill {
+        font-size: 0.68rem;
+        padding: 0.28rem 0.55rem;
+      }
+
+      .policy-text {
+        font-size: 1.05rem;
+        line-height: 1.55;
+      }
+
+      .stance-box {
+        padding: 0.85rem 0.85rem 0.9rem;
+      }
+
+      .stance-box h4 {
+        font-size: 0.9rem;
+        margin-bottom: 0.45rem;
+      }
+
+      .stance-box li {
+        font-size: 0.8rem;
+        line-height: 1.42;
+      }
+
+      .stance-box ol {
+        gap: 0.28rem;
+        padding-left: 1.05rem;
+      }
+
+      .pick-label {
+        margin-top: 0.6rem;
+        font-size: 0.74rem;
+      }
+
+      .help-btn {
+        min-height: 44px;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .section-title {
+        font-size: 0.98rem;
+      }
+
+      .insights li {
+        font-size: 0.88rem;
+        padding: 0.7rem 0.8rem;
+      }
+
+      .review-item summary {
+        padding: 0.8rem 0.85rem;
+        font-size: 0.88rem;
+      }
+
+      .review-body {
+        padding: 0 0.85rem 0.95rem;
+        font-size: 0.86rem;
+      }
+
+      .u-stat .score { font-size: 1.4rem; }
+      .u-stat .detail { font-size: 0.72rem; }
+
+      .bar-row {
+        grid-template-columns: 4.2rem 1fr 1.4rem;
+        font-size: 0.8rem;
+      }
+
+      /* Radar labels can crowd on narrow phones — slightly smaller */
+      .radar-wrap svg text {
+        font-size: 11px !important;
+      }
+    }
+
+    /* Very small phones */
+    @media (max-width: 360px) {
+      .stat-big {
+        flex-direction: column;
+      }
+      .stat-big .item {
+        width: 100%;
+      }
+      .stance-hint { font-size: 0.82rem; }
+    }
+
+    /* Landscape phones: less vertical padding, side-by-side stances if wide enough */
+    @media (max-height: 480px) and (orientation: landscape) {
+      #screen-start { padding-top: 0.75rem; gap: 0.75rem; }
+      .logo-mark { width: 56px; height: 56px; }
+      .topbar { position: static; backdrop-filter: none; }
+      .quiz-actions {
+        position: static;
+        box-shadow: none;
+        border-top: none;
+        background: transparent;
+        padding: 0.5rem 0;
+        margin: 0;
+      }
+      .stance-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 721px) {
+      .stance-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* —— Theme toggle —— */
+    .theme-toggle {
+      position: fixed;
+      top: max(0.75rem, calc(env(safe-area-inset-top, 0px) + 0.55rem));
+      right: max(0.75rem, env(safe-area-inset-right, 0px));
+      z-index: 80;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      font-size: 1.15rem;
+      touch-action: manipulation;
+    }
+    .theme-toggle:focus-visible { outline: 3px solid var(--kmt); outline-offset: 2px; }
+    .theme-toggle .icon-sun { display: none; }
+    html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    html[data-theme="dark"] .theme-toggle .icon-sun { display: inline; }
+
+    /* —— Mode cards —— */
+    .mode-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      width: 100%;
+      text-align: left;
+    }
+    @media (max-width: 560px) {
+      .mode-grid { grid-template-columns: 1fr; }
+    }
+    .mode-card {
+      font-family: inherit;
+      text-align: left;
+      border: 2px solid var(--line);
+      background: var(--card);
+      border-radius: 16px;
+      padding: 1rem 1.05rem;
+      cursor: pointer;
+      color: var(--ink);
+      box-shadow: var(--shadow);
+      transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+      touch-action: manipulation;
+      min-height: 120px;
+    }
+    .mode-card:hover {
+      transform: translateY(-2px);
+      border-color: color-mix(in srgb, var(--kmt) 40%, var(--line));
+    }
+    .mode-card.selected {
+      border-color: var(--kmt);
+      box-shadow: 0 0 0 3px var(--kmt-soft), var(--shadow);
+      background: linear-gradient(165deg, var(--kmt-soft), var(--card));
+    }
+    .mode-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.35rem;
+      font-family: var(--font-serif);
+    }
+    .mode-card p {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      line-height: 1.5;
+    }
+    .mode-card .mode-tag {
+      display: inline-block;
+      margin-top: 0.55rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--kmt-deep);
+      background: var(--kmt-soft);
+      padding: 0.2rem 0.5rem;
+      border-radius: 999px;
+    }
+
+    .mode-card .pool-count {
+      display: block;
+      margin-top: 0.55rem;
+      font-size: 0.92rem;
+      font-weight: 800;
+      font-family: var(--font-serif);
+      color: var(--ink);
+      letter-spacing: 0.02em;
+    }
+
+    .mode-card .pool-count em {
+      font-style: normal;
+      color: var(--kmt-deep);
+      font-size: 1.15rem;
+    }
+
+    .pool-summary {
+      width: 100%;
+      text-align: left;
+      padding: 0.95rem 1.1rem !important;
+      border: 1px solid var(--card-edge);
+      background:
+        linear-gradient(135deg, var(--dpp-soft), transparent 40%),
+        linear-gradient(225deg, var(--kmt-soft), transparent 42%),
+        linear-gradient(180deg, var(--card), var(--card));
+    }
+
+    .pool-summary-title {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .pool-summary-body {
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+      line-height: 1.55;
+    }
+
+    .pool-summary-body strong {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .pool-summary-body .hl {
+      color: var(--kmt-deep);
+      font-weight: 800;
+    }
+
+    .city-chip .city-count {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .city-chip.selected .city-count {
+      color: var(--kmt-deep);
+    }
+
+    /* Dark mode component polish */
+    html[data-theme="dark"] .logo-mark {
+      background: linear-gradient(145deg, #1e293b, #0f172a);
+      border-color: rgba(148, 163, 184, 0.25);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+    html[data-theme="dark"] .btn-primary,
+    html[data-theme="dark"] .btn-next.ready {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      color: #0b1220;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255,255,255,0.08);
+    }
+    html[data-theme="dark"] .btn-next:not(.ready) {
+      opacity: 0.4;
+      color: #0b1220;
+      background: linear-gradient(135deg, #94a3b8, #64748b);
+    }
+    html[data-theme="dark"] .btn-ghost {
+      color: var(--ink-soft);
+      border-color: var(--line);
+      background: rgba(255,255,255,0.03);
+    }
+    html[data-theme="dark"] .btn-ghost:hover {
+      background: rgba(96, 165, 250, 0.12);
+      border-color: var(--kmt);
+      color: var(--ink);
+    }
+    html[data-theme="dark"] .category-tag {
+      background: linear-gradient(135deg, #1e3a5f, #1e293b);
+      color: #e0f2fe;
+      box-shadow: 0 0 0 1px rgba(96,165,250,0.35);
+    }
+    html[data-theme="dark"] .review-body .note {
+      background: linear-gradient(135deg, #1e293b, #141b2a);
+      border-color: var(--line);
+      color: var(--ink-soft);
+    }
+    html[data-theme="dark"] .op-chip.agree {
+      background: var(--dpp-soft);
+      color: var(--dpp-deep);
+    }
+    html[data-theme="dark"] .op-chip.disagree {
+      background: rgba(248, 113, 113, 0.18);
+      color: #fecaca;
+    }
+    html[data-theme="dark"] .op-chip.neutral {
+      background: #1e293b;
+      color: #e2e8f0;
+      border: 1px solid var(--line);
+    }
+    html[data-theme="dark"] .help-btn {
+      background: linear-gradient(135deg, #422006, #1c1408);
+      color: #fde68a;
+      border-color: #a16207;
+    }
+    html[data-theme="dark"] .help-btn .q {
+      background: linear-gradient(135deg, #fbbf24, #d97706);
+      color: #1c1917;
+    }
+    html[data-theme="dark"] .stance-box.for {
+      background: linear-gradient(165deg, rgba(52, 211, 153, 0.16), var(--card));
+      border-color: rgba(52, 211, 153, 0.5);
+    }
+    html[data-theme="dark"] .stance-box.against {
+      background: linear-gradient(165deg, rgba(248, 113, 113, 0.14), var(--card));
+      border-color: rgba(248, 113, 113, 0.45);
+    }
+    html[data-theme="dark"] .stance-box.for.selected {
+      background: linear-gradient(165deg, rgba(52, 211, 153, 0.28), #0f172a);
+      box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.25);
+    }
+    html[data-theme="dark"] .stance-box.against.selected {
+      background: linear-gradient(165deg, rgba(248, 113, 113, 0.25), #0f172a);
+      box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.22);
+    }
+    html[data-theme="dark"] .stance-box li { color: var(--ink-soft); }
+    html[data-theme="dark"] .stance-box.selected li { color: var(--ink); }
+    html[data-theme="dark"] .party-bar-card {
+      background: linear-gradient(180deg, #1e293b, #141b2a);
+      border-color: var(--card-edge);
+    }
+    html[data-theme="dark"] .party-metric .m-track {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: var(--line);
+    }
+    html[data-theme="dark"] .party-metric .m-fill.neutral { background: #94a3b8; }
+    html[data-theme="dark"] .card {
+      background: var(--card);
+      box-shadow: var(--shadow);
+    }
+    html[data-theme="dark"] .pill {
+      background: #1e293b;
+      color: var(--ink-soft);
+      border-color: var(--line);
+    }
+    html[data-theme="dark"] .pill.dpp { color: var(--dpp-deep); border-color: rgba(52,211,153,0.4); }
+    html[data-theme="dark"] .pill.kmt { color: var(--kmt-deep); border-color: rgba(96,165,250,0.4); }
+    html[data-theme="dark"] .pill.tpp { color: var(--tpp-ink); border-color: rgba(251,191,36,0.4); }
+    html[data-theme="dark"] .mode-card {
+      background: linear-gradient(165deg, #1a2336 0%, #141b2a 100%);
+      color: var(--ink);
+      border-color: var(--line);
+    }
+    html[data-theme="dark"] .mode-card.selected {
+      border-color: var(--kmt);
+      background: linear-gradient(165deg, rgba(96,165,250,0.16), #141b2a 70%);
+      box-shadow: 0 0 0 3px rgba(96,165,250,0.2), var(--shadow);
+    }
+    html[data-theme="dark"] .mode-card p { color: var(--ink-soft); }
+    html[data-theme="dark"] .mode-card .mode-tag {
+      color: #bfdbfe;
+      background: rgba(96, 165, 250, 0.18);
+    }
+    html[data-theme="dark"] .mode-card .pool-count em { color: var(--kmt-deep); }
+    html[data-theme="dark"] .city-chip {
+      background: #151c2c;
+      color: var(--ink);
+      border-color: var(--line);
+    }
+    html[data-theme="dark"] .city-chip.selected {
+      border-color: var(--kmt);
+      background: rgba(96, 165, 250, 0.16);
+      color: var(--ink);
+      box-shadow: 0 0 0 3px rgba(96,165,250,0.18);
+    }
+    html[data-theme="dark"] .city-chip .city-count { color: var(--muted); }
+    html[data-theme="dark"] .city-chip.selected .city-count { color: var(--kmt-deep); }
+    html[data-theme="dark"] .insights li {
+      background: linear-gradient(90deg, rgba(96, 165, 250, 0.12), rgba(251, 191, 36, 0.06));
+      color: var(--ink-soft);
+      border-left-color: var(--kmt);
+    }
+    html[data-theme="dark"] .insights li strong { color: var(--ink); }
+    html[data-theme="dark"] .progress-track {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: var(--line);
+    }
+    html[data-theme="dark"] .disclaimer { color: var(--muted); }
+    html[data-theme="dark"] .rules li {
+      background: linear-gradient(90deg, rgba(255,255,255,0.04), transparent);
+    }
+    html[data-theme="dark"] .rules li::before { color: var(--accent-gold); }
+    html[data-theme="dark"] .btn-neutral {
+      background: #1e293b;
+      color: var(--ink-soft);
+      border-color: var(--line);
+    }
+    html[data-theme="dark"] .btn-neutral.selected {
+      background: #334155;
+      color: var(--ink);
+      border-color: #64748b;
+    }
+    html[data-theme="dark"] .stat-big .item {
+      background: var(--card);
+      border-color: var(--card-edge);
+    }
+    html[data-theme="dark"] .theme-toggle {
+      background: #141b2a;
+      color: var(--tpp-deep);
+      border-color: var(--line);
+      box-shadow: var(--shadow);
+    }
+    html[data-theme="dark"] #screen-start h1 {
+      background: none;
+      color: var(--ink);
+      -webkit-text-fill-color: unset;
+    }
+    html[data-theme="dark"] .subtitle { color: var(--ink-soft); }
+    html[data-theme="dark"] .site-footer { color: var(--muted); }
+    html[data-theme="dark"] .section-title { color: var(--ink); }
+    html[data-theme="dark"] .policy-text { color: var(--ink); }
+    html[data-theme="dark"] .modal {
+      background: #141b2a;
+      border-color: var(--line);
+    }
+    html[data-theme="dark"] .modal h3 { color: var(--tpp-ink); }
+    html[data-theme="dark"] .modal p { color: var(--ink-soft); }
+    html[data-theme="dark"] .pool-summary {
+      border-color: var(--line);
+    }
+    html[data-theme="dark"] .review-item {
+      background: var(--card);
+      border-color: var(--card-edge);
+    }
+    html[data-theme="dark"] .stance-hint { color: var(--ink-soft); }
+    html[data-theme="dark"] .progress-label { color: var(--ink-soft); }
+
+    .city-picker {
+      display: none;
+      width: 100%;
+      text-align: left;
+    }
+    .city-picker.show { display: block; }
+    .city-picker h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.55rem;
+      font-family: var(--font-serif);
+    }
+    .city-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+    @media (max-width: 520px) {
+      .city-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .city-chip {
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 0.75rem 0.5rem;
+      min-height: 48px;
+      border-radius: 12px;
+      border: 2px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      cursor: pointer;
+      touch-action: manipulation;
+      transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+    }
+    .city-chip:hover {
+      border-color: color-mix(in srgb, var(--kmt) 45%, var(--line));
+    }
+    .city-chip.selected {
+      border-color: var(--kmt);
+      background: var(--kmt-soft);
+      box-shadow: 0 0 0 3px var(--kmt-soft);
+    }
+    .city-chip:focus-visible {
+      outline: 3px solid var(--kmt);
+      outline-offset: 2px;
+    }
+
+  </style>
+</head>
+<body>
+  <button type="button" class="theme-toggle" id="btn-theme" aria-label="切換深色模式" title="深色／淺色模式">
+    <span class="icon-moon" aria-hidden="true">☾</span>
+    <span class="icon-sun" aria-hidden="true">☀</span>
+  </button>
+  <div class="app">
+    <!-- START -->
+    <section id="screen-start" class="screen active" aria-label="開始">
+      <div class="logo-mark" aria-hidden="true"><span><i></i><i></i><i></i></span></div>
+      <div>
+        <h1>政策光譜測驗</h1>
+        <p class="subtitle">先選模式，再盲測你的政策偏好</p>
+      </div>
+      <div class="mode-grid" role="group" aria-label="選擇遊戲模式">
+        <button type="button" class="mode-card selected" id="mode-national" data-mode="national" aria-pressed="true">
+          <h3>三黨政策</h3>
+          <p>民進黨、國民黨、民眾黨近八年全國政見與立院提案盲測。</p>
+          <span class="mode-tag" id="tag-national">每局 12 題 · 每黨 4</span>
+          <span class="pool-count" id="pool-national">題庫載入中…</span>
+        </button>
+        <button type="button" class="mode-card" id="mode-city" data-mode="city" aria-pressed="false">
+          <h3>城市市政</h3>
+          <p>選一個城市，挑戰該市三黨市政／議會政策（六都＋新竹）。</p>
+          <span class="mode-tag" id="tag-city">每局 12 題 · 每黨 4</span>
+          <span class="pool-count" id="pool-city">題庫載入中…</span>
+        </button>
+      </div>
+      <div class="pool-summary card" id="pool-summary" aria-live="polite">
+        <div class="pool-summary-title">目前題庫規模</div>
+        <div class="pool-summary-body" id="pool-summary-body">載入中…</div>
+      </div>
+      <div class="city-picker" id="city-picker" aria-label="選擇城市">
+        <h3>選擇要挑戰的城市</h3>
+        <div class="city-grid" id="city-grid"></div>
+      </div>
+      <div class="badge-row" style="justify-content:center" id="start-badges">
+        <span class="pill dpp">民進黨</span>
+        <span class="pill kmt">國民黨</span>
+        <span class="pill tpp">民眾黨</span>
+      </div>
+      <div class="card rules">
+        <p><strong>怎麼玩？</strong></p>
+        <ol id="rules-list">
+          <li>從近八年大型題庫隨機抽 <strong>12 則</strong>（不顯示是誰提出的；城市模式請先選一市）。</li>
+          <li>每題有<strong>正方／反方各 5 點</strong>；點選方框表態，或選<strong>沒意見</strong>。</li>
+          <li>可用<strong>上一題</strong>返回改答案；<strong>回首頁重來</strong>可整局重開。</li>
+          <li>結束後揭曉支持最多／<strong>反對最多</strong>的政黨，並以<strong>三黨長條圖</strong>總覽偏好。</li>
+        </ol>
+        <p class="disclaimer">
+          本遊戲依近五年公開政見、市政施政與議會提案整理並簡化，僅供教育與自我檢視。城市題含已上路與規劃中政策；請先選模式（城市模式需再選一市）。
+        </p>
+      </div>
+      <button type="button" class="btn btn-primary" id="btn-start">開始測驗</button>
+      <p class="site-footer">政策光譜測驗 · 繁體中文</p>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="screen-quiz" class="screen" aria-label="答題">
+      <div class="topbar">
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span id="progress-text">第 1／12 題</span>
+            <span id="progress-pct">8%</span>
+          </div>
+          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="12" aria-valuenow="1" id="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="policy-card">
+        <div class="card">
+          <span class="category-tag" id="q-category">能源</span>
+          <p class="policy-text" id="q-text">政策文字載入中…</p>
+          <button type="button" class="help-btn" id="btn-help" aria-haspopup="dialog" aria-expanded="false">
+            <span class="q" aria-hidden="true">?</span>
+            這是什麼意思？
+          </button>
+        </div>
+
+        <p class="stance-hint">點選下方<strong>正方</strong>或<strong>反方</strong>整塊方框，代表你的立場</p>
+        <div class="stance-grid" role="group" aria-label="選擇正方、反方或沒意見">
+          <button type="button" class="stance-box for" id="box-for" data-opinion="agree" aria-pressed="false">
+            <h4>✓ 正方論點（支持這項政策）</h4>
+            <ol id="q-pros"></ol>
+            <span class="pick-label">點我＝我較支持</span>
+          </button>
+          <button type="button" class="stance-box against" id="box-against" data-opinion="disagree" aria-pressed="false">
+            <h4>✕ 反方論點（反對這項政策）</h4>
+            <ol id="q-oppose"></ol>
+            <span class="pick-label">點我＝我較反對</span>
+          </button>
+        </div>
+
+        <div class="quiz-actions">
+          <div class="neutral-row">
+            <button type="button" class="btn-neutral" id="btn-neutral" data-opinion="neutral" aria-pressed="false">沒意見</button>
+          </div>
+          <div class="nav-row nav-row-split">
+            <button type="button" class="btn btn-ghost" id="btn-prev" disabled>上一題</button>
+            <button type="button" class="btn btn-next" id="btn-next">下一題</button>
+          </div>
+          <div class="nav-row nav-row-extra">
+            <button type="button" class="btn btn-ghost" id="btn-quiz-home">回首頁重來</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="screen-results" class="screen" aria-label="結果">
+      <div class="results-hero">
+        <h1>你的政策光譜</h1>
+        <div class="stat-big">
+          <div class="item">
+            <div class="num agree" id="stat-agree">0</div>
+            <div class="lbl">支持正方</div>
+          </div>
+          <div class="item">
+            <div class="num disagree" id="stat-disagree">0</div>
+            <div class="lbl">支持反方</div>
+          </div>
+          <div class="item">
+            <div class="num neutral" id="stat-neutral">0</div>
+            <div class="lbl">沒意見</div>
+          </div>
+        </div>
+        <p class="headline-insight" id="headline-insight"></p>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title" id="chart-title">三黨長條圖｜支持／反對／沒意見</h2>
+        <p style="font-size:0.85rem;color:var(--ink-soft);margin:-0.25rem 0 0.75rem" id="chart-caption">
+          每個政黨一組長條：<strong>支持</strong>（正方）、<strong>反對</strong>（反方）、<strong>沒意見</strong>。淨分＝支持 − 反對。
+        </p>
+        <div class="party-bars-wrap" id="party-bars"></div>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">洞察摘要</h2>
+        <ul class="insights" id="insights"></ul>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">逐題回顧</h2>
+        <div class="review-list" id="review-list"></div>
+      </div>
+
+      <div class="footer-actions">
+        <button type="button" class="btn btn-primary" id="btn-restart">再玩一輪（同模式）</button>
+        <button type="button" class="btn btn-ghost" id="btn-review-answers">返回修改答案</button>
+        <button type="button" class="btn btn-ghost" id="btn-home">回首頁重來</button>
+      </div>
+      <p class="site-footer">政策依公開資料簡化 · 僅供教育娛樂</p>
+    </section>
+  </div>
+
+  <!-- Help modal -->
+  <div class="modal-backdrop" id="help-modal" role="dialog" aria-modal="true" aria-labelledby="help-title" hidden>
+    <div class="modal">
+      <div class="modal-bubble" aria-hidden="true"></div>
+      <h3 id="help-title">白話說明</h3>
+      <p id="help-body"></p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-primary" id="btn-help-close" style="max-width:none;width:auto;padding:0.65rem 1.4rem">知道了</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirm restart modal -->
+  <div class="modal-backdrop" id="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title" hidden>
+    <div class="modal">
+      <h3 id="confirm-title">確定要重來？</h3>
+      <p id="confirm-body">目前進度將會清除，且無法復原。</p>
+      <div class="modal-actions modal-actions-split">
+        <button type="button" class="btn btn-ghost" id="btn-confirm-cancel">取消</button>
+        <button type="button" class="btn btn-primary" id="btn-confirm-ok" style="max-width:none;width:auto;padding:0.65rem 1.4rem">確定重來</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="national-data.js"></script>
+  <script src="city-data.js"></script>
+  <script>
+    /** @typedef {"dpp"|"kmt"|"tpp"} Party */
+    /** @typedef {"agree"|"disagree"|"neutral"} Opinion */
+    /** @typedef {"national"|"city"} GameMode */
+
+    const PARTY_META = {
+      dpp: { name: "民進黨", short: "民", lean: "偏綠", class: "dpp" },
+      kmt: { name: "國民黨", short: "國", lean: "偏藍", class: "kmt" },
+      tpp: { name: "民眾黨", short: "眾", lean: "偏黃", class: "tpp" },
+    };
+
+    const PARTIES = /** @type {Party[]} */ (["dpp", "kmt", "tpp"]);
+
+    /**
+     * Policy bank — anti-spoiler on text & simple; party/status/note reveal-only.
+     * status: 已推動 | 已立法 | 競選政見 | 立院提案 | 部分通過/部分違憲 | 未通過或擱置
+     */
+    // POLICIES loaded from national-data.js
+
+    // —— State ——
+    const state = {
+      mode: /** @type {GameMode} */ ("national"),
+      selectedCity: /** @type {string|null} */ (null),
+      round: /** @type {any[]} */ ([]),
+      index: 0,
+      answers: /** @type {{ policy: any, opinion: Opinion }[]} */ ([]),
+      currentOpinion: /** @type {Opinion|null} */ (null),
+    };
+
+    // —— Theme ——
+    function getPreferredTheme() {
+      const saved = localStorage.getItem("policy-spectrum-theme");
+      if (saved === "dark" || saved === "light") return saved;
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    function applyTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      const meta = document.getElementById("meta-theme-color");
+      if (meta) meta.setAttribute("content", theme === "dark" ? "#12151c" : "#f3f0ea");
+      const btn = document.getElementById("btn-theme");
+      if (btn) btn.setAttribute("aria-label", theme === "dark" ? "切換淺色模式" : "切換深色模式");
+      localStorage.setItem("policy-spectrum-theme", theme);
+    }
+    applyTheme(getPreferredTheme());
+
+    function getPoolStats() {
+      const national = typeof POLICIES !== "undefined" ? POLICIES.length : 0;
+      const byParty = { dpp: 0, kmt: 0, tpp: 0 };
+      if (typeof POLICIES !== "undefined") {
+        for (const p of POLICIES) byParty[p.party] = (byParty[p.party] || 0) + 1;
+      }
+      const cityTotal = typeof CITY_POLICIES !== "undefined" ? CITY_POLICIES.length : 0;
+      const perCity = {};
+      if (typeof CITY_POLICIES !== "undefined") {
+        for (const p of CITY_POLICIES) {
+          perCity[p.city] = (perCity[p.city] || 0) + 1;
+        }
+      }
+      const cityCount = typeof CITIES !== "undefined" ? CITIES.length : Object.keys(perCity).length;
+      return { national, byParty, cityTotal, perCity, cityCount };
+    }
+
+    function refreshPoolDisplays() {
+      const s = getPoolStats();
+      const elN = document.getElementById("pool-national");
+      const elC = document.getElementById("pool-city");
+      if (elN) {
+        elN.innerHTML = `題庫共 <em>${s.national}</em> 題`;
+      }
+      if (elC) {
+        elC.innerHTML = `題庫共 <em>${s.cityTotal}</em> 題 · ${s.cityCount} 市`;
+      }
+      const body = document.getElementById("pool-summary-body");
+      if (body) {
+        if (state.mode === "city" && state.selectedCity && CITY_META[state.selectedCity]) {
+          const n = s.perCity[state.selectedCity] || 0;
+          body.innerHTML = `已選 <strong>${CITY_META[state.selectedCity].name}</strong>：該市題庫 <span class="hl">${n}</span> 題（每黨約 ${Math.round(n / 3)}）。全部城市合計 <span class="hl">${s.cityTotal}</span> 題。每局仍抽 12 題。`;
+        } else if (state.mode === "city") {
+          body.innerHTML = `城市模式合計 <span class="hl">${s.cityTotal}</span> 題（${s.cityCount} 市）。請選擇城市後開始；每局抽 12 題。`;
+        } else {
+          body.innerHTML = `全國模式題庫 <span class="hl">${s.national}</span> 題（民進黨 ${s.byParty.dpp} · 國民黨 ${s.byParty.kmt} · 民眾黨 ${s.byParty.tpp}）。每局隨機抽 12 題（每黨 4）。`;
+        }
+      }
+    }
+
+    function renderCityGrid() {
+      const grid = document.getElementById("city-grid");
+      if (!grid || typeof CITY_META === "undefined") return;
+      const s = getPoolStats();
+      grid.innerHTML = Object.entries(CITY_META)
+        .map(([id, meta]) => {
+          const n = s.perCity[id] || 0;
+          const sel = state.selectedCity === id ? " selected" : "";
+          return `<button type="button" class="city-chip${sel}" data-city="${id}" aria-pressed="${state.selectedCity === id ? "true" : "false"}">${meta.name}<span class="city-count">${n} 題</span></button>`;
+        })
+        .join("");
+      grid.querySelectorAll(".city-chip").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          state.selectedCity = btn.dataset.city;
+          renderCityGrid();
+          updateStartBadges();
+          refreshPoolDisplays();
+        });
+      });
+    }
+
+    function updateStartBadges() {
+      const badges = document.getElementById("start-badges");
+      const s = getPoolStats();
+      if (state.mode === "city") {
+        const name =
+          state.selectedCity && CITY_META[state.selectedCity]
+            ? CITY_META[state.selectedCity].name
+            : "尚未選城市";
+        const n =
+          state.selectedCity && s.perCity[state.selectedCity]
+            ? s.perCity[state.selectedCity]
+            : 0;
+        badges.innerHTML = `
+          <span class="pill">${name}</span>
+          <span class="pill">該市 ${n} 題</span>
+          <span class="pill dpp">民 4</span>
+          <span class="pill kmt">國 4</span>
+          <span class="pill tpp">眾 4</span>`;
+      } else {
+        badges.innerHTML = `
+          <span class="pill">全國 ${s.national} 題</span>
+          <span class="pill dpp">民 ${s.byParty.dpp}</span>
+          <span class="pill kmt">國 ${s.byParty.kmt}</span>
+          <span class="pill tpp">眾 ${s.byParty.tpp}</span>`;
+      }
+    }
+
+    function setMode(mode) {
+      state.mode = mode;
+      if (mode !== "city") state.selectedCity = null;
+      document.querySelectorAll(".mode-card").forEach((el) => {
+        const on = el.dataset.mode === mode;
+        el.classList.toggle("selected", on);
+        el.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+      const picker = document.getElementById("city-picker");
+      if (picker) {
+        picker.classList.toggle("show", mode === "city");
+      }
+      if (mode === "city") {
+        if (!state.selectedCity && typeof CITIES !== "undefined") {
+          state.selectedCity = CITIES[0];
+        }
+        renderCityGrid();
+      }
+      updateStartBadges();
+      refreshPoolDisplays();
+    }
+
+    // —— Utils ——
+    function shuffle(arr) {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    const QUESTIONS_PER_ROUND = 12;
+
+    function activeBank() {
+      if (state.mode === "city") {
+        if (typeof CITY_POLICIES === "undefined") {
+          console.error("city-data.js 未載入");
+          return POLICIES;
+        }
+        return CITY_POLICIES;
+      }
+      return POLICIES;
+    }
+
+    /**
+     * National: 4 per party. City: 2 per municipality (六都).
+     */
+    function pickRound(n = QUESTIONS_PER_ROUND) {
+      const bank = activeBank();
+      const usedCats = new Set();
+      const picked = [];
+
+      function takeFromPool(pool, count, already) {
+        const chosen = [];
+        const shuffled = shuffle(pool);
+        for (const item of shuffled) {
+          if (chosen.length >= count) break;
+          if (already.some((x) => x.id === item.id) || chosen.some((x) => x.id === item.id)) continue;
+          if (!usedCats.has(item.category)) {
+            chosen.push(item);
+            usedCats.add(item.category);
+          }
+        }
+        for (const item of shuffled) {
+          if (chosen.length >= count) break;
+          if (already.some((x) => x.id === item.id) || chosen.some((x) => x.id === item.id)) continue;
+          chosen.push(item);
+          usedCats.add(item.category);
+        }
+        return chosen;
+      }
+
+      // city mode: one city, 4 per party; national: 4 per party across all
+      const perParty = Math.floor(n / 3);
+      let scoped = bank;
+      if (state.mode === "city") {
+        if (!state.selectedCity) {
+          console.warn("未選城市");
+          return [];
+        }
+        scoped = bank.filter((p) => p.city === state.selectedCity);
+      }
+      for (const party of PARTIES) {
+        const pool = scoped.filter((p) => p.party === party);
+        picked.push(...takeFromPool(pool, perParty, picked));
+      }
+      return shuffle(picked.slice(0, perParty * 3));
+    }
+
+    function showScreen(id) {
+      document.querySelectorAll(".screen").forEach((el) => el.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    // —— Quiz UI ——
+    function startGame() {
+      if (state.mode === "city" && !state.selectedCity) {
+        alert("請先選擇要挑戰的城市");
+        return;
+      }
+      state.round = pickRound(QUESTIONS_PER_ROUND);
+      if (!state.round.length) {
+        alert("題庫不足，請確認題庫檔案是否載入成功");
+        return;
+      }
+      state.index = 0;
+      // fixed-length answers slot per question (allows back/edit)
+      state.answers = state.round.map((policy) => ({ policy, opinion: null }));
+      state.currentOpinion = null;
+      state._results = null;
+      const counts = { dpp: 0, kmt: 0, tpp: 0 };
+      state.round.forEach((p) => counts[p.party]++);
+      console.info(
+        state.mode === "city"
+          ? `[城市抽題 ${CITY_META[state.selectedCity]?.name}]`
+          : "[三黨抽題]",
+        counts,
+        `題庫可抽 ${activeBank().length}`
+      );
+      showScreen("screen-quiz");
+      renderQuestion();
+    }
+
+    /** 回首頁，清空本局（完整重來） */
+    function startOverToHome() {
+      state.round = [];
+      state.index = 0;
+      state.answers = [];
+      state.currentOpinion = null;
+      state._results = null;
+      showScreen("screen-start");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    /** 從結果頁回到作答，可修改任一題 */
+    function returnToEditAnswers() {
+      if (!state.round.length) {
+        startOverToHome();
+        return;
+      }
+      // jump to last question for convenience
+      state.index = Math.max(0, state.round.length - 1);
+      showScreen("screen-quiz");
+      renderQuestion();
+    }
+
+    function renderQuestion() {
+      if (autoAdvanceTimer) {
+        clearTimeout(autoAdvanceTimer);
+        autoAdvanceTimer = null;
+      }
+      const p = state.round[state.index];
+      const n = state.index + 1;
+      const total = state.round.length;
+
+      document.getElementById("progress-text").textContent = `第 ${n}／${total} 題`;
+      document.getElementById("progress-pct").textContent = `${Math.round((n / total) * 100)}%`;
+      document.getElementById("progress-fill").style.width = `${(n / total) * 100}%`;
+      document.getElementById("progress-bar").setAttribute("aria-valuenow", String(n));
+      document.getElementById("progress-bar").setAttribute("aria-valuemax", String(total));
+
+      document.getElementById("q-category").textContent = p.category;
+      document.getElementById("q-text").textContent = p.text;
+
+      const pros = (p.pros && p.pros.length ? p.pros : ["（暫無正方論點）"]).slice(0, 5);
+      const cons = (p.oppose && p.oppose.length ? p.oppose : ["（暫無反方論點）"]).slice(0, 5);
+      document.getElementById("q-pros").innerHTML = pros.map((r) => `<li>${r}</li>`).join("");
+      document.getElementById("q-oppose").innerHTML = cons.map((r) => `<li>${r}</li>`).join("");
+
+      const prevOp = state.answers[state.index] && state.answers[state.index].opinion;
+      state.currentOpinion = prevOp || null;
+
+      document.getElementById("box-for").classList.toggle("selected", prevOp === "agree");
+      document.getElementById("box-against").classList.toggle("selected", prevOp === "disagree");
+      document.getElementById("btn-neutral").classList.toggle("selected", prevOp === "neutral");
+      document.getElementById("box-for").setAttribute("aria-pressed", prevOp === "agree" ? "true" : "false");
+      document.getElementById("box-against").setAttribute("aria-pressed", prevOp === "disagree" ? "true" : "false");
+      document.getElementById("btn-neutral").setAttribute("aria-pressed", prevOp === "neutral" ? "true" : "false");
+
+      const nextBtn = document.getElementById("btn-next");
+      if (prevOp) nextBtn.classList.add("ready");
+      else nextBtn.classList.remove("ready");
+      nextBtn.textContent = n === total ? "看結果" : "下一題";
+
+      const prevBtn = document.getElementById("btn-prev");
+      if (prevBtn) prevBtn.disabled = state.index <= 0;
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    let autoAdvanceTimer = null;
+
+    function selectOpinion(op, { autoAdvance = true } = {}) {
+      state.currentOpinion = op;
+      // save immediately so back/forward keeps edits
+      if (state.answers[state.index]) {
+        state.answers[state.index] = {
+          policy: state.round[state.index],
+          opinion: op,
+        };
+      }
+      const forBox = document.getElementById("box-for");
+      const againstBox = document.getElementById("box-against");
+      const neutral = document.getElementById("btn-neutral");
+      forBox.classList.toggle("selected", op === "agree");
+      againstBox.classList.toggle("selected", op === "disagree");
+      neutral.classList.toggle("selected", op === "neutral");
+      forBox.setAttribute("aria-pressed", op === "agree" ? "true" : "false");
+      againstBox.setAttribute("aria-pressed", op === "disagree" ? "true" : "false");
+      neutral.setAttribute("aria-pressed", op === "neutral" ? "true" : "false");
+      document.getElementById("btn-next").classList.add("ready");
+
+      if (autoAdvance) {
+        if (autoAdvanceTimer) clearTimeout(autoAdvanceTimer);
+        // brief highlight so user sees selection, then auto next
+        autoAdvanceTimer = setTimeout(() => {
+          autoAdvanceTimer = null;
+          nextQuestion();
+        }, 280);
+      }
+    }
+
+    function nextQuestion() {
+      if (!state.currentOpinion) return;
+      state.answers[state.index] = {
+        policy: state.round[state.index],
+        opinion: state.currentOpinion,
+      };
+      if (state.index >= state.round.length - 1) {
+        // ensure all answered before results
+        const missing = state.answers.findIndex((a) => !a.opinion);
+        if (missing >= 0) {
+          state.index = missing;
+          renderQuestion();
+          alert(`還有題目未作答（第 ${missing + 1} 題），已帶你回去補答。`);
+          return;
+        }
+        renderResults();
+        showScreen("screen-results");
+      } else {
+        state.index++;
+        renderQuestion();
+      }
+    }
+
+    function prevQuestion() {
+      if (state.index <= 0) return;
+      // save current if selected
+      if (state.currentOpinion && state.answers[state.index]) {
+        state.answers[state.index] = {
+          policy: state.round[state.index],
+          opinion: state.currentOpinion,
+        };
+      }
+      state.index--;
+      renderQuestion();
+    }
+
+    // —— Help modal ——
+    const helpModal = document.getElementById("help-modal");
+    const btnHelp = document.getElementById("btn-help");
+
+    function openHelp() {
+      const p = state.round[state.index];
+      document.getElementById("help-body").textContent = p.simple;
+      helpModal.hidden = false;
+      helpModal.classList.add("open");
+      btnHelp.setAttribute("aria-expanded", "true");
+      document.getElementById("btn-help-close").focus();
+    }
+
+    function closeHelp() {
+      helpModal.classList.remove("open");
+      helpModal.hidden = true;
+      btnHelp.setAttribute("aria-expanded", "false");
+      btnHelp.focus();
+    }
+
+    // —— Results ——
+    function emptyPartyBucket() {
+      return {
+        dpp: { agree: 0, disagree: 0, neutral: 0, total: 0 },
+        kmt: { agree: 0, disagree: 0, neutral: 0, total: 0 },
+        tpp: { agree: 0, disagree: 0, neutral: 0, total: 0 },
+      };
+    }
+
+    function computeResults() {
+      const agreeByParty = { dpp: 0, kmt: 0, tpp: 0 };
+      const disagreeByParty = { dpp: 0, kmt: 0, tpp: 0 };
+      const neutralByParty = { dpp: 0, kmt: 0, tpp: 0 };
+      const seenByParty = { dpp: 0, kmt: 0, tpp: 0 };
+
+      /** axisKey -> party -> stats  (category in national; city in city mode) */
+      const byAxis = {};
+      const agreeByCity = {};
+      const disagreeByCity = {};
+
+      for (const { policy, opinion } of state.answers) {
+        if (!opinion) continue;
+        seenByParty[policy.party]++;
+        if (opinion === "agree") agreeByParty[policy.party]++;
+        else if (opinion === "disagree") disagreeByParty[policy.party]++;
+        else neutralByParty[policy.party]++;
+
+        // Both modes: radar axes = policy category
+        const axisKey = policy.category;
+        if (!byAxis[axisKey]) byAxis[axisKey] = emptyPartyBucket();
+        byAxis[axisKey][policy.party].total++;
+        if (opinion === "agree") byAxis[axisKey][policy.party].agree++;
+        else if (opinion === "disagree") byAxis[axisKey][policy.party].disagree++;
+        else byAxis[axisKey][policy.party].neutral++;
+      }
+
+      const totalAgree = state.answers.filter((a) => a.opinion === "agree").length;
+      const totalDisagree = state.answers.filter((a) => a.opinion === "disagree").length;
+      const totalNeutral = state.answers.filter((a) => a.opinion === "neutral").length;
+
+      const netByParty = {};
+      for (const p of PARTIES) {
+        netByParty[p] = agreeByParty[p] - disagreeByParty[p];
+      }
+
+      function topParty(counts) {
+        let best = [];
+        let max = -Infinity;
+        for (const p of PARTIES) {
+          if (counts[p] > max) {
+            max = counts[p];
+            best = [p];
+          } else if (counts[p] === max) {
+            best.push(p);
+          }
+        }
+        return { parties: best, count: max };
+      }
+
+      return {
+        agreeByParty,
+        disagreeByParty,
+        neutralByParty,
+        seenByParty,
+        netByParty,
+        byAxis,
+        byCat: byAxis,
+        agreeByCity,
+        disagreeByCity,
+        totalAgree,
+        totalDisagree,
+        totalNeutral,
+        topAgree: topParty(agreeByParty),
+        topDisagree: topParty(disagreeByParty),
+        topNet: topParty(netByParty),
+      };
+    }
+
+    function leanForCategory(catStats) {
+      let best = [];
+      let max = -Infinity;
+      const nets = {};
+      for (const p of PARTIES) {
+        nets[p] = catStats[p].agree - catStats[p].disagree;
+        if (nets[p] > max) {
+          max = nets[p];
+          best = [p];
+        } else if (nets[p] === max) {
+          best.push(p);
+        }
+      }
+      const catTotal = PARTIES.reduce((s, p) => s + catStats[p].total, 0);
+      const anyStance = PARTIES.some((p) => catStats[p].agree + catStats[p].disagree > 0);
+      if (!anyStance) return { type: "none", label: "皆沒意見", class: "none", catTotal, max: 0 };
+      if (best.length > 1 && max === nets[best[0]]) {
+        return { type: "tie", label: "打平", class: "tie", catTotal, max };
+      }
+      return {
+        type: "lean",
+        party: best[0],
+        label: PARTY_META[best[0]].lean,
+        class: best[0],
+        catTotal,
+        max,
+        partyName: PARTY_META[best[0]].name,
+        agree: catStats[best[0]].agree,
+      };
+    }
+
+    /**
+     * Per-party horizontal bar charts: 支持 / 反對 / 沒意見
+     */
+    function renderPartyBars(R) {
+      const el = document.getElementById("party-bars");
+      if (!el) return;
+      const maxCount = Math.max(
+        1,
+        ...PARTIES.flatMap((p) => [
+          R.agreeByParty[p],
+          R.disagreeByParty[p],
+          R.neutralByParty[p],
+        ])
+      );
+
+      el.innerHTML = PARTIES.map((p) => {
+        const a = R.agreeByParty[p];
+        const d = R.disagreeByParty[p];
+        const n0 = R.neutralByParty[p];
+        const net = R.netByParty[p];
+        const netLabel = net > 0 ? `+${net}` : String(net);
+        const colorVar =
+          p === "dpp" ? "dpp-deep" : p === "kmt" ? "kmt-deep" : "tpp-ink";
+        const pct = (v) => Math.max(v === 0 ? 0 : 8, Math.round((v / maxCount) * 100));
+        return `
+          <div class="party-bar-card">
+            <h3 style="color:var(--${colorVar})">
+              <span>${PARTY_META[p].name}</span>
+              <span class="net">淨分 ${netLabel}</span>
+            </h3>
+            <div class="party-metric">
+              <span class="m-label">支持</span>
+              <div class="m-track"><div class="m-fill agree" data-w="${pct(a)}"></div></div>
+              <span class="m-count">${a}</span>
+            </div>
+            <div class="party-metric">
+              <span class="m-label">反對</span>
+              <div class="m-track"><div class="m-fill disagree" data-w="${pct(d)}"></div></div>
+              <span class="m-count">${d}</span>
+            </div>
+            <div class="party-metric">
+              <span class="m-label">沒意見</span>
+              <div class="m-track"><div class="m-fill neutral" data-w="${pct(n0)}"></div></div>
+              <span class="m-count">${n0}</span>
+            </div>
+          </div>`;
+      }).join("");
+
+      requestAnimationFrame(() => {
+        el.querySelectorAll(".m-fill").forEach((bar) => {
+          bar.style.width = `${bar.getAttribute("data-w") || 0}%`;
+        });
+      });
+    }
+
+    // —— Confirm dialog ——
+    let confirmCallback = null;
+    const confirmModal = document.getElementById("confirm-modal");
+
+    function openConfirm(title, body, onOk) {
+      document.getElementById("confirm-title").textContent = title;
+      document.getElementById("confirm-body").textContent = body;
+      confirmCallback = onOk;
+      confirmModal.hidden = false;
+      confirmModal.classList.add("open");
+      document.getElementById("btn-confirm-ok").focus();
+    }
+
+    function closeConfirm() {
+      confirmModal.classList.remove("open");
+      confirmModal.hidden = true;
+      confirmCallback = null;
+    }
+
+    function confirmRestart(kind) {
+      if (kind === "home") {
+        openConfirm(
+          "確定要回首頁重來？",
+          "目前作答進度將會清除，且無法復原。",
+          () => {
+            closeConfirm();
+            startOverToHome();
+          }
+        );
+      } else {
+        openConfirm(
+          "確定要再玩一輪？",
+          "將重新抽題並清除本輪答案，無法復原。",
+          () => {
+            closeConfirm();
+            startGame();
+          }
+        );
+      }
+    }
+
+    function buildInsights(R) {
+      const lines = [];
+      if (R.totalAgree === 0 && R.totalDisagree === 0) {
+        lines.push("本局你幾乎都選沒意見。可以再玩一輪，試著對正反論點做取捨。");
+      } else if (R.topNet.count !== -Infinity) {
+        const names = R.topNet.parties.map((p) => PARTY_META[p].name).join("、");
+        if (R.topNet.parties.length === 1) {
+          lines.push(
+            `淨支持分數最高的是<strong>${names}</strong>（支持減反對＝${R.topNet.count}）。`
+          );
+        } else {
+          lines.push(`淨支持分數在<strong>${names}</strong>之間打平（${R.topNet.count}）。`);
+        }
+      }
+
+      if (R.totalAgree > 0 && R.topAgree.count > 0) {
+        const names = R.topAgree.parties.map((p) => PARTY_META[p].name).join("、");
+        lines.push(`你點選<strong>正方（支持）</strong>最多的政策來自<strong>${names}</strong>（${R.topAgree.count} 題）。`);
+      }
+
+      if (R.totalDisagree > 0 && R.topDisagree && R.topDisagree.count > 0) {
+        const names = R.topDisagree.parties.map((p) => PARTY_META[p].name).join("、");
+        lines.push(
+          `你點選<strong>反方（反對）</strong>最多的政策來自<strong>${names}</strong>（${R.topDisagree.count} 題）。`
+        );
+      }
+
+      if (R.totalNeutral > 0) {
+        lines.push(`有 <strong>${R.totalNeutral}</strong> 題你選擇沒意見，這些不計入淨分的正反拉鋸。`);
+      }
+
+      const axisLeans = [];
+      const axisMap = R.byAxis || R.byCat;
+      for (const key of Object.keys(axisMap)) {
+        const lean = leanForCategory(axisMap[key]);
+        if (lean.type === "lean" && lean.max > 0) axisLeans.push({ key, lean });
+      }
+      axisLeans.sort((a, b) => b.lean.max - a.lean.max);
+      for (const { key, lean } of axisLeans.slice(0, 4)) {
+        const note = lean.catTotal <= 1 ? "（樣本少，僅供參考）" : "";
+        lines.push(
+          `在「<strong>${key}</strong>」議題，你較支持<strong>${lean.partyName}</strong>方向（淨分 ${lean.max}）${note}。`
+        );
+      }
+
+      if (!axisLeans.length && R.totalAgree + R.totalDisagree > 0) {
+        lines.push("各議題正反拉鋸接近，沒有特別突出的單一政黨偏好。");
+      }
+
+      if (state.mode === "city" && state.selectedCity && CITY_META[state.selectedCity]) {
+        lines.unshift(
+          `本局挑戰城市：<strong>${CITY_META[state.selectedCity].name}</strong>（每黨 4 題）。`
+        );
+      }
+
+      return lines;
+    }
+
+    function opinionLabel(op) {
+      if (op === "agree") return "選正方";
+      if (op === "disagree") return "選反方";
+      return "沒意見";
+    }
+
+    function renderReview() {
+      const el = document.getElementById("review-list");
+      el.innerHTML = state.answers
+        .filter((a) => a.opinion)
+        .map(({ policy, opinion }, i) => {
+          const pm = PARTY_META[policy.party];
+          const cityPill =
+            state.mode === "city" && policy.city && CITY_META[policy.city]
+              ? `<span class="pill">${CITY_META[policy.city].name}</span>`
+              : "";
+          return `
+            <details class="review-item">
+              <summary>
+                <div class="review-meta">
+                  <span class="pill">第 ${i + 1} 題</span>
+                  ${cityPill}
+                  <span class="pill ${pm.class}">${pm.name}</span>
+                  <span class="pill">${policy.category}</span>
+                  <span class="op-chip ${opinion}">${opinionLabel(opinion)}</span>
+                </div>
+                <span>${policy.text}</span>
+              </summary>
+              <div class="review-body">
+                <p><strong>白話：</strong>${policy.simple}</p>
+                <p><strong>正方 5 點：</strong></p>
+                <ol style="margin:0.25rem 0 0.5rem 1.1rem">${(policy.pros || []).map((r) => `<li>${r}</li>`).join("")}</ol>
+                <p><strong>反方 5 點：</strong></p>
+                <ol style="margin:0.25rem 0 0.5rem 1.1rem">${(policy.oppose || []).map((r) => `<li>${r}</li>`).join("")}</ol>
+                <p><strong>狀態：</strong>${policy.status}${policy.yearHint ? ` · ${policy.yearHint}` : ""}</p>
+                <div class="note">${policy.note}</div>
+              </div>
+            </details>`;
+        })
+        .join("");
+    }
+
+    function renderResults() {
+      const R = computeResults();
+      state._results = R;
+
+      document.getElementById("stat-agree").textContent = String(R.totalAgree);
+      document.getElementById("stat-disagree").textContent = String(R.totalDisagree);
+      document.getElementById("stat-neutral").textContent = String(R.totalNeutral);
+
+      const chartTitle = document.getElementById("chart-title");
+      const chartCap = document.getElementById("chart-caption");
+      if (state.mode === "city" && state.selectedCity && CITY_META[state.selectedCity]) {
+        chartTitle.textContent = `三黨長條圖｜${CITY_META[state.selectedCity].name}`;
+        chartCap.innerHTML =
+          "每個政黨一組長條：<strong>支持</strong>／<strong>反對</strong>／<strong>沒意見</strong>。淨分＝支持 − 反對。";
+      } else {
+        chartTitle.textContent = "三黨長條圖｜支持／反對／沒意見";
+        chartCap.innerHTML =
+          "每個政黨一組長條：<strong>支持</strong>（正方）、<strong>反對</strong>（反方）、<strong>沒意見</strong>。淨分＝支持 − 反對。";
+      }
+
+      if (R.totalAgree + R.totalDisagree === 0) {
+        document.getElementById("headline-insight").textContent =
+          "本局幾乎都是沒意見；下方長條圖會接近空白，可再玩一輪試試。";
+      } else {
+        const modeHint = state.mode === "city" ? "（依政策所屬政黨／市政路線歸類）" : "";
+        const supportNames = R.topAgree.parties.map((p) => PARTY_META[p].name).join("、");
+        const opposeNames =
+          R.totalDisagree > 0
+            ? R.topDisagree.parties.map((p) => PARTY_META[p].name).join("、")
+            : "";
+        const netNames = R.topNet.parties.map((p) => PARTY_META[p].name).join("、");
+        const parts = [];
+        if (R.totalAgree > 0) {
+          parts.push(
+            R.topAgree.parties.length === 1
+              ? `支持最多：${supportNames}（${R.topAgree.count} 題）`
+              : `支持並列最多：${supportNames}（各 ${R.topAgree.count} 題）`
+          );
+        }
+        if (R.totalDisagree > 0) {
+          parts.push(
+            R.topDisagree.parties.length === 1
+              ? `反對最多：${opposeNames}（${R.topDisagree.count} 題）`
+              : `反對並列最多：${opposeNames}（各 ${R.topDisagree.count} 題）`
+          );
+        }
+        parts.push(
+          R.topNet.parties.length === 1
+            ? `淨支持最高：${netNames}（${R.topNet.count}）`
+            : `淨支持打平：${netNames}（${R.topNet.count}）`
+        );
+        document.getElementById("headline-insight").textContent = parts.join(" · ") + modeHint;
+      }
+
+      renderPartyBars(R);
+
+      const insights = buildInsights(R);
+      document.getElementById("insights").innerHTML = insights.map((l) => `<li>${l}</li>`).join("");
+
+      renderReview();
+    }
+
+    // —— Events ——
+    document.getElementById("btn-theme").addEventListener("click", () => {
+      const cur = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      applyTheme(cur === "dark" ? "light" : "dark");
+      if (state._results) renderPartyBars(state._results);
+    });
+
+    document.querySelectorAll(".mode-card").forEach((card) => {
+      card.addEventListener("click", () => setMode(/** @type {GameMode} */ (card.dataset.mode)));
+    });
+
+    document.getElementById("btn-start").addEventListener("click", startGame);
+    document.getElementById("box-for").addEventListener("click", () => selectOpinion("agree"));
+    document.getElementById("box-against").addEventListener("click", () => selectOpinion("disagree"));
+    document.getElementById("btn-neutral").addEventListener("click", () => selectOpinion("neutral"));
+    document.getElementById("btn-next").addEventListener("click", () => {
+      if (autoAdvanceTimer) {
+        clearTimeout(autoAdvanceTimer);
+        autoAdvanceTimer = null;
+      }
+      nextQuestion();
+    });
+    document.getElementById("btn-prev").addEventListener("click", () => {
+      if (autoAdvanceTimer) {
+        clearTimeout(autoAdvanceTimer);
+        autoAdvanceTimer = null;
+      }
+      prevQuestion();
+    });
+    document.getElementById("btn-quiz-home").addEventListener("click", () => confirmRestart("home"));
+    document.getElementById("btn-help").addEventListener("click", openHelp);
+    document.getElementById("btn-help-close").addEventListener("click", closeHelp);
+    helpModal.addEventListener("click", (e) => {
+      if (e.target === helpModal) closeHelp();
+    });
+    document.getElementById("btn-confirm-cancel").addEventListener("click", closeConfirm);
+    document.getElementById("btn-confirm-ok").addEventListener("click", () => {
+      if (typeof confirmCallback === "function") confirmCallback();
+    });
+    confirmModal.addEventListener("click", (e) => {
+      if (e.target === confirmModal) closeConfirm();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        if (confirmModal.classList.contains("open")) closeConfirm();
+        else if (helpModal.classList.contains("open")) closeHelp();
+      }
+    });
+
+    document.getElementById("btn-restart").addEventListener("click", () => confirmRestart("again"));
+    document.getElementById("btn-home").addEventListener("click", () => confirmRestart("home"));
+    document.getElementById("btn-review-answers").addEventListener("click", returnToEditAnswers);
+
+    setMode("national");
+    refreshPoolDisplays();
+
+    // Sanity: bank size
+    console.info(
+      `[政策光譜] 全國題庫 ${POLICIES.length} 題`,
+      PARTIES.map((p) => `${PARTY_META[p].name} ${POLICIES.filter((x) => x.party === p).length}`).join(" · ")
+    );
+    if (typeof CITY_POLICIES !== "undefined") {
+      console.info(`[政策光譜] 城市題庫 ${CITY_POLICIES.length} 題`);
+    }
+  </script>
+</body>
+</html>
