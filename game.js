@@ -2,7 +2,7 @@
 /** @typedef {"dpp"|"kmt"|"tpp"} Party */
 /** @typedef {"dpp"|"kmt"|"tpp"|"neutral"} Pick */
 
-const APP_VERSION = "2.1.4";
+const APP_VERSION = "2.1.5";
 
 const PARTY_META = {
   dpp: { name: "民進黨", short: "民", class: "dpp" },
