@@ -2,7 +2,7 @@
 /** @typedef {"dpp"|"kmt"|"tpp"} Party */
 /** @typedef {"dpp"|"kmt"|"tpp"|"neutral"} Pick */
 
-const APP_VERSION = "2.1.0";
+const APP_VERSION = "2.1.1";
 
 const PARTY_META = {
   dpp: { name: "民進黨", short: "民", class: "dpp" },
@@ -12,7 +12,7 @@ const PARTY_META = {
 
 const PARTIES = /** @type {Party[]} */ (["dpp", "kmt", "tpp"]);
 const OPT_LABELS = ["立場 A", "立場 B", "立場 C"];
-const QUESTIONS_PER_ROUND = 12;
+const QUESTIONS_PER_ROUND = 8;
 
 const state = {
   mode: /** @type {"national"|"city"} */ ("national"),
