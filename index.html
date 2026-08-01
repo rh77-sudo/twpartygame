@@ -178,44 +178,6 @@
       color: var(--ink);
     }
 
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      padding: 0.32rem 0.75rem;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255, 252, 248, 0.9);
-      color: var(--ink-soft);
-      backdrop-filter: blur(6px);
-    }
-
-    .pill.dpp {
-      background: var(--dpp-soft);
-      border-color: color-mix(in srgb, var(--dpp) 45%, var(--line));
-      color: var(--dpp-deep);
-    }
-    .pill.kmt {
-      background: var(--kmt-soft);
-      border-color: color-mix(in srgb, var(--kmt) 45%, var(--line));
-      color: var(--kmt-deep);
-    }
-    .pill.tpp {
-      background: var(--tpp-soft);
-      border-color: color-mix(in srgb, var(--tpp) 55%, var(--line));
-      color: var(--tpp-ink);
-    }
-
     /* —— Start —— */
     #screen-start {
       justify-content: center;
@@ -1213,11 +1175,30 @@
 
     .review-item[open] summary::after { content: "收合 ▴"; }
 
-    .review-meta {
+    .review-head {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.35rem;
       align-items: center;
+      gap: 0.4rem 0.55rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .review-head .party {
+      font-weight: 700;
+    }
+    .review-head .party.dpp { color: var(--dpp-deep); }
+    .review-head .party.kmt { color: var(--kmt-deep); }
+    .review-head .party.tpp { color: var(--tpp-ink); }
+
+    .review-head .dot {
+      opacity: 0.45;
+    }
+
+    .review-item summary .review-text {
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.5;
     }
 
     .review-body {
@@ -1229,12 +1210,10 @@
 
     .review-body p { margin-top: 0.55rem; }
     .review-body .note {
-      margin-top: 0.7rem;
-      padding: 0.65rem 0.8rem;
-      background: linear-gradient(135deg, #f7f5f0, #efebe3);
-      border-radius: 10px;
+      margin-top: 0.55rem;
       font-size: 0.85rem;
-      border: 1px solid var(--line);
+      color: var(--muted);
+      line-height: 1.5;
     }
 
     .op-chip {
@@ -1388,16 +1367,6 @@
       .rules li {
         padding: 0.55rem 0.55rem 0.55rem 2.35rem;
         font-size: 0.9rem;
-      }
-
-      .badge-row {
-        justify-content: center;
-        gap: 0.35rem;
-      }
-
-      .pill {
-        font-size: 0.68rem;
-        padding: 0.28rem 0.55rem;
       }
 
       .policy-text {
@@ -1584,55 +1553,20 @@
       border-radius: 999px;
     }
 
-    .mode-card .pool-count {
-      display: block;
-      margin-top: 0.55rem;
-      font-size: 0.92rem;
-      font-weight: 800;
-      font-family: var(--font-serif);
-      color: var(--ink);
-      letter-spacing: 0.02em;
-    }
-
-    .mode-card .pool-count em {
-      font-style: normal;
-      color: var(--kmt-deep);
-      font-size: 1.15rem;
-    }
-
-    .pool-summary {
+    /* Subtle pool info — not a primary feature block */
+    .pool-info {
       width: 100%;
-      text-align: left;
-      padding: 0.95rem 1.1rem !important;
-      border: 1px solid var(--card-edge);
-      background:
-        linear-gradient(135deg, var(--dpp-soft), transparent 40%),
-        linear-gradient(225deg, var(--kmt-soft), transparent 42%),
-        linear-gradient(180deg, var(--card), var(--card));
-    }
-
-    .pool-summary-title {
+      text-align: center;
       font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
       color: var(--muted);
-      margin-bottom: 0.4rem;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      padding: 0.15rem 0.25rem 0.35rem;
     }
 
-    .pool-summary-body {
-      font-size: 0.92rem;
+    .pool-info strong {
       color: var(--ink-soft);
-      line-height: 1.55;
-    }
-
-    .pool-summary-body strong {
-      color: var(--ink);
-      font-weight: 800;
-    }
-
-    .pool-summary-body .hl {
-      color: var(--kmt-deep);
-      font-weight: 800;
+      font-weight: 600;
     }
 
     .city-chip .city-count {
@@ -1760,7 +1694,6 @@
       color: #bfdbfe;
       background: rgba(96, 165, 250, 0.18);
     }
-    html[data-theme="dark"] .mode-card .pool-count em { color: var(--kmt-deep); }
     html[data-theme="dark"] .city-chip {
       background: #151c2c;
       color: var(--ink);
@@ -1832,9 +1765,8 @@
     }
     html[data-theme="dark"] .modal h3 { color: var(--tpp-ink); }
     html[data-theme="dark"] .modal p { color: var(--ink-soft); }
-    html[data-theme="dark"] .pool-summary {
-      border-color: var(--line);
-    }
+    html[data-theme="dark"] .pool-info { color: var(--muted); }
+    html[data-theme="dark"] .pool-info strong { color: var(--ink-soft); }
     html[data-theme="dark"] .review-item {
       background: var(--card);
       border-color: var(--card-edge);
@@ -1902,7 +1834,7 @@
       <div>
         <h1>政策光譜測驗</h1>
         <p class="subtitle">先看政策好不好，再揭曉是誰提的</p>
-        <span class="version-badge" id="version-badge" aria-label="版本">v1.1.2</span>
+        <span class="version-badge" id="version-badge" aria-label="版本">v1.2.0</span>
       </div>
       <div class="card purpose-card" role="region" aria-labelledby="purpose-title">
         <h2 id="purpose-title">為什麼做這個測驗？</h2>
@@ -1918,27 +1850,17 @@
           <h3>三黨政策</h3>
           <p>民進黨、國民黨、民眾黨近八年全國政見與立院提案盲測。</p>
           <span class="mode-tag" id="tag-national">每局 12 題 · 每黨 4</span>
-          <span class="pool-count" id="pool-national">題庫載入中…</span>
         </button>
         <button type="button" class="mode-card" id="mode-city" data-mode="city" aria-pressed="false">
           <h3>城市市政</h3>
           <p>選一個城市，挑戰該市三黨市政／議會政策（六都＋新竹）。</p>
           <span class="mode-tag" id="tag-city">每局 12 題 · 每黨 4</span>
-          <span class="pool-count" id="pool-city">題庫載入中…</span>
         </button>
       </div>
-      <div class="pool-summary card" id="pool-summary" aria-live="polite">
-        <div class="pool-summary-title">目前題庫規模</div>
-        <div class="pool-summary-body" id="pool-summary-body">載入中…</div>
-      </div>
+      <p class="pool-info" id="pool-info" aria-live="polite">題庫載入中…</p>
       <div class="city-picker" id="city-picker" aria-label="選擇城市">
         <h3>選擇要挑戰的城市</h3>
         <div class="city-grid" id="city-grid"></div>
-      </div>
-      <div class="badge-row" style="justify-content:center" id="start-badges">
-        <span class="pill dpp">民進黨</span>
-        <span class="pill kmt">國民黨</span>
-        <span class="pill tpp">民眾黨</span>
       </div>
       <div class="card rules">
         <p><strong>怎麼玩？</strong></p>
@@ -1953,7 +1875,7 @@
         </p>
       </div>
       <button type="button" class="btn btn-primary" id="btn-start">開始測驗</button>
-      <p class="site-footer">政策光譜測驗 · 繁體中文 · <span class="app-version">v1.1.2</span></p>
+      <p class="site-footer">政策光譜測驗 · 繁體中文 · <span class="app-version">v1.2.0</span></p>
     </section>
 
     <!-- QUIZ -->
@@ -2053,7 +1975,7 @@
         <button type="button" class="btn btn-ghost" id="btn-review-answers">返回修改答案</button>
         <button type="button" class="btn btn-ghost" id="btn-home">回首頁重來</button>
       </div>
-      <p class="site-footer">政策依公開資料簡化 · 僅供教育娛樂 · <span class="app-version">v1.1.2</span></p>
+      <p class="site-footer">政策依公開資料簡化 · 僅供教育娛樂 · <span class="app-version">v1.2.0</span></p>
     </section>
   </div>
 
@@ -2089,7 +2011,7 @@
     /** @typedef {"national"|"city"} GameMode */
 
     /** App version — bump when shipping visible changes (sync footer badges). */
-    const APP_VERSION = "1.1.2";
+    const APP_VERSION = "1.2.0";
 
     const PARTY_META = {
       dpp: { name: "民進黨", short: "民", lean: "偏綠", class: "dpp" },
@@ -2150,24 +2072,15 @@
 
     function refreshPoolDisplays() {
       const s = getPoolStats();
-      const elN = document.getElementById("pool-national");
-      const elC = document.getElementById("pool-city");
-      if (elN) {
-        elN.innerHTML = `題庫共 <em>${s.national}</em> 題`;
-      }
-      if (elC) {
-        elC.innerHTML = `題庫共 <em>${s.cityTotal}</em> 題 · ${s.cityCount} 市`;
-      }
-      const body = document.getElementById("pool-summary-body");
-      if (body) {
-        if (state.mode === "city" && state.selectedCity && CITY_META[state.selectedCity]) {
-          const n = s.perCity[state.selectedCity] || 0;
-          body.innerHTML = `已選 <strong>${CITY_META[state.selectedCity].name}</strong>：該市題庫 <span class="hl">${n}</span> 題（每黨約 ${Math.round(n / 3)}）。全部城市合計 <span class="hl">${s.cityTotal}</span> 題。每局仍抽 12 題。`;
-        } else if (state.mode === "city") {
-          body.innerHTML = `城市模式合計 <span class="hl">${s.cityTotal}</span> 題（${s.cityCount} 市）。請選擇城市後開始；每局抽 12 題。`;
-        } else {
-          body.innerHTML = `全國模式題庫 <span class="hl">${s.national}</span> 題（民進黨 ${s.byParty.dpp} · 國民黨 ${s.byParty.kmt} · 民眾黨 ${s.byParty.tpp}）。每局隨機抽 12 題（每黨 4）。`;
-        }
+      const info = document.getElementById("pool-info");
+      if (!info) return;
+      if (state.mode === "city" && state.selectedCity && CITY_META[state.selectedCity]) {
+        const n = s.perCity[state.selectedCity] || 0;
+        info.innerHTML = `<strong>${CITY_META[state.selectedCity].name}</strong> · 約 ${n} 題 · 每局抽 12`;
+      } else if (state.mode === "city") {
+        info.textContent = `城市題庫合計 ${s.cityTotal} 題 · 請先選城市`;
+      } else {
+        info.textContent = `全國題庫約 ${s.national} 題 · 每局抽 12（每黨 4）`;
       }
     }
 
@@ -2186,37 +2099,9 @@
         btn.addEventListener("click", () => {
           state.selectedCity = btn.dataset.city;
           renderCityGrid();
-          updateStartBadges();
           refreshPoolDisplays();
         });
       });
-    }
-
-    function updateStartBadges() {
-      const badges = document.getElementById("start-badges");
-      const s = getPoolStats();
-      if (state.mode === "city") {
-        const name =
-          state.selectedCity && CITY_META[state.selectedCity]
-            ? CITY_META[state.selectedCity].name
-            : "尚未選城市";
-        const n =
-          state.selectedCity && s.perCity[state.selectedCity]
-            ? s.perCity[state.selectedCity]
-            : 0;
-        badges.innerHTML = `
-          <span class="pill">${name}</span>
-          <span class="pill">該市 ${n} 題</span>
-          <span class="pill dpp">民 4</span>
-          <span class="pill kmt">國 4</span>
-          <span class="pill tpp">眾 4</span>`;
-      } else {
-        badges.innerHTML = `
-          <span class="pill">全國 ${s.national} 題</span>
-          <span class="pill dpp">民 ${s.byParty.dpp}</span>
-          <span class="pill kmt">國 ${s.byParty.kmt}</span>
-          <span class="pill tpp">眾 ${s.byParty.tpp}</span>`;
-      }
     }
 
     function setMode(mode) {
@@ -2237,7 +2122,6 @@
         }
         renderCityGrid();
       }
-      updateStartBadges();
       refreshPoolDisplays();
     }
 
@@ -2705,66 +2589,56 @@
     }
 
     function buildInsights(R) {
+      // Keep short — headline already covers support/oppose/net totals
       const lines = [];
+      const cityLabel =
+        state.mode === "city" && state.selectedCity && CITY_META[state.selectedCity]
+          ? CITY_META[state.selectedCity].name
+          : "";
+
       if (R.totalAgree === 0 && R.totalDisagree === 0) {
-        lines.push("本局你幾乎都選沒意見。可以再玩一輪，試著對正反論點做取捨。");
-      } else if (R.topNet.count !== -Infinity) {
-        const names = R.topNet.parties.map((p) => PARTY_META[p].name).join("、");
-        if (R.topNet.parties.length === 1) {
-          lines.push(
-            `淨支持分數最高的是<strong>${names}</strong>（支持減反對＝${R.topNet.count}）。`
-          );
-        } else {
-          lines.push(`淨支持分數在<strong>${names}</strong>之間打平（${R.topNet.count}）。`);
-        }
-      }
-
-      if (R.totalAgree > 0 && R.topAgree.count > 0) {
-        const names = R.topAgree.parties.map((p) => PARTY_META[p].name).join("、");
-        lines.push(`你點選<strong>正方（支持）</strong>最多的政策來自<strong>${names}</strong>（${R.topAgree.count} 題）。`);
-      }
-
-      if (R.totalDisagree > 0 && R.topDisagree && R.topDisagree.count > 0) {
-        const names = R.topDisagree.parties.map((p) => PARTY_META[p].name).join("、");
         lines.push(
-          `你點選<strong>反方（反對）</strong>最多的政策來自<strong>${names}</strong>（${R.topDisagree.count} 題）。`
+          cityLabel
+            ? `本局（${cityLabel}）幾乎都選沒意見，可再玩一輪試試取捨。`
+            : "本局幾乎都選沒意見，可再玩一輪試試取捨。"
         );
+        return lines;
       }
 
-      if (R.totalNeutral > 0) {
-        lines.push(`有 <strong>${R.totalNeutral}</strong> 題你選擇沒意見，這些不計入淨分的正反拉鋸。`);
-      }
-
+      // Top 1–2 category leans only
       const axisLeans = [];
-      const axisMap = R.byAxis || R.byCat;
+      const axisMap = R.byAxis || R.byCat || {};
       for (const key of Object.keys(axisMap)) {
         const lean = leanForCategory(axisMap[key]);
         if (lean.type === "lean" && lean.max > 0) axisLeans.push({ key, lean });
       }
       axisLeans.sort((a, b) => b.lean.max - a.lean.max);
-      for (const { key, lean } of axisLeans.slice(0, 4)) {
-        const note = lean.catTotal <= 1 ? "（樣本少，僅供參考）" : "";
+
+      if (axisLeans.length) {
+        for (const { key, lean } of axisLeans.slice(0, 2)) {
+          const note = lean.catTotal <= 1 ? "（樣本少）" : "";
+          lines.push(
+            `在「<strong>${key}</strong>」議題，你較支持<strong>${lean.partyName}</strong>方向${note}。`
+          );
+        }
+      } else {
         lines.push(
-          `在「<strong>${key}</strong>」議題，你較支持<strong>${lean.partyName}</strong>方向（淨分 ${lean.max}）${note}。`
+          cityLabel
+            ? `本局（${cityLabel}）各議題偏好較分散，沒有特別突出的方向。`
+            : "各議題偏好較分散，沒有特別突出的單一方向。"
         );
       }
 
-      if (!axisLeans.length && R.totalAgree + R.totalDisagree > 0) {
-        lines.push("各議題正反拉鋸接近，沒有特別突出的單一政黨偏好。");
+      if (R.totalNeutral >= 3) {
+        lines.push(`有 <strong>${R.totalNeutral}</strong> 題選擇沒意見。`);
       }
 
-      if (state.mode === "city" && state.selectedCity && CITY_META[state.selectedCity]) {
-        lines.unshift(
-          `本局挑戰城市：<strong>${CITY_META[state.selectedCity].name}</strong>（每黨 4 題）。`
-        );
-      }
-
-      return lines;
+      return lines.slice(0, 3);
     }
 
     function opinionLabel(op) {
-      if (op === "agree") return "選正方";
-      if (op === "disagree") return "選反方";
+      if (op === "agree") return "支持";
+      if (op === "disagree") return "反對";
       return "沒意見";
     }
 
@@ -2772,32 +2646,24 @@
       const el = document.getElementById("review-list");
       el.innerHTML = state.answers
         .filter((a) => a.opinion)
-        .map(({ policy, opinion }, i) => {
+        .map(({ policy, opinion }) => {
           const pm = PARTY_META[policy.party];
-          const cityPill =
-            state.mode === "city" && policy.city && CITY_META[policy.city]
-              ? `<span class="pill">${CITY_META[policy.city].name}</span>`
-              : "";
+          const statusLine = [policy.status, policy.yearHint].filter(Boolean).join(" · ");
           return `
             <details class="review-item">
               <summary>
-                <div class="review-meta">
-                  <span class="pill">第 ${i + 1} 題</span>
-                  ${cityPill}
-                  <span class="pill ${pm.class}">${pm.name}</span>
-                  <span class="pill">${policy.category}</span>
+                <div class="review-head">
                   <span class="op-chip ${opinion}">${opinionLabel(opinion)}</span>
+                  <span class="party ${pm.class}">${pm.name}</span>
+                  <span class="dot">·</span>
+                  <span>${policy.category}</span>
                 </div>
-                <span>${policy.text}</span>
+                <span class="review-text">${policy.text}</span>
               </summary>
               <div class="review-body">
-                <p><strong>白話：</strong>${policy.simple}</p>
-                <p><strong>正方 5 點：</strong></p>
-                <ol style="margin:0.25rem 0 0.5rem 1.1rem">${(policy.pros || []).map((r) => `<li>${r}</li>`).join("")}</ol>
-                <p><strong>反方 5 點：</strong></p>
-                <ol style="margin:0.25rem 0 0.5rem 1.1rem">${(policy.oppose || []).map((r) => `<li>${r}</li>`).join("")}</ol>
-                <p><strong>狀態：</strong>${policy.status}${policy.yearHint ? ` · ${policy.yearHint}` : ""}</p>
-                <div class="note">${policy.note}</div>
+                <p>${policy.simple}</p>
+                ${statusLine ? `<p style="font-size:0.82rem;color:var(--muted)">${statusLine}</p>` : ""}
+                ${policy.note ? `<p class="note">${policy.note}</p>` : ""}
               </div>
             </details>`;
         })
