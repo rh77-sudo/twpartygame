@@ -7,7 +7,7 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <title>政策光譜測驗｜先看政策，再看是誰提的</title>
+  <title>用 12 題測試你的政策傾向｜政策光譜測驗</title>
   <meta name="description" content="盲測政策偏好：先隱藏政黨標籤，依內容表態。好政策支持、壞政策反對，對事不對人。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -372,6 +372,17 @@
       padding-top: 0.9rem;
       border-top: 1px dashed var(--line);
       line-height: 1.55;
+    }
+
+    .start-disclaimer {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0.35rem;
+      margin-bottom: 0;
+      max-width: 28rem;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
     }
 
     .btn {
@@ -1824,9 +1835,9 @@
     <section id="screen-start" class="screen active" aria-label="開始">
       <div class="logo-mark" aria-hidden="true"><span><i></i><i></i><i></i></span></div>
       <div>
-        <h1>政策光譜測驗</h1>
+        <h1>用 12 題測試你的政策傾向</h1>
         <p class="subtitle">先看政策好不好，再揭曉是誰提的</p>
-        <span class="version-badge" id="version-badge" aria-label="版本">v1.2.0</span>
+        <span class="version-badge" id="version-badge" aria-label="版本">v1.2.1</span>
       </div>
       <div class="card purpose-card" role="region" aria-labelledby="purpose-title">
         <h2 id="purpose-title">為什麼做這個測驗？</h2>
@@ -1854,20 +1865,11 @@
         <h3>選擇要挑戰的城市</h3>
         <div class="city-grid" id="city-grid"></div>
       </div>
-      <div class="card rules">
-        <p><strong>怎麼玩？</strong></p>
-        <ol id="rules-list">
-          <li>從近八年大型題庫隨機抽 <strong>12 則</strong>（不顯示是誰提出的；城市模式請先選一市）。</li>
-          <li>每題有<strong>正方／反方各 5 點</strong>；點選方框表態，或選<strong>沒意見</strong>。</li>
-          <li>可用<strong>上一題</strong>返回改答案；<strong>回首頁重來</strong>可整局重開。</li>
-          <li>結束後揭曉支持最多／<strong>反對最多</strong>的政黨，並以<strong>三黨長條圖</strong>總覽偏好。</li>
-        </ol>
-        <p class="disclaimer">
-          題庫依 2018–2026 公開政見、市政與議會資料整理並簡化；正反論點來自公共辯論常見主張，不代表本站立場。僅供教育與自我檢視，非正式民調。城市題含已上路與規劃中政策。
-        </p>
-      </div>
       <button type="button" class="btn btn-primary" id="btn-start">開始測驗</button>
-      <p class="site-footer">政策光譜測驗 · 繁體中文 · <span class="app-version">v1.2.0</span></p>
+      <p class="disclaimer start-disclaimer">
+        題庫依公開政見與市政資料整理並簡化，僅供教育與自我檢視，非正式民調。
+      </p>
+      <p class="site-footer">政策光譜測驗 · 繁體中文 · <span class="app-version">v1.2.1</span></p>
     </section>
 
     <!-- QUIZ -->
@@ -1967,7 +1969,7 @@
         <button type="button" class="btn btn-ghost" id="btn-review-answers">返回修改答案</button>
         <button type="button" class="btn btn-ghost" id="btn-home">回首頁重來</button>
       </div>
-      <p class="site-footer">政策依公開資料簡化 · 僅供教育娛樂 · <span class="app-version">v1.2.0</span></p>
+      <p class="site-footer">政策依公開資料簡化 · 僅供教育娛樂 · <span class="app-version">v1.2.1</span></p>
     </section>
   </div>
 
@@ -2003,7 +2005,7 @@
     /** @typedef {"national"|"city"} GameMode */
 
     /** App version — bump when shipping visible changes (sync footer badges). */
-    const APP_VERSION = "1.2.0";
+    const APP_VERSION = "1.2.1";
 
     const PARTY_META = {
       dpp: { name: "民進黨", short: "民", lean: "偏綠", class: "dpp" },
