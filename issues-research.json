@@ -1,0 +1,1332 @@
+[
+  {
+    "id": "issue-nuclear-base",
+    "category": "能源",
+    "yearHint": "2018–2025",
+    "topic": "核電機組除役後，台灣應如何安排基載與低碳電力？",
+    "simple": "電廠會老舊停機，但工廠與家裡仍要穩定用電。各方對要不要繼續用核電、或改靠天然氣和綠電，看法不同。",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "依既定除役期程走向非核家園，以氣電與再生能源接替基載，核安核廢未解前不倉促重啟。",
+        "note": "蔡政府「2025非核家園」與環境基本法目標；賴政府2024–2025仍以核安、核廢、社會共識為前提，對舊機組重啟與新核能相對審慎（後續雖有政策轉彎壓力，此為2018–2025主流路線）。",
+        "sources": [
+          "https://www.dpp.org.tw/media/contents/6681",
+          "https://www.bbc.com/zhongwen/articles/c1l9ne9qym0o/trad",
+          "https://www.twreporter.org/a/2024-election-presidential-candidates-policies-energy-housing-justice-taxation"
+        ]
+      },
+      "kmt": {
+        "text": "核電應作為穩定低碳基載，推動既有機組延役或安全重啟，並修法放寬延役申請限制。",
+        "note": "2024–2025與民眾黨聯手修《核管法》放寬延役；支持核三延役公投；侯友宜2024政見主張核一至核三延役、檢討核四。",
+        "sources": [
+          "https://www.cna.com.tw/news/aipl/202508120106.aspx",
+          "https://eventsinfocus.org/issues/7147632",
+          "https://www.twreporter.org/a/ahead-referendum-to-restart-maanshan-nuclear-power-plant"
+        ]
+      },
+      "tpp": {
+        "text": "核能納入多元能源作為基載，既有機組應延役，並以公投與核安審查推動繼續運轉。",
+        "note": "柯文哲2024政見：核二核三延役、體檢核四，2030核能約一成；黨團發起核三延役公投並聯手修核管法。",
+        "sources": [
+          "https://www.energy-omni.com/news/article/44eZyF4xY4yM1wh2",
+          "https://www.twreporter.org/a/ahead-referendum-to-restart-maanshan-nuclear-power-plant",
+          "https://esg.gvm.com.tw/article/36760"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-renewable-pace",
+    "category": "能源",
+    "yearHint": "2016–2025",
+    "topic": "再生能源（光電、離岸風電）應以多快速度、什麼配套推進？",
+    "simple": "太陽能和風力發電要擴建多少、多快，會影響電價、農地和供電穩定。三方都支持綠電，但對速度與管理寬嚴不同。",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "加速光電與離岸風電作為轉型主力，設定明確發電占比目標，並配套電網與產業鏈。",
+        "note": "蔡政府「減煤、增氣、展綠、非核」；2025再生能源發電占比目標約20%，2030約三成；賴政府續推淨零與第二次能源轉型。",
+        "sources": [
+          "https://www.dpp.org.tw/plan/contents/155",
+          "https://www.president.gov.tw/News/24873",
+          "https://www.ey.gov.tw/Page/9277F759E41CCD91/b8d80490-b2db-4f62-ab3b-96a9eee442ee"
+        ]
+      },
+      "kmt": {
+        "text": "支持長期發展風電與光電，但反對為衝量犧牲農漁與生態，要求檢討弊案與過高購電成本。",
+        "note": "侯友宜2024提出2030再生能源約27%、2040無煤；立委與黨團長期批評光電占農地、離岸風電躉購與國產化爭議。",
+        "sources": [
+          "https://esg.ettoday.net/news/2634513",
+          "https://tcan2050.org.tw/%E6%AA%A2%E8%A6%96%E4%BE%AF%E5%8F%8B%E5%AE%9C%E8%83%BD%E6%BA%90%E6%94%BF%E7%AD%96%EF%BC%9A%E6%8B%8B%E6%A3%84%E3%80%8C%E7%B6%A0%E8%83%BD%E4%B8%91%E8%A7%92%E8%AB%96%E3%80%8D%E5%80%BC%E5%BE%97%E9%BC%93/",
+          "https://ppg.ly.gov.tw/ppg/bills/latest-second-reading/212110080830000/details"
+        ]
+      },
+      "tpp": {
+        "text": "支持能源轉型與再生能源，但須嚴查綠能弊案、強化環評與土地規範，不能犧牲農業環境。",
+        "note": "支持光電轉型但強調反官商勾結；推動特定區位限制地面光電、光電納環評等修法；2030再生能源政見約三成。",
+        "sources": [
+          "https://www.twreporter.org/a/a-guide-to-lawmaker-observatory-on-electricity-and-energy-issues",
+          "https://e-info.org.tw/node/242511",
+          "https://www.twreporter.org/a/2024-election-presidential-candidates-policies-energy-housing-justice-taxation"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-carbon-fee",
+    "category": "氣候",
+    "yearHint": "2023–2025",
+    "topic": "台灣應如何用碳費（或碳定價）推動減碳？",
+    "simple": "排碳多的工廠要付費，希望大家少排廢氣。費率高低、有沒有優惠，會影響電價與企業成本。",
+    "confidence": "medium",
+    "stances": {
+      "dpp": {
+        "text": "依氣候法先徵收碳費，搭配優惠費率與自主減量計畫，引導大排放源實質減碳。",
+        "note": "《氣候變遷因應法》下環境部推動碳費；一般費率約每噸300元，高碳洩漏與達標者適用優惠；強調碳費先行、中長期再談碳交易。",
+        "sources": [
+          "https://www.cca.gov.tw/affairs/carbon-fee-fund/2301.html",
+          "https://netzero.cna.com.tw/news/202412310201/",
+          "https://csr.cw.com.tw/article/43480"
+        ]
+      },
+      "kmt": {
+        "text": "減碳方向可以接受，但費率與上路時程須顧產業競爭力，宜分階段並強化緩衝配套。",
+        "note": "2024侯友宜陣營碳定價政見被環團評為付之闕如；黨與產業側較常呼應工總等「緩徵／低起徵／滾動調整」訴求，完整黨綱表述相對薄弱。",
+        "sources": [
+          "https://csr.cw.com.tw/article/43480",
+          "https://election.tcan2050.org.tw/article/3",
+          "https://www.rti.org.tw/news?uid=3&pid=113272"
+        ]
+      },
+      "tpp": {
+        "text": "採碳費或碳稅與碳交易等多元定價接軌國際，並定期公開碳定價收入與使用情形。",
+        "note": "柯文哲2024政見：自行課徵碳定價以免被外國碳關稅；多元碳定價＋揭露收入使用；早年亦主張收入部分撥地方助轉型。",
+        "sources": [
+          "https://csr.cw.com.tw/article/43480",
+          "https://election.tcan2050.org.tw/article/3",
+          "https://www.rti.org.tw/news/view/id/2117351"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-conscription",
+    "category": "國防",
+    "yearHint": "2022–2024",
+    "topic": "義務役役期與訓練應如何調整以因應安全情勢？",
+    "simple": "年輕男生要當多久兵、學什麼，關係到保家能力與個人生涯。情勢變緊張後，役期長短成了爭議。",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "自二〇二四年起恢復一年義務役，強化實戰化訓練，並提高薪資與後備、職涯銜接。",
+        "note": "蔡英文2022年12月宣布「強化全民國防兵力結構調整方案」：94年次後役男一年役期、守備部隊常備化、新式武器與射擊量能提升。",
+        "sources": [
+          "https://www.president.gov.tw/NEWS/27206",
+          "https://www.bbc.com/zhongwen/trad/chinese-news-64102726"
+        ]
+      },
+      "kmt": {
+        "text": "現階段可配合延長役期，但若兩岸風險明顯下降，應檢討縮短，避免不當加重青年負擔。",
+        "note": "侯友宜2023年曾主張當選後在兩岸穩定前提下恢復四個月；其後改口現階段支持一年、穩定後再調整，黨內論述以「避戰降風險」連結役期彈性。",
+        "sources": [
+          "https://www.voachinese.com/a/taiwan-opposition-presidential-candidate-vows-to-shorten-military-service-20230704/7166134.html",
+          "https://news.pts.org.tw/article/644914",
+          "https://tw.news.yahoo.com/%E4%BE%AF%E5%BA%B7%E5%B0%88%E8%A8%AA-2024%E8%8B%A5%E7%95%B6%E9%81%B8%E6%9C%83%E6%8A%8A%E5%85%B5%E5%BD%B9%E6%94%B9%E5%9B%9E4%E5%80%8B%E6%9C%88-%E4%BE%AF%E5%8F%8B%E5%AE%9C-%E7%8F%BE%E9%9A%8E%E6%AE%B5%E4%B8%8D%E5%8F%AF%E8%83%BD-113610626.html"
+        ]
+      },
+      "tpp": {
+        "text": "一年役期仍難因應高科技戰場，應以募兵為主、徵兵為輔，強化網軍與海空軍技術兵種。",
+        "note": "柯文哲批評一年只是應急、對網軍海空軍不夠；主張募徵並行與質的提升，非單純拉長月數。",
+        "sources": [
+          "https://tw.news.yahoo.com/%E4%BE%AF%E5%8F%8B%E5%AE%9C%E8%A6%81%E6%81%A2%E5%BE%A9%E5%85%B5%E5%BD%B94%E5%80%8B%E6%9C%88-%E6%9F%AF%E6%96%87%E5%93%B2-1%E5%B9%B4%E4%B9%9F%E4%B8%8D%E5%A4%A0-%E5%85%88%E5%8E%BB%E8%B7%9Fait%E8%A7%A3%E9%87%8B-043653898.html",
+          "https://whoareyou.readr.tw/politics/detail/8221"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-defense-budget",
+    "category": "國防",
+    "yearHint": "2024–2025",
+    "topic": "國防特別預算與軍購預算，國會監督與刪凍應抓什麼分寸？",
+    "simple": "買武器與練兵要花很多錢。一方希望一次編足長期預算，另一方要求逐年盯緊、先查清楚再給錢。",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "關鍵防衛與不對稱戰力應足額、跨年度穩定編列，反對以大幅刪凍癱瘓軍購與建軍時程。",
+        "note": "行政院提八年約1.25兆「強化防衛韌性及不對稱戰力」特別預算；痛批潛艦等刪凍；主張國會可監督但不宜大幅縮水或僵化正面表列。",
+        "sources": [
+          "https://www.dpp.org.tw/media/contents/11027",
+          "https://www.dpp.org.tw/anti_rumor/contents/377",
+          "https://www.thenewslens.com/article/264573"
+        ]
+      },
+      "kmt": {
+        "text": "國防要強化但須嚴格監督執行績效，未達里程碑可凍結動支，特別預算規模宜緊縮可審。",
+        "note": "黨團與立委對潛艦後續艦等採凍結或分年照列（如先留當年度所需）；部分主張特別預算回歸年度或大幅下修上限，強調交貨與執行成效。",
+        "sources": [
+          "https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=54301&pid=248163",
+          "https://indsr.org.tw/focus?uid=11&pid=2772&typeid=",
+          "https://www.bbc.com/zhongwen/articles/cpqnnddw9jdo/trad"
+        ]
+      },
+      "tpp": {
+        "text": "支持強化不對稱戰力，但特別預算應一年一編、正面表列項目金額，並防止排擠民生支出。",
+        "note": "自提約4000億「保衛國家安全及強化不對稱戰力」版本，一年一期、專案報告後才審議，明文要求社福占比不低於基準年。",
+        "sources": [
+          "https://www.thenewslens.com/article/264573",
+          "https://news.pts.org.tw/article/792477",
+          "https://www.cna.com.tw/news/aipl/202601300352.aspx"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-asymmetric-force",
+    "category": "國防",
+    "yearHint": "2020–2025",
+    "topic": "防衛應更強調不對稱戰力（飛彈、無人機等）還是均衡建軍？",
+    "simple": "面對更大軍隊，要多買機動、便宜、好藏的武器，還是也要大型艦機「樣樣齊」？這是建軍優先順序之爭。",
+    "confidence": "medium",
+    "stances": {
+      "dpp": {
+        "text": "以整體防衛構想為主軸，優先大量小型機動致命火力與不對稱戰力，嚇阻敵方登陸進犯。",
+        "note": "蔡政府國防報告書與「海空戰力提升」特別預算；飛彈、無人機、高效能艦艇等；賴政府續強調防衛韌性與不對稱戰力特別條例。",
+        "sources": [
+          "https://www.twreporter.org/a/bookreview-taiwan-national-defense-overall-defense-concept",
+          "https://www.rfa.org/mandarin/zhuanlan/junshiwujinqu/mil-08182022134942.html",
+          "https://www.thenewslens.com/article/264573"
+        ]
+      },
+      "kmt": {
+        "text": "可發展不對稱手段，但不能只堆武器品項，須建立完整戰略思維並兼顧可恃傳統戰力。",
+        "note": "侯友宜2024稱延續不對稱與潛艦國造；陳永康等強調「不對稱戰略思維」與整合戰術，批評單靠裝備清單無法抵銷戰力落差，傾向更均衡、可操作的建軍。",
+        "sources": [
+          "https://tw.news.yahoo.com/%E4%BE%AF%E5%8F%8B%E5%AE%9C%E8%AB%87%E5%9C%8B%E9%98%B2%E6%94%BF%E7%AD%96-%E4%B8%BB%E5%BC%B5%E7%99%BC%E5%B1%95%E4%B8%8D%E5%B0%8D%E7%A8%B1%E6%88%B0%E7%95%A5-%E5%BB%B6%E7%BA%8C%E6%BD%9B%E8%89%A6%E5%9C%8B%E9%80%A0-054156664.html",
+          "https://www.cna.com.tw/news/aipl/202604140203.aspx",
+          "https://www.voacantonese.com/a/kmt-hou-yu-shih-called-to-deepen-military-exchange-with-the-us-20231211/7393659.html"
+        ]
+      },
+      "tpp": {
+        "text": "反對與對岸打對稱式軍備競賽，國防投資應聚焦關鍵不對稱裝備與系統的實際作戰效能。",
+        "note": "特別預算草案前言明言不可也不應對稱競賽；正面表列海馬士、自走砲等具體裝備，反對模糊「大內宣式建軍」。",
+        "sources": [
+          "https://www.thenewslens.com/article/264573",
+          "https://news.pts.org.tw/article/792477"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-92-consensus",
+    "category": "兩岸",
+    "yearHint": "2016–2024",
+    "topic": "兩岸政治互動是否應先有共同政治前提，才能恢復官方對話？",
+    "simple": "兩岸官方要不要先談定共同政治基礎？",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "否認雙方曾達成可作為官方互動前提的共同政治共識，主張依憲法現狀與民主程序持續往來。",
+        "note": "執政後承認九二會談歷史事實但不承認「九二共識」；主張不設政治前提、兩岸互不隸屬路線。",
+        "sources": [
+          "https://zh.wikipedia.org/zh-tw/%E4%B9%9D%E4%BA%8C%E5%85%B1%E8%AD%98",
+          "https://news.pts.org.tw/article/775923",
+          "https://www.mac.gov.tw/News_Content.aspx?n=FF87AB3AC4507DE3&sms=4A22C80D8C659C54&s=4927E397356C85D4"
+        ]
+      },
+      "kmt": {
+        "text": "主張以一中各表精神的既有共識作為兩岸官方對話基礎，盡速恢復制度化協商與交流管道。",
+        "note": "長期黨綱與兩岸論述核心；馬政府時期兩會協商、2020後「憲法九二」、2024侯友宜「合乎憲法的九二共識」。",
+        "sources": [
+          "https://zh.wikipedia.org/zh-tw/%E4%B9%9D%E4%BA%8C%E5%85%B1%E8%AD%98",
+          "https://whogovernstw.org/2018/11/27/cwwy1/",
+          "https://www.cna.com.tw/news/aipl/202312060048.aspx"
+        ]
+      },
+      "tpp": {
+        "text": "不綁特定共識口號作為復談前提，主張在對等尊嚴下務實溝通，並明確排除武力統一選項。",
+        "note": "柯文哲2023：無九二共識包袱亦無台獨黨綱；黃國昌2025外媒專訪指九二共識不存在；黨綱強調台灣自主、兩岸和平與五個互相。",
+        "sources": [
+          "https://www.cna.com.tw/news/aipl/202312060048.aspx",
+          "https://tw.news.yahoo.com/%E9%BB%83%E5%9C%8B%E6%98%8C%E6%8E%A5%E9%BB%A8%E4%B8%BB%E5%B8%AD%E5%BE%8C%E9%A6%96%E5%BA%A6%E5%8F%97%E5%A4%96%E5%AA%92%E5%B0%88%E8%A8%AA-%E6%8C%87%E4%B9%9D%E4%BA%8C%E5%85%B1%E8%AD%98%E4%B8%8D%E5%AD%98%E5%9C%A8-%E6%89%B9%E8%B3%B4%E6%B8%85%E5%BE%B7-%E9%BB%A8%E7%B5%B1%E6%B2%BB-081858943.html",
+          "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E6%B0%91%E7%9C%BE%E9%BB%A8"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-cross-strait-exchange",
+    "category": "兩岸",
+    "yearHint": "2019–2025",
+    "topic": "在安全與市場風險下，兩岸觀光、經貿與民間交流應如何取捨？",
+    "simple": "兩岸觀光和經貿交流，要開多開少？",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "歡迎健康有序的交流，但觀光須雙向平衡、先溝通再開放，兼顧旅遊安全、穩定與服務品質。",
+        "note": "陸委會定調「健康有序、雙向平衡、旅遊安全、小兩會先溝通」；已開放第三地陸客等可操之在我項目。",
+        "sources": [
+          "https://www.mac.gov.tw/News_Content.aspx?n=05B73310C5C3A632&sms=1A40B00E4C745211&s=BEA803BCDF9F0EDC",
+          "https://www.mac.gov.tw/News_Content.aspx?n=A0A73CF7630B1B26&sms=B69F3267D6C0F22D&s=0AC8D7A1C1BE5E9E",
+          "https://news.pts.org.tw/article/814765"
+        ]
+      },
+      "kmt": {
+        "text": "主張盡快恢復陸客來台與兩岸正常觀光與經貿往來，不應以行政前提長期拖延基層民生需求。",
+        "note": "藍營縣市與黨團多次呼籲恢復觀光、直航與農漁產品通路；批評小兩會前提拖延民生。",
+        "sources": [
+          "https://udn.com/news/story/6656/9591141",
+          "https://www.npf.org.tw/1/26313",
+          "https://news.pts.org.tw/article/803939"
+        ]
+      },
+      "tpp": {
+        "text": "依五個互相原則推動務實民間與經貿交流，以溝通取代對立，有效降低敵意螺旋與誤判風險。",
+        "note": "黨一貫兩岸路線：互相認識、了解、尊重、合作、諒解；支持對等尊嚴下交流，雙城論壇經驗為論述基礎。",
+        "sources": [
+          "https://tw.news.yahoo.com/%E4%BA%94%E5%80%8B%E4%BA%92%E7%9B%B8%E6%94%AF%E6%8C%81%E5%85%A9%E5%B2%B8%E4%BA%A4%E6%B5%81-%E6%B0%91%E7%9C%BE%E9%BB%A8%E6%A8%82%E8%A6%8B%E9%84%AD%E7%BF%92%E6%9C%83%E6%98%A5%E6%9A%96%E8%8A%B1%E9%96%8B-085946259.html",
+          "https://udn.com/news/story/6656/9629936",
+          "https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E6%B0%91%E7%9C%BE%E9%BB%A8"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-anti-infiltration",
+    "category": "兩岸",
+    "yearHint": "2019–2024",
+    "topic": "防範境外勢力介入選舉與社會，相關法律應嚴到什麼程度？",
+    "simple": "防境外勢力介入的法律，要訂多嚴？",
+    "confidence": "medium",
+    "stances": {
+      "dpp": {
+        "text": "主張維持並落實反滲透等國安法制，反對放寬相關規範，以免削弱對境外介入的民主防衛。",
+        "note": "2019年主導三讀《反滲透法》；2024堅拒修法鬆綁，稱規範境外指示委託資助之違法行為加重刑罰。",
+        "sources": [
+          "https://zh.wikipedia.org/zh-tw/%E5%8F%8D%E6%B8%97%E9%80%8F%E6%B3%95",
+          "https://www.dpp.org.tw/media/contents/10784",
+          "https://indsr.org.tw/respublicationcon?uid=12&resid=753&pid=2913"
+        ]
+      },
+      "kmt": {
+        "text": "指定義模糊易生寒蟬效應、侵害交流自由與人權，主張應通盤檢討並修正罰則與條文內容。",
+        "note": "2019立法時退席抗議並指違憲；2024馬辦與黨內多人呼應修法，稱阻礙兩岸交流、執行過寬。",
+        "sources": [
+          "https://www.kmt.org.tw/2019/12/blog-post_49.html",
+          "https://zh.wikipedia.org/zh-tw/%E5%8F%8D%E6%B8%97%E9%80%8F%E6%B3%95",
+          "https://www.dpp.org.tw/media/contents/10784"
+        ]
+      },
+      "tpp": {
+        "text": "不反對防範滲透的政策目標，但定義與執行必須清楚明確，避免法律淪為政治整肅的工具。",
+        "note": "創黨前後柯文哲表態不反對標題但內容與執行是關鍵（信任與界定）；黨未提系統性廢法，近期個案多強調程序正義。證據相對薄，取最接近公開線。",
+        "sources": [
+          "https://www.rfi.fr/tw/%E4%B8%AD%E5%9C%8B/20200101-%E6%9F%AF%E6%96%87%E5%93%B2%E8%AB%87%E5%8F%8D%E6%BB%B2%E9%80%8F%E6%B3%95%E5%95%8F%E9%A1%8C%E5%9C%A8%E6%96%BC%E4%BA%BA%E6%B0%91%E5%B0%8D%E6%94%BF%E5%BA%9C%E4%B8%8D%E4%BF%A1%E4%BB%BB",
+          "https://www.storm.mg/article/2117011",
+          "https://election.ltn.com.tw/2020/news/overview/breakingnews/3019735"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-social-housing",
+    "category": "住宅",
+    "yearHint": "2016–2025",
+    "topic": "居住正義應優先直接興建社會住宅，還是租金補貼與包租代管？",
+    "simple": "解決住房，要多蓋社宅還是多補租金？",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "直接興建社宅、包租代管與租金補貼三軌並進，同步擴大弱勢與青年可負擔的出租供給量。",
+        "note": "蔡政府8年20萬戶（興建+包租）；賴政見延續百萬租屋家戶（社宅、包租、租補加總）。",
+        "sources": [
+          "https://www.ey.gov.tw/Page/5A8A0CB5B41DA11E/7345b2c6-1314-4fda-8e21-18b012466827",
+          "https://www.dpp.org.tw/media/contents/10247",
+          "https://www.businessweekly.com.tw/focus/blog/3013536"
+        ]
+      },
+      "kmt": {
+        "text": "以重劃容獎、都更回饋與企業勞工宅等多元方式擴充公宅供給，並同步加碼青年租金補貼。",
+        "note": "2024侯友宜政見：拚社宅（社福用地、容獎回饋、私校退場用地）＋租金實價登錄與青年租補。",
+        "sources": [
+          "https://www.businessweekly.com.tw/focus/blog/3013536",
+          "https://ubrand.udn.com/ubrand/story/123661/7688873",
+          "https://ours.org.tw/2024president_socialhousing/"
+        ]
+      },
+      "tpp": {
+        "text": "優先擴大實質興建與閒置房舍活化，建立全國一致輪候制，避免只靠包租代管灌水供給數字。",
+        "note": "柯政見「大力蓋」：減少標售公地、長期租賃住宅、舊舍活化、全國輪候制；批評包租灌水與興建跳票。",
+        "sources": [
+          "https://www.businessweekly.com.tw/focus/blog/3013536",
+          "https://ubrand.udn.com/ubrand/story/123661/7688873",
+          "https://www.cna.com.tw/news/aipl/202607160259.aspx"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-housing-tax",
+    "category": "住宅",
+    "yearHint": "2021–2024",
+    "topic": "抑制炒房應更靠提高囤房與交易稅，還是增加供給與都更？",
+    "simple": "打炒房，要靠加稅還是多蓋房？",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "推動囤房稅全國歸戶與差額累進，鼓勵閒置房屋釋出市場，並搭配擴大居住供給相關政策。",
+        "note": "房屋稅差別稅率2.0（囤房稅2.0）2023年底完成立法；執政論述為持有稅＋社宅／租補組合拳。",
+        "sources": [
+          "https://www.dpp.org.tw/media/contents/10247",
+          "https://news.pts.org.tw/article/672006",
+          "https://www.dot.gov.tw/singlehtml/ch26?cntId=1497bb9c1af445f7b306342b20f4537f"
+        ]
+      },
+      "kmt": {
+        "text": "合理化房屋持有稅並檢討交易所得稅，同時以擴大供給與青年貸款抑制炒作所推升的房價。",
+        "note": "侯友宜：空屋稅／囤房稅合理化持有成本＋檢討不動產交易所得稅；地方曾被批囤房稅推進較緩，全國版最終仍參與通過。",
+        "sources": [
+          "https://www.businessweekly.com.tw/focus/blog/3013536",
+          "https://ubrand.udn.com/ubrand/story/123661/7688873",
+          "https://news.pts.org.tw/article/672006"
+        ]
+      },
+      "tpp": {
+        "text": "自住大幅降稅、囤房加重累進，主張以中央專法拉開稅率差距，有效抑制投資性炒房行為。",
+        "note": "柯文哲「自住最優惠、囤房者重稅」：自住稅率降至0.6%、立中央專法擴大累進；曾批2.0稅率過低打假球。",
+        "sources": [
+          "https://www.businessweekly.com.tw/focus/blog/3013536",
+          "https://ubrand.udn.com/ubrand/story/123661/7688873",
+          "https://www.housefeel.com.tw/article/%E7%B8%BD%E7%B5%B1%E5%A4%A7%E9%81%B8-%E6%88%BF%E5%B8%82%E6%94%BF%E8%A6%8B-%E6%88%BF%E5%B8%82%E6%94%BF%E7%AD%96/"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-fiscal-division",
+    "category": "財政",
+    "yearHint": "2024–2025",
+    "topic": "中央與地方財源分配（統籌分配稅）應如何改革才算合理？",
+    "simple": "中央和地方的錢，該怎麼分？",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "主張垂直與水平財源分配同步合理化，反對倉促大幅削弱中央財政調劑能力與整體施政量能。",
+        "note": "行政院多次覆議／提對案；批評藍白版公式錯誤、分錢不分事，強調中央仍須有能力協助地方與國防社福。",
+        "sources": [
+          "https://www.dpp.org.tw/anti_rumor/contents/285",
+          "https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=61aa9657308f4555a2d1b35ca3d017d0",
+          "https://news.pts.org.tw/article/783958"
+        ]
+      },
+      "kmt": {
+        "text": "主張大幅提高地方統籌分配稅款比重，結束中央長期集權集錢、地方財政長期喊窮的困境。",
+        "note": "2024年底主導三讀擴大統籌分配（所得稅提撥、營業稅全額等）；稱25年未修、還財於地方為大方向。",
+        "sources": [
+          "https://www.twreporter.org/a/allocation-amendments-controversy",
+          "https://tfc-taiwan.org.tw/wrong-financial-allocation-formula-passed-third-reading/",
+          "http://www.taiwansig.tw/index.php/%E6%94%BF%E7%AD%96%E5%A0%B1%E5%91%8A/%E6%86%B2%E6%94%BF%E6%B3%95%E5%88%B6/9045-%E6%99%82%E9%9A%94%E5%9B%9B%E5%88%86%E4%B9%8B%E4%B8%80%E4%B8%96%E7%B4%80%EF%BC%8C%E3%80%8A%E8%B2%A1%E5%8A%83%E6%B3%95%E3%80%8B%E4%BF%AE%E6%83%A1%E4%BA%86%EF%BC%8C%E9%82%84%E6%98%AF%E4%BF%AE%E5%A5%BD%E4%BA%86%EF%BC%9F"
+        ]
+      },
+      "tpp": {
+        "text": "支持修正財劃法、提高地方自主財源比重，讓各縣市擁有穩定預算辦理公共建設與社會福利。",
+        "note": "黨團自2023起提修法版本；2024與國民黨合作通過擴大地方財源，論述為地方自治與財政紀律配套。",
+        "sources": [
+          "https://zh.wikipedia.org/zh-hant/%E8%B2%A1%E6%94%BF%E6%94%B6%E6%94%AF%E5%8A%83%E5%88%86%E6%B3%95%E4%BF%AE%E6%AD%A3%E6%A1%88%E7%88%AD%E8%AD%B0",
+          "https://tfc-taiwan.org.tw/wrong-financial-allocation-formula-passed-third-reading/",
+          "https://www.twreporter.org/a/allocation-amendments-controversy"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-congress-reform",
+    "category": "國會",
+    "yearHint": "2024",
+    "topic": "立法院調查權、聽證與藐視國會等改革，權力邊界應如何劃？",
+    "simple": "國會要不要加大調查、聽證權，官員不實答詢要不要用刑罰管？",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "國會調查聽證應明確劃界並尊重司法監察職權，反對以藐視國會罪刑罰化質詢並擴權過當。",
+        "note": "2024反對藍白版立法院職權修法：指擴權濫權、程序不正義；聲請覆議與釋憲。憲法法庭113年憲判字第9號多數關鍵條文（含藐視國會罪）違憲失效。",
+        "sources": [
+          "https://zh.wikipedia.org/zh-hant/2024%E5%B9%B4%E7%AB%8B%E6%B3%95%E9%99%A2%E8%81%B7%E6%AC%8A%E4%BF%AE%E6%B3%95%E7%88%AD%E8%AD%B0",
+          "https://www.twreporter.org/a/legislature-voting-on-controversial-political-reforms-2",
+          "https://www.bbc.com/zhongwen/trad/chinese-news-69044613",
+          "https://www.voachinese.com/a/taiwan-government-seeks-constitution-interpretation-on-the-legislature-s-controversial-reform-bills-20240621/7665294.html"
+        ]
+      },
+      "kmt": {
+        "text": "立法院應具完整調查與聽證權，官員虛偽陳述須受究責，以強化對行政部門實質監督制衡。",
+        "note": "2024與民眾黨聯手三讀通過國會改革五法核心：擴大調查／聽證、藐視國會罪、國情報告常態化、人事同意權等，主張強化監督、對標民主國家。",
+        "sources": [
+          "https://zh.wikipedia.org/zh-hant/2024%E5%B9%B4%E7%AB%8B%E6%B3%95%E9%99%A2%E8%81%B7%E6%AC%8A%E4%BF%AE%E6%B3%95%E7%88%AD%E8%AD%B0",
+          "https://www.twreporter.org/a/legislature-voting-on-controversial-political-reforms-2",
+          "https://www.bbc.com/zhongwen/trad/chinese-news-69044613",
+          "https://www.eventsinfocus.org/issues/7147651"
+        ]
+      },
+      "tpp": {
+        "text": "應擴大國會調查聽證與取得資訊權能，對虛偽陳述設明確罰則，讓立法監督真正具有牙齒。",
+        "note": "2024率先提案修《立法院職權行使法》並與國民黨合併推進；黃國昌等主張調查聽證揭弊、官員不得虛偽陳述；覆議後續推改革。",
+        "sources": [
+          "https://zh.wikipedia.org/zh-hant/2024%E5%B9%B4%E7%AB%8B%E6%B3%95%E9%99%A2%E8%81%B7%E6%AC%8A%E4%BF%AE%E6%B3%95%E7%88%AD%E8%AD%B0",
+          "https://www.bbc.com/zhongwen/trad/chinese-news-69044613",
+          "https://www.voachinese.com/a/taiwan-government-seeks-constitution-interpretation-on-the-legislature-s-controversial-reform-bills-20240621/7665294.html",
+          "https://www.eventsinfocus.org/issues/7147651"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-budget-oversight",
+    "category": "財政",
+    "yearHint": "2024–2025",
+    "topic": "在野監督總預算時，刪減與凍結應以何種強度為合理？",
+    "simple": "在野審總預算時，砍多少、凍多少才算合理監督？",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "預算刪凍應節制且不傷施政核心功能，反對以大比例統刪與凍結癱瘓行政效能與國防整備。",
+        "note": "執政方與黨團批評2025總預算遭刪減逾兩千億、凍結創新高，指癱瘓政府、衝擊國防與施政；行政院提覆議，呼籲理性審查。",
+        "sources": [
+          "https://www.twreporter.org/a/legislature-passes-2025-government-budget",
+          "https://www.dpp.org.tw/media/contents/11102",
+          "https://zh.wikipedia.org/zh-hant/2025%E5%B9%B4%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E6%94%BF%E5%BA%9C%E7%B8%BD%E9%A0%90%E7%AE%97%E6%A1%88%E5%88%AA%E6%B8%9B",
+          "https://theinitium.com/20250123-whatsnew-taiwan-2025-budget/"
+        ]
+      },
+      "kmt": {
+        "text": "應大砍浮編並嚴格把關年度歲出，刪除不必要支出還錢於民，並強調此舉並不會癱瘓政府。",
+        "note": "2025總預算審查主導刪減；傅崐萁等稱刪浮編「還錢於民」、歲出仍高、不會癱瘓政府；與民眾黨聯手創史上高刪減額。",
+        "sources": [
+          "https://www.twreporter.org/a/legislature-passes-2025-government-budget",
+          "https://zh.wikipedia.org/zh-hant/2025%E5%B9%B4%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E6%94%BF%E5%BA%9C%E7%B8%BD%E9%A0%90%E7%AE%97%E6%A1%88%E5%88%AA%E6%B8%9B",
+          "https://theinitium.com/20250123-whatsnew-taiwan-2025-budget/",
+          "https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=54301&pid=248168"
+        ]
+      },
+      "tpp": {
+        "text": "應嚴格審查並刪減浮濫科目，讓歲出回歸合理規模；凍結須經報告後解凍，而非癱瘓施政。",
+        "note": "黃國昌等主張嚴格把關血汗錢；提案大幅減列／凍結浮濫科目，強調歲出與前年相當、凍結≠刪除；反對被指癱瘓政府。",
+        "sources": [
+          "https://www.twreporter.org/a/legislature-passes-2025-government-budget",
+          "https://theinitium.com/20250123-whatsnew-taiwan-2025-budget/",
+          "https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=54301&pid=248168",
+          "https://zh.wikipedia.org/zh-hant/2025%E5%B9%B4%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E6%94%BF%E5%BA%9C%E7%B8%BD%E9%A0%90%E7%AE%97%E6%A1%88%E5%88%AA%E6%B8%9B"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-long-term-care",
+    "category": "社福",
+    "yearHint": "2017–2025",
+    "topic": "長照體系應如何擴充服務與確保財源永續？",
+    "simple": "長照要多靠稅收預算擴服務，還是改辦保險穩財源？",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "以稅收與公務預算持續擴充長照服務據點與涵蓋率，升級社區照顧並強化醫照整合服務量能。",
+        "note": "執政推動長照2.0（稅收制：遺贈稅、菸稅、房地合一等＋公務預算），後續長照3.0擴大服務對象與醫照整合；反對改保險制為唯一解方。",
+        "sources": [
+          "https://www.dpp.org.tw/plan/contents/115",
+          "https://1966.gov.tw/LTC/cp-6572-85008-207.html",
+          "https://elderhealthcare.ntunhs.edu.tw/tab/530/id/112",
+          "https://feature.nextapple.com/election2024/article/5CF72AB8D139B62F5873AB0768D8FFA0"
+        ]
+      },
+      "kmt": {
+        "text": "應改採社會保險制籌措長期穩定財源，避免依賴機會稅與年度預算撥補，確保長照可長可久。",
+        "note": "長期主張長照保險；2025朱立倫與黨團推《長照保險法》，批稅收／預算制財源不穩、機會稅入不敷出，比照日韓保險制。",
+        "sources": [
+          "https://www.cmmedia.com.tw/home/articles/52634",
+          "https://www.npf.org.tw/2/15908",
+          "https://www.familycare.org.tw/policy/11722",
+          "https://cdj.sfaa.gov.tw/Journal/FileLoad?no=169867"
+        ]
+      },
+      "tpp": {
+        "text": "應開辦長照保險並設置專責機構，擴大住宿補助與穩定財源，把長照支出拉升到合理規模。",
+        "note": "2024柯文哲政見：成立中央長照保險局、長照支出約GDP1%、保費分攤；批現行財源不穩，提高住宿機構補助。",
+        "sources": [
+          "https://www.cna.com.tw/news/aipl/202309210121.aspx",
+          "https://www.fiftyplus.com.tw/articles/29613",
+          "https://www.uho.com.tw/article-62651.html",
+          "https://www.twreporter.org/a/2024-election-presidential-candidates-policies-education-social-welfare"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-childcare",
+    "category": "社福",
+    "yearHint": "2018–2025",
+    "topic": "因應少子化，托育與育兒支持應以現金津貼還是公共化服務為主？",
+    "simple": "救少子化：多蓋平價公托準公托，還是多直接發育兒現金？",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "以公共化與準公共托育為主軸，並搭配育兒津貼雙軌，降低托育費用並擴大平價服務名額。",
+        "note": "「0到6歲國家一起養」：擴大公共化／準公共托育、降低月費，並發育兒津貼；後續加碼成長津貼等家庭支持，服務＋現金並行但重公共化量能。",
+        "sources": [
+          "https://www.ey.gov.tw/Page/5A8A0CB5B41DA11E/1edab400-96b1-479d-919d-8ee14340fd26",
+          "https://www.mohw.gov.tw/fp-16-55672-1.html",
+          "https://www.edu.tw/News_Content.aspx?n=9E7AC85F1954DDA8&s=9D475E9258B5B32B",
+          "https://www.president.gov.tw/News/40077"
+        ]
+      },
+      "kmt": {
+        "text": "公托準公托免月費，自帶或送私立則發高額現金津貼，直接大幅減輕家庭的育兒經濟負擔。",
+        "note": "2024侯友宜政見：公立／非營利／準公共托育免月費；自帶或私立每月約1萬育兒津貼；另有凍卵、育嬰留停、多胎購屋等現金導向加碼。",
+        "sources": [
+          "https://news.ltn.com.tw/news/politics/breakingnews/4439102",
+          "https://www.mombaby.com.tw/articles/9929070",
+          "https://www.businessweekly.com.tw/focus/blog/3013395",
+          "https://www.cmmedia.com.tw/home/articles/44476"
+        ]
+      },
+      "tpp": {
+        "text": "提高並延長現金育兒支持且原則上不排富，讓家庭自由運用，並搭配未來帳戶累積成長金。",
+        "note": "偏現金與帳戶制：延長／提高育兒津貼、不排富取向；與國民黨共推「未來帳戶」等高現金／儲蓄支持，強調家庭自由運用。",
+        "sources": [
+          "https://plainlaw.me/article/comparing-parenting-policies",
+          "https://news.pts.org.tw/article/809647",
+          "https://www.parenting.com.tw/article/6002262",
+          "https://tw.news.yahoo.com/%E8%97%8D%E7%99%BD%E7%89%88%E3%80%8C%E5%85%92%E5%B0%91%E6%9C%AA%E4%BE%86%E5%B8%B3%E6%88%B6%E6%A2%9D%E4%BE%8B%E3%80%8D%E7%AB%8B%E9%99%A2%E4%B8%89%E8%AE%80%E9%80%9A%E9%81%8E-%E6%AF%8F%E5%B9%B4%E6%94%BF%E5%BA%9C%E7%B5%A66%E8%90%AC%E5%88%B018%E6%AD%B2-%E8%A1%8C%E6%94%BF%E9%99%A2%EF%BC%9A%E4%BE%9D%E6%97%A2%E6%9C%89%E6%94%BF%E7%AD%96%E8%A6%8F%E7%95%AB%E6%8E%A8%E5%8B%95-080023632.html"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-min-wage",
+    "category": "勞動",
+    "yearHint": "2016–2025",
+    "topic": "基本工資（最低工資）調整應更積極還是更顧中小企業負擔？",
+    "simple": "最低工資要調快一點顧勞工，還是調慢一點顧中小企業？",
+    "confidence": "medium",
+    "stances": {
+      "dpp": {
+        "text": "應持續依法調升最低工資，並把審議指標與程序全面法制化，以確實保障基層勞工基本生活。",
+        "note": "蔡英文政見訂《最低工資法》（2023三讀、2024施行）；執政期間基本／最低工資連年調升，強調審議法制化與勞工生活保障。",
+        "sources": [
+          "https://zh.wikipedia.org/zh-hant/%E6%9C%80%E4%BD%8E%E5%B7%A5%E8%B3%87_(%E8%87%BA%E7%81%A3)",
+          "https://www.mol.gov.tw/1607/1632/1640/65500/post",
+          "https://eventsinfocus.org/issues/2546",
+          "https://www.rti.org.tw/news?uid=3&pid=78967"
+        ]
+      },
+      "kmt": {
+        "text": "調整應兼顧景氣、物價與中小企業成本負擔，避免過快推升薪資成本而拖垮就業與本土產業。",
+        "note": "支持最低工資法制與審議改革，但論述常強調景氣、就業與中小企業負擔（馬政府時期緩調爭議為背景）；也曾批政府立法延宕。",
+        "sources": [
+          "https://zh.wikipedia.org/zh-hant/%E6%9C%80%E4%BD%8E%E5%B7%A5%E8%B3%87_(%E8%87%BA%E7%81%A3)",
+          "https://tw.news.yahoo.com/%E5%9C%8B%E6%B0%91%E9%BB%A8%E6%89%B9-%E6%9C%80%E4%BD%8E%E5%B7%A5%E8%B3%87%E6%B3%95-%E6%8B%967%E5%B9%B4%E9%81%B8%E5%89%8D%E6%89%8D%E5%8D%94%E5%95%86-%E6%B0%91%E9%80%B2%E9%BB%A8%E5%8F%8D%E6%93%8A-%E4%BD%A0%E5%80%91%E9%83%BD%E5%9C%A8%E7%9D%A1-100045014.html",
+          "https://forwardhrm.com.tw/2023/12/12/minimumwage/",
+          "https://eventsinfocus.org/issues/2546"
+        ]
+      },
+      "tpp": {
+        "text": "應以透明物價與經濟指標公式調整，減少政治喊價式調薪，並強化對違法未給足額的罰則。",
+        "note": "力推《最低工資法》並主張明確調整公式、納入CPI等指標；批評執政黨延宕立法；版本強調罰則與透明審議，減少政治角力。",
+        "sources": [
+          "https://www.cna.com.tw/news/aipl/202312060162.aspx",
+          "https://www.rti.org.tw/news?uid=3&pid=78967",
+          "https://news.ipcf.org.tw/105803",
+          "https://zh.wikipedia.org/zh-hant/%E6%9C%80%E4%BD%8E%E5%B7%A5%E8%B3%87_(%E8%87%BA%E7%81%A3)"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-recall-rules",
+    "category": "國會",
+    "yearHint": "2024–2025",
+    "topic": "罷免門檻與選罷法修正，應更易還是更難啟動罷免？",
+    "simple": "罷免要不要加嚴連署（例如附身分證）或提高通過門檻？",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "應維持人民易於行使的罷免門檻，反對連署強制附身分證影本以及不當拉高通過門檻條件。",
+        "note": "反對2024選罷法加嚴：連署附身分證影本、同意票須逾當選票數等；稱沒收公民罷免權、個資風險嚇阻連署；黨團動員擋修法。",
+        "sources": [
+          "https://www.dpp.org.tw/media/contents/11023",
+          "https://www.twreporter.org/a/kmt-tpp-lawmakers-pass-three-amendments-include-constitutional-court-procedure-act",
+          "https://plainlaw.me/article/petition-accompanied-by-copy-of-ID-card",
+          "https://news.pts.org.tw/article/729820"
+        ]
+      },
+      "kmt": {
+        "text": "罷免連署應檢附身分證影本以防止假連署，程序加嚴以避免惡意罷免與惡質政黨政治鬥爭。",
+        "note": "推動連署附身分證正反影本（2024三讀）；部分立委另提同意票須超過當選票數（後延議／調整）；理由防假連署、惡意罷免。",
+        "sources": [
+          "https://www.twreporter.org/a/kmt-tpp-lawmakers-pass-three-amendments-include-constitutional-court-procedure-act",
+          "https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=54301&pid=243743",
+          "https://plainlaw.me/article/petition-accompanied-by-copy-of-ID-card",
+          "https://news.pts.org.tw/article/729820"
+        ]
+      },
+      "tpp": {
+        "text": "連署應附身分證影本確保真實性，但不應再把同意票通過門檻提高到超過其當選時得票數。",
+        "note": "支持連署比照總統連署附身分證影本；報導與黨團表態：不支持將通過門檻提高到「同意票超過當選票數」；與國民黨在門檻高度上有落差。",
+        "sources": [
+          "https://www.twreporter.org/a/kmt-tpp-lawmakers-pass-three-amendments-include-constitutional-court-procedure-act",
+          "https://plainlaw.me/article/petition-accompanied-by-copy-of-ID-card",
+          "https://www.dpp.org.tw/media/contents/11023",
+          "https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=54301&pid=241693"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-new-southbound",
+    "category": "產業",
+    "yearHint": "2016–2024",
+    "topic": "對外經貿布局應如何在新南向分散市場與兩岸／全球供應鏈間取捨？",
+    "simple": "要不要大力開拓東南亞等市場，減少對單一市場依賴。",
+    "confidence": "medium",
+    "stances": {
+      "dpp": {
+        "text": "持續推動與東南亞、南亞及紐澳的經貿人才雙向交流，分散出口市場以降低對單一市場過度依賴。",
+        "note": "執政後將新南向列為經貿主軸：分散市場、降低對中依賴；外交部亦以出口與貿易額成長回應在野質疑。",
+        "sources": [
+          "https://zh.wikipedia.org/zh-tw/%E6%96%B0%E5%8D%97%E5%90%91%E6%94%BF%E7%AD%96",
+          "https://www.mofa.gov.tw/News_Content.aspx?n=97&s=115810",
+          "https://www.moea.gov.tw/MNS/populace/news/News.aspx?kind=1&menu_id=40&news_id=112735",
+          "https://www.president.gov.tw/NEWS/20876"
+        ]
+      },
+      "kmt": {
+        "text": "應正視分散市場政策實績落後，同步維持兩岸經貿往來，勿以政治優先犧牲既有最大出口市場。",
+        "note": "立院黨團與黨部多次指新南向「失敗」：對中依存不降反升、預算效益不佳，並主張勿忽視兩岸經貿紅利。",
+        "sources": [
+          "https://zh.wikipedia.org/zh-tw/%E6%96%B0%E5%8D%97%E5%90%91%E6%94%BF%E7%AD%96",
+          "https://www.mofa.gov.tw/News_Content.aspx?n=97&s=115810",
+          "https://www.facebook.com/llchu/posts/%E8%8A%B1%E4%BA%86252%E5%84%84%E5%B0%91%E8%B3%BA%E4%BA%867562%E5%84%84%E6%88%90%E6%9E%9C%E8%BC%9D%E7%85%8C%E8%B2%BF%E6%98%93%E9%A0%86%E5%B7%AE%E5%B0%B1%E6%98%AF%E5%8F%B0%E7%81%A3%E8%B3%BA%E7%9A%84%E9%8C%A2%E6%98%A8%E5%A4%A9%E6%88%91%E8%AA%AA%E8%94%A1%E6%94%BF%E5%BA%9C%E6%8E%A8%E5%8B%95%E6%96%B0%E5%8D%97%E5%90%91%E6%94%BF%E7%AD%96%E5%9B%9B%E5%B9%B4%E4%BE%86%E8%8A%B1%E4%BA%86%E7%B4%8D%E7%A8%85%E4%BA%BA2527%E5%84%84%E5%85%83%E7%B5%90%E6%9E%9C2020%E5%B9%B4%E7%9A%84%E8%B2%BF%E6%98%93%E9%A0%86%E5%B7%AE%E5%8F%8D%E5%80%92%E6%AF%94%E6%8E%A8%E5%8B%95%E6%96%B0%E5%8D%97%E5%90%91%E5%89%8D%E5%B0%91%E4%BA%86/10164861545700128/"
+        ]
+      },
+      "tpp": {
+        "text": "經貿布局應務實多元，東南亞、美日與全球市場並行，以可量化績效檢討資源投入，避免空泛口號。",
+        "note": "黨團少有獨立「新南向」品牌路線；公開論述偏務實多元化與績效檢討（含美關稅後東南亞移轉受限等），對執政執行力較多批評。",
+        "sources": [
+          "https://www.threads.com/@tpp_taiwan/post/DUsFfIGkvk_/",
+          "https://www.facebook.com/TPPfanpage/posts/%E9%9D%A2%E5%B0%8D%E7%BE%8E%E5%9C%8B%E9%97%9C%E7%A8%85%E6%B5%B7%E5%98%AF%E8%B3%B4%E6%94%BF%E5%BA%9C%E4%BA%8B%E5%89%8D%E6%BA%96%E5%82%99%E4%B8%8D%E8%B6%B3%E9%A0%90%E5%88%A4%E9%8C%AF%E8%AA%A4%E4%BA%8B%E5%BE%8C%E8%99%95%E7%90%86%E5%A4%B1%E5%BA%8F%E6%9B%B4%E9%9A%B1%E5%8C%BF%E8%B3%87%E8%B3%87%E8%A8%8A%E8%BF%91%E6%9C%9F%E8%82%A1%E5%B8%82%E9%9C%87%E7%9B%AA%E5%85%85%E6%BB%BF%E4%B8%8D%E7%A2%BA%E5%AE%9A%E6%80%A7%E9%83%BD%E8%AE%93%E8%B3%87%E6%9C%AC%E5%B8%82%E5%A0%B4%E8%B7%9F%E5%9F%BA%E5%B1%A4%E7%94%A2%E6%A5%AD%E6%86%82%E5%BF%83%E8%90%AC%E5%88%86%E6%8E%A5%E4%B8%8B%E4%BE%86-%E9%97%9C%E9%8D%B590%E5%A4%A9-%E7%B7%A9%E8%A1%9D%E6%9C%9F%E8%B3%B4%E6%94%BF%E5%BA%9C%E6%87%89%E7%9B%A1%E5%8A%9B%E8%AE%93%E5%8F%B0/1219102032905640/",
+          "https://zh.wikipedia.org/zh-tw/%E6%96%B0%E5%8D%97%E5%90%91%E6%94%BF%E7%AD%96"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-chip-policy",
+    "category": "產業",
+    "yearHint": "2022–2024",
+    "topic": "政府對半導體等關鍵產業的租稅優惠與補助，尺度應多大？",
+    "simple": "要不要用很高的稅務優惠留住半導體等關鍵產業。",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "對居國際供應鏈關鍵地位的產業，提高研發與先進設備投資抵減，以鞏固技術與產能根留本地。",
+        "note": "行政院提案、立院三讀產創條例第10條之2（俗稱台版晶片法）：關鍵產業研發最高25%投抵等，鞏固供應鏈地位。",
+        "sources": [
+          "https://ocacnews.net/article/329454",
+          "https://www.leeandli.com/TW/NewslettersDetail/7030.htm",
+          "https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=aabf7a9c6e6744ba87b9bc2eed994738",
+          "https://www.ctee.com.tw/news/20230107700276-430104"
+        ]
+      },
+      "kmt": {
+        "text": "支持關鍵產業高額投資抵減，惟應適度放寬適用條件，並同步提出照顧中小企業與均衡發展方案。",
+        "note": "三讀時黨團表態全力支持，但要求降低「國際供應鏈關鍵地位」門檻、另提中小企業方案與根留台灣配套。",
+        "sources": [
+          "https://tw.news.yahoo.com/%E5%8F%B0%E7%89%88%E6%99%B6%E7%89%87%E6%B3%95-%E7%AB%8B%E9%99%A2%E4%B8%89%E8%AE%80%E9%80%9A%E9%81%8E-%E5%9C%8B%E6%B0%91%E9%BB%A8%E7%B1%B2-%E9%81%A9%E7%94%A8%E6%A2%9D%E4%BB%B6-%E6%87%89%E9%81%A9%E5%BA%A6%E9%99%8D%E4%BD%8E-041023941.html",
+          "https://today.line.me/tw/v3/article/kEG5yzJ",
+          "https://ocacnews.net/article/329454"
+        ]
+      },
+      "tpp": {
+        "text": "原則支持關鍵產業投資抵減以留才留技，惟應檢討優惠幅度與受惠範圍，並要求提出可驗證成效評估。",
+        "note": "黨團原則支持台版晶片法／產創修正以因應挖角與根留；協商中亦提醒優惠與補助設計需再評估、加速完成。",
+        "sources": [
+          "https://today.line.me/tw/v3/article/0M0Nyvl",
+          "https://ppg.ly.gov.tw/ppg/PublicationBulletinDetail/download/communique1/final/pdf/112/13/LCIDC01_1121302_00005.pdf",
+          "https://www.epochtimes.com/b5/22/12/6/n13879540.htm",
+          "https://cnews.com.tw/%E7%82%BA%E4%BD%95%E6%9C%83%E6%95%97%E9%81%B8%EF%BC%9F%E5%8F%B0%E7%81%A3%E6%B0%91%E7%9C%BE%E9%BB%A8%E7%B4%B0%E6%95%B8%E3%80%8C%E5%9F%B7%E6%94%BF%E6%95%97%E7%AD%86%E3%80%8D-%E7%B1%B2%E5%85%A7%E9%96%A3/"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-china-trade-risk",
+    "category": "產業",
+    "yearHint": "2020–2025",
+    "topic": "對中經貿依賴與國安風險，政策應偏積極管理還是維持交流紅利？",
+    "simple": "跟中國做生意的風險要管多嚴，還是多保留交流好處。",
+    "confidence": "medium",
+    "stances": {
+      "dpp": {
+        "text": "以國安及核心關鍵技術保護為優先，強化赴陸審查與陸資管理，積極分散市場並降低過度依賴。",
+        "note": "推動國安五法／兩岸條例：核心關鍵技術人員赴陸審查、陸資人頭與業務活動管制，並以新南向等分散依賴。",
+        "sources": [
+          "https://www.cna.com.tw/news/aipl/202205200125.aspx",
+          "https://www.mac.gov.tw/News_Content.aspx?n=A0A73CF7630B1B26&sms=B69F3267D6C0F22D&s=4C0B2E06FFF6B248",
+          "https://www.seftb.org/cp-2-1534-c4c42-1.html",
+          "https://ocacnews.net/article/310611"
+        ]
+      },
+      "kmt": {
+        "text": "風險宜管理但不宜全面脫鉤，應維持必要經貿往來與協商空間，避免過度限縮傷害就業與出口。",
+        "note": "主張管理風險而非全面脫鉤；2024選戰亦見重啟服貿／強化交流等論述，批評過度抗中傷害庶民經濟。",
+        "sources": [
+          "https://www.dpp.org.tw/media/contents/10514",
+          "https://today.line.me/tw/v2/amp/article/WBXW3nX",
+          "https://www.cna.com.tw/news/aipl/202312080089.aspx",
+          "https://www.kmt.org.tw/p/blog-page_3.html"
+        ]
+      },
+      "tpp": {
+        "text": "以務實風險控管取代意識形態對抗，關鍵技術外流須防堵，惟正常民間經貿不宜過度政治化。",
+        "note": "公開路線偏「務實控管」：支持深化對美等經貿、批評意識形態化；對兩岸民間交流較少採全面脫鉤論，細節因議題而異。",
+        "sources": [
+          "https://www.threads.com/@tpp_taiwan/post/DUsFfIGkvk_/",
+          "https://www.dpp.org.tw/media/contents/798",
+          "https://www.cna.com.tw/news/aipl/202205200125.aspx"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-bilingual",
+    "category": "教育",
+    "yearHint": "2018–2030",
+    "topic": "「雙語國家」政策應全力推進英語，還是先強化師資與本土語言平等？",
+    "simple": "要不要全力推英語雙語，還是先把師資和本土語言顧好。",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "以提升全民英語力為主軸，全面啟動教育體系雙語活化，並推動公務與公共服務雙語化接軌國際。",
+        "note": "行政院核定「2030雙語國家政策發展藍圖」：教育體系雙語活化、公務與公共服務雙語化等，作為國家競爭力主軸。",
+        "sources": [
+          "https://www.ey.gov.tw/Page/448DE008087A1971/b7a931c4-c902-4992-a00c-7d1b87f46cea",
+          "https://www.bilingual.gov.tw/",
+          "https://www.edu.tw/"
+        ]
+      },
+      "kmt": {
+        "text": "質疑雙語政策目標空泛且師資資源不足，應先補強基礎教育與師資配備，而非空喊期限達標。",
+        "note": "黨部／立委論述常批2030雙語破功、師資與本國語文基礎不足；重點在執行落差與基礎能力，非全面否定英語。",
+        "sources": [
+          "https://www.facebook.com/mykmt/photos/2030%E9%9B%99%E8%AA%9E%E6%94%BF%E7%AD%96%E5%85%A8%E7%A0%B4%E5%8A%9F%E8%B3%B4%E6%B8%85%E5%BE%B7%E7%A9%BA%E9%A0%AD%E6%94%AF%E7%A5%A8%E9%96%8B%E5%A5%BD%E9%96%8B%E6%BB%BF%E5%9B%9B%E7%8F%AD%E8%BF%91%E7%99%BE%E4%BA%BA%E5%8F%AA%E6%9C%89%E4%B8%80%E4%BA%BA%E8%81%BD%E6%87%82%E8%8B%B1%E6%96%87%E8%B3%B4%E6%B8%85%E5%BE%B72014%E5%B9%B4%E5%9C%A8%E5%8F%B0%E5%8D%97%E5%B8%82%E9%95%B7%E4%BB%BB%E5%85%A7%E6%8E%A8%E5%8B%95%E9%9B%99%E8%AA%9E%E6%94%BF%E7%AD%96%E8%87%AA2017%E5%B9%B4%E6%8E%A5%E4%BB%BB%E8%A1%8C%E6%94%BF%E9%99%A2%E9%95%B7%E8%A6%8F%E5%8A%832030%E9%9B%99%E8%AA%9E%E5%9C%8B%E5%AE%B6%E6%94%BF%E7%AD%96/874849567337235/",
+          "https://voicettank.org/%E6%B0%91%E9%80%B2%E9%BB%A8%E5%BE%9E%E6%B2%92%E6%9C%89%E8%88%87%E5%9C%8B%E6%B0%91%E9%BB%A8%E5%A6%82%E6%AD%A4%E5%A5%91%E5%90%88%E9%81%8E%E8%8B%B1%E8%AA%9E%E8%8F%AF%E8%AA%9E/",
+          "https://www.i-meihua.com/Article/Detail/20290"
+        ]
+      },
+      "tpp": {
+        "text": "反對僅有願景卻缺路徑的雙語口號，應優先解決師資教材與學用合一，訂可檢驗期程再推進。",
+        "note": "2023–2024教育政見明確批2030雙語淪口號、師資不足；主張先解決師資教材與學用合一。",
+        "sources": [
+          "https://today.line.me/tw/v3/article/Gg1wQZR",
+          "https://udn.com/news/story/6885/7443865",
+          "https://www.storm.mg/article/4963346"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-curriculum",
+    "category": "教育",
+    "yearHint": "2019–2024",
+    "topic": "高中歷史／國文課綱應更強調台灣主體還是中華文化與經典？",
+    "simple": "課綱要多教台灣自己的歷史語文，還是多保留中華經典。",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "以素養導向與台灣主體史觀調整課綱，適度降低文言文必選比重，並強化在地與多元選修彈性。",
+        "note": "推動108課綱：素養導向、歷史以台灣／東亞脈絡編排、國文文言文比例調整；教育部否認「無恥／去中」簡化指控。",
+        "sources": [
+          "https://www.edu.tw/News_Content.aspx?n=FD56C961F1677400&s=8802EEE9E503371C",
+          "https://www.naer.edu.tw/",
+          "https://edujou.site.nthu.edu.tw/var/file/128/1128/img/1172/38-1-3.pdf",
+          "https://www.rfi.fr/tw/%E5%8F%B0%E7%81%A3/20231211-%E5%8F%B0%E7%81%A3108%E8%AA%B2%E7%B6%B1-%E7%84%A1%E6%81%A5-%E7%88%AD%E8%AD%B0-%E8%83%BD%E6%94%AA%E5%8B%95%E5%A4%A7%E9%81%B8"
+        ]
+      },
+      "kmt": {
+        "text": "全面檢討現行課綱，避免基礎學科與文化經典弱化，應補強中華文化、歷史脈絡與文言文素養。",
+        "note": "2023–2024選戰主張全面檢討108課綱、召開教育國是會議；論述常連結文言文刪減與「去中國化」批評。",
+        "sources": [
+          "https://www.cna.com.tw/news/aipl/202312080089.aspx",
+          "https://www.storm.mg/article/4942891",
+          "https://tw.news.yahoo.com/2024%E9%81%B8%E8%88%89-%E7%B8%BD%E7%B5%B1%E5%A4%A7%E9%81%B8-%E7%B8%BD%E7%B5%B1%E9%81%B8%E8%88%89-%E4%BE%AF%E5%8F%8B%E5%AE%9C%E6%95%99%E8%82%B2%E6%94%BF%E8%A6%8B-108%E8%AA%B2%E7%B6%B1-010057186.html",
+          "https://www.anntw.com/articles/20231210-Oblz"
+        ]
+      },
+      "tpp": {
+        "text": "教育不應被意識形態主導，反對文化去中化；課綱須兼顧語文素養、歷史連貫與國際競爭力。",
+        "note": "公開反對文化去中化，並批108課綱削弱基礎與競爭力；強調教育勿被政治意識形態干擾。",
+        "sources": [
+          "https://www.cna.com.tw/news/aipl/202312120111.aspx",
+          "https://news.ttv.com.tw/news/11212260002400W",
+          "https://www.anntw.com/articles/20231210-Oblz",
+          "https://www.rfi.fr/tw/%E5%8F%B0%E7%81%A3/20231211-%E5%8F%B0%E7%81%A3108%E8%AA%B2%E7%B6%B1-%E7%84%A1%E6%81%A5-%E7%88%AD%E8%AD%B0-%E8%83%BD%E6%94%AA%E5%8B%95%E5%A4%A7%E9%81%B8"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-transitional-justice",
+    "category": "司法",
+    "yearHint": "2016–2022",
+    "topic": "轉型正義與不當黨產處理，應推進到什麼程度？",
+    "simple": "威權時期的不當財產與歷史真相，還要不要繼續追。",
+    "confidence": "high",
+    "stances": {
+      "dpp": {
+        "text": "以法制持續處理不當黨產歸還全民與歷史真相還原，完善受害者平復、紀念及人權教育制度。",
+        "note": "主導促轉條例、黨產條例與黨產會／促轉會體系；主張追討不當黨產、平復司法不法與真相調查。",
+        "sources": [
+          "https://zh.wikipedia.org/zh-hant/%E4%BF%83%E9%80%B2%E8%BD%89%E5%9E%8B%E6%AD%A3%E7%BE%A9%E5%A7%94%E5%93%A1%E6%9C%83",
+          "https://www.cipas.gov.tw/",
+          "https://www.voachinese.com/a/voanews-20171208-pcc-justice-law/4154905.html",
+          "https://www.cmmedia.com.tw/home/articles/7227"
+        ]
+      },
+      "kmt": {
+        "text": "反對選擇性正義式擴權追討財產，主張限縮附隨組織認定範圍並檢討相關預算，避免政治清算。",
+        "note": "長期批促轉／黨產為政治追殺；近年提案限縮附隨組織定義、刪凍轉型正義與黨產會相關預算。",
+        "sources": [
+          "https://www.edunion.org.tw/newsrelease/%E3%80%90%E6%8A%97%E8%AD%B0%E3%80%8A%E9%BB%A8%E7%94%A2%E6%A2%9D%E4%BE%8B%E3%80%8B%E4%BF%AE%E6%B3%95-%E5%8F%8D%E5%B0%8D%E6%95%91%E5%9C%8B%E5%9C%98%E3%80%81%E5%A9%A6%E8%81%AF%E6%9C%83/",
+          "https://www.ccat.tw/news/1498",
+          "https://taiwantrc.org/%E5%BC%B7%E7%83%88%E8%AD%B4%E8%B2%AC%E4%B8%AD%E5%9C%8B%E5%9C%8B%E6%B0%91%E9%BB%A8%E5%9C%98%E5%88%AA%E9%99%A4%E8%BD%89%E5%9E%8B%E6%AD%A3%E7%BE%A9%E9%A0%90%E7%AE%97/",
+          "https://zh.wikipedia.org/zh-hant/%E4%BF%83%E9%80%B2%E8%BD%89%E5%9E%8B%E6%AD%A3%E7%BE%A9%E5%A7%94%E5%93%A1%E6%9C%83"
+        ]
+      },
+      "tpp": {
+        "text": "監督轉型正義機關效能與預算運用，質疑無限擴張組織認定，支持矯正當年過寬規定回歸法治。",
+        "note": "2024–2026國會與藍營聯手刪凍促轉／黨產相關預算，並參與黨產條例限縮附隨組織修法；後續對再修法態度曾出現保留表態。",
+        "sources": [
+          "https://www.tahr.org.tw/news/3641/",
+          "https://www.coolloud.org.tw/node/99092",
+          "https://www.cna.com.tw/news/aipl/202605310061.aspx",
+          "https://www.cyc.org.tw/activity/%E7%AB%8B%E6%B3%95%E9%99%A2%E4%BF%AE%E6%B3%95%E6%98%AF%E7%9F%AF%E6%AD%A3%E5%88%B6%E5%BA%A6%E8%AA%A4%E5%88%A4%EF%BC%8C%E7%B6%AD%E8%AD%B7%E6%B0%91%E4%B8%BB%E5%8E%9F%E5%89%87%E7%9A%84%E6%AD%A3%E7%BE%A9%E4%B9%8B%E8%88%89-67723.html"
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-judicial-participation",
+    "topic": "人民參與審判（國民法官等）應如何設計才算真正司法改革？",
+    "simple": "一般人要用什麼方式參與重大刑案審判？",
+    "yearHint": "2020–2023",
+    "stances": {
+      "dpp": {
+        "text": "以司法院版合審合判國民法官制落實人民參審，重大刑案由三名法官與六名國民法官共同審判。",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://plainlaw.me/article/ivod",
+            "title": "為何《國民法官法》表決三天才通過？談立法院立修法程序",
+            "outlet": "法律白話文運動",
+            "year": "2020"
+          },
+          {
+            "url": "https://www.judicial.gov.tw/tw/cp-1887-213158-6a0cd-1.html",
+            "title": "國民法官制已融合兩制優點之說明",
+            "outlet": "司法院",
+            "year": "2020"
+          },
+          {
+            "url": "https://www.titanlaw.com.tw/blog/?p=7746",
+            "title": "人民參審草案多案並陳，陪審參審制規範不同",
+            "outlet": "鈦坦法律",
+            "year": "2020"
+          }
+        ]
+      },
+      "kmt": {
+        "text": "另提公民參與審判草案，採三法官六參審人合議，並在院會以修正動議與執政黨版逐條表決。",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://www.titanlaw.com.tw/blog/?p=7746",
+            "title": "人民參審草案多案並陳，陪審參審制規範不同",
+            "outlet": "鈦坦法律",
+            "year": "2020"
+          },
+          {
+            "url": "https://plainlaw.me/article/ivod",
+            "title": "為何《國民法官法》表決三天才通過？談立法院立修法程序",
+            "outlet": "法律白話文運動",
+            "year": "2020"
+          }
+        ]
+      },
+      "tpp": {
+        "text": "主張陪審與參審兩制併行、由被告選擇制度；適用案件門檻較低，並設施行評估期再檢討。",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://www.titanlaw.com.tw/blog/?p=7746",
+            "title": "人民參審草案多案並陳，陪審參審制規範不同",
+            "outlet": "鈦坦法律",
+            "year": "2020"
+          },
+          {
+            "url": "https://plainlaw.me/article/ivod",
+            "title": "為何《國民法官法》表決三天才通過？談立法院立修法程序",
+            "outlet": "法律白話文運動",
+            "year": "2020"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-whistleblower",
+    "topic": "揭弊者（吹哨者）保護法制應涵蓋多廣、罰則多嚴？",
+    "simple": "檢舉弊端的人要保護到哪裡、罰則多重？",
+    "yearHint": "2020–2024",
+    "stances": {
+      "dpp": {
+        "text": "支持揭弊者保護法制化，但主張公部門先行並防惡意濫訴，憂倉促納入私部門衝擊過大企業。",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://news.ipcf.org.tw/151590",
+            "title": "揭弊者保護法三讀 洩吹哨人身分最重關5年",
+            "outlet": "原視新聞網",
+            "year": "2024"
+          },
+          {
+            "url": "https://hakkanews.tw/2024/12/31/170992/",
+            "title": "《公益揭弊者保護法》三讀後發言藍綠隔空較勁",
+            "outlet": "客家電視新聞",
+            "year": "2024"
+          }
+        ]
+      },
+      "kmt": {
+        "text": "主導通過以公部門及國營事業為主的揭弊者保護法，鼓勵檢舉不法並對洩露身分處以重罰。",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://news.ipcf.org.tw/151590",
+            "title": "揭弊者保護法三讀 洩吹哨人身分最重關5年",
+            "outlet": "原視新聞網",
+            "year": "2024"
+          },
+          {
+            "url": "https://hakkanews.tw/2024/12/31/170992/",
+            "title": "《公益揭弊者保護法》三讀後發言藍綠隔空較勁",
+            "outlet": "客家電視新聞",
+            "year": "2024"
+          }
+        ]
+      },
+      "tpp": {
+        "text": "長期力推揭弊者保護，主張公私部門皆應納入；折衷版曾限資本額門檻，仍未被全數採納。",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://news.ipcf.org.tw/151590",
+            "title": "揭弊者保護法三讀 洩吹哨人身分最重關5年",
+            "outlet": "原視新聞網",
+            "year": "2024"
+          },
+          {
+            "url": "https://lawmaker.twreporter.org/congress/a/158435",
+            "title": "黃國昌：審查揭弊者保護法｜國是論壇",
+            "outlet": "報導者立委逐字稿",
+            "year": "2024"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-health-nhi",
+    "topic": "健保永續應優先調漲部分負擔／費率，還是抑制浪費與提高點值？",
+    "simple": "健保要靠調負擔、管浪費，還是先顧點值？",
+    "yearHint": "2020–2025",
+    "stances": {
+      "dpp": {
+        "text": "調整部分負擔抑制浪費，並以公務預算補貼點值、兩年凍漲保費，兼顧財務與就醫可近性。",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/4232649",
+            "title": "健保黑洞補不了 國民黨立委：政府「只想拖過去」不想改革",
+            "outlet": "自由時報",
+            "year": "2023"
+          },
+          {
+            "url": "https://www.twreporter.org/a/national-health-insurance-global-budget-system-point-value-reform",
+            "title": "揭開健保點值的真相──0.95點值保障，保障了誰？",
+            "outlet": "報導者",
+            "year": "2024"
+          },
+          {
+            "url": "https://www.twreporter.org/a/2024-election-presidential-candidates-policies-education-social-welfare",
+            "title": "從勞保破產到健保危機，柯賴侯多為治標而無法治本？",
+            "outlet": "報導者",
+            "year": "2024"
+          }
+        ]
+      },
+      "kmt": {
+        "text": "批評調漲部分負擔難解財務黑洞，要求檢討浪費與藥價黑洞，並推動點值保障入法或主決議。",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/4232649",
+            "title": "健保黑洞補不了 國民黨立委：政府「只想拖過去」不想改革",
+            "outlet": "自由時報",
+            "year": "2023"
+          },
+          {
+            "url": "https://www.twreporter.org/a/national-health-insurance-global-budget-system-point-value-reform",
+            "title": "揭開健保點值的真相──0.95點值保障，保障了誰？",
+            "outlet": "報導者",
+            "year": "2024"
+          }
+        ]
+      },
+      "tpp": {
+        "text": "支持分級醫療與合理部分負擔並照顧弱勢就醫，同時在立院積極推動保障與提高健保點值。",
+        "confidence": "medium",
+        "sources": [
+          {
+            "url": "https://www.cmmedia.com.tw/home/articles/48054",
+            "title": "從藥價先下手 民眾黨提出3健保點值附帶決議",
+            "outlet": "信傳媒",
+            "year": "2024"
+          },
+          {
+            "url": "https://www.twreporter.org/a/2024-election-presidential-candidates-policies-education-social-welfare",
+            "title": "從勞保破產到健保危機，柯賴侯多為治標而無法治本？",
+            "outlet": "報導者",
+            "year": "2024"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-labor-pension",
+    "topic": "年金與勞保／軍公教改革後，下一步應如何兼顧永續與世代公平？",
+    "simple": "勞保年金怎麼補洞，又怎麼顧世代公平？",
+    "yearHint": "2017–2025",
+    "stances": {
+      "dpp": {
+        "text": "以公務預算持續撥補勞保並鼓勵企業提高勞退提繳，強調政府負最後給付責任、穩健改革。",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://www.rti.org.tw/news?uid=3&pid=53739",
+            "title": "勞保改革 賴將拉高提繳率、侯喊開國是會議、柯承諾每年撥補",
+            "outlet": "中央廣播電台",
+            "year": "2023"
+          },
+          {
+            "url": "https://www.twreporter.org/a/2024-election-presidential-candidates-policies-education-social-welfare",
+            "title": "從勞保破產到健保危機，柯賴侯多為治標而無法治本？",
+            "outlet": "報導者",
+            "year": "2024"
+          }
+        ]
+      },
+      "kmt": {
+        "text": "主張政府撥補入法並召開勞保年改國是會議，優化基金投資報酬，並一併討論提撥率調整。",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://www.rti.org.tw/news?uid=3&pid=53739",
+            "title": "勞保改革 賴將拉高提繳率、侯喊開國是會議、柯承諾每年撥補",
+            "outlet": "中央廣播電台",
+            "year": "2023"
+          },
+          {
+            "url": "https://www.twreporter.org/a/2024-election-presidential-candidates-policies-education-social-welfare",
+            "title": "從勞保破產到健保危機，柯賴侯多為治標而無法治本？",
+            "outlet": "報導者",
+            "year": "2024"
+          }
+        ]
+      },
+      "tpp": {
+        "text": "承諾每年固定大額撥補並優先用超徵稅收填補，召開國是會議檢討基礎年金與整體結構改革。",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://www.rti.org.tw/news?uid=3&pid=53739",
+            "title": "勞保改革 賴將拉高提繳率、侯喊開國是會議、柯承諾每年撥補",
+            "outlet": "中央廣播電台",
+            "year": "2023"
+          },
+          {
+            "url": "https://www.twreporter.org/a/2024-election-presidential-candidates-policies-education-social-welfare",
+            "title": "從勞保破產到健保危機，柯賴侯多為治標而無法治本？",
+            "outlet": "報導者",
+            "year": "2024"
+          },
+          {
+            "url": "https://udn.com/news/story/10903/9116703",
+            "title": "民眾黨提今年起停砍公教年金 物價指數累計成長5%檢討調整",
+            "outlet": "聯合報",
+            "year": "2025"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-media-influence",
+    "topic": "對中資或親中媒體的換照與管理，國家應干預到什麼程度？",
+    "simple": "新聞台換照與親中媒體，國家該管多嚴？",
+    "yearHint": "2019–2024",
+    "stances": {
+      "dpp": {
+        "text": "主張獨立機關依違規紀錄與大股東干預新聞等事實專業審查換照，並非政治打壓異己媒體。",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://zh.wikipedia.org/zh-tw/%E4%B8%AD%E5%A4%A9%E6%96%B0%E8%81%9E%E5%8F%B0%E5%81%9C%E6%92%AD%E4%BA%8B%E4%BB%B6",
+            "title": "中天新聞台停播事件",
+            "outlet": "維基百科",
+            "year": "2020–"
+          },
+          {
+            "url": "https://www.bbc.com/zhongwen/trad/chinese-news-55000536",
+            "title": "台灣「親中」媒體中天新聞台換照被拒引發「打壓新聞自由」爭議",
+            "outlet": "BBC中文",
+            "year": "2020"
+          },
+          {
+            "url": "https://www.cdns.com.tw/articles/295471",
+            "title": "民進黨：請尊重NCC依法審查中天換照",
+            "outlet": "中華日報",
+            "year": "2020"
+          }
+        ]
+      },
+      "kmt": {
+        "text": "批評不予換照侵害新聞自由、打壓異己媒體，聲援被下架頻道並推動修法以限縮撤照權力。",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://zh.wikipedia.org/zh-tw/%E4%B8%AD%E5%A4%A9%E6%96%B0%E8%81%9E%E5%8F%B0%E5%81%9C%E6%92%AD%E4%BA%8B%E4%BB%B6",
+            "title": "中天新聞台停播事件",
+            "outlet": "維基百科",
+            "year": "2020–"
+          },
+          {
+            "url": "https://www.bbc.com/zhongwen/trad/chinese-news-55000536",
+            "title": "台灣「親中」媒體中天新聞台換照被拒引發「打壓新聞自由」爭議",
+            "outlet": "BBC中文",
+            "year": "2020"
+          }
+        ]
+      },
+      "tpp": {
+        "text": "反對以政治審判方式關台，主張依法行政與充分證據，並強調反紅媒也要反綠媒、反雙標。",
+        "confidence": "medium",
+        "sources": [
+          {
+            "url": "https://taronews.tw/2020/10/26/694494/",
+            "title": "談中天換照案 柯文哲：反紅媒也反綠媒",
+            "outlet": "Taronews",
+            "year": "2020"
+          },
+          {
+            "url": "https://www.storm.mg/article/3143274",
+            "title": "最大柯粉心寒！館長「不再支持民眾黨」全因柯文哲1句話",
+            "outlet": "風傳媒",
+            "year": "2020"
+          },
+          {
+            "url": "https://voicettank.org/single-post/2020/10/14/101403/",
+            "title": "柯文哲的最後反撲──藍白合挺中天",
+            "outlet": "思想坦克",
+            "year": "2020"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "issue-marriage-equality",
+    "topic": "同性婚姻與相關家庭權益法制化，應走到哪一步？",
+    "simple": "同性婚姻與家庭權，法律要保障到哪？",
+    "yearHint": "2018–2019",
+    "stances": {
+      "dpp": {
+        "text": "以專法落實釋憲與公投後立法義務，讓同性二人得辦理結婚登記並準用繼承等民法親屬權利。",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://zh.wikipedia.org/zh-tw/%E8%87%BA%E7%81%A3%E5%90%8C%E6%80%A7%E5%A9%9A%E5%A7%BB",
+            "title": "臺灣同性婚姻",
+            "outlet": "維基百科",
+            "year": "2019–"
+          },
+          {
+            "url": "https://news.pts.org.tw/article/431992",
+            "title": "同婚專法立院表決 朝野黨團甲級動員",
+            "outlet": "公視新聞",
+            "year": "2019"
+          }
+        ]
+      },
+      "kmt": {
+        "text": "主推家屬關係式專法以呼應公投；多數立委反對結婚登記關鍵條文，並採開放投票不強制。",
+        "confidence": "high",
+        "note": "黨團公開主線支持賴士葆等「同性家屬」版本；關鍵第4條贊成7、反對23；少數立委贊成結婚登記。",
+        "sources": [
+          {
+            "url": "https://news.pts.org.tw/article/431992",
+            "title": "同婚專法立院表決 朝野黨團甲級動員",
+            "outlet": "公視新聞",
+            "year": "2019"
+          },
+          {
+            "url": "https://zh.wikipedia.org/zh-tw/%E8%87%BA%E7%81%A3%E5%90%8C%E6%80%A7%E5%A9%9A%E5%A7%BB",
+            "title": "臺灣同性婚姻（表決紀錄）",
+            "outlet": "維基百科",
+            "year": "2019"
+          },
+          {
+            "url": "https://www.twreporter.org/a/taiwan-marriage-equality-draft-bills",
+            "title": "同婚法案二次協商未果，週五院會是終極之戰",
+            "outlet": "報導者",
+            "year": "2019"
+          }
+        ]
+      },
+      "tpp": {
+        "text": "前身市政團隊聲請同婚釋憲，原則支持婚姻平權；公投後接受專法路徑以求法律明確保障。",
+        "confidence": "medium",
+        "note": "民眾黨2019/8建黨，未參與2019/5專法表決；此條依柯文哲／北市府2017–2019公開紀錄作為黨成立前可溯及主線。",
+        "sources": [
+          {
+            "url": "https://news.pts.org.tw/article/423228",
+            "title": "對同婚專法仍不表態 柯：讓立院去討論",
+            "outlet": "公視新聞",
+            "year": "2019"
+          },
+          {
+            "url": "https://www.storm.mg/article/974392",
+            "title": "支持同婚專法？柯文哲：有明確法律條文比較有保障",
+            "outlet": "風傳媒",
+            "year": "2019"
+          },
+          {
+            "url": "https://lgbtfamiliesinfo.tw/?p=2495",
+            "title": "柯文哲有態度：聲請同婚釋憲的是台北市",
+            "outlet": "同志家庭權益相關彙整",
+            "year": "2018"
+          }
+        ]
+      }
+    }
+  }
+]

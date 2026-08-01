@@ -593,6 +593,62 @@
       font-weight: 500;
     }
 
+    .mode-card.mode-disabled,
+    .mode-card:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      filter: grayscale(0.2);
+    }
+
+    .stance-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .stance-opt {
+      text-align: left;
+      width: 100%;
+      font-family: inherit;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--card);
+      border: 2px solid var(--line);
+      border-radius: var(--radius);
+      padding: 0.95rem 1.05rem;
+      cursor: pointer;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      touch-action: manipulation;
+    }
+    .stance-opt:hover {
+      border-color: color-mix(in srgb, var(--kmt) 40%, var(--line));
+    }
+    .stance-opt.selected {
+      border-color: var(--kmt);
+      background: var(--kmt-soft);
+      box-shadow: 0 0 0 3px var(--kmt-soft);
+    }
+    .stance-opt:focus-visible {
+      outline: 3px solid var(--kmt);
+      outline-offset: 2px;
+    }
+    .stance-opt .opt-label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+    .stance-opt .opt-text {
+      display: block;
+      font-weight: 600;
+    }
+    html[data-theme="dark"] .stance-opt.selected {
+      background: rgba(96, 165, 250, 0.14);
+    }
+
     .stance-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1836,40 +1892,36 @@
       <div class="logo-mark" aria-hidden="true"><span><i></i><i></i><i></i></span></div>
       <div>
         <h1>用 12 題測試你的政策傾向</h1>
-        <p class="subtitle">先看政策好不好，再揭曉是誰提的</p>
-        <span class="version-badge" id="version-badge" aria-label="版本">v1.2.2</span>
+        <p class="subtitle">同一議題、三個匿名立場——選你較認同的</p>
+        <span class="version-badge" id="version-badge" aria-label="版本">v2.0.0</span>
       </div>
       <div class="card purpose-card" role="region" aria-labelledby="purpose-title">
         <h2 id="purpose-title">為什麼做這個測驗？</h2>
         <p>
-          我們常先問「是誰提的」，才決定要不要支持。本測驗<strong>刻意先隱藏政黨標籤</strong>，請你只依政策內容表態——覺得好就同意，不妥就反對，<strong>對事不對人</strong>。
+          我們常先問「是誰提的」，才決定要不要支持。本測驗每題給<strong>同一個公共議題</strong>下的<strong>三個匿名路線</strong>（順序打亂），請你只依內容選最認同的一個。
         </p>
         <p>
-          希望降低「為反而反」或「因人廢言」：好政策不該因提出者就被否定，壞政策也不該因同陣營就被默許。把注意力拉回真正該討論的——<strong>這項政策對人民好不好？</strong>
+          答完才揭曉各立場屬於哪個政黨，看你的選擇<strong>最常對齊誰</strong>——對事不對人，減少「為反而反」或「因人廢言」。
         </p>
       </div>
       <div class="mode-grid" role="group" aria-label="選擇遊戲模式">
         <button type="button" class="mode-card selected" id="mode-national" data-mode="national" aria-pressed="true">
           <h3>全國政見／立院提案</h3>
-          <p>民進黨、國民黨、民眾黨近八年全國政見與立院提案盲測。</p>
-          <span class="mode-tag" id="tag-national">每局 12 題 · 每黨 4</span>
+          <p>每題一個爭議軸，三黨真實公開立場匿名對照（近八年）。</p>
+          <span class="mode-tag" id="tag-national">每局 12 題 · 三選一</span>
         </button>
-        <button type="button" class="mode-card" id="mode-city" data-mode="city" aria-pressed="false">
+        <button type="button" class="mode-card mode-disabled" id="mode-city" data-mode="city" aria-pressed="false" disabled title="即將推出">
           <h3>城市市政</h3>
-          <p>選一個城市，挑戰該市三黨市政／議會政策（六都＋新竹）。</p>
-          <span class="mode-tag" id="tag-city">每局 12 題 · 每黨 4</span>
+          <p>單一城市三黨市政對照（開發中）。</p>
+          <span class="mode-tag" id="tag-city">即將推出</span>
         </button>
       </div>
       <p class="pool-info" id="pool-info" aria-live="polite">題庫載入中…</p>
-      <div class="city-picker" id="city-picker" aria-label="選擇城市">
-        <h3>選擇要挑戰的城市</h3>
-        <div class="city-grid" id="city-grid"></div>
-      </div>
       <button type="button" class="btn btn-primary" id="btn-start">開始測驗</button>
       <p class="disclaimer start-disclaimer">
-        題庫依公開政見與市政資料整理並簡化，僅供教育與自我檢視，非正式民調。
+        立場依公開政見、立院與媒體紀錄濃縮，僅供教育與自我檢視，非正式民調；不代表本站立場。
       </p>
-      <p class="site-footer">政策光譜測驗 · 繁體中文 · <span class="app-version">v1.2.2</span></p>
+      <p class="site-footer">政策光譜測驗 · 繁體中文 · <span class="app-version">v2.0.0</span></p>
     </section>
 
     <!-- QUIZ -->
@@ -1889,30 +1941,19 @@
       <div class="policy-card">
         <div class="card">
           <span class="category-tag" id="q-category">能源</span>
-          <p class="policy-text" id="q-text">政策文字載入中…</p>
+          <p class="policy-text" id="q-text">議題載入中…</p>
           <button type="button" class="help-btn" id="btn-help" aria-haspopup="dialog" aria-expanded="false">
             <span class="q" aria-hidden="true">?</span>
             這是什麼意思？
           </button>
         </div>
 
-        <p class="stance-hint">點選下方<strong>正方</strong>或<strong>反方</strong>整塊方框，代表你的立場</p>
-        <div class="stance-grid" role="group" aria-label="選擇正方、反方或沒意見">
-          <button type="button" class="stance-box for" id="box-for" data-opinion="agree" aria-pressed="false">
-            <h4>✓ 正方論點（支持這項政策）</h4>
-            <ol id="q-pros"></ol>
-            <span class="pick-label">點我＝我較支持</span>
-          </button>
-          <button type="button" class="stance-box against" id="box-against" data-opinion="disagree" aria-pressed="false">
-            <h4>✕ 反方論點（反對這項政策）</h4>
-            <ol id="q-oppose"></ol>
-            <span class="pick-label">點我＝我較反對</span>
-          </button>
-        </div>
+        <p class="stance-hint">以下三個是<strong>匿名路線</strong>（順序已打亂）。選你<strong>最認同</strong>的一個：</p>
+        <div class="stance-options" id="stance-options" role="group" aria-label="選擇匿名立場"></div>
 
         <div class="quiz-actions">
           <div class="neutral-row">
-            <button type="button" class="btn-neutral" id="btn-neutral" data-opinion="neutral" aria-pressed="false">沒意見</button>
+            <button type="button" class="btn-neutral" id="btn-neutral" aria-pressed="false">沒意見</button>
           </div>
           <div class="nav-row nav-row-split">
             <button type="button" class="btn btn-ghost" id="btn-prev" disabled>上一題</button>
@@ -1928,48 +1969,48 @@
     <!-- RESULTS -->
     <section id="screen-results" class="screen" aria-label="結果">
       <div class="results-hero">
-        <h1>你的政策光譜</h1>
+        <h1>你的政策對齊</h1>
         <div class="stat-big">
           <div class="item">
-            <div class="num agree" id="stat-agree">0</div>
-            <div class="lbl">支持正方</div>
-          </div>
-          <div class="item">
-            <div class="num disagree" id="stat-disagree">0</div>
-            <div class="lbl">支持反方</div>
+            <div class="num agree" id="stat-picked">0</div>
+            <div class="lbl">有選立場</div>
           </div>
           <div class="item">
             <div class="num neutral" id="stat-neutral">0</div>
             <div class="lbl">沒意見</div>
+          </div>
+          <div class="item">
+            <div class="num" id="stat-total" style="color:var(--ink)">12</div>
+            <div class="lbl">本局題數</div>
           </div>
         </div>
         <p class="headline-insight" id="headline-insight"></p>
       </div>
 
       <div class="card">
-        <h2 class="section-title" id="chart-title">三黨長條圖｜支持／反對／沒意見</h2>
+        <h2 class="section-title" id="chart-title">三黨對齊長條圖</h2>
         <p style="font-size:0.85rem;color:var(--ink-soft);margin:-0.25rem 0 0.75rem" id="chart-caption">
-          每個政黨一組長條：<strong>支持</strong>（正方）、<strong>反對</strong>（反方）、<strong>沒意見</strong>。淨分＝支持 − 反對。
+          你選中該黨匿名立場的<strong>次數</strong>與占比（沒意見不計入對齊）。
         </p>
         <div class="party-bars-wrap" id="party-bars"></div>
       </div>
 
       <div class="card">
-        <h2 class="section-title">洞察摘要</h2>
+        <h2 class="section-title">簡短結論</h2>
         <ul class="insights" id="insights"></ul>
       </div>
 
       <div class="card">
-        <h2 class="section-title">逐題回顧</h2>
+        <h2 class="section-title">逐題回顧（揭曉）</h2>
         <div class="review-list" id="review-list"></div>
       </div>
 
       <div class="footer-actions">
-        <button type="button" class="btn btn-primary" id="btn-restart">再玩一輪（同模式）</button>
+        <button type="button" class="btn btn-primary" id="btn-restart">再玩一輪</button>
         <button type="button" class="btn btn-ghost" id="btn-review-answers">返回修改答案</button>
         <button type="button" class="btn btn-ghost" id="btn-home">回首頁重來</button>
       </div>
-      <p class="site-footer">政策依公開資料簡化 · 僅供教育娛樂 · <span class="app-version">v1.2.2</span></p>
+      <p class="site-footer">政策依公開資料簡化 · 僅供教育娛樂 · <span class="app-version">v2.0.0</span></p>
     </section>
   </div>
 
@@ -1997,804 +2038,7 @@
     </div>
   </div>
 
-  <script src="national-data.js"></script>
-  <script src="city-data.js"></script>
-  <script>
-    /** @typedef {"dpp"|"kmt"|"tpp"} Party */
-    /** @typedef {"agree"|"disagree"|"neutral"} Opinion */
-    /** @typedef {"national"|"city"} GameMode */
-
-    /** App version — bump when shipping visible changes (sync footer badges). */
-    const APP_VERSION = "1.2.2";
-
-    const PARTY_META = {
-      dpp: { name: "民進黨", short: "民", lean: "偏綠", class: "dpp" },
-      kmt: { name: "國民黨", short: "國", lean: "偏藍", class: "kmt" },
-      tpp: { name: "民眾黨", short: "眾", lean: "偏黃", class: "tpp" },
-    };
-
-    const PARTIES = /** @type {Party[]} */ (["dpp", "kmt", "tpp"]);
-
-    /**
-     * Policy bank — anti-spoiler on text & simple; party/status/note reveal-only.
-     * status: 已推動 | 已立法 | 競選政見 | 立院提案 | 部分通過/部分違憲 | 未通過或擱置
-     */
-    // POLICIES loaded from national-data.js
-
-    // —— State ——
-    const state = {
-      mode: /** @type {GameMode} */ ("national"),
-      selectedCity: /** @type {string|null} */ (null),
-      round: /** @type {any[]} */ ([]),
-      index: 0,
-      answers: /** @type {{ policy: any, opinion: Opinion }[]} */ ([]),
-      currentOpinion: /** @type {Opinion|null} */ (null),
-    };
-
-    // —— Theme ——
-    function getPreferredTheme() {
-      const saved = localStorage.getItem("policy-spectrum-theme");
-      if (saved === "dark" || saved === "light") return saved;
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    }
-    function applyTheme(theme) {
-      document.documentElement.setAttribute("data-theme", theme);
-      const meta = document.getElementById("meta-theme-color");
-      if (meta) meta.setAttribute("content", theme === "dark" ? "#12151c" : "#f3f0ea");
-      const btn = document.getElementById("btn-theme");
-      if (btn) btn.setAttribute("aria-label", theme === "dark" ? "切換淺色模式" : "切換深色模式");
-      localStorage.setItem("policy-spectrum-theme", theme);
-    }
-    applyTheme(getPreferredTheme());
-
-    function getPoolStats() {
-      const national = typeof POLICIES !== "undefined" ? POLICIES.length : 0;
-      const byParty = { dpp: 0, kmt: 0, tpp: 0 };
-      if (typeof POLICIES !== "undefined") {
-        for (const p of POLICIES) byParty[p.party] = (byParty[p.party] || 0) + 1;
-      }
-      const cityTotal = typeof CITY_POLICIES !== "undefined" ? CITY_POLICIES.length : 0;
-      const perCity = {};
-      if (typeof CITY_POLICIES !== "undefined") {
-        for (const p of CITY_POLICIES) {
-          perCity[p.city] = (perCity[p.city] || 0) + 1;
-        }
-      }
-      const cityCount = typeof CITIES !== "undefined" ? CITIES.length : Object.keys(perCity).length;
-      return { national, byParty, cityTotal, perCity, cityCount };
-    }
-
-    function refreshPoolDisplays() {
-      const s = getPoolStats();
-      const info = document.getElementById("pool-info");
-      if (!info) return;
-      if (state.mode === "city" && state.selectedCity && CITY_META[state.selectedCity]) {
-        const n = s.perCity[state.selectedCity] || 0;
-        info.innerHTML = `<strong>${CITY_META[state.selectedCity].name}</strong> · 約 ${n} 題 · 每局抽 12`;
-      } else if (state.mode === "city") {
-        info.textContent = `城市題庫合計 ${s.cityTotal} 題 · 請先選城市`;
-      } else {
-        info.textContent = `全國題庫約 ${s.national} 題 · 每局抽 12（每黨 4）`;
-      }
-    }
-
-    function renderCityGrid() {
-      const grid = document.getElementById("city-grid");
-      if (!grid || typeof CITY_META === "undefined") return;
-      const s = getPoolStats();
-      grid.innerHTML = Object.entries(CITY_META)
-        .map(([id, meta]) => {
-          const n = s.perCity[id] || 0;
-          const sel = state.selectedCity === id ? " selected" : "";
-          return `<button type="button" class="city-chip${sel}" data-city="${id}" aria-pressed="${state.selectedCity === id ? "true" : "false"}">${meta.name}<span class="city-count">${n} 題</span></button>`;
-        })
-        .join("");
-      grid.querySelectorAll(".city-chip").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          state.selectedCity = btn.dataset.city;
-          renderCityGrid();
-          refreshPoolDisplays();
-        });
-      });
-    }
-
-    function setMode(mode) {
-      state.mode = mode;
-      if (mode !== "city") state.selectedCity = null;
-      document.querySelectorAll(".mode-card").forEach((el) => {
-        const on = el.dataset.mode === mode;
-        el.classList.toggle("selected", on);
-        el.setAttribute("aria-pressed", on ? "true" : "false");
-      });
-      const picker = document.getElementById("city-picker");
-      if (picker) {
-        picker.classList.toggle("show", mode === "city");
-      }
-      if (mode === "city") {
-        if (!state.selectedCity && typeof CITIES !== "undefined") {
-          state.selectedCity = CITIES[0];
-        }
-        renderCityGrid();
-      }
-      refreshPoolDisplays();
-    }
-
-    // —— Utils ——
-    function shuffle(arr) {
-      const a = arr.slice();
-      for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
-      }
-      return a;
-    }
-
-    const QUESTIONS_PER_ROUND = 12;
-
-    function activeBank() {
-      if (state.mode === "city") {
-        if (typeof CITY_POLICIES === "undefined") {
-          console.error("city-data.js 未載入");
-          return POLICIES;
-        }
-        return CITY_POLICIES;
-      }
-      return POLICIES;
-    }
-
-    /**
-     * National: 4 per party. City: 2 per municipality (六都).
-     */
-    function pickRound(n = QUESTIONS_PER_ROUND) {
-      const bank = activeBank();
-      const usedCats = new Set();
-      const picked = [];
-
-      function takeFromPool(pool, count, already) {
-        const chosen = [];
-        const shuffled = shuffle(pool);
-        for (const item of shuffled) {
-          if (chosen.length >= count) break;
-          if (already.some((x) => x.id === item.id) || chosen.some((x) => x.id === item.id)) continue;
-          if (!usedCats.has(item.category)) {
-            chosen.push(item);
-            usedCats.add(item.category);
-          }
-        }
-        for (const item of shuffled) {
-          if (chosen.length >= count) break;
-          if (already.some((x) => x.id === item.id) || chosen.some((x) => x.id === item.id)) continue;
-          chosen.push(item);
-          usedCats.add(item.category);
-        }
-        return chosen;
-      }
-
-      // city mode: one city, 4 per party; national: 4 per party across all
-      const perParty = Math.floor(n / 3);
-      let scoped = bank;
-      if (state.mode === "city") {
-        if (!state.selectedCity) {
-          console.warn("未選城市");
-          return [];
-        }
-        scoped = bank.filter((p) => p.city === state.selectedCity);
-      }
-      for (const party of PARTIES) {
-        const pool = scoped.filter((p) => p.party === party);
-        picked.push(...takeFromPool(pool, perParty, picked));
-      }
-      return shuffle(picked.slice(0, perParty * 3));
-    }
-
-    function showScreen(id) {
-      document.querySelectorAll(".screen").forEach((el) => el.classList.remove("active"));
-      document.getElementById(id).classList.add("active");
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-
-    // —— Quiz UI ——
-    function startGame() {
-      if (state.mode === "city" && !state.selectedCity) {
-        alert("請先選擇要挑戰的城市");
-        return;
-      }
-      state.round = pickRound(QUESTIONS_PER_ROUND);
-      if (!state.round.length) {
-        alert("題庫不足，請確認題庫檔案是否載入成功");
-        return;
-      }
-      state.index = 0;
-      // fixed-length answers slot per question (allows back/edit)
-      state.answers = state.round.map((policy) => ({ policy, opinion: null }));
-      state.currentOpinion = null;
-      state._results = null;
-      const counts = { dpp: 0, kmt: 0, tpp: 0 };
-      state.round.forEach((p) => counts[p.party]++);
-      console.info(
-        state.mode === "city"
-          ? `[城市抽題 ${CITY_META[state.selectedCity]?.name}]`
-          : "[三黨抽題]",
-        counts,
-        `題庫可抽 ${activeBank().length}`
-      );
-      showScreen("screen-quiz");
-      renderQuestion();
-    }
-
-    /** 回首頁，清空本局（完整重來） */
-    function startOverToHome() {
-      state.round = [];
-      state.index = 0;
-      state.answers = [];
-      state.currentOpinion = null;
-      state._results = null;
-      showScreen("screen-start");
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-
-    /** 從結果頁回到作答，可修改任一題 */
-    function returnToEditAnswers() {
-      if (!state.round.length) {
-        startOverToHome();
-        return;
-      }
-      // jump to last question for convenience
-      state.index = Math.max(0, state.round.length - 1);
-      showScreen("screen-quiz");
-      renderQuestion();
-    }
-
-    function renderQuestion() {
-      if (autoAdvanceTimer) {
-        clearTimeout(autoAdvanceTimer);
-        autoAdvanceTimer = null;
-      }
-      const p = state.round[state.index];
-      const n = state.index + 1;
-      const total = state.round.length;
-
-      document.getElementById("progress-text").textContent = `第 ${n}／${total} 題`;
-      document.getElementById("progress-pct").textContent = `${Math.round((n / total) * 100)}%`;
-      document.getElementById("progress-fill").style.width = `${(n / total) * 100}%`;
-      document.getElementById("progress-bar").setAttribute("aria-valuenow", String(n));
-      document.getElementById("progress-bar").setAttribute("aria-valuemax", String(total));
-
-      document.getElementById("q-category").textContent = p.category;
-      document.getElementById("q-text").textContent = p.text;
-
-      const pros = (p.pros && p.pros.length ? p.pros : ["（暫無正方論點）"]).slice(0, 5);
-      const cons = (p.oppose && p.oppose.length ? p.oppose : ["（暫無反方論點）"]).slice(0, 5);
-      document.getElementById("q-pros").innerHTML = pros.map((r) => `<li>${r}</li>`).join("");
-      document.getElementById("q-oppose").innerHTML = cons.map((r) => `<li>${r}</li>`).join("");
-
-      const prevOp = state.answers[state.index] && state.answers[state.index].opinion;
-      state.currentOpinion = prevOp || null;
-
-      document.getElementById("box-for").classList.toggle("selected", prevOp === "agree");
-      document.getElementById("box-against").classList.toggle("selected", prevOp === "disagree");
-      document.getElementById("btn-neutral").classList.toggle("selected", prevOp === "neutral");
-      document.getElementById("box-for").setAttribute("aria-pressed", prevOp === "agree" ? "true" : "false");
-      document.getElementById("box-against").setAttribute("aria-pressed", prevOp === "disagree" ? "true" : "false");
-      document.getElementById("btn-neutral").setAttribute("aria-pressed", prevOp === "neutral" ? "true" : "false");
-
-      const nextBtn = document.getElementById("btn-next");
-      if (prevOp) nextBtn.classList.add("ready");
-      else nextBtn.classList.remove("ready");
-      nextBtn.textContent = n === total ? "看結果" : "下一題";
-
-      const prevBtn = document.getElementById("btn-prev");
-      if (prevBtn) prevBtn.disabled = state.index <= 0;
-
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-
-    let autoAdvanceTimer = null;
-
-    function selectOpinion(op, { autoAdvance = true } = {}) {
-      state.currentOpinion = op;
-      // save immediately so back/forward keeps edits
-      if (state.answers[state.index]) {
-        state.answers[state.index] = {
-          policy: state.round[state.index],
-          opinion: op,
-        };
-      }
-      const forBox = document.getElementById("box-for");
-      const againstBox = document.getElementById("box-against");
-      const neutral = document.getElementById("btn-neutral");
-      forBox.classList.toggle("selected", op === "agree");
-      againstBox.classList.toggle("selected", op === "disagree");
-      neutral.classList.toggle("selected", op === "neutral");
-      forBox.setAttribute("aria-pressed", op === "agree" ? "true" : "false");
-      againstBox.setAttribute("aria-pressed", op === "disagree" ? "true" : "false");
-      neutral.setAttribute("aria-pressed", op === "neutral" ? "true" : "false");
-      document.getElementById("btn-next").classList.add("ready");
-
-      if (autoAdvance) {
-        if (autoAdvanceTimer) clearTimeout(autoAdvanceTimer);
-        // brief highlight so user sees selection, then auto next
-        autoAdvanceTimer = setTimeout(() => {
-          autoAdvanceTimer = null;
-          nextQuestion();
-        }, 280);
-      }
-    }
-
-    function nextQuestion() {
-      if (!state.currentOpinion) return;
-      state.answers[state.index] = {
-        policy: state.round[state.index],
-        opinion: state.currentOpinion,
-      };
-      if (state.index >= state.round.length - 1) {
-        // ensure all answered before results
-        const missing = state.answers.findIndex((a) => !a.opinion);
-        if (missing >= 0) {
-          state.index = missing;
-          renderQuestion();
-          alert(`還有題目未作答（第 ${missing + 1} 題），已帶你回去補答。`);
-          return;
-        }
-        renderResults();
-        showScreen("screen-results");
-      } else {
-        state.index++;
-        renderQuestion();
-      }
-    }
-
-    function prevQuestion() {
-      if (state.index <= 0) return;
-      // save current if selected
-      if (state.currentOpinion && state.answers[state.index]) {
-        state.answers[state.index] = {
-          policy: state.round[state.index],
-          opinion: state.currentOpinion,
-        };
-      }
-      state.index--;
-      renderQuestion();
-    }
-
-    // —— Help modal ——
-    const helpModal = document.getElementById("help-modal");
-    const btnHelp = document.getElementById("btn-help");
-
-    function openHelp() {
-      const p = state.round[state.index];
-      document.getElementById("help-body").textContent = p.simple;
-      helpModal.hidden = false;
-      helpModal.classList.add("open");
-      btnHelp.setAttribute("aria-expanded", "true");
-      document.getElementById("btn-help-close").focus();
-    }
-
-    function closeHelp() {
-      helpModal.classList.remove("open");
-      helpModal.hidden = true;
-      btnHelp.setAttribute("aria-expanded", "false");
-      btnHelp.focus();
-    }
-
-    // —— Results ——
-    function emptyPartyBucket() {
-      return {
-        dpp: { agree: 0, disagree: 0, neutral: 0, total: 0 },
-        kmt: { agree: 0, disagree: 0, neutral: 0, total: 0 },
-        tpp: { agree: 0, disagree: 0, neutral: 0, total: 0 },
-      };
-    }
-
-    function computeResults() {
-      const agreeByParty = { dpp: 0, kmt: 0, tpp: 0 };
-      const disagreeByParty = { dpp: 0, kmt: 0, tpp: 0 };
-      const neutralByParty = { dpp: 0, kmt: 0, tpp: 0 };
-      const seenByParty = { dpp: 0, kmt: 0, tpp: 0 };
-
-      /** axisKey -> party -> stats  (category in national; city in city mode) */
-      const byAxis = {};
-      const agreeByCity = {};
-      const disagreeByCity = {};
-
-      for (const { policy, opinion } of state.answers) {
-        if (!opinion) continue;
-        seenByParty[policy.party]++;
-        if (opinion === "agree") agreeByParty[policy.party]++;
-        else if (opinion === "disagree") disagreeByParty[policy.party]++;
-        else neutralByParty[policy.party]++;
-
-        // Both modes: radar axes = policy category
-        const axisKey = policy.category;
-        if (!byAxis[axisKey]) byAxis[axisKey] = emptyPartyBucket();
-        byAxis[axisKey][policy.party].total++;
-        if (opinion === "agree") byAxis[axisKey][policy.party].agree++;
-        else if (opinion === "disagree") byAxis[axisKey][policy.party].disagree++;
-        else byAxis[axisKey][policy.party].neutral++;
-      }
-
-      const totalAgree = state.answers.filter((a) => a.opinion === "agree").length;
-      const totalDisagree = state.answers.filter((a) => a.opinion === "disagree").length;
-      const totalNeutral = state.answers.filter((a) => a.opinion === "neutral").length;
-
-      const netByParty = {};
-      for (const p of PARTIES) {
-        netByParty[p] = agreeByParty[p] - disagreeByParty[p];
-      }
-
-      function topParty(counts) {
-        let best = [];
-        let max = -Infinity;
-        for (const p of PARTIES) {
-          if (counts[p] > max) {
-            max = counts[p];
-            best = [p];
-          } else if (counts[p] === max) {
-            best.push(p);
-          }
-        }
-        return { parties: best, count: max };
-      }
-
-      return {
-        agreeByParty,
-        disagreeByParty,
-        neutralByParty,
-        seenByParty,
-        netByParty,
-        byAxis,
-        byCat: byAxis,
-        agreeByCity,
-        disagreeByCity,
-        totalAgree,
-        totalDisagree,
-        totalNeutral,
-        topAgree: topParty(agreeByParty),
-        topDisagree: topParty(disagreeByParty),
-        topNet: topParty(netByParty),
-      };
-    }
-
-    function leanForCategory(catStats) {
-      let best = [];
-      let max = -Infinity;
-      const nets = {};
-      for (const p of PARTIES) {
-        nets[p] = catStats[p].agree - catStats[p].disagree;
-        if (nets[p] > max) {
-          max = nets[p];
-          best = [p];
-        } else if (nets[p] === max) {
-          best.push(p);
-        }
-      }
-      const catTotal = PARTIES.reduce((s, p) => s + catStats[p].total, 0);
-      const anyStance = PARTIES.some((p) => catStats[p].agree + catStats[p].disagree > 0);
-      if (!anyStance) return { type: "none", label: "皆沒意見", class: "none", catTotal, max: 0 };
-      if (best.length > 1 && max === nets[best[0]]) {
-        return { type: "tie", label: "打平", class: "tie", catTotal, max };
-      }
-      return {
-        type: "lean",
-        party: best[0],
-        label: PARTY_META[best[0]].lean,
-        class: best[0],
-        catTotal,
-        max,
-        partyName: PARTY_META[best[0]].name,
-        agree: catStats[best[0]].agree,
-      };
-    }
-
-    /**
-     * Per-party horizontal bar charts: 支持 / 反對 / 沒意見
-     */
-    function renderPartyBars(R) {
-      const el = document.getElementById("party-bars");
-      if (!el) return;
-      const maxCount = Math.max(
-        1,
-        ...PARTIES.flatMap((p) => [
-          R.agreeByParty[p],
-          R.disagreeByParty[p],
-          R.neutralByParty[p],
-        ])
-      );
-
-      el.innerHTML = PARTIES.map((p) => {
-        const a = R.agreeByParty[p];
-        const d = R.disagreeByParty[p];
-        const n0 = R.neutralByParty[p];
-        const net = R.netByParty[p];
-        const netLabel = net > 0 ? `+${net}` : String(net);
-        const colorVar =
-          p === "dpp" ? "dpp-deep" : p === "kmt" ? "kmt-deep" : "tpp-ink";
-        const pct = (v) => Math.max(v === 0 ? 0 : 8, Math.round((v / maxCount) * 100));
-        return `
-          <div class="party-bar-card">
-            <h3 style="color:var(--${colorVar})">
-              <span>${PARTY_META[p].name}</span>
-              <span class="net">淨分 ${netLabel}</span>
-            </h3>
-            <div class="party-metric">
-              <span class="m-label">支持</span>
-              <div class="m-track"><div class="m-fill agree" data-w="${pct(a)}"></div></div>
-              <span class="m-count">${a}</span>
-            </div>
-            <div class="party-metric">
-              <span class="m-label">反對</span>
-              <div class="m-track"><div class="m-fill disagree" data-w="${pct(d)}"></div></div>
-              <span class="m-count">${d}</span>
-            </div>
-            <div class="party-metric">
-              <span class="m-label">沒意見</span>
-              <div class="m-track"><div class="m-fill neutral" data-w="${pct(n0)}"></div></div>
-              <span class="m-count">${n0}</span>
-            </div>
-          </div>`;
-      }).join("");
-
-      requestAnimationFrame(() => {
-        el.querySelectorAll(".m-fill").forEach((bar) => {
-          bar.style.width = `${bar.getAttribute("data-w") || 0}%`;
-        });
-      });
-    }
-
-    // —— Confirm dialog ——
-    let confirmCallback = null;
-    const confirmModal = document.getElementById("confirm-modal");
-
-    function openConfirm(title, body, onOk) {
-      document.getElementById("confirm-title").textContent = title;
-      document.getElementById("confirm-body").textContent = body;
-      confirmCallback = onOk;
-      confirmModal.hidden = false;
-      confirmModal.classList.add("open");
-      document.getElementById("btn-confirm-ok").focus();
-    }
-
-    function closeConfirm() {
-      confirmModal.classList.remove("open");
-      confirmModal.hidden = true;
-      confirmCallback = null;
-    }
-
-    function confirmRestart(kind) {
-      if (kind === "home") {
-        openConfirm(
-          "確定要回首頁重來？",
-          "目前作答進度將會清除，且無法復原。",
-          () => {
-            closeConfirm();
-            startOverToHome();
-          }
-        );
-      } else {
-        openConfirm(
-          "確定要再玩一輪？",
-          "將重新抽題並清除本輪答案，無法復原。",
-          () => {
-            closeConfirm();
-            startGame();
-          }
-        );
-      }
-    }
-
-    function buildInsights(R) {
-      // Keep short — headline already covers support/oppose/net totals
-      const lines = [];
-      const cityLabel =
-        state.mode === "city" && state.selectedCity && CITY_META[state.selectedCity]
-          ? CITY_META[state.selectedCity].name
-          : "";
-
-      if (R.totalAgree === 0 && R.totalDisagree === 0) {
-        lines.push(
-          cityLabel
-            ? `本局（${cityLabel}）幾乎都選沒意見，可再玩一輪試試取捨。`
-            : "本局幾乎都選沒意見，可再玩一輪試試取捨。"
-        );
-        return lines;
-      }
-
-      // Top 1–2 category leans only
-      const axisLeans = [];
-      const axisMap = R.byAxis || R.byCat || {};
-      for (const key of Object.keys(axisMap)) {
-        const lean = leanForCategory(axisMap[key]);
-        if (lean.type === "lean" && lean.max > 0) axisLeans.push({ key, lean });
-      }
-      axisLeans.sort((a, b) => b.lean.max - a.lean.max);
-
-      if (axisLeans.length) {
-        for (const { key, lean } of axisLeans.slice(0, 2)) {
-          const note = lean.catTotal <= 1 ? "（樣本少）" : "";
-          lines.push(
-            `在「<strong>${key}</strong>」議題，你較支持<strong>${lean.partyName}</strong>方向${note}。`
-          );
-        }
-      } else {
-        lines.push(
-          cityLabel
-            ? `本局（${cityLabel}）各議題偏好較分散，沒有特別突出的方向。`
-            : "各議題偏好較分散，沒有特別突出的單一方向。"
-        );
-      }
-
-      if (R.totalNeutral >= 3) {
-        lines.push(`有 <strong>${R.totalNeutral}</strong> 題選擇沒意見。`);
-      }
-
-      return lines.slice(0, 3);
-    }
-
-    function opinionLabel(op) {
-      if (op === "agree") return "支持";
-      if (op === "disagree") return "反對";
-      return "沒意見";
-    }
-
-    function renderReview() {
-      const el = document.getElementById("review-list");
-      el.innerHTML = state.answers
-        .filter((a) => a.opinion)
-        .map(({ policy, opinion }) => {
-          const pm = PARTY_META[policy.party];
-          const statusLine = [policy.status, policy.yearHint].filter(Boolean).join(" · ");
-          return `
-            <details class="review-item">
-              <summary>
-                <div class="review-head">
-                  <span class="op-chip ${opinion}">${opinionLabel(opinion)}</span>
-                  <span class="party ${pm.class}">${pm.name}</span>
-                  <span class="dot">·</span>
-                  <span>${policy.category}</span>
-                </div>
-                <span class="review-text">${policy.text}</span>
-              </summary>
-              <div class="review-body">
-                <p>${policy.simple}</p>
-                ${statusLine ? `<p style="font-size:0.82rem;color:var(--muted)">${statusLine}</p>` : ""}
-                ${policy.note ? `<p class="note">${policy.note}</p>` : ""}
-              </div>
-            </details>`;
-        })
-        .join("");
-    }
-
-    function renderResults() {
-      const R = computeResults();
-      state._results = R;
-
-      document.getElementById("stat-agree").textContent = String(R.totalAgree);
-      document.getElementById("stat-disagree").textContent = String(R.totalDisagree);
-      document.getElementById("stat-neutral").textContent = String(R.totalNeutral);
-
-      const chartTitle = document.getElementById("chart-title");
-      const chartCap = document.getElementById("chart-caption");
-      if (state.mode === "city" && state.selectedCity && CITY_META[state.selectedCity]) {
-        chartTitle.textContent = `三黨長條圖｜${CITY_META[state.selectedCity].name}`;
-        chartCap.innerHTML =
-          "每個政黨一組長條：<strong>支持</strong>／<strong>反對</strong>／<strong>沒意見</strong>。淨分＝支持 − 反對。";
-      } else {
-        chartTitle.textContent = "三黨長條圖｜支持／反對／沒意見";
-        chartCap.innerHTML =
-          "每個政黨一組長條：<strong>支持</strong>（正方）、<strong>反對</strong>（反方）、<strong>沒意見</strong>。淨分＝支持 − 反對。";
-      }
-
-      if (R.totalAgree + R.totalDisagree === 0) {
-        document.getElementById("headline-insight").textContent =
-          "本局幾乎都是沒意見；下方長條圖會接近空白，可再玩一輪試試。";
-      } else {
-        const modeHint = state.mode === "city" ? "（依政策所屬政黨／市政路線歸類）" : "";
-        const supportNames = R.topAgree.parties.map((p) => PARTY_META[p].name).join("、");
-        const opposeNames =
-          R.totalDisagree > 0
-            ? R.topDisagree.parties.map((p) => PARTY_META[p].name).join("、")
-            : "";
-        const netNames = R.topNet.parties.map((p) => PARTY_META[p].name).join("、");
-        const parts = [];
-        if (R.totalAgree > 0) {
-          parts.push(
-            R.topAgree.parties.length === 1
-              ? `支持最多：${supportNames}（${R.topAgree.count} 題）`
-              : `支持並列最多：${supportNames}（各 ${R.topAgree.count} 題）`
-          );
-        }
-        if (R.totalDisagree > 0) {
-          parts.push(
-            R.topDisagree.parties.length === 1
-              ? `反對最多：${opposeNames}（${R.topDisagree.count} 題）`
-              : `反對並列最多：${opposeNames}（各 ${R.topDisagree.count} 題）`
-          );
-        }
-        parts.push(
-          R.topNet.parties.length === 1
-            ? `淨支持最高：${netNames}（${R.topNet.count}）`
-            : `淨支持打平：${netNames}（${R.topNet.count}）`
-        );
-        document.getElementById("headline-insight").textContent = parts.join(" · ") + modeHint;
-      }
-
-      renderPartyBars(R);
-
-      const insights = buildInsights(R);
-      document.getElementById("insights").innerHTML = insights.map((l) => `<li>${l}</li>`).join("");
-
-      renderReview();
-    }
-
-    // —— Events ——
-    document.getElementById("btn-theme").addEventListener("click", () => {
-      const cur = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
-      applyTheme(cur === "dark" ? "light" : "dark");
-      if (state._results) renderPartyBars(state._results);
-    });
-
-    document.querySelectorAll(".mode-card").forEach((card) => {
-      card.addEventListener("click", () => setMode(/** @type {GameMode} */ (card.dataset.mode)));
-    });
-
-    document.getElementById("btn-start").addEventListener("click", startGame);
-    document.getElementById("box-for").addEventListener("click", () => selectOpinion("agree"));
-    document.getElementById("box-against").addEventListener("click", () => selectOpinion("disagree"));
-    document.getElementById("btn-neutral").addEventListener("click", () => selectOpinion("neutral"));
-    document.getElementById("btn-next").addEventListener("click", () => {
-      if (autoAdvanceTimer) {
-        clearTimeout(autoAdvanceTimer);
-        autoAdvanceTimer = null;
-      }
-      nextQuestion();
-    });
-    document.getElementById("btn-prev").addEventListener("click", () => {
-      if (autoAdvanceTimer) {
-        clearTimeout(autoAdvanceTimer);
-        autoAdvanceTimer = null;
-      }
-      prevQuestion();
-    });
-    document.getElementById("btn-quiz-home").addEventListener("click", () => confirmRestart("home"));
-    document.getElementById("btn-help").addEventListener("click", openHelp);
-    document.getElementById("btn-help-close").addEventListener("click", closeHelp);
-    helpModal.addEventListener("click", (e) => {
-      if (e.target === helpModal) closeHelp();
-    });
-    document.getElementById("btn-confirm-cancel").addEventListener("click", closeConfirm);
-    document.getElementById("btn-confirm-ok").addEventListener("click", () => {
-      if (typeof confirmCallback === "function") confirmCallback();
-    });
-    confirmModal.addEventListener("click", (e) => {
-      if (e.target === confirmModal) closeConfirm();
-    });
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        if (confirmModal.classList.contains("open")) closeConfirm();
-        else if (helpModal.classList.contains("open")) closeHelp();
-      }
-    });
-
-    document.getElementById("btn-restart").addEventListener("click", () => confirmRestart("again"));
-    document.getElementById("btn-home").addEventListener("click", () => confirmRestart("home"));
-    document.getElementById("btn-review-answers").addEventListener("click", returnToEditAnswers);
-
-    // Keep version labels in sync with APP_VERSION
-    document.querySelectorAll(".app-version, #version-badge").forEach((el) => {
-      el.textContent = "v" + APP_VERSION;
-    });
-
-    setMode("national");
-    refreshPoolDisplays();
-
-    // Sanity: bank size
-    console.info(
-      `[政策光譜 v${APP_VERSION}] 全國題庫 ${POLICIES.length} 題`,
-      PARTIES.map((p) => `${PARTY_META[p].name} ${POLICIES.filter((x) => x.party === p).length}`).join(" · ")
-    );
-    if (typeof CITY_POLICIES !== "undefined") {
-      console.info(`[政策光譜 v${APP_VERSION}] 城市題庫 ${CITY_POLICIES.length} 題`);
-    }
-  </script>
+  <script src="issues-data.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>
