@@ -2,7 +2,7 @@
 /** @typedef {"dpp"|"kmt"|"tpp"} Party */
 /** @typedef {"dpp"|"kmt"|"tpp"|"neutral"} Pick */
 
-const APP_VERSION = "2.0.0";
+const APP_VERSION = "2.1.0";
 
 const PARTY_META = {
   dpp: { name: "民進黨", short: "民", class: "dpp" },
@@ -15,6 +15,8 @@ const OPT_LABELS = ["立場 A", "立場 B", "立場 C"];
 const QUESTIONS_PER_ROUND = 12;
 
 const state = {
+  mode: /** @type {"national"|"city"} */ ("national"),
+  selectedCity: /** @type {string|null} */ (null),
   round: /** @type {any[]} */ ([]),
   index: 0,
   /** @type {{ issue: any, optionOrder: Party[], pick: Pick|null }[]} */
@@ -42,13 +44,75 @@ function applyTheme(theme) {
 }
 applyTheme(getPreferredTheme());
 
+function getNationalCount() {
+  return typeof ISSUES !== "undefined" ? ISSUES.length : 0;
+}
+function getCityCount(cityId) {
+  if (typeof CITY_ISSUES === "undefined") return 0;
+  if (!cityId) return CITY_ISSUES.length;
+  return CITY_ISSUES.filter((x) => x.city === cityId).length;
+}
+
 function refreshPoolDisplays() {
   const info = document.getElementById("pool-info");
   if (!info) return;
-  const n = typeof ISSUES !== "undefined" ? ISSUES.length : 0;
-  info.textContent = n
-    ? `全國議題題庫 ${n} 題 · 每局抽 ${Math.min(QUESTIONS_PER_ROUND, n)} · 三匿名立場`
-    : "題庫載入中…";
+  if (state.mode === "city") {
+    if (state.selectedCity && typeof CITY_META !== "undefined" && CITY_META[state.selectedCity]) {
+      const n = getCityCount(state.selectedCity);
+      info.innerHTML = `<strong>${CITY_META[state.selectedCity].name}</strong> · ${n} 題 · 每局抽 ${Math.min(
+        QUESTIONS_PER_ROUND,
+        n
+      )} · 三匿名立場`;
+    } else {
+      info.textContent = `城市題庫合計 ${getCityCount()} 題 · 請先選城市`;
+    }
+  } else {
+    const n = getNationalCount();
+    info.textContent = n
+      ? `全國議題題庫 ${n} 題 · 每局抽 ${Math.min(QUESTIONS_PER_ROUND, n)} · 三匿名立場`
+      : "題庫載入中…";
+  }
+}
+
+function renderCityGrid() {
+  const grid = document.getElementById("city-grid");
+  if (!grid || typeof CITY_META === "undefined") return;
+  grid.innerHTML = Object.entries(CITY_META)
+    .map(([id, meta]) => {
+      const n = getCityCount(id);
+      const sel = state.selectedCity === id ? " selected" : "";
+      return `<button type="button" class="city-chip${sel}" data-city="${id}" aria-pressed="${
+        state.selectedCity === id ? "true" : "false"
+      }">${meta.name}<span class="city-count">${n} 題</span></button>`;
+    })
+    .join("");
+  grid.querySelectorAll(".city-chip").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      state.selectedCity = btn.dataset.city;
+      renderCityGrid();
+      refreshPoolDisplays();
+    });
+  });
+}
+
+function setMode(mode) {
+  state.mode = mode;
+  if (mode !== "city") state.selectedCity = null;
+  document.querySelectorAll(".mode-card").forEach((el) => {
+    if (el.disabled) return;
+    const on = el.dataset.mode === mode;
+    el.classList.toggle("selected", on);
+    el.setAttribute("aria-pressed", on ? "true" : "false");
+  });
+  const picker = document.getElementById("city-picker");
+  if (picker) picker.classList.toggle("show", mode === "city");
+  if (mode === "city") {
+    if (!state.selectedCity && typeof CITIES !== "undefined" && CITIES.length) {
+      state.selectedCity = CITIES[0];
+    }
+    renderCityGrid();
+  }
+  refreshPoolDisplays();
 }
 
 function shuffle(arr) {
@@ -60,10 +124,19 @@ function shuffle(arr) {
   return a;
 }
 
+function activeBank() {
+  if (state.mode === "city") {
+    if (typeof CITY_ISSUES === "undefined") return [];
+    if (!state.selectedCity) return [];
+    return CITY_ISSUES.filter((x) => x.city === state.selectedCity);
+  }
+  return typeof ISSUES !== "undefined" ? ISSUES : [];
+}
+
 function pickRound(n = QUESTIONS_PER_ROUND) {
-  if (typeof ISSUES === "undefined" || !ISSUES.length) return [];
-  const pool = shuffle(ISSUES);
-  return pool.slice(0, Math.min(n, pool.length));
+  const bank = activeBank();
+  if (!bank.length) return [];
+  return shuffle(bank).slice(0, Math.min(n, bank.length));
 }
 
 function showScreen(id) {
@@ -73,9 +146,13 @@ function showScreen(id) {
 }
 
 function startGame() {
+  if (state.mode === "city" && !state.selectedCity) {
+    alert("請先選擇要挑戰的城市");
+    return;
+  }
   state.round = pickRound(QUESTIONS_PER_ROUND);
   if (!state.round.length) {
-    alert("題庫不足，請確認 issues-data.js 是否載入成功");
+    alert("題庫不足，請確認 issues-data.js / city-issues-data.js 是否載入成功");
     return;
   }
   state.index = 0;
@@ -86,7 +163,13 @@ function startGame() {
   }));
   state.currentPick = null;
   state._results = null;
-  console.info(`[政策光譜 v${APP_VERSION}] 抽題 ${state.round.length}/${ISSUES.length}`);
+  const label =
+    state.mode === "city" && state.selectedCity && typeof CITY_META !== "undefined"
+      ? CITY_META[state.selectedCity].name
+      : "全國";
+  console.info(
+    `[政策光譜 v${APP_VERSION}] ${label} 抽題 ${state.round.length}/${activeBank().length}`
+  );
   showScreen("screen-quiz");
   renderQuestion();
 }
@@ -395,6 +478,10 @@ document.getElementById("btn-theme").addEventListener("click", () => {
   if (state._results) renderPartyBars(state._results);
 });
 
+document.querySelectorAll(".mode-card:not(:disabled)").forEach((card) => {
+  card.addEventListener("click", () => setMode(/** @type {"national"|"city"} */ (card.dataset.mode)));
+});
+
 document.getElementById("btn-start").addEventListener("click", startGame);
 document.getElementById("btn-neutral").addEventListener("click", () => selectPick("neutral"));
 document.getElementById("btn-next").addEventListener("click", () => {
@@ -454,5 +541,7 @@ document.head.appendChild(styleExtra);
 document.querySelectorAll(".app-version, #version-badge").forEach((el) => {
   el.textContent = "v" + APP_VERSION;
 });
-refreshPoolDisplays();
-console.info(`[政策光譜 v${APP_VERSION}] 議題數`, typeof ISSUES !== "undefined" ? ISSUES.length : 0);
+setMode("national");
+console.info(
+  `[政策光譜 v${APP_VERSION}] 全國 ${getNationalCount()} · 城市 ${getCityCount()}`
+);

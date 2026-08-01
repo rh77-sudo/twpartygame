@@ -1910,13 +1910,17 @@
           <p>每題一個爭議軸，三黨真實公開立場匿名對照（近八年）。</p>
           <span class="mode-tag" id="tag-national">每局 12 題 · 三選一</span>
         </button>
-        <button type="button" class="mode-card mode-disabled" id="mode-city" data-mode="city" aria-pressed="false" disabled title="即將推出">
+        <button type="button" class="mode-card" id="mode-city" data-mode="city" aria-pressed="false">
           <h3>城市市政</h3>
-          <p>單一城市三黨市政對照（開發中）。</p>
-          <span class="mode-tag" id="tag-city">即將推出</span>
+          <p>選一市，挑戰該市三黨市政／議會路線匿名對照（六都＋新竹）。</p>
+          <span class="mode-tag" id="tag-city">每局 12 題 · 三選一</span>
         </button>
       </div>
       <p class="pool-info" id="pool-info" aria-live="polite">題庫載入中…</p>
+      <div class="city-picker" id="city-picker" aria-label="選擇城市">
+        <h3>選擇要挑戰的城市</h3>
+        <div class="city-grid" id="city-grid"></div>
+      </div>
       <button type="button" class="btn btn-primary" id="btn-start">開始測驗</button>
       <p class="disclaimer start-disclaimer">
         立場依公開政見、立院與媒體紀錄濃縮，僅供教育與自我檢視，非正式民調；不代表本站立場。
@@ -2039,6 +2043,7 @@
   </div>
 
   <script src="issues-data.js"></script>
+  <script src="city-issues-data.js"></script>
   <script src="game.js"></script>
 </body>
 </html>
