@@ -2,7 +2,7 @@
 /** @typedef {"dpp"|"kmt"|"tpp"} Party */
 /** @typedef {"dpp"|"kmt"|"tpp"|"neutral"} Pick */
 
-const APP_VERSION = "2.1.3";
+const APP_VERSION = "2.1.4";
 
 const PARTY_META = {
   dpp: { name: "民進黨", short: "民", class: "dpp" },
@@ -83,7 +83,7 @@ function renderCityGrid() {
       const sel = state.selectedCity === id ? " selected" : "";
       return `<button type="button" class="city-chip${sel}" data-city="${id}" aria-pressed="${
         state.selectedCity === id ? "true" : "false"
-      }">${meta.name}<span class="city-count">${n} 題</span></button>`;
+      }">${meta.name}</button>`;
     })
     .join("");
   grid.querySelectorAll(".city-chip").forEach((btn) => {
