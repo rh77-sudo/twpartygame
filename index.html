@@ -606,6 +606,50 @@
       gap: 0.65rem;
     }
 
+    .stance-opt-row {
+      position: relative;
+      display: block;
+    }
+    .stance-opt-row.has-plain .stance-opt {
+      padding-right: 2.75rem;
+    }
+    .stance-plain-btn {
+      position: absolute;
+      top: 0.7rem;
+      right: 0.65rem;
+      z-index: 2;
+      width: 1.85rem;
+      height: 1.85rem;
+      border-radius: 999px;
+      border: 1.5px solid var(--line);
+      background: linear-gradient(145deg, var(--accent-soft), var(--card));
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 800;
+      line-height: 1;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      touch-action: manipulation;
+      box-shadow: 0 1px 4px rgba(18, 21, 28, 0.08);
+      transition: border-color 0.15s ease, transform 0.12s ease, background 0.15s ease;
+    }
+    .stance-plain-btn:hover {
+      border-color: var(--accent-gold);
+      transform: scale(1.06);
+    }
+    .stance-plain-btn:focus-visible {
+      outline: 3px solid var(--kmt);
+      outline-offset: 2px;
+    }
+    html[data-theme="dark"] .stance-plain-btn {
+      background: linear-gradient(145deg, #3a2f12, #1a2336);
+      color: #fde68a;
+      border-color: #a16207;
+    }
+
     .stance-opt {
       text-align: left;
       width: 100%;
@@ -1952,7 +1996,7 @@
           </button>
         </div>
 
-        <p class="stance-hint">以下三個是<strong>匿名路線</strong>（順序已打亂）。選你<strong>最認同</strong>的一個：</p>
+        <p class="stance-hint">以下三個是<strong>匿名路線</strong>（順序已打亂）。選你<strong>最認同</strong>的一個。點立場右上角 <strong>?</strong> 可看白話解釋：</p>
         <div class="stance-options" id="stance-options" role="group" aria-label="選擇匿名立場"></div>
 
         <div class="quiz-actions">

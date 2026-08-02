@@ -2,7 +2,7 @@
 /** @typedef {"dpp"|"kmt"|"tpp"} Party */
 /** @typedef {"dpp"|"kmt"|"tpp"|"neutral"} Pick */
 
-const APP_VERSION = "2.1.5";
+const APP_VERSION = "2.1.8";
 
 const PARTY_META = {
   dpp: { name: "民進黨", short: "民", class: "dpp" },
@@ -219,18 +219,35 @@ function renderQuestion() {
   const box = document.getElementById("stance-options");
   box.innerHTML = slot.optionOrder
     .map((party, i) => {
-      const text = issue.stances[party].text;
+      const st = issue.stances[party] || {};
+      const text = st.text || "";
+      const plain = (st.plain || "").trim();
       const sel = prev === party ? " selected" : "";
       const pressed = prev === party ? "true" : "false";
-      return `<button type="button" class="stance-opt${sel}" data-party="${party}" aria-pressed="${pressed}">
-        <span class="opt-label">${OPT_LABELS[i]}</span>
-        <span class="opt-text">${text}</span>
-      </button>`;
+      const helpBtn = plain
+        ? `<button type="button" class="stance-plain-btn" data-party="${party}" data-label="${OPT_LABELS[i]}" aria-label="用白話說明${OPT_LABELS[i]}" title="白話說明">?</button>`
+        : "";
+      return `<div class="stance-opt-row${plain ? " has-plain" : ""}">
+        <button type="button" class="stance-opt${sel}" data-party="${party}" aria-pressed="${pressed}">
+          <span class="opt-label">${OPT_LABELS[i]}</span>
+          <span class="opt-text">${escapeHtml(text)}</span>
+        </button>
+        ${helpBtn}
+      </div>`;
     })
     .join("");
 
   box.querySelectorAll(".stance-opt").forEach((btn) => {
     btn.addEventListener("click", () => selectPick(/** @type {Party} */ (btn.dataset.party)));
+  });
+  box.querySelectorAll(".stance-plain-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const party = /** @type {Party} */ (btn.dataset.party);
+      const label = btn.dataset.label || "此立場";
+      openStancePlain(issue, party, label);
+    });
   });
 
   const neutral = document.getElementById("btn-neutral");
@@ -298,22 +315,43 @@ function prevQuestion() {
   renderQuestion();
 }
 
-function openHelp() {
-  const issue = state.answers[state.index].issue;
-  document.getElementById("help-body").textContent = issue.simple || issue.topic;
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function openHelpModal(title, body, { expandHelpBtn = false } = {}) {
+  document.getElementById("help-title").textContent = title;
+  document.getElementById("help-body").textContent = body;
   const helpModal = document.getElementById("help-modal");
   helpModal.hidden = false;
   helpModal.classList.add("open");
-  document.getElementById("btn-help").setAttribute("aria-expanded", "true");
+  if (expandHelpBtn) {
+    document.getElementById("btn-help").setAttribute("aria-expanded", "true");
+  }
   document.getElementById("btn-help-close").focus();
+}
+
+function openHelp() {
+  const issue = state.answers[state.index].issue;
+  openHelpModal("白話說明", issue.simple || issue.topic, { expandHelpBtn: true });
+}
+
+function openStancePlain(issue, party, label) {
+  const plain = (issue.stances[party] && issue.stances[party].plain) || "";
+  if (!plain) return;
+  openHelpModal(`${label} · 白話解釋`, plain);
 }
 
 function closeHelp() {
   const helpModal = document.getElementById("help-modal");
   helpModal.classList.remove("open");
   helpModal.hidden = true;
-  document.getElementById("btn-help").setAttribute("aria-expanded", "false");
-  document.getElementById("btn-help").focus();
+  const helpBtn = document.getElementById("btn-help");
+  if (helpBtn) helpBtn.setAttribute("aria-expanded", "false");
 }
 
 function computeResults() {
