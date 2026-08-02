@@ -1,8 +1,8 @@
 /** Policy spectrum quiz v2 — pick anonymous party stances per issue */
 /** @typedef {"dpp"|"kmt"|"tpp"} Party */
-/** @typedef {"dpp"|"kmt"|"tpp"|"neutral"} Pick */
+/** @typedef {"dpp"|"kmt"|"tpp"} Pick */
 
-const APP_VERSION = "2.2.0";
+const APP_VERSION = "2.2.1";
 
 const PARTY_META = {
   dpp: { name: "民進黨", short: "民", class: "dpp" },
@@ -250,10 +250,6 @@ function renderQuestion() {
     });
   });
 
-  const neutral = document.getElementById("btn-neutral");
-  neutral.classList.toggle("selected", prev === "neutral");
-  neutral.setAttribute("aria-pressed", prev === "neutral" ? "true" : "false");
-
   const nextBtn = document.getElementById("btn-next");
   if (prev) nextBtn.classList.add("ready");
   else nextBtn.classList.remove("ready");
@@ -273,9 +269,6 @@ function selectPick(pick, { autoAdvance = true } = {}) {
     btn.classList.toggle("selected", on);
     btn.setAttribute("aria-pressed", on ? "true" : "false");
   });
-  const neutral = document.getElementById("btn-neutral");
-  neutral.classList.toggle("selected", pick === "neutral");
-  neutral.setAttribute("aria-pressed", pick === "neutral" ? "true" : "false");
   document.getElementById("btn-next").classList.add("ready");
 
   if (autoAdvance) {
@@ -356,11 +349,9 @@ function closeHelp() {
 
 function computeResults() {
   const counts = { dpp: 0, kmt: 0, tpp: 0 };
-  let neutral = 0;
   let picked = 0;
   for (const a of state.answers) {
-    if (a.pick === "neutral") neutral++;
-    else if (a.pick && counts[a.pick] !== undefined) {
+    if (a.pick && counts[a.pick] !== undefined) {
       counts[a.pick]++;
       picked++;
     }
@@ -375,7 +366,7 @@ function computeResults() {
       topParties.push(p);
     }
   }
-  return { counts, neutral, picked, total: state.answers.length, topParties, topCount };
+  return { counts, picked, total: state.answers.length, topParties, topCount };
 }
 
 function renderPartyBars(R) {
@@ -408,17 +399,16 @@ function renderResults() {
   state._results = R;
 
   document.getElementById("stat-picked").textContent = String(R.picked);
-  document.getElementById("stat-neutral").textContent = String(R.neutral);
   document.getElementById("stat-total").textContent = String(R.total);
 
   if (R.picked === 0) {
     document.getElementById("headline-insight").textContent =
-      "本局幾乎都選沒意見；再玩一輪試試選一個你較認同的路線。";
+      "本局尚未完成表態；請每題選一個最認同的立場後再看結果。";
   } else if (R.topParties.length === 1) {
     const name = PARTY_META[R.topParties[0]].name;
     const pct = Math.round((R.topCount / R.picked) * 100);
     document.getElementById("headline-insight").textContent =
-      `本局你的選擇最常對齊${name}（${R.topCount}／${R.picked} 題有表態，約 ${pct}%）。`;
+      `本局你的選擇最常對齊${name}（${R.topCount}／${R.picked} 題，約 ${pct}%）。`;
   } else {
     const names = R.topParties.map((p) => PARTY_META[p].name).join("、");
     document.getElementById("headline-insight").textContent =
@@ -429,7 +419,7 @@ function renderResults() {
 
   const insights = [];
   if (R.picked === 0) {
-    insights.push("沒有可計算的對齊結果。試著在議題上選一個較接近的立場。");
+    insights.push("沒有可計算的對齊結果。每題請選一個最接近的立場。");
   } else {
     const ranked = PARTIES.slice().sort((a, b) => R.counts[b] - R.counts[a]);
     insights.push(
@@ -437,23 +427,15 @@ function renderResults() {
         .map((p) => `${PARTY_META[p].name} ${R.counts[p]} 次`)
         .join(" · ")
     );
-    if (R.neutral > 0) {
-      insights.push(`另有 ${R.neutral} 題選擇沒意見，不計入對齊占比。`);
-    }
   }
   document.getElementById("insights").innerHTML = insights.map((l) => `<li>${l}</li>`).join("");
 
   const review = document.getElementById("review-list");
   review.innerHTML = state.answers
-    .map((a, i) => {
+    .map((a) => {
       const issue = a.issue;
       const pick = a.pick;
-      let pickLabel = "沒意見";
-      let pickClass = "neutral";
-      if (pick && pick !== "neutral") {
-        pickLabel = PARTY_META[pick].name;
-        pickClass = PARTY_META[pick].class;
-      }
+      const pickLabel = pick && PARTY_META[pick] ? PARTY_META[pick].name : "未選";
       const allStances = PARTIES.map((p) => {
         const mark = pick === p ? " ← 你的選擇" : "";
         return `<p><strong class="party ${PARTY_META[p].class}">${PARTY_META[p].name}</strong>：${issue.stances[p].text}${mark}</p>`;
@@ -461,7 +443,7 @@ function renderResults() {
       return `<details class="review-item">
         <summary>
           <div class="review-head">
-            <span class="op-chip ${pickClass === "neutral" ? "neutral" : "agree"}">${pick === "neutral" ? "沒意見" : "對齊 " + pickLabel}</span>
+            <span class="op-chip agree">對齊 ${pickLabel}</span>
             <span>${issue.category || ""}</span>
           </div>
           <span class="review-text">${issue.topic}</span>
@@ -521,7 +503,6 @@ document.querySelectorAll(".mode-card:not(:disabled)").forEach((card) => {
 });
 
 document.getElementById("btn-start").addEventListener("click", startGame);
-document.getElementById("btn-neutral").addEventListener("click", () => selectPick("neutral"));
 document.getElementById("btn-next").addEventListener("click", () => {
   if (autoAdvanceTimer) {
     clearTimeout(autoAdvanceTimer);

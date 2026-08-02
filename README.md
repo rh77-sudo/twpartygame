@@ -1,12 +1,12 @@
 # 政策光譜測驗
 
 [![Live Demo](https://img.shields.io/badge/GitHub%20Pages-Live-2ea44f?logo=github&logoColor=white)](https://rh77-sudo.github.io/twpartygame/)
-[![Version](https://img.shields.io/badge/version-2.2.0-blue)](https://github.com/rh77-sudo/twpartygame)
+[![Version](https://img.shields.io/badge/version-2.2.1-blue)](https://github.com/rh77-sudo/twpartygame)
 [![GitHub last commit](https://img.shields.io/github/last-commit/rh77-sudo/twpartygame)](https://github.com/rh77-sudo/twpartygame/commits/master)
 
 **線上版：** [https://rh77-sudo.github.io/twpartygame/](https://rh77-sudo.github.io/twpartygame/)
 
-用 **6 題**測試你的政策傾向（全國與城市相同）：每一題是一個公共議題，底下有**三個匿名路線**（三黨真實公開立場，順序打亂）。選你最認同的一個（或沒意見）；結束後才揭曉是誰的主張，看你**最常對齊哪一黨**。
+用 **6 題**測試你的政策傾向（全國與城市相同）：每一題是一個公共議題，底下有**三個匿名路線**（三黨真實公開立場，順序打亂）。選你最認同的一個；結束後才揭曉是誰的主張，看你**最常對齊哪一黨**。
 
 ## 為什麼做這個測驗？
 
@@ -16,7 +16,7 @@
 
 1. 用瀏覽器開啟根目錄的 `index.html`（或開 GitHub Pages）。
 2. 選擇**全國**或**城市**（六都＋基隆、新竹）。
-3. 每題：中立議題 → 三匿名立場 A／B／C → 選一個或沒意見；可點立場右上角 **?** 看白話解釋。
+3. 每題：中立議題 → 三匿名立場 A／B／C → 必選一個；可點立場右上角 **?** 看白話解釋。
 4. 結束後看對齊長條圖與逐題揭曉。
 
 ## 題庫
