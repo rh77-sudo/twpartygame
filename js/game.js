@@ -2,7 +2,7 @@
 /** @typedef {"dpp"|"kmt"|"tpp"} Party */
 /** @typedef {"dpp"|"kmt"|"tpp"} Pick */
 
-const APP_VERSION = "2.2.1";
+const APP_VERSION = "2.2.3";
 
 const PARTY_META = {
   dpp: { name: "民進黨", short: "民", class: "dpp" },
@@ -398,9 +398,6 @@ function renderResults() {
   const R = computeResults();
   state._results = R;
 
-  document.getElementById("stat-picked").textContent = String(R.picked);
-  document.getElementById("stat-total").textContent = String(R.total);
-
   if (R.picked === 0) {
     document.getElementById("headline-insight").textContent =
       "本局尚未完成表態；請每題選一個最認同的立場後再看結果。";
@@ -416,19 +413,6 @@ function renderResults() {
   }
 
   renderPartyBars(R);
-
-  const insights = [];
-  if (R.picked === 0) {
-    insights.push("沒有可計算的對齊結果。每題請選一個最接近的立場。");
-  } else {
-    const ranked = PARTIES.slice().sort((a, b) => R.counts[b] - R.counts[a]);
-    insights.push(
-      ranked
-        .map((p) => `${PARTY_META[p].name} ${R.counts[p]} 次`)
-        .join(" · ")
-    );
-  }
-  document.getElementById("insights").innerHTML = insights.map((l) => `<li>${l}</li>`).join("");
 
   const review = document.getElementById("review-list");
   review.innerHTML = state.answers

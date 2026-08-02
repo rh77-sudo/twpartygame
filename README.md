@@ -1,7 +1,7 @@
 # 政策光譜測驗
 
 [![Live Demo](https://img.shields.io/badge/GitHub%20Pages-Live-2ea44f?logo=github&logoColor=white)](https://rh77-sudo.github.io/twpartygame/)
-[![Version](https://img.shields.io/badge/version-2.2.1-blue)](https://github.com/rh77-sudo/twpartygame)
+[![Version](https://img.shields.io/badge/version-2.2.3-blue)](https://github.com/rh77-sudo/twpartygame)
 [![GitHub last commit](https://img.shields.io/github/last-commit/rh77-sudo/twpartygame)](https://github.com/rh77-sudo/twpartygame/commits/master)
 
 **線上版：** [https://rh77-sudo.github.io/twpartygame/](https://rh77-sudo.github.io/twpartygame/)

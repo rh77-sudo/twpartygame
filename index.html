@@ -1599,9 +1599,12 @@
       background: linear-gradient(165deg, var(--kmt-soft), var(--card));
     }
     .mode-card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.35rem;
+      font-size: clamp(1.25rem, 3.5vw, 1.45rem);
+      margin-bottom: 0.45rem;
       font-family: var(--font-serif);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      line-height: 1.35;
     }
     .mode-card p {
       font-size: 0.82rem;
@@ -1897,12 +1900,10 @@
       <div class="mode-grid" role="group" aria-label="選擇遊戲模式">
         <button type="button" class="mode-card selected" id="mode-national" data-mode="national" aria-pressed="true">
           <h3>全國政見／立院提案</h3>
-          <p>每題一個爭議軸，三黨真實公開立場匿名對照（近八年）。</p>
           <span class="mode-tag" id="tag-national">每局 6 題 · 三選一</span>
         </button>
         <button type="button" class="mode-card" id="mode-city" data-mode="city" aria-pressed="false">
           <h3>城市市政</h3>
-          <p>選一市，挑戰該市三黨市政／議會路線匿名對照（六都＋基隆、新竹）。</p>
           <span class="mode-tag" id="tag-city">每局 6 題 · 三選一</span>
         </button>
       </div>
@@ -1961,16 +1962,6 @@
     <section id="screen-results" class="screen" aria-label="結果">
       <div class="results-hero">
         <h1>你的政策對齊</h1>
-        <div class="stat-big">
-          <div class="item">
-            <div class="num agree" id="stat-picked">0</div>
-            <div class="lbl">有選立場</div>
-          </div>
-          <div class="item">
-            <div class="num" id="stat-total" style="color:var(--ink)">6</div>
-            <div class="lbl">本局題數</div>
-          </div>
-        </div>
         <p class="headline-insight" id="headline-insight"></p>
       </div>
 
@@ -1980,11 +1971,6 @@
           你選中該黨匿名立場的<strong>次數</strong>與占比。
         </p>
         <div class="party-bars-wrap" id="party-bars"></div>
-      </div>
-
-      <div class="card">
-        <h2 class="section-title">簡短結論</h2>
-        <ul class="insights" id="insights"></ul>
       </div>
 
       <div class="card">
