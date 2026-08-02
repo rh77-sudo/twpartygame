@@ -791,42 +791,6 @@
     .stance-box.for .pick-label { color: var(--agree); }
     .stance-box.against .pick-label { color: var(--disagree); }
 
-    .neutral-row {
-      display: flex;
-      justify-content: center;
-      margin-top: 0.1rem;
-    }
-
-    .btn-neutral {
-      font-family: inherit;
-      font-size: 0.95rem;
-      font-weight: 700;
-      padding: 0.8rem 1.5rem;
-      border-radius: 999px;
-      border: 2px solid var(--line);
-      background: rgba(255, 252, 248, 0.9);
-      color: var(--ink-soft);
-      cursor: pointer;
-      transition: all 0.18s ease;
-      min-width: 168px;
-      min-height: 48px;
-      letter-spacing: 0.04em;
-      touch-action: manipulation;
-    }
-
-    .btn-neutral:hover {
-      border-color: var(--ink-soft);
-      color: var(--ink);
-      background: #fff;
-    }
-    .btn-neutral.selected {
-      border-color: #5a6170;
-      background: linear-gradient(135deg, #eef0f4, #e4e7ed);
-      color: var(--ink);
-      box-shadow: 0 0 0 3px rgba(90, 97, 112, 0.15);
-    }
-    .btn-neutral:focus-visible { outline: 3px solid var(--kmt); outline-offset: 2px; }
-
     .quiz-actions {
       display: flex;
       flex-direction: column;
@@ -1378,13 +1342,6 @@
         -webkit-backdrop-filter: none;
       }
 
-      .neutral-row { margin: 0; }
-
-      .btn-neutral {
-        width: 100%;
-        min-width: 0;
-      }
-
       .nav-row {
         justify-content: stretch;
       }
@@ -1569,8 +1526,7 @@
         gap: 0.4rem;
         padding-top: 0.55rem;
       }
-      .quiz-actions .btn,
-      .quiz-actions .btn-neutral {
+      .quiz-actions .btn {
         min-height: 42px;
         padding-top: 0.55rem;
         padding-bottom: 0.55rem;
@@ -1832,16 +1788,6 @@
     html[data-theme="dark"] .version-badge {
       background: rgba(255, 255, 255, 0.04);
       color: var(--muted);
-    }
-    html[data-theme="dark"] .btn-neutral {
-      background: #1e293b;
-      color: var(--ink-soft);
-      border-color: var(--line);
-    }
-    html[data-theme="dark"] .btn-neutral.selected {
-      background: #334155;
-      color: var(--ink);
-      border-color: #64748b;
     }
     html[data-theme="dark"] .stat-big .item {
       background: var(--card);
