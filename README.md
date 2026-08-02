@@ -1,19 +1,8 @@
 # 政策光譜測驗
 
-[![Live Demo](https://img.shields.io/badge/GitHub%20Pages-Live-2ea44f?style=flat&logo=githubpages&logoColor=white)](https://rh77-sudo.github.io/twpartygame/)
-[![Version](https://img.shields.io/badge/version-2.1.9-0A66C2?style=flat)](https://github.com/rh77-sudo/twpartygame)
-[![GitHub last commit](https://img.shields.io/github/last-commit/rh77-sudo/twpartygame?style=flat)](https://github.com/rh77-sudo/twpartygame/commits/master)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/rh77-sudo/twpartygame?style=flat)](https://github.com/rh77-sudo/twpartygame/commits/master)
-[![GitHub repo size](https://img.shields.io/github/repo-size/rh77-sudo/twpartygame?style=flat)](https://github.com/rh77-sudo/twpartygame)
-[![GitHub language count](https://img.shields.io/github/languages/count/rh77-sudo/twpartygame?style=flat)](https://github.com/rh77-sudo/twpartygame)
-[![Top language](https://img.shields.io/github/languages/top/rh77-sudo/twpartygame?style=flat)](https://github.com/rh77-sudo/twpartygame)
-[![HTML · CSS · JS](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20JS-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://github.com/rh77-sudo/twpartygame)
-[![Traditional Chinese](https://img.shields.io/badge/lang-zh--Hant-red?style=flat)](https://rh77-sudo.github.io/twpartygame/)
-[![Questions](https://img.shields.io/badge/questions-55%20national%20%2B%20112%20city-informational?style=flat)](https://github.com/rh77-sudo/twpartygame)
-[![GitHub issues](https://img.shields.io/github/issues/rh77-sudo/twpartygame?style=flat)](https://github.com/rh77-sudo/twpartygame/issues)
-[![GitHub stars](https://img.shields.io/github/stars/rh77-sudo/twpartygame?style=social)](https://github.com/rh77-sudo/twpartygame/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/rh77-sudo/twpartygame?style=social)](https://github.com/rh77-sudo/twpartygame/network/members)
-[![GitHub watchers](https://img.shields.io/github/watchers/rh77-sudo/twpartygame?style=social)](https://github.com/rh77-sudo/twpartygame/watchers)
+[![Live Demo](https://img.shields.io/badge/GitHub%20Pages-Live-2ea44f?logo=github&logoColor=white)](https://rh77-sudo.github.io/twpartygame/)
+[![Version](https://img.shields.io/badge/version-2.1.9-blue)](https://github.com/rh77-sudo/twpartygame)
+[![GitHub last commit](https://img.shields.io/github/last-commit/rh77-sudo/twpartygame)](https://github.com/rh77-sudo/twpartygame/commits/master)
 
 **線上版：** [https://rh77-sudo.github.io/twpartygame/](https://rh77-sudo.github.io/twpartygame/)
 
