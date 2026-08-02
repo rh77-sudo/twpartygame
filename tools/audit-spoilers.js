@@ -6,7 +6,7 @@ const path = require("path");
 const vm = require("vm");
 
 function loadIssues() {
-  const code = fs.readFileSync(path.join(__dirname, "issues-data.js"), "utf8");
+  const code = fs.readFileSync(path.join(__dirname, "..", "data", "issues-data.js"), "utf8");
   const sandbox = {};
   vm.createContext(sandbox);
   vm.runInContext(code + "\n;this.__R = ISSUES;", sandbox);

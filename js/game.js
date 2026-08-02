@@ -2,7 +2,7 @@
 /** @typedef {"dpp"|"kmt"|"tpp"} Party */
 /** @typedef {"dpp"|"kmt"|"tpp"|"neutral"} Pick */
 
-const APP_VERSION = "2.1.8";
+const APP_VERSION = "2.1.9";
 
 const PARTY_META = {
   dpp: { name: "民進黨", short: "民", class: "dpp" },
@@ -152,7 +152,7 @@ function startGame() {
   }
   state.round = pickRound(QUESTIONS_PER_ROUND);
   if (!state.round.length) {
-    alert("題庫不足，請確認 issues-data.js / city-issues-data.js 是否載入成功");
+    alert("題庫不足，請確認 data/issues-data.js 與 data/city-issues-data.js 是否載入成功");
     return;
   }
   state.index = 0;
